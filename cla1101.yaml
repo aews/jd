@@ -1,0 +1,1300 @@
+# ;微软分流：不支持
+# ;苹果分流：不支持
+# ;增强中国IP段：不支持
+# ;增强国外GFW：不支持
+# ;ruleset=🎯 全球直连,[]GEOIP,LAN
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+
+
+proxies:
+  - type: vmess
+    name: 美国
+    server: 104.18.240.238
+    port: 80
+    uuid: d967ffca-de90-4daa-bd00-d527e5bae11f
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: google.whatsapp.snapp.torob.basalam.leoshopping77.ir.
+    ws-opts:
+      path: /?BIA_TELEGRAM (@AZARBAYJAB1) TM (@AZARBAYJAB1) TM (@AZARBAYJAB1) TM
+        (@AZARBAYJAB1) TM (@AZARBAYJAB1) TM (@AZARBAYJAB1)
+      headers:
+        Host: google.whatsapp.snapp.torob.basalam.leoshopping77.ir.
+  - type: vmess
+    name: 🇺🇸 美国 0515
+    server: cdn1.ttcdn.top
+    port: 13231
+    uuid: fd58cdde-471f-489f-bde8-b3025aba53f3
+    alterId: 0
+    network: tcp
+    cipher: auto
+    servername: cdn1.ttcdn.top
+  - type: vmess
+    name: 🇰🇷 韩国 21
+    server: cdn3.ttcdn.top
+    port: 21617
+    uuid: 4170c3f6-84e7-429a-af3d-ddf49bb11ebc
+    alterId: 0
+    network: tcp
+    cipher: auto
+    servername: cdn3.ttcdn.top
+  - type: vmess
+    name: 🇭🇰 香港 13
+    server: cdn3.ttcdn.top
+    port: 35373
+    uuid: 4170c3f6-84e7-429a-af3d-ddf49bb11ebc
+    alterId: 0
+    network: tcp
+    cipher: auto
+    servername: cdn3.ttcdn.top
+  - type: vmess
+    name: 🇭🇰 香港6|@stairnode
+    server: 36.133.73.36
+    port: 11819
+    uuid: de32752c-0661-467e-82d3-35bc740a787f
+    alterId: 0
+    network: tcp
+    cipher: auto
+    servername: 36.133.73.36
+  - type: vmess
+    name: 🇨🇳 北京市 移动
+    server: 36.133.73.36
+    port: 11819
+    uuid: de32752c-0661-467e-82d3-35bc740a787f
+    alterId: 0
+    network: tcp
+    cipher: auto
+  - type: vmess
+    name: 香港6|@ripaojiedian
+    server: 36.133.73.36
+    port: 11819
+    uuid: de32752c-0661-467e-82d3-35bc740a787f
+    alterId: 0
+    network: tcp
+    cipher: auto
+  - type: vmess
+    name: 🇺🇸 美国 CloudFlare节点
+    server: sy4.620720.xyz
+    port: 443
+    uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: sy4.620720.xyz
+    ws-opts:
+      path: /
+      headers:
+        Host: sy4.620720.xyz
+    tls: true
+  - type: vmess
+    name: 🇩🇪DE_6 | ⬇️ 7.6MB/s
+    server: 104.18.240.238
+    port: 80
+    uuid: d967ffca-de90-4daa-bd00-d527e5bae11f
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: google.whatsapp.snapp.torob.basalam.leoshopping77.ir.
+    ws-opts:
+      path: /?BIA_TELEGRAM (@AZARBAYJAB1) TM (@AZARBAYJAB1) TM (@AZARBAYJAB1) TM
+        (@AZARBAYJAB1) TM (@AZARBAYJAB1) TM (@AZARBAYJAB1)
+      headers:
+        Host: google.whatsapp.snapp.torob.basalam.leoshopping77.ir.
+  - type: vmess
+    name: 韩国
+    server: 152.70.92.69
+    port: 80
+    uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b
+    alterId: 0
+    network: tcp
+    cipher: auto
+  - type: vless
+    name: 🇰🇷韩国
+    server: 158.179.175.153
+    port: 47018
+    uuid: 57580310-fb4f-4b6f-b1de-7137fb06b913
+    network: tcp
+    servername: www.yahoo.com
+    tls: true
+    encryption: none
+    reality-opts:
+      public-key: EgvsNiV4Ugwlj7GDq0XHXE63is_DJ5vhSiHgft-jRDs
+      short-id: 23c1eba6
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 美国_1
+    server: 94.232.247.177
+    port: 8880
+    uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+    network: grpc
+    encryption: none
+  - type: vless
+    name: 美国_2
+    server: 95.164.45.119
+    port: 8880
+    uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+    network: grpc
+    encryption: none
+  - type: vless
+    name: 美国_3
+    server: 95.164.6.97
+    port: 8880
+    uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+    network: grpc
+    encryption: none
+  - type: vless
+    name: 美国_4
+    server: 89.221.224.238
+    port: 8880
+    uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+    network: grpc
+    encryption: none
+  - type: vless
+    name: 美国_5
+    server: 95.164.6.183
+    port: 8880
+    uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+    network: grpc
+    encryption: none
+  - type: vless
+    name: 美国_6
+    server: 94.232.247.206
+    port: 8880
+    uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+    network: grpc
+    encryption: none
+  - type: trojan
+    name: 台湾
+    server: 125.227.86.47
+    port: 443
+    password: 3f5bc61547b1f0d9
+    network: grpc
+    sni: TG.节点狂魔
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_1
+    server: 125.227.86.47
+    port: 443
+    password: 0a9f1f5a397bd427
+    network: grpc
+    sni: TG.WangCai2
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_2
+    server: 125.227.86.46
+    port: 443
+    password: 0a9f1f5a397bd427
+    network: grpc
+    sni: TG.节点狂魔
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_3
+    server: 125.227.86.44
+    port: 443
+    password: 0a9f1f5a397bd427
+    network: grpc
+    sni: TG.节点狂魔
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_4
+    server: 125.227.86.48
+    port: 443
+    password: 0a9f1f5a397bd427
+    network: grpc
+    sni: TG.节点狂魔
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_5
+    server: 125.227.86.45
+    port: 443
+    password: 3f5bc61547b1f0d9
+    network: grpc
+    sni: TG.WangCai2
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_6
+    server: 125.227.86.45
+    port: 443
+    password: 3f5bc61547b1f0d9
+    network: grpc
+    sni: TG.节点狂魔
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_7
+    server: 125.227.86.48
+    port: 443
+    password: 3f5bc61547b1f0d9
+    network: grpc
+    sni: TG.节点狂魔
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_8
+    server: 125.227.86.46
+    port: 443
+    password: 3f5bc61547b1f0d9
+    network: grpc
+    sni: TG.WangCai2
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 台湾_9
+    server: 125.227.86.44
+    port: 443
+    password: 3f5bc61547b1f0d9
+    network: grpc
+    sni: TG.节点狂魔
+    alpn:
+      - h2
+    skip-cert-verify: true
+    tls: true
+    grpc-opts:
+      grpc-service-name: db
+  - type: trojan
+    name: 香港51
+    server: 36.151.192.242
+    port: 194
+    password: BxceQaOe
+    network: tcp
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇸🇬 新加坡31
+    server: 36.150.215.197
+    port: 9713
+    password: BxceQaOe
+    network: tcp
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇸🇬 新加坡2|@ripaojiedian
+    server: 117.172.176.24
+    port: 5321
+    password: bca467b8c15211d189008a93c7519d3b
+    network: tcp
+    sni: www.nintendogames.net
+    tls: true
+  - type: trojan
+    name: 日本|@ripaojiedian
+    server: 36.150.215.236
+    port: 487
+    password: BxceQaOe
+    network: tcp
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇸🇬 新加坡|@ripaojiedian
+    server: 117.172.176.24
+    port: 5041
+    password: bca467b8c15211d189008a93c7519d3b
+    network: tcp
+    sni: www.nintendogames.net
+    tls: true
+  - type: trojan
+    name: 香港
+    server: 58.152.53.3
+    port: 443
+    password: BxceQaOe
+    network: tcp
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇭🇰香港
+    server: 58.152.46.98
+    port: 443
+    password: BxceQaOe
+    network: tcp
+    sni: 58.152.46.98
+    skip-cert-verify: true
+    fingerprint: chrome
+    tls: true
+  - type: trojan
+    name: 香港_1
+    server: 58.152.46.98
+    port: 443
+    password: BxceQaOe
+    network: tcp
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇭🇰香港_1
+    server: 58.152.46.98
+    port: 443
+    password: BxceQaOe
+    network: tcp
+    sni: 58.152.46.98
+    skip-cert-verify: true
+    tls: true
+  - type: hysteria2
+    name: 🇺🇸 美国 039
+    server: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk
+    port: 1743
+    password: 6286105c-fb6d-11ef-be96-f23c93136cb3
+  - type: hysteria2
+    name: 🇺🇸 美国 025
+    server: 3d2c11f1-t52o00-tdw2ye-2gok.la.shifen.uk
+    port: 1743
+    password: 17cdeb6c-f046-11ee-bdac-f23c93141fad
+  - type: hysteria2
+    name: 🇺🇸 美国 038
+    server: e10829f0-t4un40-t9lb2a-1glq.la.shifen.uk
+    port: 1743
+    password: df7bed3c-06eb-11f0-8ebc-f23c93141fad
+  - type: hysteria2
+    name: 🇺🇸 美国 167
+    server: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk
+    port: 1743
+    password: be8cc8f6-0c6a-11f0-a5a3-f23c93141fad
+  - type: hysteria2
+    name: 🇺🇸 美国 161
+    server: 6e206c57-t3b340-tcj7b6-d70y.la.shifen.uk
+    port: 1743
+    password: 537d7098-fdbe-11ef-8ebc-f23c93141fad
+  - type: hysteria2
+    name: 🇺🇸 美国 0121
+    server: tw2.oxdtangx.top
+    port: 11112
+    password: 4623af89-13d4-4a7f-8972-1ebbe2bae142
+    skip-cert-verify: true
+    sni: tw2.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0310
+    server: 8d40c4cb-t5bb40-t67p0i-4lg6.us.hyhuawei.com
+    port: 443
+    password: a4c9b7cc-a816-11ed-9f65-f23c9164ca5d
+  - type: hysteria2
+    name: 🇺🇸 美国 0790
+    server: xjp1.oxdtangx.top
+    port: 11112
+    password: 3eec7894-1fd0-45c6-85a1-54a7871c0d07
+    skip-cert-verify: true
+    sni: xjp1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0727
+    server: us2.oxdtangx.top
+    port: 11112
+    password: bfef1ed1-5fb7-48bf-8230-b28b21d91437
+    skip-cert-verify: true
+    sni: us2.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0937
+    server: rb1.oxdtangx.top
+    port: 11112
+    password: 3eec7894-1fd0-45c6-85a1-54a7871c0d07
+    skip-cert-verify: true
+    sni: rb1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0120
+    server: tw2.oxdtangx.top
+    port: 11112
+    password: 9e8af28b-7489-42e7-bb76-375d84bbf04e
+    skip-cert-verify: true
+    sni: tw2.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0150
+    server: tw1.oxdtangx.top
+    port: 11112
+    password: 4623af89-13d4-4a7f-8972-1ebbe2bae142
+    skip-cert-verify: true
+    sni: tw1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0944
+    server: rb1.oxdtangx.top
+    port: 11112
+    password: 0c6af622-c47d-428b-9717-6b1ee2f96d0a
+    skip-cert-verify: true
+    sni: rb1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0782
+    server: xjp1.oxdtangx.top
+    port: 11112
+    password: 48090ef9-7ff0-41b6-be54-a831cb9bb1a0
+    skip-cert-verify: true
+    sni: xjp1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0072
+    server: hg1.oxdtangx.top
+    port: 11112
+    password: 5c5968a6-94d0-4178-a4bd-d7820841a543
+    skip-cert-verify: true
+    sni: hg1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 1100
+    server: mg2.xinlancloud.top
+    port: 2222
+    password: 6bc16d90-670e-4d6d-97fb-f9fc8527e2cf
+    skip-cert-verify: true
+    sni: mg2.xinlancloud.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0884
+    server: banmabanmabanmabanmabanmabanma1.wanlidag.top
+    port: 54265
+    password: 485afce0-5a36-4531-9972-b299b616c5ac
+    skip-cert-verify: true
+    sni: banmabanmabanmabanmabanmabanma1.wanlidag.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0613
+    server: c37b0be5-t3kyo0-t3lvgh-2gok.la.shifen.uk
+    port: 1743
+    password: 17cdeb6c-f046-11ee-bdac-f23c93141fad
+  - type: hysteria2
+    name: 🇺🇸 美国 0595
+    server: banmabanmabanmabanmabanmabanma1.wanlidag.top
+    port: 54265
+    password: f4326e2b-703b-4066-811c-bd57c8353414
+    sni: banmabanmabanmabanmabanmabanma1.wanlidag.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0525
+    server: yg1.oxdtangx.top
+    port: 11112
+    password: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+    skip-cert-verify: true
+    sni: yg1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0864
+    server: banmabanmabanmabanmabanmabanma1.wanlidag.top
+    port: 54265
+    password: 4e95c8d4-6916-4571-b846-c90df766f8e0
+    skip-cert-verify: true
+    sni: banmabanmabanmabanmabanmabanma1.wanlidag.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0580
+    server: yg1.oxdtangx.top
+    port: 11112
+    password: 0c6af622-c47d-428b-9717-6b1ee2f96d0a
+    skip-cert-verify: true
+    sni: yg1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0545
+    server: yg1.oxdtangx.top
+    port: 11112
+    password: af411408-cefc-4b33-b7b6-ef43fe944001
+    skip-cert-verify: true
+    sni: yg1.oxdtangx.top
+  - type: hysteria2
+    name: 🇨🇦 加拿大 04
+    server: 40.233.103.51
+    port: 47262
+    password: 862e90e1-2f26-4506-b8b9-0adf20da05fc
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: hysteria2
+    name: 🇺🇸 美国 1071
+    server: banmabanmabanmabanmabanmabanma3.wanlidag.top
+    port: 54265
+    password: 35d51884-2673-46ee-ae3d-add29392f317
+    skip-cert-verify: true
+    sni: banmabanmabanmabanmabanmabanma3.wanlidag.top
+  - type: hysteria2
+    name: 🇺🇸 美国 0184
+    server: tw2.oxdtangx.top
+    port: 11112
+    password: 96399c64-052a-4fcf-a8cc-82577bcf8361
+    skip-cert-verify: true
+    sni: tw2.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸_US_美国
+    server: eb8d3417-t4teo0-tdtx5w-au6.la.shifen.uk
+    port: 1743
+    password: 1b609740-eec2-11ef-8543-f23c93136cb3
+  - type: hysteria2
+    name: 🇺🇸_US_美国_1
+    server: dcc40639-t3cxs0-tcj7b6-d70y.la.shifen.uk
+    port: 1743
+    password: 537d7098-fdbe-11ef-8ebc-f23c93141fad
+  - type: hysteria2
+    name: 🇺🇸US_68 | ⬇️ 3.9MB/s
+    server: us2.oxdtangx.top
+    port: 11112
+    password: 70f44486-cda5-4750-9bf5-ca8826ee9bcc
+    skip-cert-verify: true
+    sni: us2.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸US_51 | ⬇️ 6.3MB/s
+    server: 03fdff3c-t53wg0-t5l33r-cq5n.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: fb3d8bb2-e288-11ec-b2b4-f23c91cfbbc9
+    sni: 03fdff3c-t53wg0-t5l33r-cq5n.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_21 | ⬇️ 4.5MB/s
+    server: bbe8dfd0-t53wg0-tk30wc-eyem.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 64617ed2-4823-11ef-9f2d-f23c9164ca5d
+    sni: bbe8dfd0-t53wg0-tk30wc-eyem.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_52 | ⬇️ 5.9MB/s
+    server: 749af71d-t53wg0-tc9wl2-py5w.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: ae5338ae-9a70-58c9-3d47-7d54a5675715
+    sni: 749af71d-t53wg0-tc9wl2-py5w.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_69 | ⬇️ 3.2MB/s
+    server: 7f7b7251-t53wg0-t7pmvm-17xo8.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: b4e40aa2-74a1-11ed-b0b5-f23c9164ca5d
+    sni: 7f7b7251-t53wg0-t7pmvm-17xo8.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_28 | ⬇️ 3.7MB/s
+    server: 1ebb83ea-t53wg0-tkgk4w-1fvdh.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 9e1ddc04-073b-11ed-bd7c-f23c913c8d2b
+    sni: 1ebb83ea-t53wg0-tkgk4w-1fvdh.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_29 | ⬇️ 3.3MB/s
+    server: 18c674f2-t53wg0-t5zsa5-1pr35.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 6b7c1278-ff9d-11ee-84ca-f23c913c8d2b
+    sni: 18c674f2-t53wg0-t5zsa5-1pr35.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_76 | ⬇️ 3.5MB/s
+    server: 1563bbb0-t53wg0-t8xyf4-1l0qa.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 0720c874-35e8-11ef-aa88-f23c913c8d2b
+    sni: 1563bbb0-t53wg0-t8xyf4-1l0qa.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_27 | ⬇️ 3.5MB/s
+    server: 301edbc8-t53wg0-t5ivfn-1m0fq.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: a698c4a6-c3c9-11ee-9693-f23c91cfbbc9
+    sni: 301edbc8-t53wg0-t5ivfn-1m0fq.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_15 | ⬇️ 5.0MB/s
+    server: 8bad3e9f-t53wg0-t7k911-1gxvd.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 398e0d38-8649-11ef-959c-f23c9164ca5d
+    sni: 8bad3e9f-t53wg0-t7k911-1gxvd.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_64 | ⬇️ 3.2MB/s
+    server: 5e7b8fdc-t53wg0-t5jnf1-n09f.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 89b0ea8c-806b-11ed-94ba-f23c913c8d2b
+    sni: 5e7b8fdc-t53wg0-t5jnf1-n09f.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_80 | ⬇️ 6.3MB/s
+    server: 3e56d898-t53wg0-tifnix-1ro8s.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: a18ef18e-293a-11ef-b76e-f23c91cfbbc9
+    sni: 3e56d898-t53wg0-tifnix-1ro8s.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_79 | ⬇️ 4.6MB/s
+    server: ef794ab3-t53wg0-t6i5o0-gacy.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
+    sni: ef794ab3-t53wg0-t6i5o0-gacy.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_60 | ⬇️ 3.7MB/s
+    server: cde71859-t53wg0-t917sa-12ach.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: fc5ba91a-acd7-11ef-97e0-f23c9164ca5d
+    sni: cde71859-t53wg0-t917sa-12ach.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_20 | ⬇️ 4.7MB/s
+    server: 9d6483c2-t53wg0-t8ivpf-z65w.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: a2313fba-74a6-11ed-a8bf-f23c91cfbbc9
+    sni: 9d6483c2-t53wg0-t8ivpf-z65w.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_31 | ⬇️ 4.0MB/s
+    server: 4ff8964c-t53wg0-td95qh-1isea.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: d6abdbda-fe9d-11ec-bb74-f23c9164ca5d
+    sni: 4ff8964c-t53wg0-td95qh-1isea.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_22 | ⬇️ 3.1MB/s
+    server: us2.oxdtangx.top
+    port: 11112
+    password: f5e7858a-ab72-4255-a93e-be8a6809fbdd
+    skip-cert-verify: true
+    sni: us2.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸US_16 | ⬇️ 4.9MB/s
+    server: 7f5f8886-t53wg0-tiuovf-v3c2.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
+    sni: 7f5f8886-t53wg0-tiuovf-v3c2.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_73 | ⬇️ 3.7MB/s
+    server: 59f1cbb4-t53wg0-t7bo2t-1psmw.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 42bb6d36-97c7-11ee-be7f-f23c9164ca5d
+    sni: 59f1cbb4-t53wg0-t7bo2t-1psmw.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_17 | ⬇️ 4.8MB/s
+    server: 5ba5fbfe-t53wg0-tcq5zn-19qpt.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 4b9ca118-7fab-11eb-bd3a-f23c9164ca5d
+    sni: 5ba5fbfe-t53wg0-tcq5zn-19qpt.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_66 | ⬇️ 2.9MB/s
+    server: c65ff46f-t53wg0-thd0h1-1rz5s.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 40e084d6-0316-11f0-90e2-f23c913c8d2b
+    sni: c65ff46f-t53wg0-thd0h1-1rz5s.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_74 | ⬇️ 3.4MB/s
+    server: 21e599dd-t53wg0-tnfe2z-1s4hc.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: aafedc64-9c23-11ef-a79f-f23c91cfbbc9
+    sni: 21e599dd-t53wg0-tnfe2z-1s4hc.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_67 | ⬇️ 2.9MB/s
+    server: us1.oxdtangx.top
+    port: 11112
+    password: b5b0b6c6-5ce2-4436-ac59-26498e1bb63a
+    skip-cert-verify: true
+    sni: us1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸US_14 | ⬇️ 4.2MB/s
+    server: cf5f1d08-t53wg0-tkhmfr-1jm8i.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: a6ddfc37-05eb-11ed-af40-f23c91cfbbc9
+    sni: cf5f1d08-t53wg0-tkhmfr-1jm8i.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_53 | ⬇️ 3.7MB/s
+    server: dd6a422a-t53wg0-t7udc0-1pqhp.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: b02327ac-a49a-11ef-a673-f23c913c8d2b
+    sni: dd6a422a-t53wg0-t7udc0-1pqhp.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_30 | ⬇️ 3.0MB/s
+    server: 0a4e8f99-t53wg0-t6v6ki-1phla.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 467f2940-77cd-11ee-b5ed-f23c9164ca5d
+    sni: 0a4e8f99-t53wg0-t6v6ki-1phla.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_18 | ⬇️ 5.1MB/s
+    server: 679b6c8d-t53wg0-t9hghw-1sdoq.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 7c077572-6da9-11ef-b786-f23c91cfbbc9
+    sni: 679b6c8d-t53wg0-t9hghw-1sdoq.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_81 | ⬇️ 5.4MB/s
+    server: ea2da9cf-t53wg0-t9p7yj-1ijh5.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: f7d95364-607b-11ee-93af-f23c91369f2d
+    sni: ea2da9cf-t53wg0-t9p7yj-1ijh5.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_59 | ⬇️ 3.7MB/s
+    server: 6886ac7f-t53wg0-taklwz-12bd.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: ea76ae7e-ea95-11ef-8b73-f23c91cfbbc9
+    sni: 6886ac7f-t53wg0-taklwz-12bd.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_25 | ⬇️ 3.7MB/s
+    server: 7a569d6d-t53wg0-t7qy26-14g76.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 4729b4c8-1790-11eb-8684-f23c913c8d2b
+    sni: 7a569d6d-t53wg0-t7qy26-14g76.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_58 | ⬇️ 3.6MB/s
+    server: 7f2b2a53-t53wg0-tk5ls1-z7a1.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 3bd247a8-993e-11ec-a8bf-f23c91cfbbc9
+    sni: 7f2b2a53-t53wg0-tk5ls1-z7a1.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_37 | ⬇️ 10.8MB/s
+    server: 63e55baf-t53wg0-tcum62-se45.us.hyhuawei.com
+    port: 443
+    password: d076280a-0d5f-11f0-8a7b-f23c913c8d2b
+    sni: 63e55baf-t53wg0-tcum62-se45.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_19 | ⬇️ 5.2MB/s
+    server: 0a355d13-t53wg0-thiwul-1gcq2.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 759bf004-6137-11ec-bd7c-f23c913c8d2b
+    sni: 0a355d13-t53wg0-thiwul-1gcq2.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_78 | ⬇️ 5.4MB/s
+    server: 51dc7e86-t53wg0-thvc3p-1o4kv.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 87b31a02-172e-11ee-a11f-f23c913c8d2b
+    sni: 51dc7e86-t53wg0-thvc3p-1o4kv.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_23 | ⬇️ 4.1MB/s
+    server: 956660e1-t53wg0-tlvq5w-1jcwu.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: f93486ce-cc84-11ed-9e98-f23c913c8d2b
+    sni: 956660e1-t53wg0-tlvq5w-1jcwu.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_26 | ⬇️ 3.2MB/s
+    server: dc8050eb-t53wg0-t6oj1r-1pv16.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 541259a8-8df6-11ee-ace4-f23c913c8d2b
+    sni: dc8050eb-t53wg0-t6oj1r-1pv16.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_36 | ⬇️ 1.6MB/s
+    server: yg1.oxdtangx.top
+    port: 11112
+    password: 4623af89-13d4-4a7f-8972-1ebbe2bae142
+    skip-cert-verify: true
+    sni: yg1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸US_13 | ⬇️ 4.7MB/s
+    server: 5bca9536-t53wg0-t5xw8a-g3b3.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 9ad05870-d8c5-11ef-9f1c-f23c913c8d2b
+    sni: 5bca9536-t53wg0-t5xw8a-g3b3.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸US_44 | ⬇️ 1.1MB/s
+    server: yg1.oxdtangx.top
+    port: 11112
+    password: 8a342ee4-26a5-4014-a7ad-1d14cdd4ef39
+    skip-cert-verify: true
+    sni: yg1.oxdtangx.top
+  - type: hysteria2
+    name: 🇺🇸US_24 | ⬇️ 3.7MB/s
+    server: 3e535e09-t53wg0-tlpfci-1jdha.us.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: de629d50-1711-11ed-bd7c-f23c913c8d2b
+    sni: 3e535e09-t53wg0-tlpfci-1jdha.us.hyhuawei.com
+  - type: hysteria2
+    name: 🇺🇸美国
+    server: banmabanmabanmabanmabanmabanma1.wanlidag.top
+    port: 54265
+    password: 92e45ed7-f1b3-42f8-8aab-cfc454125bda
+    skip-cert-verify: true
+    sni: banmabanmabanmabanmabanmabanma1.wanlidag.top
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 美国
+      - 🇺🇸 美国 0515
+      - 🇰🇷 韩国 21
+      - 🇭🇰 香港 13
+      - 🇭🇰 香港6|@stairnode
+      - 🇨🇳 北京市 移动
+      - 香港6|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇩🇪DE_6 | ⬇️ 7.6MB/s
+      - 韩国
+      - 🇰🇷韩国
+      - 美国_1
+      - 美国_2
+      - 美国_3
+      - 美国_4
+      - 美国_5
+      - 美国_6
+      - 台湾
+      - 台湾_1
+      - 台湾_2
+      - 台湾_3
+      - 台湾_4
+      - 台湾_5
+      - 台湾_6
+      - 台湾_7
+      - 台湾_8
+      - 台湾_9
+      - 香港51
+      - 🇸🇬 新加坡31
+      - 🇸🇬 新加坡2|@ripaojiedian
+      - 日本|@ripaojiedian
+      - 🇸🇬 新加坡|@ripaojiedian
+      - 香港
+      - 🇭🇰香港
+      - 香港_1
+      - 🇭🇰香港_1
+      - 🇺🇸 美国 039
+      - 🇺🇸 美国 025
+      - 🇺🇸 美国 038
+      - 🇺🇸 美国 167
+      - 🇺🇸 美国 161
+      - 🇺🇸 美国 0121
+      - 🇺🇸 美国 0310
+      - 🇺🇸 美国 0790
+      - 🇺🇸 美国 0727
+      - 🇺🇸 美国 0937
+      - 🇺🇸 美国 0120
+      - 🇺🇸 美国 0150
+      - 🇺🇸 美国 0944
+      - 🇺🇸 美国 0782
+      - 🇺🇸 美国 0072
+      - 🇺🇸 美国 1100
+      - 🇺🇸 美国 0884
+      - 🇺🇸 美国 0613
+      - 🇺🇸 美国 0595
+      - 🇺🇸 美国 0525
+      - 🇺🇸 美国 0864
+      - 🇺🇸 美国 0580
+      - 🇺🇸 美国 0545
+      - 🇨🇦 加拿大 04
+      - 🇺🇸 美国 1071
+      - 🇺🇸 美国 0184
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸US_68 | ⬇️ 3.9MB/s
+      - 🇺🇸US_51 | ⬇️ 6.3MB/s
+      - 🇺🇸US_21 | ⬇️ 4.5MB/s
+      - 🇺🇸US_52 | ⬇️ 5.9MB/s
+      - 🇺🇸US_69 | ⬇️ 3.2MB/s
+      - 🇺🇸US_28 | ⬇️ 3.7MB/s
+      - 🇺🇸US_29 | ⬇️ 3.3MB/s
+      - 🇺🇸US_76 | ⬇️ 3.5MB/s
+      - 🇺🇸US_27 | ⬇️ 3.5MB/s
+      - 🇺🇸US_15 | ⬇️ 5.0MB/s
+      - 🇺🇸US_64 | ⬇️ 3.2MB/s
+      - 🇺🇸US_80 | ⬇️ 6.3MB/s
+      - 🇺🇸US_79 | ⬇️ 4.6MB/s
+      - 🇺🇸US_60 | ⬇️ 3.7MB/s
+      - 🇺🇸US_20 | ⬇️ 4.7MB/s
+      - 🇺🇸US_31 | ⬇️ 4.0MB/s
+      - 🇺🇸US_22 | ⬇️ 3.1MB/s
+      - 🇺🇸US_16 | ⬇️ 4.9MB/s
+      - 🇺🇸US_73 | ⬇️ 3.7MB/s
+      - 🇺🇸US_17 | ⬇️ 4.8MB/s
+      - 🇺🇸US_66 | ⬇️ 2.9MB/s
+      - 🇺🇸US_74 | ⬇️ 3.4MB/s
+      - 🇺🇸US_67 | ⬇️ 2.9MB/s
+      - 🇺🇸US_14 | ⬇️ 4.2MB/s
+      - 🇺🇸US_53 | ⬇️ 3.7MB/s
+      - 🇺🇸US_30 | ⬇️ 3.0MB/s
+      - 🇺🇸US_18 | ⬇️ 5.1MB/s
+      - 🇺🇸US_81 | ⬇️ 5.4MB/s
+      - 🇺🇸US_59 | ⬇️ 3.7MB/s
+      - 🇺🇸US_25 | ⬇️ 3.7MB/s
+      - 🇺🇸US_58 | ⬇️ 3.6MB/s
+      - 🇺🇸US_37 | ⬇️ 10.8MB/s
+      - 🇺🇸US_19 | ⬇️ 5.2MB/s
+      - 🇺🇸US_78 | ⬇️ 5.4MB/s
+      - 🇺🇸US_23 | ⬇️ 4.1MB/s
+      - 🇺🇸US_26 | ⬇️ 3.2MB/s
+      - 🇺🇸US_36 | ⬇️ 1.6MB/s
+      - 🇺🇸US_13 | ⬇️ 4.7MB/s
+      - 🇺🇸US_44 | ⬇️ 1.1MB/s
+      - 🇺🇸US_24 | ⬇️ 3.7MB/s
+      - 🇺🇸美国
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 美国
+      - 🇺🇸 美国 0515
+      - 🇰🇷 韩国 21
+      - 🇭🇰 香港 13
+      - 🇭🇰 香港6|@stairnode
+      - 🇨🇳 北京市 移动
+      - 香港6|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇩🇪DE_6 | ⬇️ 7.6MB/s
+      - 韩国
+      - 🇰🇷韩国
+      - 美国_1
+      - 美国_2
+      - 美国_3
+      - 美国_4
+      - 美国_5
+      - 美国_6
+      - 台湾
+      - 台湾_1
+      - 台湾_2
+      - 台湾_3
+      - 台湾_4
+      - 台湾_5
+      - 台湾_6
+      - 台湾_7
+      - 台湾_8
+      - 台湾_9
+      - 香港51
+      - 🇸🇬 新加坡31
+      - 🇸🇬 新加坡2|@ripaojiedian
+      - 日本|@ripaojiedian
+      - 🇸🇬 新加坡|@ripaojiedian
+      - 香港
+      - 🇭🇰香港
+      - 香港_1
+      - 🇭🇰香港_1
+      - 🇺🇸 美国 039
+      - 🇺🇸 美国 025
+      - 🇺🇸 美国 038
+      - 🇺🇸 美国 167
+      - 🇺🇸 美国 161
+      - 🇺🇸 美国 0121
+      - 🇺🇸 美国 0310
+      - 🇺🇸 美国 0790
+      - 🇺🇸 美国 0727
+      - 🇺🇸 美国 0937
+      - 🇺🇸 美国 0120
+      - 🇺🇸 美国 0150
+      - 🇺🇸 美国 0944
+      - 🇺🇸 美国 0782
+      - 🇺🇸 美国 0072
+      - 🇺🇸 美国 1100
+      - 🇺🇸 美国 0884
+      - 🇺🇸 美国 0613
+      - 🇺🇸 美国 0595
+      - 🇺🇸 美国 0525
+      - 🇺🇸 美国 0864
+      - 🇺🇸 美国 0580
+      - 🇺🇸 美国 0545
+      - 🇨🇦 加拿大 04
+      - 🇺🇸 美国 1071
+      - 🇺🇸 美国 0184
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸US_68 | ⬇️ 3.9MB/s
+      - 🇺🇸US_51 | ⬇️ 6.3MB/s
+      - 🇺🇸US_21 | ⬇️ 4.5MB/s
+      - 🇺🇸US_52 | ⬇️ 5.9MB/s
+      - 🇺🇸US_69 | ⬇️ 3.2MB/s
+      - 🇺🇸US_28 | ⬇️ 3.7MB/s
+      - 🇺🇸US_29 | ⬇️ 3.3MB/s
+      - 🇺🇸US_76 | ⬇️ 3.5MB/s
+      - 🇺🇸US_27 | ⬇️ 3.5MB/s
+      - 🇺🇸US_15 | ⬇️ 5.0MB/s
+      - 🇺🇸US_64 | ⬇️ 3.2MB/s
+      - 🇺🇸US_80 | ⬇️ 6.3MB/s
+      - 🇺🇸US_79 | ⬇️ 4.6MB/s
+      - 🇺🇸US_60 | ⬇️ 3.7MB/s
+      - 🇺🇸US_20 | ⬇️ 4.7MB/s
+      - 🇺🇸US_31 | ⬇️ 4.0MB/s
+      - 🇺🇸US_22 | ⬇️ 3.1MB/s
+      - 🇺🇸US_16 | ⬇️ 4.9MB/s
+      - 🇺🇸US_73 | ⬇️ 3.7MB/s
+      - 🇺🇸US_17 | ⬇️ 4.8MB/s
+      - 🇺🇸US_66 | ⬇️ 2.9MB/s
+      - 🇺🇸US_74 | ⬇️ 3.4MB/s
+      - 🇺🇸US_67 | ⬇️ 2.9MB/s
+      - 🇺🇸US_14 | ⬇️ 4.2MB/s
+      - 🇺🇸US_53 | ⬇️ 3.7MB/s
+      - 🇺🇸US_30 | ⬇️ 3.0MB/s
+      - 🇺🇸US_18 | ⬇️ 5.1MB/s
+      - 🇺🇸US_81 | ⬇️ 5.4MB/s
+      - 🇺🇸US_59 | ⬇️ 3.7MB/s
+      - 🇺🇸US_25 | ⬇️ 3.7MB/s
+      - 🇺🇸US_58 | ⬇️ 3.6MB/s
+      - 🇺🇸US_37 | ⬇️ 10.8MB/s
+      - 🇺🇸US_19 | ⬇️ 5.2MB/s
+      - 🇺🇸US_78 | ⬇️ 5.4MB/s
+      - 🇺🇸US_23 | ⬇️ 4.1MB/s
+      - 🇺🇸US_26 | ⬇️ 3.2MB/s
+      - 🇺🇸US_36 | ⬇️ 1.6MB/s
+      - 🇺🇸US_13 | ⬇️ 4.7MB/s
+      - 🇺🇸US_44 | ⬇️ 1.1MB/s
+      - 🇺🇸US_24 | ⬇️ 3.7MB/s
+      - 🇺🇸美国
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 美国
+      - 🇺🇸 美国 0515
+      - 🇰🇷 韩国 21
+      - 🇭🇰 香港 13
+      - 🇭🇰 香港6|@stairnode
+      - 🇨🇳 北京市 移动
+      - 香港6|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇩🇪DE_6 | ⬇️ 7.6MB/s
+      - 韩国
+      - 🇰🇷韩国
+      - 美国_1
+      - 美国_2
+      - 美国_3
+      - 美国_4
+      - 美国_5
+      - 美国_6
+      - 台湾
+      - 台湾_1
+      - 台湾_2
+      - 台湾_3
+      - 台湾_4
+      - 台湾_5
+      - 台湾_6
+      - 台湾_7
+      - 台湾_8
+      - 台湾_9
+      - 香港51
+      - 🇸🇬 新加坡31
+      - 🇸🇬 新加坡2|@ripaojiedian
+      - 日本|@ripaojiedian
+      - 🇸🇬 新加坡|@ripaojiedian
+      - 香港
+      - 🇭🇰香港
+      - 香港_1
+      - 🇭🇰香港_1
+      - 🇺🇸 美国 039
+      - 🇺🇸 美国 025
+      - 🇺🇸 美国 038
+      - 🇺🇸 美国 167
+      - 🇺🇸 美国 161
+      - 🇺🇸 美国 0121
+      - 🇺🇸 美国 0310
+      - 🇺🇸 美国 0790
+      - 🇺🇸 美国 0727
+      - 🇺🇸 美国 0937
+      - 🇺🇸 美国 0120
+      - 🇺🇸 美国 0150
+      - 🇺🇸 美国 0944
+      - 🇺🇸 美国 0782
+      - 🇺🇸 美国 0072
+      - 🇺🇸 美国 1100
+      - 🇺🇸 美国 0884
+      - 🇺🇸 美国 0613
+      - 🇺🇸 美国 0595
+      - 🇺🇸 美国 0525
+      - 🇺🇸 美国 0864
+      - 🇺🇸 美国 0580
+      - 🇺🇸 美国 0545
+      - 🇨🇦 加拿大 04
+      - 🇺🇸 美国 1071
+      - 🇺🇸 美国 0184
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸US_68 | ⬇️ 3.9MB/s
+      - 🇺🇸US_51 | ⬇️ 6.3MB/s
+      - 🇺🇸US_21 | ⬇️ 4.5MB/s
+      - 🇺🇸US_52 | ⬇️ 5.9MB/s
+      - 🇺🇸US_69 | ⬇️ 3.2MB/s
+      - 🇺🇸US_28 | ⬇️ 3.7MB/s
+      - 🇺🇸US_29 | ⬇️ 3.3MB/s
+      - 🇺🇸US_76 | ⬇️ 3.5MB/s
+      - 🇺🇸US_27 | ⬇️ 3.5MB/s
+      - 🇺🇸US_15 | ⬇️ 5.0MB/s
+      - 🇺🇸US_64 | ⬇️ 3.2MB/s
+      - 🇺🇸US_80 | ⬇️ 6.3MB/s
+      - 🇺🇸US_79 | ⬇️ 4.6MB/s
+      - 🇺🇸US_60 | ⬇️ 3.7MB/s
+      - 🇺🇸US_20 | ⬇️ 4.7MB/s
+      - 🇺🇸US_31 | ⬇️ 4.0MB/s
+      - 🇺🇸US_22 | ⬇️ 3.1MB/s
+      - 🇺🇸US_16 | ⬇️ 4.9MB/s
+      - 🇺🇸US_73 | ⬇️ 3.7MB/s
+      - 🇺🇸US_17 | ⬇️ 4.8MB/s
+      - 🇺🇸US_66 | ⬇️ 2.9MB/s
+      - 🇺🇸US_74 | ⬇️ 3.4MB/s
+      - 🇺🇸US_67 | ⬇️ 2.9MB/s
+      - 🇺🇸US_14 | ⬇️ 4.2MB/s
+      - 🇺🇸US_53 | ⬇️ 3.7MB/s
+      - 🇺🇸US_30 | ⬇️ 3.0MB/s
+      - 🇺🇸US_18 | ⬇️ 5.1MB/s
+      - 🇺🇸US_81 | ⬇️ 5.4MB/s
+      - 🇺🇸US_59 | ⬇️ 3.7MB/s
+      - 🇺🇸US_25 | ⬇️ 3.7MB/s
+      - 🇺🇸US_58 | ⬇️ 3.6MB/s
+      - 🇺🇸US_37 | ⬇️ 10.8MB/s
+      - 🇺🇸US_19 | ⬇️ 5.2MB/s
+      - 🇺🇸US_78 | ⬇️ 5.4MB/s
+      - 🇺🇸US_23 | ⬇️ 4.1MB/s
+      - 🇺🇸US_26 | ⬇️ 3.2MB/s
+      - 🇺🇸US_36 | ⬇️ 1.6MB/s
+      - 🇺🇸US_13 | ⬇️ 4.7MB/s
+      - 🇺🇸US_44 | ⬇️ 1.1MB/s
+      - 🇺🇸US_24 | ⬇️ 3.7MB/s
+      - 🇺🇸美国
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/providers/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/providers/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/providers/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/providers/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/providers/SteamCN.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/providers/Telegram.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/providers/ProxyMedia.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/providers/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/providers/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/providers/ChinaCompanyIp.list
+    interval: 86400
+
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
