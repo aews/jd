@@ -1,0 +1,3528 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: US VLESS-09
+    type: vless
+    server: picassooo.info
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: US VLESS-25
+    type: vless
+    server: picassooo.info
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: DE VLESS-03
+    type: vless
+    server: dfg.octopusss.net
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: DE VLESS-29
+    type: vless
+    server: dfg.octopusss.net
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: VLESS-19
+    type: vless
+    server: delilah.ns.cloudflare.com
+    port: 443
+    uuid: 8f654717-4009-4417-af5a-8b9bf7853e79
+    network: ws
+    servername: 639034354143079886.defender-amsjs.info
+    tls: true
+    ws-opts:
+      path: /yirpvnws
+      headers:
+        Host: 639034354143079886.defender-amsjs.info
+  - name: US VLESS-11 | free-nodes
+    type: vless
+    server: azizoarjmanddd.info
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: US VLESS-01 | free-nodes
+    type: vless
+    server: azizoarjmanddd.info
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: VLESS-18
+    type: vless
+    server: cosmin.ns.cloudflare.com
+    port: 443
+    uuid: 9575377c-6574-4145-a4f0-505f9d5af787
+    network: ws
+    servername: 639034354142781815.defender-amsjs.info
+    tls: true
+    ws-opts:
+      path: /habfarws
+      headers:
+        Host: 639034354142781815.defender-amsjs.info
+  - name: RU VLESS-91
+    type: vless
+    server: 45.139.26.152
+    port: 7443
+    uuid: 7fc953d6-ae75-46fb-a970-10b57d513487
+    servername: eh.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: random
+    reality-opts:
+      public-key: BTkKaFt2xac4xAHn3EXrBKV0d8ItHSfciMFnxg57BGA
+      short-id: fd88bd27db4cc661
+  - name: SS-123
+    type: ss
+    server: 85.90.207.104
+    port: 18791
+    cipher: chacha20-ietf-poly1305
+    password: e716d7bbae4bdd14
+  - name: SS-96
+    type: ss
+    server: 109.61.39.150
+    port: 11201
+    cipher: chacha20-ietf-poly1305
+    password: 01dc0d7cbb650bc3
+  - name: HK TROJAN-06
+    type: trojan
+    server: 58.152.30.149
+    port: 443
+    password: BxceQaOe
+    sni: t.me/ripaojiedian
+    skip-cert-verify: true
+    tls: true
+  - name: 英国 speedtest12
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 英国 speedtest13
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国 speedtest14
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 英国 speedtest15
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国 speedtest16
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国 speedtest17
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 英国 speedtest021
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 英国 speedtest022
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港+电讯盈科有限公司
+    type: trojan
+    server: 58.152.30.149
+    port: 443
+    password: BxceQaOe
+    sni: t.me/ripaojiedian
+    skip-cert-verify: true
+    tls: true
+  - name: 广东省佛山市+电信
+    type: ss
+    server: e4d7a1c2f3b80976a5e2c1d4b3f0a987.358.onl
+    port: 18005
+    cipher: chacha20-ietf-poly1305
+    password: e611027a-7b55-4f64-b8df-258f2d7ef95c
+  - name: 广东省佛山市+电信_1
+    type: ss
+    server: e4d7a1c2f3b80976a5e2c1d4b3f0a987.358.onl
+    port: 18017
+    cipher: chacha20-ietf-poly1305
+    password: e611027a-7b55-4f64-b8df-258f2d7ef95c
+  - name: 🇸🇬 新加坡 | SGP
+    type: vless
+    server: cloudflare.182682.xyz
+    port: 443
+    uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+    network: ws
+    servername: l.ayovo.netlib.re
+    tls: true
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l.ayovo.netlib.re
+  - name: 🇭🇰 香港 | HKG 27
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 747f4d20-1ab3-4896-b255-5d4b9f587ce7
+    skip-cert-verify: false
+    tls: true
+  - name: 🇫🇮 芬兰 | FIN
+    type: vless
+    server: 146.75.119.82
+    port: 80
+    uuid: 74542945-0d84-4797-a56e-e7f31b84c5be
+    network: ws
+    tls: false
+    ws-opts:
+      path: /ws/?ed=2048/@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz/?2048
+      headers:
+        Host: welcomtofreeboarders.com
+  - name: 🇭🇰 香港 | HKG 6
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 6843b488-2db1-4617-9b50-a2d6492398ed
+    skip-cert-verify: false
+    tls: true
+  - name: 🇭🇰 香港 | HKG 62
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 7882a049-8d73-4c30-9c71-20ef57909cb2
+    skip-cert-verify: false
+    tls: true
+  - name: 🇰🇿 哈萨克斯坦 | KAZ
+    type: ss
+    server: 109.61.39.150
+    port: 11201
+    cipher: chacha20-ietf-poly1305
+    password: 01dc0d7cbb650bc3
+  - name: 🇭🇰 香港 | HKG 35
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 7ce4327c-43d3-404b-ad66-283a9f6b6eb4
+    skip-cert-verify: false
+    tls: true
+  - name: 🇭🇰 香港 | HKG 7
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 154e3552-cd70-4b43-a906-121b5ba29bbd
+    skip-cert-verify: false
+    tls: true
+  - name: 🇺🇸 美国 | USA 6
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: db86510f-8f0e-4e0e-9534-746dd8e4d07e
+    skip-cert-verify: false
+    tls: true
+  - name: 🇺🇸 美国 | USA 9
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: 70cc8fc7-fb59-45ab-87d0-de404abe723c
+    skip-cert-verify: false
+    tls: true
+  - name: 🇸🇬 新加坡 | SGP_1
+    type: vless
+    server: 162.159.16.63
+    port: 443
+    uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+    network: ws
+    servername: l.ayovo.netlib.re
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l.ayovo.netlib.re
+  - name: 🇱🇺 卢森堡 | LUX
+    type: vless
+    server: delilah.ns.cloudflare.com
+    port: 443
+    uuid: 8f654717-4009-4417-af5a-8b9bf7853e79
+    network: ws
+    servername: 639034354143079886.defender-amsjs.info
+    tls: true
+    ws-opts:
+      path: /yirpvnws
+      headers:
+        Host: 639034354143079886.defender-amsjs.info
+  - name: 🇭🇰 香港 | HKG
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 2cfd8fb6-1f17-4d33-a3b9-448b1d723723
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: false
+    tls: true
+  - name: 🇭🇰 香港 | HKG_1
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 3cd9679e-cd01-4aa6-9ddc-3ffd8b53f02e
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 5de81c8b-ffbb-4542-a334-88a49413d5ea
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: false
+    tls: true
+  - name: 🇫🇮 芬兰 | FIN_1
+    type: vless
+    server: ficdn16.suio.me
+    port: 443
+    uuid: 21f8d9aa-8ec7-4340-aa0a-7ce19f244adc
+    servername: ficdn16.suio.me
+    tls: true
+    client-fingerprint: chrome
+  - name: 🇭🇰 香港 | HKG_2
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 4e0d0293-3d1b-4c73-a2d1-701a0e85e1a5
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: false
+    tls: true
+  - name: 🇭🇰 香港 | HKG_3
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 70cc8fc7-fb59-45ab-87d0-de404abe723c
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: false
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_1
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 70cc8fc7-fb59-45ab-87d0-de404abe723c
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_4
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 747f4d20-1ab3-4896-b255-5d4b9f587ce7
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇺🇸 美国 | USA
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35502
+    password: 459850f0-b409-4f18-95e2-440d4ebea0cd
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_2
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 459850f0-b409-4f18-95e2-440d4ebea0cd
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_5
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 2352a65e-aa8a-46c7-ab41-8f203e858f4a
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇺🇸 美国 | USA_1
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35502
+    password: 87a08b2d-7f83-41c4-85c7-ac021d1493fd
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_3
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: db86510f-8f0e-4e0e-9534-746dd8e4d07e
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_6
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 3cd9679e-cd01-4aa6-9ddc-3ffd8b53f02e
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_7
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 0a10af44-d4c6-4803-aca4-abc92983bc5c
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇺🇸 美国 | USA_2
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: 154e3552-cd70-4b43-a906-121b5ba29bbd
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_4
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: fe6eae40-94da-4c80-9f23-5e3d4402d52b
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_5
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: fe6eae40-94da-4c80-9f23-5e3d4402d52b
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_8
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 1b88ad4e-20d1-4b1e-8e20-2793d0619a18
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_6
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 5107a215-5284-44d5-b740-607bed57026e
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_9
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 154e3552-cd70-4b43-a906-121b5ba29bbd
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_10
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 843bcd0b-f2ab-482f-8262-6d09cf97f4b8
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_11
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 4e0d0293-3d1b-4c73-a2d1-701a0e85e1a5
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇺🇸 美国 | USA_3
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: 7ce4327c-43d3-404b-ad66-283a9f6b6eb4
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_12
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 1b88ad4e-20d1-4b1e-8e20-2793d0619a18
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_7
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: f272b771-49f1-48f0-8ac4-ab7cd1a5c343
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇭🇰 香港 | HKG_13
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 67b68bf7-150c-4073-a2d6-1567637814b9
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_8
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: b9a669b3-f076-4805-af15-9fa65db1b4bb
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 🇺🇸_US_美国
+    type: vless
+    server: 151.101.3.8
+    port: 80
+    uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82
+    network: ws
+    tls: false
+    ws-opts:
+      path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN
+      headers:
+        Host: mitivpn.global.ssl.fastly.net
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: cloudflare.182682.xyz
+    port: 443
+    uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+    network: ws
+    servername: l.ayovo.netlib.re
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l.ayovo.netlib.re
+  - name: 🇺🇸_US_美国_2
+    type: vless
+    server: 162.159.16.63
+    port: 443
+    uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+    network: ws
+    servername: l.ayovo.netlib.re
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: l.ayovo.netlib.re
+  - name: 🇺🇸_US_美国_3
+    type: vless
+    server: 104.21.60.38
+    port: 443
+    uuid: 55821780-6970-49df-8a23-800c2c9b7d3a
+    network: ws
+    servername: 435F-8550-7B7588CC4678.008880888.XyZ
+    tls: true
+    ws-opts:
+      path: /4kMdPPOPDnAtNtvgyaVXm
+      headers:
+        Host: 435F-8550-7B7588CC4678.008880888.XyZ
+  - name: 🇩🇪_DE_德国
+    type: vless
+    server: api.dark-coffe.com
+    port: 2096
+    uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+    network: ws
+    servername: TzS7v35LfD.sMaRtTeChZaAl.InFo
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: TzS7v35LfD.sMaRtTeChZaAl.InFo
+  - name: 🇩🇪_DE_德国_1
+    type: vless
+    server: api.dark-coffe.com
+    port: 443
+    uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+    network: ws
+    servername: GfV5t2331T.sMaRtTeChZaAl.InFo
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: GfV5t2331T.sMaRtTeChZaAl.InFo
+  - name: 🇩🇪_DE_德国_2
+    type: vless
+    server: api.dark-coffe.com
+    port: 2087
+    uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+    network: ws
+    servername: 5JxGp6VrFh.SmArTtEcHzAaL.iNfO
+    tls: true
+    ws-opts:
+      path: /?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN
+      headers:
+        Host: 5JxGp6VrFh.SmArTtEcHzAaL.iNfO
+  - name: US-speedtest234
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 🇩🇪_DE_德国_3
+    type: vless
+    server: picassooo.info
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: 🇩🇪_DE_德国_4
+    type: vless
+    server: dfg.octopusss.net
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: 🇮🇶_IQ_伊拉克
+    type: vless
+    server: 178.17.53.28
+    port: 47539
+    uuid: 447c45cd-ade0-4bfe-90a0-3e581829f741
+    servername: yandex.ru
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: uapzi5mhLkADHuak0eXEKq9vIl2A8IGrMhjdIG-tn3U
+      short-id: 82a55f31981ea6be
+  - name: 🇺🇸_US_美国_4
+    type: vless
+    server: delilah.ns.cloudflare.com
+    port: 443
+    uuid: 8f654717-4009-4417-af5a-8b9bf7853e79
+    network: ws
+    servername: 639034354143079886.defender-amsjs.info
+    tls: true
+    ws-opts:
+      path: /yirpvnws
+      headers:
+        Host: 639034354143079886.defender-amsjs.info
+  - name: 香港
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: "������ [By DukeMehdi] b2n.ir/v2ray-configs | 934 "
+    skip-cert-verify: true
+    tls: true
+  - name: HK
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: +++++++[By+DukeMehdi]+trojan-HK+
+    skip-cert-verify: true
+    tls: true
+  - name: HK_1
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: ������+[By+EbraSha]+b2n.ir/v2ray-configs+
+    skip-cert-verify: true
+    tls: true
+  - name: 香港_1
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    skip-cert-verify: true
+    tls: true
+  - name: HK_2
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: ������+[By+EbraSha]+b2n.ir/v2ray-configs+|+868+
+    skip-cert-verify: true
+    tls: true
+  - name: 香港_2
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: +++++++[By+EbraSha]+b2n.ir/v2ray-configs+|+83+
+    skip-cert-verify: true
+    tls: true
+  - name: HK_3
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: +++++++[By+EbraSha]+b2n.ir/v2ray-configs+|+88+
+    skip-cert-verify: true
+    tls: true
+  - name: HK_4
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: +++++++[By+DukeMehdi]+b2n.ir/v2ray-configs+|+934+
+    skip-cert-verify: true
+    tls: true
+  - name: HK_5
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: +++++++[By+DukeMehdi]+b2n.ir/v2ray-configs+|+160+
+    skip-cert-verify: true
+    tls: true
+  - name: 香港_3
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: "       [By EbraSha] b2n.ir/v2ray-configs | 83 "
+    skip-cert-verify: true
+    tls: true
+  - name: 俄羅斯
+    type: trojan
+    server: 109.234.211.66
+    port: 8443
+    password: trojan
+    sni: store.timimi.dpdns.org
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: store.timimi.dpdns.org
+  - name: 美國
+    type: trojan
+    server: 109.234.211.66
+    port: 2087
+    password: trojan
+    sni: store.timimi.dpdns.org
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?BIA_TELEGRAM(@AZARBAYJAB1)TM(@AZARBAYJAB1)TM(@AZARBAYJAB1)TM(@AZARBAYJAB1)TM(@AZARBAYJAB1)TM(@AZARBAYJAB1)
+      headers:
+        Host: store.timimi.dpdns.org
+  - name: US VLESS-13
+    type: vless
+    server: picassooo.info
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: 美國_1
+    type: trojan
+    server: 205.185.115.223
+    port: 19258
+    password: iWnFtzMiac
+    sni: cloudflare.com
+    skip-cert-verify: false
+    tls: true
+  - name: 美國_2
+    type: vless
+    server: 5.78.57.125
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: Hysteria2节点3
+    type: hysteria2
+    server: 89.144.35.25
+    port: 33550
+    password: dongtaiwang.com
+    sni: apple.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+  - name: 香港_4
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: " [By EbraSha] trojan-HK "
+    skip-cert-verify: true
+    tls: true
+  - name: 美國_3
+    type: vless
+    server: 5.78.72.175
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: DE VLESS-02
+    type: vless
+    server: octopusss5.info
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: 西班牙
+    type: vless
+    server: allison.kosmolet.xyz
+    port: 443
+    uuid: 613725ab-ca86-4d54-852e-a0bf45e812de
+    servername: allison.kosmolet.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: UgCLC1JdwUh-hgpvSfndN1tuH98620gziTq2UB0gOjI
+      short-id: a369bfe440aba1a2
+  - name: 德國
+    type: vless
+    server: 5.78.54.69
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: DE VLESS-17
+    type: vless
+    server: dfg.octopusss.net
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: 美國_4
+    type: ss
+    server: 156.244.20.53
+    port: 11201
+    cipher: chacha20-ietf-poly1305
+    password: c8f11e2ba63181ea
+  - name: TW
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: 0a10af44-d4c6-4803-aca4-abc92983bc5c
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 美国
+    type: vless
+    server: 188.114.96.2
+    port: 443
+    uuid: b2744521-78b7-4c24-86f2-4f751d1cb7bf
+    network: ws
+    servername: private.digikala.lat
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+  - name: 芬蘭
+    type: vless
+    server: 78.153.139.68
+    port: 8443
+    uuid: fd8972d7-cf5e-11f0-9970-45e1d80c4039
+    servername: images.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: random
+    reality-opts:
+      public-key: pekfYPV5U8EjfQ4_zS5c6I2NnOZ2jUlyMGAWa4FWPF4
+      short-id: 58c512b4422e2517
+  - name: 香港_5
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: "������ [By DukeMehdi] b2n.ir/v2ray-configs | 78 "
+    skip-cert-verify: true
+    tls: true
+  - name: 香港_6
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: "������ [By DukeMehdi] b2n.ir/v2ray-configs | 868 "
+    skip-cert-verify: true
+    tls: true
+  - name: HK_6
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: ������+[By+DukeMehdi]+trojan-HK+
+    skip-cert-verify: true
+    tls: true
+  - name: HK_7
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: t.me%2Fripaojiedian
+    skip-cert-verify: true
+    tls: true
+  - name: 荷兰
+    type: vless
+    server: 141.11.37.185
+    port: 48677
+    uuid: 793ba358-8df3-40dd-b60c-035b7b45afe5
+    tls: false
+  - name: 香港_7
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: ������+[By+DukeMehdi]+b2n.ir/v2ray-configs+
+    skip-cert-verify: true
+    tls: true
+  - name: 波蘭
+    type: vless
+    server: aneta.kosmolet.xyz
+    port: 443
+    uuid: 613725ab-ca86-4d54-852e-a0bf45e812de
+    servername: aneta.kosmolet.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: -uB8zIro9WM-NPpiSlOLWHouzZVXibfmT-MxwkacoQ0
+      short-id: a67894cec8a930c4
+  - name: 賽普勒斯
+    type: trojan
+    server: 23.227.38.33
+    port: 443
+    password: a544940a-2c1c-4723-96cc-d03053a95530
+    sni: z9mifq7ujufk56im.jptimecsgo.xyz
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /images
+  - name: RU VLESS-26 | free-nodes
+    type: vless
+    server: 45.139.26.133
+    port: 443
+    uuid: 613725ab-ca86-4d54-852e-a0bf45e812de
+    servername: alisa.kosmolet.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IU2t096hBC7gAQ_rY1qwYsAtgiegzYI6loivZJxpx1E
+      short-id: 28e1270764a2464b
+  - name: " 芬兰 01"
+    type: vless
+    server: 78.153.139.68
+    port: 8443
+    uuid: fd8972d7-cf5e-11f0-9970-45e1d80c4039
+    servername: images.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: pekfYPV5U8EjfQ4_zS5c6I2NnOZ2jUlyMGAWa4FWPF4
+      short-id: 58c512b4422e2517
+  - name: TW_1
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31101
+    password: f272b771-49f1-48f0-8ac4-ab7cd1a5c343
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: false
+    tls: true
+  - name: SI
+    type: vless
+    server: ficdn16.suio.me
+    port: 443
+    uuid: 21f8d9aa-8ec7-4340-aa0a-7ce19f244adc
+    servername: ficdn16.suio.me
+    tls: true
+    client-fingerprint: chrome
+  - name: 俄羅斯_1
+    type: vless
+    server: 217.198.12.29
+    port: 443
+    uuid: 613725ab-ca86-4d54-852e-a0bf45e812de
+    servername: alisa.kosmolet.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IU2t096hBC7gAQ_rY1qwYsAtgiegzYI6loivZJxpx1E
+      short-id: 28e1270764a2464b
+  - name: JP VLESS-51 | free-nodes
+    type: vless
+    server: japan.geodema.network
+    port: 443
+    uuid: a11ab9c5-4155-430b-9efc-7a7122531382
+    servername: japan.geodema.network
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+      short-id: 1ed136481e0ede74
+  - name: 俄羅斯_2
+    type: vless
+    server: ru01-vlr01.tcp-reset-club.net
+    port: 443
+    uuid: f13b15a6-d235-4161-b57a-274676335502
+    servername: hls-svod.itunes.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+      short-id: 48720c
+  - name: NL
+    type: vless
+    server: nl02-vlr01.tcp-reset-club.net
+    port: 443
+    uuid: b81c61f9-51d5-48a4-84a6-1715f41d89fb
+    servername: hls-svod.itunes.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+      short-id: "31"
+  - name: 日本
+    type: vless
+    server: japan.geodema.network
+    port: 443
+    uuid: a11ab9c5-4155-430b-9efc-7a7122531382
+    servername: japan.geodema.network
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+      short-id: 1ed136481e0ede74
+  - name: 德國_1
+    type: vless
+    server: api.dark-coffe.com
+    port: 2087
+    uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+    network: ws
+    servername: 5JxGp6VrFh.SmArTtEcHzAaL.iNfO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: 5JxGp6VrFh.SmArTtEcHzAaL.iNfO
+  - name: DE
+    type: vless
+    server: 146.75.119.82
+    port: 80
+    uuid: 74542945-0d84-4797-a56e-e7f31b84c5be
+    network: ws
+    tls: false
+    ws-opts:
+      path: /ws/?ed=2048/@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz/?2048
+      headers:
+        Host: welcomtofreeboarders.com
+  - name: DE VLESS-29 | free-nodes
+    type: vless
+    server: api.dark-coffe.com
+    port: 443
+    uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+    network: ws
+    servername: GfV5t2331T.sMaRtTeChZaAl.InFo
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: GfV5t2331T.sMaRtTeChZaAl.InFo
+  - name: DE_1
+    type: vless
+    server: api.dark-coffe.com
+    port: 443
+    uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+    network: ws
+    servername: GfV5t2331T.sMaRtTeChZaAl.InFo
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: GfV5t2331T.sMaRtTeChZaAl.InFo
+  - name: 美国_1
+    type: vless
+    server: 45.139.26.152
+    port: 7443
+    uuid: 7fc953d6-ae75-46fb-a970-10b57d513487
+    servername: eh.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: random
+    reality-opts:
+      public-key: BTkKaFt2xac4xAHn3EXrBKV0d8ItHSfciMFnxg57BGA
+      short-id: fd88bd27db4cc661
+  - name: 未知 VLESS-23 | free-nodes
+    type: vless
+    server: 51.250.95.143
+    port: 443
+    uuid: 5725a60c-34a5-476d-9ae3-9e43d945ca8f
+    servername: www.mobile.yandex.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: random
+    reality-opts:
+      public-key: dEHsPQQSnMJiHJKnJRbbLFKQmwIemUXQsQ1zIYbLZng
+      short-id: f6
+  - name: DE_2
+    type: vless
+    server: api.dark-coffe.com
+    port: 2096
+    uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+    network: ws
+    servername: TzS7v35LfD.sMaRtTeChZaAl.InFo
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: TzS7v35LfD.sMaRtTeChZaAl.InFo
+  - name: 俄羅斯_3
+    type: vless
+    server: 45.139.26.33
+    port: 443
+    uuid: 613725ab-ca86-4d54-852e-a0bf45e812de
+    servername: alisa.kosmolet.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IU2t096hBC7gAQ_rY1qwYsAtgiegzYI6loivZJxpx1E
+      short-id: 28e1270764a2464b
+  - name: 俄羅斯_4
+    type: vless
+    server: 45.139.26.152
+    port: 7443
+    uuid: 7fc953d6-ae75-46fb-a970-10b57d513487
+    servername: eh.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: BTkKaFt2xac4xAHn3EXrBKV0d8ItHSfciMFnxg57BGA
+      short-id: fd88bd27db4cc661
+  - name: 波蘭_1
+    type: vless
+    server: 158.160.201.80
+    port: 8443
+    uuid: e329843c-02c3-4401-8289-cf196d5a6921
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 887c0d72e771a934
+  - name: 波蘭_2
+    type: vless
+    server: 158.160.201.80
+    port: 443
+    uuid: 329bd550-a8f8-4157-b2df-dc4503097a27
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 1929ef620e9b34f5
+  - name: 俄羅斯_5
+    type: vless
+    server: 158.160.189.247
+    port: 443
+    uuid: 329bd550-a8f8-4157-b2df-dc4503097a27
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 1929ef620e9b34f5
+  - name: LV
+    type: hysteria2
+    server: channel4.saghetalaie.homes
+    port: 46914
+    password: yhqy5AHofQq
+    sni: www.google.com
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: "&O#28YB5qK!5t#U"
+  - name: 波蘭_3
+    type: vless
+    server: 158.160.201.80
+    port: 443
+    uuid: e329843c-02c3-4401-8289-cf196d5a6921
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 1929ef620e9b34f5
+  - name: 荷蘭
+    type: ss
+    server: 85.90.207.104
+    port: 18792
+    cipher: chacha20-ietf-poly1305
+    password: e716d7bbae4bdd14
+  - name: RU
+    type: vless
+    server: 176.123.164.110
+    port: 8443
+    uuid: 329bd550-a8f8-4157-b2df-dc4503097a27
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 8f222b3475800821
+  - name: 德國_2
+    type: vless
+    server: api.dark-coffe.com
+    port: 2096
+    uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+    network: ws
+    servername: TzS7v35LfD.sMaRtTeChZaAl.InFo
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: TzS7v35LfD.sMaRtTeChZaAl.InFo
+  - name: 俄羅斯_6
+    type: vless
+    server: 158.160.189.247
+    port: 443
+    uuid: e329843c-02c3-4401-8289-cf196d5a6921
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 1929ef620e9b34f5
+  - name: RU_1
+    type: vless
+    server: 158.160.189.247
+    port: 8443
+    uuid: 329bd550-a8f8-4157-b2df-dc4503097a27
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 8f222b3475800821
+  - name: 荷蘭_1
+    type: ss
+    server: 85.90.207.104
+    port: 18791
+    cipher: chacha20-ietf-poly1305
+    password: e716d7bbae4bdd14
+  - name: 美国_2
+    type: ss
+    server: 85.90.207.104
+    port: 18794
+    cipher: chacha20-ietf-poly1305
+    password: e716d7bbae4bdd14
+  - name: SS-81
+    type: ss
+    server: 85.90.207.104
+    port: 18793
+    cipher: chacha20-ietf-poly1305
+    password: e716d7bbae4bdd14
+  - name: 波蘭_4
+    type: vless
+    server: 158.160.201.80
+    port: 8443
+    uuid: 329bd550-a8f8-4157-b2df-dc4503097a27
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 8f222b3475800821
+  - name: 波蘭_5
+    type: vless
+    server: 176.123.164.110
+    port: 443
+    uuid: 329bd550-a8f8-4157-b2df-dc4503097a27
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 1929ef620e9b34f5
+  - name: RU_2
+    type: vless
+    server: 158.160.189.247
+    port: 8443
+    uuid: e329843c-02c3-4401-8289-cf196d5a6921
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 887c0d72e771a934
+  - name: 约旦 011
+    type: ss
+    server: 91.106.109.73
+    port: 11201
+    cipher: chacha20-ietf-poly1305
+    password: be5ee3c62f0aae96
+  - name: TW_2
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: fe6eae40-94da-4c80-9f23-5e3d4402d52b
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 卢森堡 012
+    type: ss
+    server: 109.61.39.150
+    port: 11201
+    cipher: chacha20-ietf-poly1305
+    password: 01dc0d7cbb650bc3
+  - name: 哈薩克
+    type: vless
+    server: aigul.kosmolet.xyz
+    port: 443
+    uuid: 613725ab-ca86-4d54-852e-a0bf45e812de
+    servername: aigul.kosmolet.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 4tgpfnEvkdOoG1jGnODdaIglbQqGDauXokKhFBEvJxk
+      short-id: "8133508795292229"
+  - name: 俄羅斯_7
+    type: vless
+    server: 91.243.82.82
+    port: 443
+    uuid: a91e64f0-9295-499d-bf4a-661ad99d4938
+    servername: khabarovsk.geodema.network
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+      short-id: 1ed136481e0ede74
+  - name: TW_3
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 40991964-b3be-4458-8bc7-5b1774552acf
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_4
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: f1a09e6c-f30c-43ca-a9e4-e2015ee5c0da
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_5
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: cde8eda2-9c2e-4fae-b308-2fed2cc33e4b
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: GB
+    type: vless
+    server: 5.39.253.14
+    port: 443
+    uuid: db912ae7-7c2e-4777-897c-c49201e48cb9
+    servername: vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: VRZ6ZwSsMA9K5f7aoJ9KvQgQ4xoSaF792mcNbeh-TQ4
+      short-id: f12d61f4
+  - name: 波蘭_6
+    type: vless
+    server: 83.166.236.201
+    port: 443
+    uuid: 329bd550-a8f8-4157-b2df-dc4503097a27
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 1929ef620e9b34f5
+  - name: 波蘭_7
+    type: vless
+    server: 83.166.236.201
+    port: 8443
+    uuid: e329843c-02c3-4401-8289-cf196d5a6921
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 887c0d72e771a934
+  - name: 俄羅斯_8
+    type: vless
+    server: 83.166.236.201
+    port: 443
+    uuid: e329843c-02c3-4401-8289-cf196d5a6921
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 1929ef620e9b34f5
+  - name: 俄罗斯 02
+    type: vless
+    server: 213.165.60.36
+    port: 443
+    uuid: e9dbc178-3656-40f8-8833-5023f306ef1d
+    servername: hls-svod.itunes.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+      short-id: 86e999a2cdc2
+  - name: 越南
+    type: ss
+    server: 103.97.203.227
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  - name: 美國_5
+    type: trojan
+    server: d-4bed-b726-2c53a82e4925.664.qzz.io
+    port: 443
+    password: 0507fbcd-b983-43a7-8e1d-2c561960ad4f
+    sni: d-4bED-B726-2C53a82E4925.664.Qzz.iO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /E2JXJM5geneWfr9noOhn
+  - name: 波蘭_8
+    type: vless
+    server: 83.166.236.201
+    port: 8443
+    uuid: 329bd550-a8f8-4157-b2df-dc4503097a27
+    servername: m.vk.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
+      short-id: 8f222b3475800821
+  - name: TW_6
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: db86510f-8f0e-4e0e-9534-746dd8e4d07e
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_7
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 1b55988c-ba9d-4203-b4fb-6afb7353c4f6
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 美國_6
+    type: vless
+    server: us01-vlr01-gmn03.vpnvezdehod.net
+    port: 443
+    uuid: e9dbc178-3656-40f8-8833-5023f306ef1d
+    servername: hls-svod.itunes.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+      short-id: 86e999a2cdc2
+  - name: 美國_7
+    type: vless
+    server: hazmkardannn.info
+    port: 22955
+    uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+    network: grpc
+    servername: one-piece.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+      short-id: 6ba85179e30d4fc2
+  - name: 哈薩克_1
+    type: vless
+    server: 91.217.10.233
+    port: 443
+    uuid: 613725ab-ca86-4d54-852e-a0bf45e812de
+    servername: aigul.kosmolet.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 4tgpfnEvkdOoG1jGnODdaIglbQqGDauXokKhFBEvJxk
+      short-id: "8133508795292229"
+  - name: 韓國
+    type: vless
+    server: 121.154.180.50
+    port: 51698
+    uuid: 5d42cfef-0556-4f0c-bfb7-161aef500ab5
+    network: grpc
+    servername: lenovoglobal.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: PPZbDAYSwCYnPCF8BxguTFfAAZTnLnzpsHePCkGZYxo
+      short-id: "34"
+  - name: 荷蘭_2
+    type: vless
+    server: 78.159.247.74
+    port: 5444
+    uuid: 9c4dd65a-7158-4db7-bcef-4b44fb9941f0
+    servername: max.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      short-id: 6ba85179e30d4fc2
+  - name: VLESS-126
+    type: vless
+    server: 78.159.247.74
+    port: 3443
+    uuid: 9c4dd65a-7158-4db7-bcef-4b44fb9941f0
+    servername: max.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      short-id: 6ba85179e30d4fc2
+  - name: TW_8
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: cde8eda2-9c2e-4fae-b308-2fed2cc33e4b
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: RU_3
+    type: vless
+    server: 95.174.92.156
+    port: 443
+    uuid: cc61ea7c-92f2-4c2d-b272-32cfe8fdf99f
+    servername: sun6-21.userapi.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw
+      short-id: c7e42004e5f024be
+  - name: HK_8
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: +++++++[By+DukeMehdi]+
+    skip-cert-verify: true
+    tls: true
+  - name: 俄羅斯_9
+    type: vless
+    server: 176.109.104.107
+    port: 443
+    uuid: cc61ea7c-92f2-4c2d-b272-32cfe8fdf99f
+    servername: sun6-21.userapi.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw
+      short-id: c7e42004e5f024be
+  - name: TW_9
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 2352a65e-aa8a-46c7-ab41-8f203e858f4a
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 俄羅斯_10
+    type: vless
+    server: khabarovsk.geodema.network
+    port: 443
+    uuid: a91e64f0-9295-499d-bf4a-661ad99d4938
+    servername: khabarovsk.geodema.network
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+      short-id: 1ed136481e0ede74
+  - name: DE_3
+    type: hysteria2
+    server: 91.107.190.166
+    port: 8443
+    password: xtGIM7iEx9
+    sni: dash.cloudflare.com
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: KLSADFIU43#$
+  - name: TW_10
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 87a08b2d-7f83-41c4-85c7-ac021d1493fd
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_11
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 747f4d20-1ab3-4896-b255-5d4b9f587ce7
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_12
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 3cd9679e-cd01-4aa6-9ddc-3ffd8b53f02e
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_13
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: fe6eae40-94da-4c80-9f23-5e3d4402d52b
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_14
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: 154e3552-cd70-4b43-a906-121b5ba29bbd
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_15
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: 843bcd0b-f2ab-482f-8262-6d09cf97f4b8
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 美國_8
+    type: vless
+    server: 199.241.32.132
+    port: 26978
+    uuid: 9042affd-0ad3-4014-adbc-e52f00891ea2
+    servername: tesla.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: n2w4hj7Q7wN6P21LSJJwIPitfYZbwWh5a2seJHH58SE
+      short-id: 28bf
+  - name: TW_16
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: db86510f-8f0e-4e0e-9534-746dd8e4d07e
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_17
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 843bcd0b-f2ab-482f-8262-6d09cf97f4b8
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_18
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31102
+    password: e0e28234-f4cd-4583-922c-c97795cb6222
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 美國_9
+    type: vless
+    server: ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz
+    port: 443
+    uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2
+    servername: i2pd.website
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE
+      short-id: 55e6af1a35e64a98
+  - name: TW_19
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: 1b88ad4e-20d1-4b1e-8e20-2793d0619a18
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_20
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: 5107a215-5284-44d5-b740-607bed57026e
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: false
+    tls: true
+  - name: TW_21
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: 6843b488-2db1-4617-9b50-a2d6492398ed
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 香港_8
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: +[By+DukeMehdi]+trojan-HK+
+    skip-cert-verify: true
+    tls: true
+  - name: 台灣
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: f1a09e6c-f30c-43ca-a9e4-e2015ee5c0da
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_22
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 0a10af44-d4c6-4803-aca4-abc92983bc5c
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_23
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 459850f0-b409-4f18-95e2-440d4ebea0cd
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_24
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 40991964-b3be-4458-8bc7-5b1774552acf
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: HK_9
+    type: trojan
+    server: 58.152.46.60
+    port: 443
+    password: BxceQaOe
+    sni: ������+[By+DukeMehdi]+b2n.ir/v2ray-configs+|+88+
+    skip-cert-verify: true
+    tls: true
+  - name: TW_25
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 31103
+    password: 6843b488-2db1-4617-9b50-a2d6492398ed
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_26
+    type: trojan
+    server: 220.130.58.136
+    port: 35501
+    password: 40991964-b3be-4458-8bc7-5b1774552acf
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_27
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: cde8eda2-9c2e-4fae-b308-2fed2cc33e4b
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: TW_28
+    type: trojan
+    server: green2.cdntencentmusic.com
+    port: 35501
+    password: fe6eae40-94da-4c80-9f23-5e3d4402d52b
+    sni: green2.cdntencentmusic.com
+    skip-cert-verify: true
+    tls: true
+  - name: 荷蘭_3
+    type: vless
+    server: free1.barayekhudam.ir
+    port: 2255
+    uuid: 02b320ce-09f8-4cb5-9c46-9024f5585881
+    servername: radar.arvancloud.ir
+    tls: true
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: Cs7yLk8XXPksSjf6GB1JFYyFICqWVL3nL-10K7jQ7xc
+      short-id: 983c9303725c67
+  - name: RU_4
+    type: vless
+    server: 51.250.4.181
+    port: 443
+    uuid: 846c5d45-936c-42f6-9120-2d13830d5fa0
+    servername: eh.vk.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: t0Gj0moa6d8jMp9LazLtWPenE3wl_M9tMHveifor8GU
+      short-id: 4d4421a0bac569
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - US VLESS-09
+      - US VLESS-25
+      - DE VLESS-03
+      - DE VLESS-29
+      - VLESS-19
+      - US VLESS-11 | free-nodes
+      - US VLESS-01 | free-nodes
+      - VLESS-18
+      - RU VLESS-91
+      - SS-123
+      - SS-96
+      - HK TROJAN-06
+      - 英国 speedtest12
+      - 英国 speedtest13
+      - 美国 speedtest14
+      - 英国 speedtest15
+      - 美国 speedtest16
+      - 美国 speedtest17
+      - 英国 speedtest021
+      - 英国 speedtest022
+      - 香港+电讯盈科有限公司
+      - 广东省佛山市+电信
+      - 广东省佛山市+电信_1
+      - 🇸🇬 新加坡 | SGP
+      - 🇭🇰 香港 | HKG 27
+      - 🇫🇮 芬兰 | FIN
+      - 🇭🇰 香港 | HKG 6
+      - 🇭🇰 香港 | HKG 62
+      - 🇰🇿 哈萨克斯坦 | KAZ
+      - 🇭🇰 香港 | HKG 35
+      - 🇭🇰 香港 | HKG 7
+      - 🇺🇸 美国 | USA 6
+      - 🇺🇸 美国 | USA 9
+      - 🇸🇬 新加坡 | SGP_1
+      - 🇱🇺 卢森堡 | LUX
+      - 🇭🇰 香港 | HKG
+      - 🇭🇰 香港 | HKG_1
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇫🇮 芬兰 | FIN_1
+      - 🇭🇰 香港 | HKG_2
+      - 🇭🇰 香港 | HKG_3
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - 🇭🇰 香港 | HKG_4
+      - 🇺🇸 美国 | USA
+      - 🇹🇼 🇨🇳 台湾 | TWN_2
+      - 🇭🇰 香港 | HKG_5
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇼 🇨🇳 台湾 | TWN_3
+      - 🇭🇰 香港 | HKG_6
+      - 🇭🇰 香港 | HKG_7
+      - 🇺🇸 美国 | USA_2
+      - 🇹🇼 🇨🇳 台湾 | TWN_4
+      - 🇹🇼 🇨🇳 台湾 | TWN_5
+      - 🇭🇰 香港 | HKG_8
+      - 🇹🇼 🇨🇳 台湾 | TWN_6
+      - 🇭🇰 香港 | HKG_9
+      - 🇭🇰 香港 | HKG_10
+      - 🇭🇰 香港 | HKG_11
+      - 🇺🇸 美国 | USA_3
+      - 🇭🇰 香港 | HKG_12
+      - 🇹🇼 🇨🇳 台湾 | TWN_7
+      - 🇭🇰 香港 | HKG_13
+      - 🇹🇼 🇨🇳 台湾 | TWN_8
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇪_DE_德国
+      - 🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国_2
+      - US-speedtest234
+      - 🇩🇪_DE_德国_3
+      - 🇩🇪_DE_德国_4
+      - 🇮🇶_IQ_伊拉克
+      - 🇺🇸_US_美国_4
+      - 香港
+      - HK
+      - HK_1
+      - 香港_1
+      - HK_2
+      - 香港_2
+      - HK_3
+      - HK_4
+      - HK_5
+      - 香港_3
+      - 俄羅斯
+      - 美國
+      - US VLESS-13
+      - 美國_1
+      - 美國_2
+      - Hysteria2节点3
+      - 香港_4
+      - 美國_3
+      - DE VLESS-02
+      - 西班牙
+      - 德國
+      - DE VLESS-17
+      - 美國_4
+      - TW
+      - 美国
+      - 芬蘭
+      - 香港_5
+      - 香港_6
+      - HK_6
+      - HK_7
+      - 荷兰
+      - 香港_7
+      - 波蘭
+      - 賽普勒斯
+      - RU VLESS-26 | free-nodes
+      - " 芬兰 01"
+      - TW_1
+      - SI
+      - 俄羅斯_1
+      - JP VLESS-51 | free-nodes
+      - 俄羅斯_2
+      - NL
+      - 日本
+      - 德國_1
+      - DE
+      - DE VLESS-29 | free-nodes
+      - DE_1
+      - 美国_1
+      - 未知 VLESS-23 | free-nodes
+      - DE_2
+      - 俄羅斯_3
+      - 俄羅斯_4
+      - 波蘭_1
+      - 波蘭_2
+      - 俄羅斯_5
+      - LV
+      - 波蘭_3
+      - 荷蘭
+      - RU
+      - 德國_2
+      - 俄羅斯_6
+      - RU_1
+      - 荷蘭_1
+      - 美国_2
+      - SS-81
+      - 波蘭_4
+      - 波蘭_5
+      - RU_2
+      - 约旦 011
+      - TW_2
+      - 卢森堡 012
+      - 哈薩克
+      - 俄羅斯_7
+      - TW_3
+      - TW_4
+      - TW_5
+      - GB
+      - 波蘭_6
+      - 波蘭_7
+      - 俄羅斯_8
+      - 俄罗斯 02
+      - 越南
+      - 美國_5
+      - 波蘭_8
+      - TW_6
+      - TW_7
+      - 美國_6
+      - 美國_7
+      - 哈薩克_1
+      - 韓國
+      - 荷蘭_2
+      - VLESS-126
+      - TW_8
+      - RU_3
+      - HK_8
+      - 俄羅斯_9
+      - TW_9
+      - 俄羅斯_10
+      - DE_3
+      - TW_10
+      - TW_11
+      - TW_12
+      - TW_13
+      - TW_14
+      - TW_15
+      - 美國_8
+      - TW_16
+      - TW_17
+      - TW_18
+      - 美國_9
+      - TW_19
+      - TW_20
+      - TW_21
+      - 香港_8
+      - 台灣
+      - TW_22
+      - TW_23
+      - TW_24
+      - HK_9
+      - TW_25
+      - TW_26
+      - TW_27
+      - TW_28
+      - 荷蘭_3
+      - RU_4
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - US VLESS-09
+      - US VLESS-25
+      - DE VLESS-03
+      - DE VLESS-29
+      - VLESS-19
+      - US VLESS-11 | free-nodes
+      - US VLESS-01 | free-nodes
+      - VLESS-18
+      - RU VLESS-91
+      - SS-123
+      - SS-96
+      - HK TROJAN-06
+      - 英国 speedtest12
+      - 英国 speedtest13
+      - 美国 speedtest14
+      - 英国 speedtest15
+      - 美国 speedtest16
+      - 美国 speedtest17
+      - 英国 speedtest021
+      - 英国 speedtest022
+      - 香港+电讯盈科有限公司
+      - 广东省佛山市+电信
+      - 广东省佛山市+电信_1
+      - 🇸🇬 新加坡 | SGP
+      - 🇭🇰 香港 | HKG 27
+      - 🇫🇮 芬兰 | FIN
+      - 🇭🇰 香港 | HKG 6
+      - 🇭🇰 香港 | HKG 62
+      - 🇰🇿 哈萨克斯坦 | KAZ
+      - 🇭🇰 香港 | HKG 35
+      - 🇭🇰 香港 | HKG 7
+      - 🇺🇸 美国 | USA 6
+      - 🇺🇸 美国 | USA 9
+      - 🇸🇬 新加坡 | SGP_1
+      - 🇱🇺 卢森堡 | LUX
+      - 🇭🇰 香港 | HKG
+      - 🇭🇰 香港 | HKG_1
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇫🇮 芬兰 | FIN_1
+      - 🇭🇰 香港 | HKG_2
+      - 🇭🇰 香港 | HKG_3
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - 🇭🇰 香港 | HKG_4
+      - 🇺🇸 美国 | USA
+      - 🇹🇼 🇨🇳 台湾 | TWN_2
+      - 🇭🇰 香港 | HKG_5
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇼 🇨🇳 台湾 | TWN_3
+      - 🇭🇰 香港 | HKG_6
+      - 🇭🇰 香港 | HKG_7
+      - 🇺🇸 美国 | USA_2
+      - 🇹🇼 🇨🇳 台湾 | TWN_4
+      - 🇹🇼 🇨🇳 台湾 | TWN_5
+      - 🇭🇰 香港 | HKG_8
+      - 🇹🇼 🇨🇳 台湾 | TWN_6
+      - 🇭🇰 香港 | HKG_9
+      - 🇭🇰 香港 | HKG_10
+      - 🇭🇰 香港 | HKG_11
+      - 🇺🇸 美国 | USA_3
+      - 🇭🇰 香港 | HKG_12
+      - 🇹🇼 🇨🇳 台湾 | TWN_7
+      - 🇭🇰 香港 | HKG_13
+      - 🇹🇼 🇨🇳 台湾 | TWN_8
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇪_DE_德国
+      - 🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国_2
+      - US-speedtest234
+      - 🇩🇪_DE_德国_3
+      - 🇩🇪_DE_德国_4
+      - 🇮🇶_IQ_伊拉克
+      - 🇺🇸_US_美国_4
+      - 香港
+      - HK
+      - HK_1
+      - 香港_1
+      - HK_2
+      - 香港_2
+      - HK_3
+      - HK_4
+      - HK_5
+      - 香港_3
+      - 俄羅斯
+      - 美國
+      - US VLESS-13
+      - 美國_1
+      - 美國_2
+      - Hysteria2节点3
+      - 香港_4
+      - 美國_3
+      - DE VLESS-02
+      - 西班牙
+      - 德國
+      - DE VLESS-17
+      - 美國_4
+      - TW
+      - 美国
+      - 芬蘭
+      - 香港_5
+      - 香港_6
+      - HK_6
+      - HK_7
+      - 荷兰
+      - 香港_7
+      - 波蘭
+      - 賽普勒斯
+      - RU VLESS-26 | free-nodes
+      - " 芬兰 01"
+      - TW_1
+      - SI
+      - 俄羅斯_1
+      - JP VLESS-51 | free-nodes
+      - 俄羅斯_2
+      - NL
+      - 日本
+      - 德國_1
+      - DE
+      - DE VLESS-29 | free-nodes
+      - DE_1
+      - 美国_1
+      - 未知 VLESS-23 | free-nodes
+      - DE_2
+      - 俄羅斯_3
+      - 俄羅斯_4
+      - 波蘭_1
+      - 波蘭_2
+      - 俄羅斯_5
+      - LV
+      - 波蘭_3
+      - 荷蘭
+      - RU
+      - 德國_2
+      - 俄羅斯_6
+      - RU_1
+      - 荷蘭_1
+      - 美国_2
+      - SS-81
+      - 波蘭_4
+      - 波蘭_5
+      - RU_2
+      - 约旦 011
+      - TW_2
+      - 卢森堡 012
+      - 哈薩克
+      - 俄羅斯_7
+      - TW_3
+      - TW_4
+      - TW_5
+      - GB
+      - 波蘭_6
+      - 波蘭_7
+      - 俄羅斯_8
+      - 俄罗斯 02
+      - 越南
+      - 美國_5
+      - 波蘭_8
+      - TW_6
+      - TW_7
+      - 美國_6
+      - 美國_7
+      - 哈薩克_1
+      - 韓國
+      - 荷蘭_2
+      - VLESS-126
+      - TW_8
+      - RU_3
+      - HK_8
+      - 俄羅斯_9
+      - TW_9
+      - 俄羅斯_10
+      - DE_3
+      - TW_10
+      - TW_11
+      - TW_12
+      - TW_13
+      - TW_14
+      - TW_15
+      - 美國_8
+      - TW_16
+      - TW_17
+      - TW_18
+      - 美國_9
+      - TW_19
+      - TW_20
+      - TW_21
+      - 香港_8
+      - 台灣
+      - TW_22
+      - TW_23
+      - TW_24
+      - HK_9
+      - TW_25
+      - TW_26
+      - TW_27
+      - TW_28
+      - 荷蘭_3
+      - RU_4
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - US VLESS-09
+      - US VLESS-25
+      - DE VLESS-03
+      - DE VLESS-29
+      - VLESS-19
+      - US VLESS-11 | free-nodes
+      - US VLESS-01 | free-nodes
+      - VLESS-18
+      - RU VLESS-91
+      - SS-123
+      - SS-96
+      - HK TROJAN-06
+      - 英国 speedtest12
+      - 英国 speedtest13
+      - 美国 speedtest14
+      - 英国 speedtest15
+      - 美国 speedtest16
+      - 美国 speedtest17
+      - 英国 speedtest021
+      - 英国 speedtest022
+      - 香港+电讯盈科有限公司
+      - 广东省佛山市+电信
+      - 广东省佛山市+电信_1
+      - 🇸🇬 新加坡 | SGP
+      - 🇭🇰 香港 | HKG 27
+      - 🇫🇮 芬兰 | FIN
+      - 🇭🇰 香港 | HKG 6
+      - 🇭🇰 香港 | HKG 62
+      - 🇰🇿 哈萨克斯坦 | KAZ
+      - 🇭🇰 香港 | HKG 35
+      - 🇭🇰 香港 | HKG 7
+      - 🇺🇸 美国 | USA 6
+      - 🇺🇸 美国 | USA 9
+      - 🇸🇬 新加坡 | SGP_1
+      - 🇱🇺 卢森堡 | LUX
+      - 🇭🇰 香港 | HKG
+      - 🇭🇰 香港 | HKG_1
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇫🇮 芬兰 | FIN_1
+      - 🇭🇰 香港 | HKG_2
+      - 🇭🇰 香港 | HKG_3
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - 🇭🇰 香港 | HKG_4
+      - 🇺🇸 美国 | USA
+      - 🇹🇼 🇨🇳 台湾 | TWN_2
+      - 🇭🇰 香港 | HKG_5
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇼 🇨🇳 台湾 | TWN_3
+      - 🇭🇰 香港 | HKG_6
+      - 🇭🇰 香港 | HKG_7
+      - 🇺🇸 美国 | USA_2
+      - 🇹🇼 🇨🇳 台湾 | TWN_4
+      - 🇹🇼 🇨🇳 台湾 | TWN_5
+      - 🇭🇰 香港 | HKG_8
+      - 🇹🇼 🇨🇳 台湾 | TWN_6
+      - 🇭🇰 香港 | HKG_9
+      - 🇭🇰 香港 | HKG_10
+      - 🇭🇰 香港 | HKG_11
+      - 🇺🇸 美国 | USA_3
+      - 🇭🇰 香港 | HKG_12
+      - 🇹🇼 🇨🇳 台湾 | TWN_7
+      - 🇭🇰 香港 | HKG_13
+      - 🇹🇼 🇨🇳 台湾 | TWN_8
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇪_DE_德国
+      - 🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国_2
+      - US-speedtest234
+      - 🇩🇪_DE_德国_3
+      - 🇩🇪_DE_德国_4
+      - 🇮🇶_IQ_伊拉克
+      - 🇺🇸_US_美国_4
+      - 香港
+      - HK
+      - HK_1
+      - 香港_1
+      - HK_2
+      - 香港_2
+      - HK_3
+      - HK_4
+      - HK_5
+      - 香港_3
+      - 俄羅斯
+      - 美國
+      - US VLESS-13
+      - 美國_1
+      - 美國_2
+      - Hysteria2节点3
+      - 香港_4
+      - 美國_3
+      - DE VLESS-02
+      - 西班牙
+      - 德國
+      - DE VLESS-17
+      - 美國_4
+      - TW
+      - 美国
+      - 芬蘭
+      - 香港_5
+      - 香港_6
+      - HK_6
+      - HK_7
+      - 荷兰
+      - 香港_7
+      - 波蘭
+      - 賽普勒斯
+      - RU VLESS-26 | free-nodes
+      - " 芬兰 01"
+      - TW_1
+      - SI
+      - 俄羅斯_1
+      - JP VLESS-51 | free-nodes
+      - 俄羅斯_2
+      - NL
+      - 日本
+      - 德國_1
+      - DE
+      - DE VLESS-29 | free-nodes
+      - DE_1
+      - 美国_1
+      - 未知 VLESS-23 | free-nodes
+      - DE_2
+      - 俄羅斯_3
+      - 俄羅斯_4
+      - 波蘭_1
+      - 波蘭_2
+      - 俄羅斯_5
+      - LV
+      - 波蘭_3
+      - 荷蘭
+      - RU
+      - 德國_2
+      - 俄羅斯_6
+      - RU_1
+      - 荷蘭_1
+      - 美国_2
+      - SS-81
+      - 波蘭_4
+      - 波蘭_5
+      - RU_2
+      - 约旦 011
+      - TW_2
+      - 卢森堡 012
+      - 哈薩克
+      - 俄羅斯_7
+      - TW_3
+      - TW_4
+      - TW_5
+      - GB
+      - 波蘭_6
+      - 波蘭_7
+      - 俄羅斯_8
+      - 俄罗斯 02
+      - 越南
+      - 美國_5
+      - 波蘭_8
+      - TW_6
+      - TW_7
+      - 美國_6
+      - 美國_7
+      - 哈薩克_1
+      - 韓國
+      - 荷蘭_2
+      - VLESS-126
+      - TW_8
+      - RU_3
+      - HK_8
+      - 俄羅斯_9
+      - TW_9
+      - 俄羅斯_10
+      - DE_3
+      - TW_10
+      - TW_11
+      - TW_12
+      - TW_13
+      - TW_14
+      - TW_15
+      - 美國_8
+      - TW_16
+      - TW_17
+      - TW_18
+      - 美國_9
+      - TW_19
+      - TW_20
+      - TW_21
+      - 香港_8
+      - 台灣
+      - TW_22
+      - TW_23
+      - TW_24
+      - HK_9
+      - TW_25
+      - TW_26
+      - TW_27
+      - TW_28
+      - 荷蘭_3
+      - RU_4
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - US VLESS-09
+      - US VLESS-25
+      - DE VLESS-03
+      - DE VLESS-29
+      - VLESS-19
+      - US VLESS-11 | free-nodes
+      - US VLESS-01 | free-nodes
+      - VLESS-18
+      - RU VLESS-91
+      - SS-123
+      - SS-96
+      - HK TROJAN-06
+      - 英国 speedtest12
+      - 英国 speedtest13
+      - 美国 speedtest14
+      - 英国 speedtest15
+      - 美国 speedtest16
+      - 美国 speedtest17
+      - 英国 speedtest021
+      - 英国 speedtest022
+      - 香港+电讯盈科有限公司
+      - 广东省佛山市+电信
+      - 广东省佛山市+电信_1
+      - 🇸🇬 新加坡 | SGP
+      - 🇭🇰 香港 | HKG 27
+      - 🇫🇮 芬兰 | FIN
+      - 🇭🇰 香港 | HKG 6
+      - 🇭🇰 香港 | HKG 62
+      - 🇰🇿 哈萨克斯坦 | KAZ
+      - 🇭🇰 香港 | HKG 35
+      - 🇭🇰 香港 | HKG 7
+      - 🇺🇸 美国 | USA 6
+      - 🇺🇸 美国 | USA 9
+      - 🇸🇬 新加坡 | SGP_1
+      - 🇱🇺 卢森堡 | LUX
+      - 🇭🇰 香港 | HKG
+      - 🇭🇰 香港 | HKG_1
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇫🇮 芬兰 | FIN_1
+      - 🇭🇰 香港 | HKG_2
+      - 🇭🇰 香港 | HKG_3
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - 🇭🇰 香港 | HKG_4
+      - 🇺🇸 美国 | USA
+      - 🇹🇼 🇨🇳 台湾 | TWN_2
+      - 🇭🇰 香港 | HKG_5
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇼 🇨🇳 台湾 | TWN_3
+      - 🇭🇰 香港 | HKG_6
+      - 🇭🇰 香港 | HKG_7
+      - 🇺🇸 美国 | USA_2
+      - 🇹🇼 🇨🇳 台湾 | TWN_4
+      - 🇹🇼 🇨🇳 台湾 | TWN_5
+      - 🇭🇰 香港 | HKG_8
+      - 🇹🇼 🇨🇳 台湾 | TWN_6
+      - 🇭🇰 香港 | HKG_9
+      - 🇭🇰 香港 | HKG_10
+      - 🇭🇰 香港 | HKG_11
+      - 🇺🇸 美国 | USA_3
+      - 🇭🇰 香港 | HKG_12
+      - 🇹🇼 🇨🇳 台湾 | TWN_7
+      - 🇭🇰 香港 | HKG_13
+      - 🇹🇼 🇨🇳 台湾 | TWN_8
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇪_DE_德国
+      - 🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国_2
+      - US-speedtest234
+      - 🇩🇪_DE_德国_3
+      - 🇩🇪_DE_德国_4
+      - 🇮🇶_IQ_伊拉克
+      - 🇺🇸_US_美国_4
+      - 香港
+      - HK
+      - HK_1
+      - 香港_1
+      - HK_2
+      - 香港_2
+      - HK_3
+      - HK_4
+      - HK_5
+      - 香港_3
+      - 俄羅斯
+      - 美國
+      - US VLESS-13
+      - 美國_1
+      - 美國_2
+      - Hysteria2节点3
+      - 香港_4
+      - 美國_3
+      - DE VLESS-02
+      - 西班牙
+      - 德國
+      - DE VLESS-17
+      - 美國_4
+      - TW
+      - 美国
+      - 芬蘭
+      - 香港_5
+      - 香港_6
+      - HK_6
+      - HK_7
+      - 荷兰
+      - 香港_7
+      - 波蘭
+      - 賽普勒斯
+      - RU VLESS-26 | free-nodes
+      - " 芬兰 01"
+      - TW_1
+      - SI
+      - 俄羅斯_1
+      - JP VLESS-51 | free-nodes
+      - 俄羅斯_2
+      - NL
+      - 日本
+      - 德國_1
+      - DE
+      - DE VLESS-29 | free-nodes
+      - DE_1
+      - 美国_1
+      - 未知 VLESS-23 | free-nodes
+      - DE_2
+      - 俄羅斯_3
+      - 俄羅斯_4
+      - 波蘭_1
+      - 波蘭_2
+      - 俄羅斯_5
+      - LV
+      - 波蘭_3
+      - 荷蘭
+      - RU
+      - 德國_2
+      - 俄羅斯_6
+      - RU_1
+      - 荷蘭_1
+      - 美国_2
+      - SS-81
+      - 波蘭_4
+      - 波蘭_5
+      - RU_2
+      - 约旦 011
+      - TW_2
+      - 卢森堡 012
+      - 哈薩克
+      - 俄羅斯_7
+      - TW_3
+      - TW_4
+      - TW_5
+      - GB
+      - 波蘭_6
+      - 波蘭_7
+      - 俄羅斯_8
+      - 俄罗斯 02
+      - 越南
+      - 美國_5
+      - 波蘭_8
+      - TW_6
+      - TW_7
+      - 美國_6
+      - 美國_7
+      - 哈薩克_1
+      - 韓國
+      - 荷蘭_2
+      - VLESS-126
+      - TW_8
+      - RU_3
+      - HK_8
+      - 俄羅斯_9
+      - TW_9
+      - 俄羅斯_10
+      - DE_3
+      - TW_10
+      - TW_11
+      - TW_12
+      - TW_13
+      - TW_14
+      - TW_15
+      - 美國_8
+      - TW_16
+      - TW_17
+      - TW_18
+      - 美國_9
+      - TW_19
+      - TW_20
+      - TW_21
+      - 香港_8
+      - 台灣
+      - TW_22
+      - TW_23
+      - TW_24
+      - HK_9
+      - TW_25
+      - TW_26
+      - TW_27
+      - TW_28
+      - 荷蘭_3
+      - RU_4
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - US VLESS-09
+      - US VLESS-25
+      - DE VLESS-03
+      - DE VLESS-29
+      - VLESS-19
+      - US VLESS-11 | free-nodes
+      - US VLESS-01 | free-nodes
+      - VLESS-18
+      - RU VLESS-91
+      - SS-123
+      - SS-96
+      - HK TROJAN-06
+      - 英国 speedtest12
+      - 英国 speedtest13
+      - 美国 speedtest14
+      - 英国 speedtest15
+      - 美国 speedtest16
+      - 美国 speedtest17
+      - 英国 speedtest021
+      - 英国 speedtest022
+      - 香港+电讯盈科有限公司
+      - 广东省佛山市+电信
+      - 广东省佛山市+电信_1
+      - 🇸🇬 新加坡 | SGP
+      - 🇭🇰 香港 | HKG 27
+      - 🇫🇮 芬兰 | FIN
+      - 🇭🇰 香港 | HKG 6
+      - 🇭🇰 香港 | HKG 62
+      - 🇰🇿 哈萨克斯坦 | KAZ
+      - 🇭🇰 香港 | HKG 35
+      - 🇭🇰 香港 | HKG 7
+      - 🇺🇸 美国 | USA 6
+      - 🇺🇸 美国 | USA 9
+      - 🇸🇬 新加坡 | SGP_1
+      - 🇱🇺 卢森堡 | LUX
+      - 🇭🇰 香港 | HKG
+      - 🇭🇰 香港 | HKG_1
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇫🇮 芬兰 | FIN_1
+      - 🇭🇰 香港 | HKG_2
+      - 🇭🇰 香港 | HKG_3
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - 🇭🇰 香港 | HKG_4
+      - 🇺🇸 美国 | USA
+      - 🇹🇼 🇨🇳 台湾 | TWN_2
+      - 🇭🇰 香港 | HKG_5
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇼 🇨🇳 台湾 | TWN_3
+      - 🇭🇰 香港 | HKG_6
+      - 🇭🇰 香港 | HKG_7
+      - 🇺🇸 美国 | USA_2
+      - 🇹🇼 🇨🇳 台湾 | TWN_4
+      - 🇹🇼 🇨🇳 台湾 | TWN_5
+      - 🇭🇰 香港 | HKG_8
+      - 🇹🇼 🇨🇳 台湾 | TWN_6
+      - 🇭🇰 香港 | HKG_9
+      - 🇭🇰 香港 | HKG_10
+      - 🇭🇰 香港 | HKG_11
+      - 🇺🇸 美国 | USA_3
+      - 🇭🇰 香港 | HKG_12
+      - 🇹🇼 🇨🇳 台湾 | TWN_7
+      - 🇭🇰 香港 | HKG_13
+      - 🇹🇼 🇨🇳 台湾 | TWN_8
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇪_DE_德国
+      - 🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国_2
+      - US-speedtest234
+      - 🇩🇪_DE_德国_3
+      - 🇩🇪_DE_德国_4
+      - 🇮🇶_IQ_伊拉克
+      - 🇺🇸_US_美国_4
+      - 香港
+      - HK
+      - HK_1
+      - 香港_1
+      - HK_2
+      - 香港_2
+      - HK_3
+      - HK_4
+      - HK_5
+      - 香港_3
+      - 俄羅斯
+      - 美國
+      - US VLESS-13
+      - 美國_1
+      - 美國_2
+      - Hysteria2节点3
+      - 香港_4
+      - 美國_3
+      - DE VLESS-02
+      - 西班牙
+      - 德國
+      - DE VLESS-17
+      - 美國_4
+      - TW
+      - 美国
+      - 芬蘭
+      - 香港_5
+      - 香港_6
+      - HK_6
+      - HK_7
+      - 荷兰
+      - 香港_7
+      - 波蘭
+      - 賽普勒斯
+      - RU VLESS-26 | free-nodes
+      - " 芬兰 01"
+      - TW_1
+      - SI
+      - 俄羅斯_1
+      - JP VLESS-51 | free-nodes
+      - 俄羅斯_2
+      - NL
+      - 日本
+      - 德國_1
+      - DE
+      - DE VLESS-29 | free-nodes
+      - DE_1
+      - 美国_1
+      - 未知 VLESS-23 | free-nodes
+      - DE_2
+      - 俄羅斯_3
+      - 俄羅斯_4
+      - 波蘭_1
+      - 波蘭_2
+      - 俄羅斯_5
+      - LV
+      - 波蘭_3
+      - 荷蘭
+      - RU
+      - 德國_2
+      - 俄羅斯_6
+      - RU_1
+      - 荷蘭_1
+      - 美国_2
+      - SS-81
+      - 波蘭_4
+      - 波蘭_5
+      - RU_2
+      - 约旦 011
+      - TW_2
+      - 卢森堡 012
+      - 哈薩克
+      - 俄羅斯_7
+      - TW_3
+      - TW_4
+      - TW_5
+      - GB
+      - 波蘭_6
+      - 波蘭_7
+      - 俄羅斯_8
+      - 俄罗斯 02
+      - 越南
+      - 美國_5
+      - 波蘭_8
+      - TW_6
+      - TW_7
+      - 美國_6
+      - 美國_7
+      - 哈薩克_1
+      - 韓國
+      - 荷蘭_2
+      - VLESS-126
+      - TW_8
+      - RU_3
+      - HK_8
+      - 俄羅斯_9
+      - TW_9
+      - 俄羅斯_10
+      - DE_3
+      - TW_10
+      - TW_11
+      - TW_12
+      - TW_13
+      - TW_14
+      - TW_15
+      - 美國_8
+      - TW_16
+      - TW_17
+      - TW_18
+      - 美國_9
+      - TW_19
+      - TW_20
+      - TW_21
+      - 香港_8
+      - 台灣
+      - TW_22
+      - TW_23
+      - TW_24
+      - HK_9
+      - TW_25
+      - TW_26
+      - TW_27
+      - TW_28
+      - 荷蘭_3
+      - RU_4
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - US VLESS-09
+      - US VLESS-25
+      - DE VLESS-03
+      - DE VLESS-29
+      - VLESS-19
+      - US VLESS-11 | free-nodes
+      - US VLESS-01 | free-nodes
+      - VLESS-18
+      - RU VLESS-91
+      - SS-123
+      - SS-96
+      - HK TROJAN-06
+      - 英国 speedtest12
+      - 英国 speedtest13
+      - 美国 speedtest14
+      - 英国 speedtest15
+      - 美国 speedtest16
+      - 美国 speedtest17
+      - 英国 speedtest021
+      - 英国 speedtest022
+      - 香港+电讯盈科有限公司
+      - 广东省佛山市+电信
+      - 广东省佛山市+电信_1
+      - 🇸🇬 新加坡 | SGP
+      - 🇭🇰 香港 | HKG 27
+      - 🇫🇮 芬兰 | FIN
+      - 🇭🇰 香港 | HKG 6
+      - 🇭🇰 香港 | HKG 62
+      - 🇰🇿 哈萨克斯坦 | KAZ
+      - 🇭🇰 香港 | HKG 35
+      - 🇭🇰 香港 | HKG 7
+      - 🇺🇸 美国 | USA 6
+      - 🇺🇸 美国 | USA 9
+      - 🇸🇬 新加坡 | SGP_1
+      - 🇱🇺 卢森堡 | LUX
+      - 🇭🇰 香港 | HKG
+      - 🇭🇰 香港 | HKG_1
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇫🇮 芬兰 | FIN_1
+      - 🇭🇰 香港 | HKG_2
+      - 🇭🇰 香港 | HKG_3
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - 🇭🇰 香港 | HKG_4
+      - 🇺🇸 美国 | USA
+      - 🇹🇼 🇨🇳 台湾 | TWN_2
+      - 🇭🇰 香港 | HKG_5
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇼 🇨🇳 台湾 | TWN_3
+      - 🇭🇰 香港 | HKG_6
+      - 🇭🇰 香港 | HKG_7
+      - 🇺🇸 美国 | USA_2
+      - 🇹🇼 🇨🇳 台湾 | TWN_4
+      - 🇹🇼 🇨🇳 台湾 | TWN_5
+      - 🇭🇰 香港 | HKG_8
+      - 🇹🇼 🇨🇳 台湾 | TWN_6
+      - 🇭🇰 香港 | HKG_9
+      - 🇭🇰 香港 | HKG_10
+      - 🇭🇰 香港 | HKG_11
+      - 🇺🇸 美国 | USA_3
+      - 🇭🇰 香港 | HKG_12
+      - 🇹🇼 🇨🇳 台湾 | TWN_7
+      - 🇭🇰 香港 | HKG_13
+      - 🇹🇼 🇨🇳 台湾 | TWN_8
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇪_DE_德国
+      - 🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国_2
+      - US-speedtest234
+      - 🇩🇪_DE_德国_3
+      - 🇩🇪_DE_德国_4
+      - 🇮🇶_IQ_伊拉克
+      - 🇺🇸_US_美国_4
+      - 香港
+      - HK
+      - HK_1
+      - 香港_1
+      - HK_2
+      - 香港_2
+      - HK_3
+      - HK_4
+      - HK_5
+      - 香港_3
+      - 俄羅斯
+      - 美國
+      - US VLESS-13
+      - 美國_1
+      - 美國_2
+      - Hysteria2节点3
+      - 香港_4
+      - 美國_3
+      - DE VLESS-02
+      - 西班牙
+      - 德國
+      - DE VLESS-17
+      - 美國_4
+      - TW
+      - 美国
+      - 芬蘭
+      - 香港_5
+      - 香港_6
+      - HK_6
+      - HK_7
+      - 荷兰
+      - 香港_7
+      - 波蘭
+      - 賽普勒斯
+      - RU VLESS-26 | free-nodes
+      - " 芬兰 01"
+      - TW_1
+      - SI
+      - 俄羅斯_1
+      - JP VLESS-51 | free-nodes
+      - 俄羅斯_2
+      - NL
+      - 日本
+      - 德國_1
+      - DE
+      - DE VLESS-29 | free-nodes
+      - DE_1
+      - 美国_1
+      - 未知 VLESS-23 | free-nodes
+      - DE_2
+      - 俄羅斯_3
+      - 俄羅斯_4
+      - 波蘭_1
+      - 波蘭_2
+      - 俄羅斯_5
+      - LV
+      - 波蘭_3
+      - 荷蘭
+      - RU
+      - 德國_2
+      - 俄羅斯_6
+      - RU_1
+      - 荷蘭_1
+      - 美国_2
+      - SS-81
+      - 波蘭_4
+      - 波蘭_5
+      - RU_2
+      - 约旦 011
+      - TW_2
+      - 卢森堡 012
+      - 哈薩克
+      - 俄羅斯_7
+      - TW_3
+      - TW_4
+      - TW_5
+      - GB
+      - 波蘭_6
+      - 波蘭_7
+      - 俄羅斯_8
+      - 俄罗斯 02
+      - 越南
+      - 美國_5
+      - 波蘭_8
+      - TW_6
+      - TW_7
+      - 美國_6
+      - 美國_7
+      - 哈薩克_1
+      - 韓國
+      - 荷蘭_2
+      - VLESS-126
+      - TW_8
+      - RU_3
+      - HK_8
+      - 俄羅斯_9
+      - TW_9
+      - 俄羅斯_10
+      - DE_3
+      - TW_10
+      - TW_11
+      - TW_12
+      - TW_13
+      - TW_14
+      - TW_15
+      - 美國_8
+      - TW_16
+      - TW_17
+      - TW_18
+      - 美國_9
+      - TW_19
+      - TW_20
+      - TW_21
+      - 香港_8
+      - 台灣
+      - TW_22
+      - TW_23
+      - TW_24
+      - HK_9
+      - TW_25
+      - TW_26
+      - TW_27
+      - TW_28
+      - 荷蘭_3
+      - RU_4
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - US VLESS-09
+      - US VLESS-25
+      - DE VLESS-03
+      - DE VLESS-29
+      - VLESS-19
+      - US VLESS-11 | free-nodes
+      - US VLESS-01 | free-nodes
+      - VLESS-18
+      - RU VLESS-91
+      - SS-123
+      - SS-96
+      - HK TROJAN-06
+      - 英国 speedtest12
+      - 英国 speedtest13
+      - 美国 speedtest14
+      - 英国 speedtest15
+      - 美国 speedtest16
+      - 美国 speedtest17
+      - 英国 speedtest021
+      - 英国 speedtest022
+      - 香港+电讯盈科有限公司
+      - 广东省佛山市+电信
+      - 广东省佛山市+电信_1
+      - 🇸🇬 新加坡 | SGP
+      - 🇭🇰 香港 | HKG 27
+      - 🇫🇮 芬兰 | FIN
+      - 🇭🇰 香港 | HKG 6
+      - 🇭🇰 香港 | HKG 62
+      - 🇰🇿 哈萨克斯坦 | KAZ
+      - 🇭🇰 香港 | HKG 35
+      - 🇭🇰 香港 | HKG 7
+      - 🇺🇸 美国 | USA 6
+      - 🇺🇸 美国 | USA 9
+      - 🇸🇬 新加坡 | SGP_1
+      - 🇱🇺 卢森堡 | LUX
+      - 🇭🇰 香港 | HKG
+      - 🇭🇰 香港 | HKG_1
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇫🇮 芬兰 | FIN_1
+      - 🇭🇰 香港 | HKG_2
+      - 🇭🇰 香港 | HKG_3
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - 🇭🇰 香港 | HKG_4
+      - 🇺🇸 美国 | USA
+      - 🇹🇼 🇨🇳 台湾 | TWN_2
+      - 🇭🇰 香港 | HKG_5
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇼 🇨🇳 台湾 | TWN_3
+      - 🇭🇰 香港 | HKG_6
+      - 🇭🇰 香港 | HKG_7
+      - 🇺🇸 美国 | USA_2
+      - 🇹🇼 🇨🇳 台湾 | TWN_4
+      - 🇹🇼 🇨🇳 台湾 | TWN_5
+      - 🇭🇰 香港 | HKG_8
+      - 🇹🇼 🇨🇳 台湾 | TWN_6
+      - 🇭🇰 香港 | HKG_9
+      - 🇭🇰 香港 | HKG_10
+      - 🇭🇰 香港 | HKG_11
+      - 🇺🇸 美国 | USA_3
+      - 🇭🇰 香港 | HKG_12
+      - 🇹🇼 🇨🇳 台湾 | TWN_7
+      - 🇭🇰 香港 | HKG_13
+      - 🇹🇼 🇨🇳 台湾 | TWN_8
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇪_DE_德国
+      - 🇩🇪_DE_德国_1
+      - 🇩🇪_DE_德国_2
+      - US-speedtest234
+      - 🇩🇪_DE_德国_3
+      - 🇩🇪_DE_德国_4
+      - 🇮🇶_IQ_伊拉克
+      - 🇺🇸_US_美国_4
+      - 香港
+      - HK
+      - HK_1
+      - 香港_1
+      - HK_2
+      - 香港_2
+      - HK_3
+      - HK_4
+      - HK_5
+      - 香港_3
+      - 俄羅斯
+      - 美國
+      - US VLESS-13
+      - 美國_1
+      - 美國_2
+      - Hysteria2节点3
+      - 香港_4
+      - 美國_3
+      - DE VLESS-02
+      - 西班牙
+      - 德國
+      - DE VLESS-17
+      - 美國_4
+      - TW
+      - 美国
+      - 芬蘭
+      - 香港_5
+      - 香港_6
+      - HK_6
+      - HK_7
+      - 荷兰
+      - 香港_7
+      - 波蘭
+      - 賽普勒斯
+      - RU VLESS-26 | free-nodes
+      - " 芬兰 01"
+      - TW_1
+      - SI
+      - 俄羅斯_1
+      - JP VLESS-51 | free-nodes
+      - 俄羅斯_2
+      - NL
+      - 日本
+      - 德國_1
+      - DE
+      - DE VLESS-29 | free-nodes
+      - DE_1
+      - 美国_1
+      - 未知 VLESS-23 | free-nodes
+      - DE_2
+      - 俄羅斯_3
+      - 俄羅斯_4
+      - 波蘭_1
+      - 波蘭_2
+      - 俄羅斯_5
+      - LV
+      - 波蘭_3
+      - 荷蘭
+      - RU
+      - 德國_2
+      - 俄羅斯_6
+      - RU_1
+      - 荷蘭_1
+      - 美国_2
+      - SS-81
+      - 波蘭_4
+      - 波蘭_5
+      - RU_2
+      - 约旦 011
+      - TW_2
+      - 卢森堡 012
+      - 哈薩克
+      - 俄羅斯_7
+      - TW_3
+      - TW_4
+      - TW_5
+      - GB
+      - 波蘭_6
+      - 波蘭_7
+      - 俄羅斯_8
+      - 俄罗斯 02
+      - 越南
+      - 美國_5
+      - 波蘭_8
+      - TW_6
+      - TW_7
+      - 美國_6
+      - 美國_7
+      - 哈薩克_1
+      - 韓國
+      - 荷蘭_2
+      - VLESS-126
+      - TW_8
+      - RU_3
+      - HK_8
+      - 俄羅斯_9
+      - TW_9
+      - 俄羅斯_10
+      - DE_3
+      - TW_10
+      - TW_11
+      - TW_12
+      - TW_13
+      - TW_14
+      - TW_15
+      - 美國_8
+      - TW_16
+      - TW_17
+      - TW_18
+      - 美國_9
+      - TW_19
+      - TW_20
+      - TW_21
+      - 香港_8
+      - 台灣
+      - TW_22
+      - TW_23
+      - TW_24
+      - HK_9
+      - TW_25
+      - TW_26
+      - TW_27
+      - TW_28
+      - 荷蘭_3
+      - RU_4
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
