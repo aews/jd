@@ -1,0 +1,1944 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+proxies:
+  - name: 00-Trojan-jp-AI
+    type: trojan
+    server: jp.111000.cc.cd
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 03-Trojan-cloudflare88
+    type: trojan
+    server: freeyx.cloudflare88.eu.org
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 02-Trojan-saas.sin.fan
+    type: trojan
+    server: saas.sin.fan
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 00-WS-jp-AI
+    type: vless
+    server: jp.111000.cc.cd
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 02-WS-saas.sin.fan
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 03-WS-cloudflare88
+    type: vless
+    server: freeyx.cloudflare88.eu.org
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 🇩🇪 德国 | DEU
+    type: vless
+    server: go.inmobi.com
+    port: 8443
+    uuid: 0905460d-6edc-4a82-8ec8-6b76090b41c8
+    network: ws
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: nginx-f.pages.dev
+    udp: true
+  - name: 🇺🇸 美国 | USA 5
+    type: hysteria2
+    server: usa-hy2.onetaplink.app
+    port: 443
+    password: 48b36b6a-eaa6-4843-9231-0bb8b38b5da5
+    sni: hy2-usa.onetaplink.app
+    skip-cert-verify: false
+    obfs: salamander
+    obfs-password: OrT7yQQIMqcvKdet
+    udp: true
+  - name: 德国
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 香港216
+    type: vmess
+    server: 103.181.164.145
+    port: 51556
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国217
+    type: vmess
+    server: 103.181.164.145
+    port: 51556
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇸🇬SG_1|258KB/s
+    type: hysteria2
+    server: sg-hy2.onetaplink.app
+    port: 443
+    password: 48b36b6a-eaa6-4843-9231-0bb8b38b5da5
+    sni: hy2-sg.onetaplink.app
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: OrT7yQQIMqcvKdet
+    udp: true
+  - name: 01-WS-030101.xyz
+    type: vless
+    server: bestcf.030101.xyz
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 🇭🇰HK_1|261KB/s
+    type: vless
+    server: 216.57.105.74
+    port: 443
+    uuid: 73c0a723-c0ab-4ad8-8f25-799b9bd54e36
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: A1OvYDljz8ZJr7_1xe4j2H1AHsMuYEKifyjdWhdybzk
+      short-id: "11e2"
+    udp: true
+  - name: 🇨🇿CZ_1|258KB/s
+    type: vless
+    server: 86.54.82.239
+    port: 443
+    uuid: 43488128-319e-f480-64ea-0acdc712e2a8
+    servername: store.steampowered.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: xzCEjrybgdtiyOYNKgEAEWzHjvsE2Pkj198_Ch1gZ2U
+      short-id: 41427aa565e28984
+    udp: true
+  - name: 01-Trojan2
+    type: trojan
+    server: bestcf.030101.xyz
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 美国236
+    type: vless
+    server: 64.186.242.84
+    port: 8443
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 美国032
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国033
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国034
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国035
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国036
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国037
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国038
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国039
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国041
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国042
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国043
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国044
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国045
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国236_1
+    type: vless
+    server: 199.119.137.109
+    port: 2053
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 美国236_2
+    type: vless
+    server: 199.119.137.77
+    port: 2053
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 美国236_3
+    type: vless
+    server: 199.119.137.41
+    port: 2053
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 俄罗斯236
+    type: ss
+    server: 185.39.204.196
+    port: 7918
+    cipher: aes-256-gcm
+    password: HGlzsKUqaTiC0PSLHn6jT83OZvGiLnpI
+    udp: true
+  - name: 美国236_4
+    type: vless
+    server: 69.164.245.25
+    port: 443
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 美国236_5
+    type: vless
+    server: 199.119.137.78
+    port: 2053
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 美国236_6
+    type: vless
+    server: 69.143.174.201
+    port: 8443
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 香港046
+    type: vmess
+    server: 38.22.93.20
+    port: 55165
+    uuid: 8108a7dc-6162-4366-d492-23dcd3553e38
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 香港047
+    type: vmess
+    server: 38.22.93.20
+    port: 15079
+    uuid: 66e12acd-4f93-4e35-e229-5f93e2f379e1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国236_7
+    type: vless
+    server: 34.136.119.149
+    port: 443
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: FR TROJAN-52 | free-nodes
+    type: trojan
+    server: 104.21.40.34
+    port: 443
+    password: humanity
+    sni: www.gossipglove.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.gossipglove.com
+    udp: true
+  - name: DE VLESS-80 | free-nodes
+    type: vless
+    server: 2.27.20.17
+    port: 443
+    uuid: 610b4374-6c1b-43e6-ba7f-a89aba596db6
+    network: grpc
+    servername: vpn.xorealis.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: N9YEtcvbXxG2GD8cLMlQT35HnX8cmvYPasnqtcBW_XY
+      short-id: 131df166be01a436
+    udp: true
+  - name: DE VLESS-105 | free-nodes
+    type: vless
+    server: gr-1.illusion-proxy.ru
+    port: 443
+    uuid: bf263367-bb63-4663-b4a1-34946107a72e
+    servername: gr-1.illusion-proxy.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: I-ltGSV73Fd08VfuP_XZ-mAAb2ZE3Ag4a_8ftaX0bz0
+      short-id: fe28038a
+    udp: true
+  - name: VLESS-88 | free-nodes
+    type: vless
+    server: 193.34.212.80.vhub.pro
+    port: 443
+    uuid: 7c1d17f5-4f43-4f78-9505-d50c38efc40b
+    network: grpc
+    servername: 193.34.212.80.vhub.pro
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: /sequre/grpc/
+    udp: true
+  - name: FR TROJAN-58 | free-nodes
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.calmloud.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.calmloud.com
+    udp: true
+  - name: 英国 12
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国  123
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 124
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 21
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: CH_6a69f_0017
+    type: vless
+    server: 5.182.36.56
+    port: 45886
+    uuid: 8338171d-2ea7-4015-bdea-492f3d5d4e60
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: zJeLZDPHoHMcAzBJh38tSavofNlkBrpADFx9jVVPil0
+      short-id: 94f9
+    udp: true
+  - name: US_6a69f_0105
+    type: vless
+    server: 216.57.105.74
+    port: 443
+    uuid: 73c0a723-c0ab-4ad8-8f25-799b9bd54e36
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: A1OvYDljz8ZJr7_1xe4j2H1AHsMuYEKifyjdWhdybzk
+      short-id: "11e2"
+    udp: true
+  - name: DE_6a69f_0035
+    type: vless
+    server: pl2-gws4.onnstreaming.ru
+    port: 443
+    uuid: 19ef3d02-1c55-4fec-9794-6def8cbac396
+    servername: pl2-gws4.onnstreaming.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: fN3l3mYSDO44IWNPHWOQo2JMUw2isUGoOqrS6hCFfBQ
+      short-id: d1f93724859d75ac
+    udp: true
+  - name: SC_6a69f_0091
+    type: vless
+    server: 195.66.27.165
+    port: 7443
+    uuid: caa3af29-3b04-4099-9772-c64a1b7cca34
+    servername: chat.deepseek.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
+      short-id: be0ce047
+    udp: true
+  - name: US_6a69f_0124
+    type: vless
+    server: 150.241.103.74
+    port: 443
+    uuid: 19ef3d02-1c55-4fec-9794-6def8cbac396
+    servername: st-2.globalcache.onnstreaming.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: NOhuaiHfc8Tv7VrFKnNgr-VN594kxtUCslNEBhySvXQ
+      short-id: aa69f619e4414362
+    udp: true
+  - name: GB_6a69f_0064
+    type: vless
+    server: 86.54.82.239
+    port: 443
+    uuid: 43488128-319e-f480-64ea-0acdc712e2a8
+    servername: store.steampowered.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: xzCEjrybgdtiyOYNKgEAEWzHjvsE2Pkj198_Ch1gZ2U
+      short-id: 41427aa565e28984
+    udp: true
+  - name: 🇸🇬 新加坡 | SGP 7
+    type: vless
+    server: cf.cloudflare.182682.xyz
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: a50u951.stream.chinav.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: a50u951.stream.chinav.indevs.in
+    udp: true
+  - name: 🇸🇬 新加坡 | SGP 15
+    type: vless
+    server: www.sofi.com
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: a50u951.stream.chinav.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: a50u951.stream.chinav.indevs.in
+    udp: true
+  - name: 🇸🇬 新加坡 | SGP 16
+    type: vless
+    server: 20.6.12.145
+    port: 443
+    uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
+    network: ws
+    servername: sni.skylee4.cloudns.ch
+    tls: true
+    ws-opts:
+      path: /proxyip=ProxyIP.CMLiussss.net
+      headers:
+        Host: sni.skylee4.cloudns.ch
+    udp: true
+  - name: 🇺🇸 美国 | USA
+    type: anytls
+    server: 8e711df0-te9j40-tiv91g-1l0qa.se.hyhuawei.com
+    port: 443
+    password: 0720c874-35e8-11ef-aa88-f23c913c8d2b
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇺🇸 美国 | USA 10
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国 | USA 11
+    type: anytls
+    server: e293ed18-te9j40-tfpmu9-1m0fq.se.hyhuawei.com
+    port: 443
+    password: a698c4a6-c3c9-11ee-9693-f23c91cfbbc9
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇫🇷 法国 | FRA 2
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41283
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA 2
+    type: hysteria2
+    server: vpn-us-003.fastervpn.world
+    port: 443
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    sni: vpn-us-003.fastervpn.world
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD
+    type: vless
+    server: 216.57.105.74
+    port: 443
+    uuid: 73c0a723-c0ab-4ad8-8f25-799b9bd54e36
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: A1OvYDljz8ZJr7_1xe4j2H1AHsMuYEKifyjdWhdybzk
+      short-id: "11e2"
+    udp: true
+  - name: 🇵🇱 波兰 | POL
+    type: vless
+    server: 144.31.5.23
+    port: 9443
+    uuid: 4649d681-7f26-4959-a3f2-02eb8866230f
+    servername: yahoo.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg
+      short-id: 2344766a270a6298
+    udp: true
+  - name: 🇺🇸 美国 | USA 3
+    type: vless
+    server: 69.143.174.201
+    port: 8443
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram+@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 🇲🇩 摩尔多瓦 | MDA
+    type: vless
+    server: 94.131.8.19
+    port: 45448
+    uuid: 96fcf8cc-535d-46c4-b8f9-76058df48e3b
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: MmEVCRy11fz67vYJQWyA2a_ZPMBzv2le2cus1XSSI0E
+      short-id: 958639bf55e679
+    udp: true
+  - name: 🇬🇧 英国 | GBR 2
+    type: vless
+    server: ip.sb
+    port: 443
+    uuid: 6f4e029b-099f-45f6-afd2-33f0e8f86f15
+    network: ws
+    servername: gbwarp.owg.dpdns.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /vless-argo?ed=2560
+      headers:
+        Host: gbwarp.owg.dpdns.org
+    udp: true
+  - name: 🇩🇪 德国 | DEU 3
+    type: vless
+    server: xn-dns.onlineblog.ir
+    port: 2083
+    uuid: b24484be-a335-472c-8dff-060ccd2b8f3b
+    network: ws
+    servername: xn-de.shakhle.ir.
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: xn-de.shakhle.ir.
+    udp: true
+  - name: 🇺🇸 美国 | USA_1
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇨🇭 瑞士 | CHE
+    type: vless
+    server: 138.124.9.190
+    port: 16558
+    uuid: 11348c0f-b646-446a-bad7-b2b39c6de767
+    servername: gpuopen.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: vDKgmefC_2JaSrrvQSsb7DU3KBeKUlXG1V0vgdjv_i4
+      short-id: 0a856e071790b1
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD_1
+    type: vless
+    server: 195.66.27.165
+    port: 7443
+    uuid: caa3af29-3b04-4099-9772-c64a1b7cca34
+    servername: chat.deepseek.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
+      short-id: be0ce047
+    udp: true
+  - name: 🇯🇵 日本 | JPN
+    type: ss
+    server: 185.141.219.46
+    port: 30312
+    cipher: aes-256-gcm
+    password: 99394cfebe6c0906
+    udp: true
+  - name: 🇰🇷_KR_韩国
+    type: vless
+    server: 220.77.18.195
+    port: 36814
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: snzeys.edge-node-a1.fgfw.qzz.io
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng
+      headers:
+        Host: snzeys.edge-node-a1.fgfw.qzz.io
+    udp: true
+  - name: 🇺🇸_US_美国
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇵🇱_PL_波兰
+    type: vless
+    server: 193.34.212.80.vhub.pro
+    port: 443
+    uuid: 7c1d17f5-4f43-4f78-9505-d50c38efc40b
+    network: grpc
+    servername: 193.34.212.80.vhub.pro
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: /sequre/grpc/
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+    type: vmess
+    server: 103.181.164.145
+    port: 54022
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 00-Trojan-jp-AI_1
+    type: trojan
+    server: jp.111000.cc.cd
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 🇺🇸 美国US 215
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸US_23|1.9MB/s
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸US_1|5.8MB/s
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 224
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 209
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 210
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸_US_美国1
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国 1836
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇭🇰 香港 1235
+    type: vmess
+    server: 38.22.93.20
+    port: 15079
+    uuid: 66e12acd-4f93-4e35-e229-5f93e2f379e1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇭🇰 香港 1234
+    type: vmess
+    server: 38.22.93.20
+    port: 55165
+    uuid: 8108a7dc-6162-4366-d492-23dcd3553e38
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇩🇪DE_6|1.6MB/s
+    type: trojan
+    server: 104.20.5.134
+    port: 443
+    password: mSzFVhUczD
+    sni: abest.api-tel.xyz
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /
+    udp: true
+  - name: 🇩🇪 德国 1198
+    type: vmess
+    server: 77.90.11.178
+    port: 17662
+    uuid: eafa523f-3472-4efc-f1c5-6ce25b3910a9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇩🇪 DE 410 | ⬇️ 1MB/s
+    type: vless
+    server: 159.195.82.187
+    port: 9443
+    uuid: 4649d681-7f26-4959-a3f2-02eb8866230f
+    servername: yahoo.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg
+      short-id: 2344766a270a6298
+    udp: true
+  - name: DE VLESS-103 | free-nodes
+    type: vless
+    server: finl9.keepsecured.net
+    port: 443
+    uuid: b6ce8a51-19b9-4979-91ba-b4298c26d5fc
+    servername: finl9.keepsecured.net
+    tls: true
+    client-fingerprint: chrome
+    udp: true
+  - name: 🇭🇰HK_1|261KB/s_1
+    type: vless
+    server: 216.57.105.74
+    port: 443
+    uuid: 73c0a723-c0ab-4ad8-8f25-799b9bd54e36
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: A1OvYDljz8ZJr7_1xe4j2H1AHsMuYEKifyjdWhdybzk
+      short-id: "11e2"
+    udp: true
+  - name: 🇹🇼 TW 020 | ⬇️ 12MB/s
+    type: vless
+    server: 125.227.219.98
+    port: 6235
+    uuid: f6ddddaf-dfd6-4134-9dae-03b93b03d146
+    network: ws
+    servername: baidu.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /xxxxhttp
+      headers:
+        Host: baidu.com
+    udp: true
+  - name: VLESS-94 | free-nodes
+    type: vless
+    server: 193.34.212.80
+    port: 443
+    uuid: 7c1d17f5-4f43-4f78-9505-d50c38efc40b
+    network: grpc
+    servername: 193.34.212.80.vhub.pro
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: /sequre/grpc/
+    udp: true
+  - name: 🇩🇪 德国DE 1012
+    type: vless
+    server: 104.18.12.149
+    port: 80
+    uuid: fc53bae5-92f5-4572-9ce8-9e56901479f1
+    network: ws
+    tls: false
+    ws-opts:
+      path: /amo-mohammad
+      headers:
+        Host: 尼亞團員1尼亞團員2尼亞團員3尼亞團亞團員尼亞團尼亞團亞團員亞團員員亞3亞團員亞團員.尼亞團員1尼亞團員2尼亞團員3尼亞團亞團員尼亞團尼亞團亞團員亞團員員亞團亞團員亞團員.com.
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 00-Trojan-jp-AI
+      - 03-Trojan-cloudflare88
+      - 02-Trojan-saas.sin.fan
+      - 00-WS-jp-AI
+      - 02-WS-saas.sin.fan
+      - 03-WS-cloudflare88
+      - 🇩🇪 德国 | DEU
+      - 🇺🇸 美国 | USA 5
+      - 德国
+      - 香港216
+      - 美国217
+      - 🇸🇬SG_1|258KB/s
+      - 01-WS-030101.xyz
+      - 🇭🇰HK_1|261KB/s
+      - 🇨🇿CZ_1|258KB/s
+      - 01-Trojan2
+      - 美国236
+      - 美国032
+      - 英国033
+      - 英国034
+      - 美国035
+      - 德国036
+      - 德国037
+      - 英国038
+      - 德国039
+      - 英国041
+      - 德国042
+      - 美国043
+      - 美国044
+      - 德国045
+      - 美国236_1
+      - 美国236_2
+      - 美国236_3
+      - 俄罗斯236
+      - 美国236_4
+      - 美国236_5
+      - 美国236_6
+      - 香港046
+      - 香港047
+      - 美国236_7
+      - FR TROJAN-52 | free-nodes
+      - DE VLESS-80 | free-nodes
+      - DE VLESS-105 | free-nodes
+      - VLESS-88 | free-nodes
+      - FR TROJAN-58 | free-nodes
+      - 英国 12
+      - 英国  123
+      - 英国 124
+      - 英国 21
+      - CH_6a69f_0017
+      - US_6a69f_0105
+      - DE_6a69f_0035
+      - SC_6a69f_0091
+      - US_6a69f_0124
+      - GB_6a69f_0064
+      - 🇸🇬 新加坡 | SGP 7
+      - 🇸🇬 新加坡 | SGP 15
+      - 🇸🇬 新加坡 | SGP 16
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 10
+      - 🇺🇸 美国 | USA 11
+      - 🇫🇷 法国 | FRA 2
+      - 🇺🇸 美国 | USA 2
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇺🇸 美国 | USA 3
+      - 🇲🇩 摩尔多瓦 | MDA
+      - 🇬🇧 英国 | GBR 2
+      - 🇩🇪 德国 | DEU 3
+      - 🇺🇸 美国 | USA_1
+      - 🇨🇭 瑞士 | CHE
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇯🇵 日本 | JPN
+      - 🇰🇷_KR_韩国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 00-Trojan-jp-AI_1
+      - 🇺🇸 美国US 215
+      - 🇺🇸US_23|1.9MB/s
+      - 🇺🇸US_1|5.8MB/s
+      - 🇺🇸 美国US 224
+      - 🇺🇸 美国US 209
+      - 🇺🇸 美国US 210
+      - 🇺🇸_US_美国1
+      - 🇺🇸 美国 1836
+      - 🇭🇰 香港 1235
+      - 🇭🇰 香港 1234
+      - 🇩🇪DE_6|1.6MB/s
+      - 🇩🇪 德国 1198
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - DE VLESS-103 | free-nodes
+      - 🇭🇰HK_1|261KB/s_1
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - VLESS-94 | free-nodes
+      - 🇩🇪 德国DE 1012
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 00-Trojan-jp-AI
+      - 03-Trojan-cloudflare88
+      - 02-Trojan-saas.sin.fan
+      - 00-WS-jp-AI
+      - 02-WS-saas.sin.fan
+      - 03-WS-cloudflare88
+      - 🇩🇪 德国 | DEU
+      - 🇺🇸 美国 | USA 5
+      - 德国
+      - 香港216
+      - 美国217
+      - 🇸🇬SG_1|258KB/s
+      - 01-WS-030101.xyz
+      - 🇭🇰HK_1|261KB/s
+      - 🇨🇿CZ_1|258KB/s
+      - 01-Trojan2
+      - 美国236
+      - 美国032
+      - 英国033
+      - 英国034
+      - 美国035
+      - 德国036
+      - 德国037
+      - 英国038
+      - 德国039
+      - 英国041
+      - 德国042
+      - 美国043
+      - 美国044
+      - 德国045
+      - 美国236_1
+      - 美国236_2
+      - 美国236_3
+      - 俄罗斯236
+      - 美国236_4
+      - 美国236_5
+      - 美国236_6
+      - 香港046
+      - 香港047
+      - 美国236_7
+      - FR TROJAN-52 | free-nodes
+      - DE VLESS-80 | free-nodes
+      - DE VLESS-105 | free-nodes
+      - VLESS-88 | free-nodes
+      - FR TROJAN-58 | free-nodes
+      - 英国 12
+      - 英国  123
+      - 英国 124
+      - 英国 21
+      - CH_6a69f_0017
+      - US_6a69f_0105
+      - DE_6a69f_0035
+      - SC_6a69f_0091
+      - US_6a69f_0124
+      - GB_6a69f_0064
+      - 🇸🇬 新加坡 | SGP 7
+      - 🇸🇬 新加坡 | SGP 15
+      - 🇸🇬 新加坡 | SGP 16
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 10
+      - 🇺🇸 美国 | USA 11
+      - 🇫🇷 法国 | FRA 2
+      - 🇺🇸 美国 | USA 2
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇺🇸 美国 | USA 3
+      - 🇲🇩 摩尔多瓦 | MDA
+      - 🇬🇧 英国 | GBR 2
+      - 🇩🇪 德国 | DEU 3
+      - 🇺🇸 美国 | USA_1
+      - 🇨🇭 瑞士 | CHE
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇯🇵 日本 | JPN
+      - 🇰🇷_KR_韩国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 00-Trojan-jp-AI_1
+      - 🇺🇸 美国US 215
+      - 🇺🇸US_23|1.9MB/s
+      - 🇺🇸US_1|5.8MB/s
+      - 🇺🇸 美国US 224
+      - 🇺🇸 美国US 209
+      - 🇺🇸 美国US 210
+      - 🇺🇸_US_美国1
+      - 🇺🇸 美国 1836
+      - 🇭🇰 香港 1235
+      - 🇭🇰 香港 1234
+      - 🇩🇪DE_6|1.6MB/s
+      - 🇩🇪 德国 1198
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - DE VLESS-103 | free-nodes
+      - 🇭🇰HK_1|261KB/s_1
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - VLESS-94 | free-nodes
+      - 🇩🇪 德国DE 1012
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 00-Trojan-jp-AI
+      - 03-Trojan-cloudflare88
+      - 02-Trojan-saas.sin.fan
+      - 00-WS-jp-AI
+      - 02-WS-saas.sin.fan
+      - 03-WS-cloudflare88
+      - 🇩🇪 德国 | DEU
+      - 🇺🇸 美国 | USA 5
+      - 德国
+      - 香港216
+      - 美国217
+      - 🇸🇬SG_1|258KB/s
+      - 01-WS-030101.xyz
+      - 🇭🇰HK_1|261KB/s
+      - 🇨🇿CZ_1|258KB/s
+      - 01-Trojan2
+      - 美国236
+      - 美国032
+      - 英国033
+      - 英国034
+      - 美国035
+      - 德国036
+      - 德国037
+      - 英国038
+      - 德国039
+      - 英国041
+      - 德国042
+      - 美国043
+      - 美国044
+      - 德国045
+      - 美国236_1
+      - 美国236_2
+      - 美国236_3
+      - 俄罗斯236
+      - 美国236_4
+      - 美国236_5
+      - 美国236_6
+      - 香港046
+      - 香港047
+      - 美国236_7
+      - FR TROJAN-52 | free-nodes
+      - DE VLESS-80 | free-nodes
+      - DE VLESS-105 | free-nodes
+      - VLESS-88 | free-nodes
+      - FR TROJAN-58 | free-nodes
+      - 英国 12
+      - 英国  123
+      - 英国 124
+      - 英国 21
+      - CH_6a69f_0017
+      - US_6a69f_0105
+      - DE_6a69f_0035
+      - SC_6a69f_0091
+      - US_6a69f_0124
+      - GB_6a69f_0064
+      - 🇸🇬 新加坡 | SGP 7
+      - 🇸🇬 新加坡 | SGP 15
+      - 🇸🇬 新加坡 | SGP 16
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 10
+      - 🇺🇸 美国 | USA 11
+      - 🇫🇷 法国 | FRA 2
+      - 🇺🇸 美国 | USA 2
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇺🇸 美国 | USA 3
+      - 🇲🇩 摩尔多瓦 | MDA
+      - 🇬🇧 英国 | GBR 2
+      - 🇩🇪 德国 | DEU 3
+      - 🇺🇸 美国 | USA_1
+      - 🇨🇭 瑞士 | CHE
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇯🇵 日本 | JPN
+      - 🇰🇷_KR_韩国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 00-Trojan-jp-AI_1
+      - 🇺🇸 美国US 215
+      - 🇺🇸US_23|1.9MB/s
+      - 🇺🇸US_1|5.8MB/s
+      - 🇺🇸 美国US 224
+      - 🇺🇸 美国US 209
+      - 🇺🇸 美国US 210
+      - 🇺🇸_US_美国1
+      - 🇺🇸 美国 1836
+      - 🇭🇰 香港 1235
+      - 🇭🇰 香港 1234
+      - 🇩🇪DE_6|1.6MB/s
+      - 🇩🇪 德国 1198
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - DE VLESS-103 | free-nodes
+      - 🇭🇰HK_1|261KB/s_1
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - VLESS-94 | free-nodes
+      - 🇩🇪 德国DE 1012
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 00-Trojan-jp-AI
+      - 03-Trojan-cloudflare88
+      - 02-Trojan-saas.sin.fan
+      - 00-WS-jp-AI
+      - 02-WS-saas.sin.fan
+      - 03-WS-cloudflare88
+      - 🇩🇪 德国 | DEU
+      - 🇺🇸 美国 | USA 5
+      - 德国
+      - 香港216
+      - 美国217
+      - 🇸🇬SG_1|258KB/s
+      - 01-WS-030101.xyz
+      - 🇭🇰HK_1|261KB/s
+      - 🇨🇿CZ_1|258KB/s
+      - 01-Trojan2
+      - 美国236
+      - 美国032
+      - 英国033
+      - 英国034
+      - 美国035
+      - 德国036
+      - 德国037
+      - 英国038
+      - 德国039
+      - 英国041
+      - 德国042
+      - 美国043
+      - 美国044
+      - 德国045
+      - 美国236_1
+      - 美国236_2
+      - 美国236_3
+      - 俄罗斯236
+      - 美国236_4
+      - 美国236_5
+      - 美国236_6
+      - 香港046
+      - 香港047
+      - 美国236_7
+      - FR TROJAN-52 | free-nodes
+      - DE VLESS-80 | free-nodes
+      - DE VLESS-105 | free-nodes
+      - VLESS-88 | free-nodes
+      - FR TROJAN-58 | free-nodes
+      - 英国 12
+      - 英国  123
+      - 英国 124
+      - 英国 21
+      - CH_6a69f_0017
+      - US_6a69f_0105
+      - DE_6a69f_0035
+      - SC_6a69f_0091
+      - US_6a69f_0124
+      - GB_6a69f_0064
+      - 🇸🇬 新加坡 | SGP 7
+      - 🇸🇬 新加坡 | SGP 15
+      - 🇸🇬 新加坡 | SGP 16
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 10
+      - 🇺🇸 美国 | USA 11
+      - 🇫🇷 法国 | FRA 2
+      - 🇺🇸 美国 | USA 2
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇺🇸 美国 | USA 3
+      - 🇲🇩 摩尔多瓦 | MDA
+      - 🇬🇧 英国 | GBR 2
+      - 🇩🇪 德国 | DEU 3
+      - 🇺🇸 美国 | USA_1
+      - 🇨🇭 瑞士 | CHE
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇯🇵 日本 | JPN
+      - 🇰🇷_KR_韩国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 00-Trojan-jp-AI_1
+      - 🇺🇸 美国US 215
+      - 🇺🇸US_23|1.9MB/s
+      - 🇺🇸US_1|5.8MB/s
+      - 🇺🇸 美国US 224
+      - 🇺🇸 美国US 209
+      - 🇺🇸 美国US 210
+      - 🇺🇸_US_美国1
+      - 🇺🇸 美国 1836
+      - 🇭🇰 香港 1235
+      - 🇭🇰 香港 1234
+      - 🇩🇪DE_6|1.6MB/s
+      - 🇩🇪 德国 1198
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - DE VLESS-103 | free-nodes
+      - 🇭🇰HK_1|261KB/s_1
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - VLESS-94 | free-nodes
+      - 🇩🇪 德国DE 1012
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 00-Trojan-jp-AI
+      - 03-Trojan-cloudflare88
+      - 02-Trojan-saas.sin.fan
+      - 00-WS-jp-AI
+      - 02-WS-saas.sin.fan
+      - 03-WS-cloudflare88
+      - 🇩🇪 德国 | DEU
+      - 🇺🇸 美国 | USA 5
+      - 德国
+      - 香港216
+      - 美国217
+      - 🇸🇬SG_1|258KB/s
+      - 01-WS-030101.xyz
+      - 🇭🇰HK_1|261KB/s
+      - 🇨🇿CZ_1|258KB/s
+      - 01-Trojan2
+      - 美国236
+      - 美国032
+      - 英国033
+      - 英国034
+      - 美国035
+      - 德国036
+      - 德国037
+      - 英国038
+      - 德国039
+      - 英国041
+      - 德国042
+      - 美国043
+      - 美国044
+      - 德国045
+      - 美国236_1
+      - 美国236_2
+      - 美国236_3
+      - 俄罗斯236
+      - 美国236_4
+      - 美国236_5
+      - 美国236_6
+      - 香港046
+      - 香港047
+      - 美国236_7
+      - FR TROJAN-52 | free-nodes
+      - DE VLESS-80 | free-nodes
+      - DE VLESS-105 | free-nodes
+      - VLESS-88 | free-nodes
+      - FR TROJAN-58 | free-nodes
+      - 英国 12
+      - 英国  123
+      - 英国 124
+      - 英国 21
+      - CH_6a69f_0017
+      - US_6a69f_0105
+      - DE_6a69f_0035
+      - SC_6a69f_0091
+      - US_6a69f_0124
+      - GB_6a69f_0064
+      - 🇸🇬 新加坡 | SGP 7
+      - 🇸🇬 新加坡 | SGP 15
+      - 🇸🇬 新加坡 | SGP 16
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 10
+      - 🇺🇸 美国 | USA 11
+      - 🇫🇷 法国 | FRA 2
+      - 🇺🇸 美国 | USA 2
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇺🇸 美国 | USA 3
+      - 🇲🇩 摩尔多瓦 | MDA
+      - 🇬🇧 英国 | GBR 2
+      - 🇩🇪 德国 | DEU 3
+      - 🇺🇸 美国 | USA_1
+      - 🇨🇭 瑞士 | CHE
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇯🇵 日本 | JPN
+      - 🇰🇷_KR_韩国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 00-Trojan-jp-AI_1
+      - 🇺🇸 美国US 215
+      - 🇺🇸US_23|1.9MB/s
+      - 🇺🇸US_1|5.8MB/s
+      - 🇺🇸 美国US 224
+      - 🇺🇸 美国US 209
+      - 🇺🇸 美国US 210
+      - 🇺🇸_US_美国1
+      - 🇺🇸 美国 1836
+      - 🇭🇰 香港 1235
+      - 🇭🇰 香港 1234
+      - 🇩🇪DE_6|1.6MB/s
+      - 🇩🇪 德国 1198
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - DE VLESS-103 | free-nodes
+      - 🇭🇰HK_1|261KB/s_1
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - VLESS-94 | free-nodes
+      - 🇩🇪 德国DE 1012
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 00-Trojan-jp-AI
+      - 03-Trojan-cloudflare88
+      - 02-Trojan-saas.sin.fan
+      - 00-WS-jp-AI
+      - 02-WS-saas.sin.fan
+      - 03-WS-cloudflare88
+      - 🇩🇪 德国 | DEU
+      - 🇺🇸 美国 | USA 5
+      - 德国
+      - 香港216
+      - 美国217
+      - 🇸🇬SG_1|258KB/s
+      - 01-WS-030101.xyz
+      - 🇭🇰HK_1|261KB/s
+      - 🇨🇿CZ_1|258KB/s
+      - 01-Trojan2
+      - 美国236
+      - 美国032
+      - 英国033
+      - 英国034
+      - 美国035
+      - 德国036
+      - 德国037
+      - 英国038
+      - 德国039
+      - 英国041
+      - 德国042
+      - 美国043
+      - 美国044
+      - 德国045
+      - 美国236_1
+      - 美国236_2
+      - 美国236_3
+      - 俄罗斯236
+      - 美国236_4
+      - 美国236_5
+      - 美国236_6
+      - 香港046
+      - 香港047
+      - 美国236_7
+      - FR TROJAN-52 | free-nodes
+      - DE VLESS-80 | free-nodes
+      - DE VLESS-105 | free-nodes
+      - VLESS-88 | free-nodes
+      - FR TROJAN-58 | free-nodes
+      - 英国 12
+      - 英国  123
+      - 英国 124
+      - 英国 21
+      - CH_6a69f_0017
+      - US_6a69f_0105
+      - DE_6a69f_0035
+      - SC_6a69f_0091
+      - US_6a69f_0124
+      - GB_6a69f_0064
+      - 🇸🇬 新加坡 | SGP 7
+      - 🇸🇬 新加坡 | SGP 15
+      - 🇸🇬 新加坡 | SGP 16
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 10
+      - 🇺🇸 美国 | USA 11
+      - 🇫🇷 法国 | FRA 2
+      - 🇺🇸 美国 | USA 2
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇺🇸 美国 | USA 3
+      - 🇲🇩 摩尔多瓦 | MDA
+      - 🇬🇧 英国 | GBR 2
+      - 🇩🇪 德国 | DEU 3
+      - 🇺🇸 美国 | USA_1
+      - 🇨🇭 瑞士 | CHE
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇯🇵 日本 | JPN
+      - 🇰🇷_KR_韩国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 00-Trojan-jp-AI_1
+      - 🇺🇸 美国US 215
+      - 🇺🇸US_23|1.9MB/s
+      - 🇺🇸US_1|5.8MB/s
+      - 🇺🇸 美国US 224
+      - 🇺🇸 美国US 209
+      - 🇺🇸 美国US 210
+      - 🇺🇸_US_美国1
+      - 🇺🇸 美国 1836
+      - 🇭🇰 香港 1235
+      - 🇭🇰 香港 1234
+      - 🇩🇪DE_6|1.6MB/s
+      - 🇩🇪 德国 1198
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - DE VLESS-103 | free-nodes
+      - 🇭🇰HK_1|261KB/s_1
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - VLESS-94 | free-nodes
+      - 🇩🇪 德国DE 1012
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 00-Trojan-jp-AI
+      - 03-Trojan-cloudflare88
+      - 02-Trojan-saas.sin.fan
+      - 00-WS-jp-AI
+      - 02-WS-saas.sin.fan
+      - 03-WS-cloudflare88
+      - 🇩🇪 德国 | DEU
+      - 🇺🇸 美国 | USA 5
+      - 德国
+      - 香港216
+      - 美国217
+      - 🇸🇬SG_1|258KB/s
+      - 01-WS-030101.xyz
+      - 🇭🇰HK_1|261KB/s
+      - 🇨🇿CZ_1|258KB/s
+      - 01-Trojan2
+      - 美国236
+      - 美国032
+      - 英国033
+      - 英国034
+      - 美国035
+      - 德国036
+      - 德国037
+      - 英国038
+      - 德国039
+      - 英国041
+      - 德国042
+      - 美国043
+      - 美国044
+      - 德国045
+      - 美国236_1
+      - 美国236_2
+      - 美国236_3
+      - 俄罗斯236
+      - 美国236_4
+      - 美国236_5
+      - 美国236_6
+      - 香港046
+      - 香港047
+      - 美国236_7
+      - FR TROJAN-52 | free-nodes
+      - DE VLESS-80 | free-nodes
+      - DE VLESS-105 | free-nodes
+      - VLESS-88 | free-nodes
+      - FR TROJAN-58 | free-nodes
+      - 英国 12
+      - 英国  123
+      - 英国 124
+      - 英国 21
+      - CH_6a69f_0017
+      - US_6a69f_0105
+      - DE_6a69f_0035
+      - SC_6a69f_0091
+      - US_6a69f_0124
+      - GB_6a69f_0064
+      - 🇸🇬 新加坡 | SGP 7
+      - 🇸🇬 新加坡 | SGP 15
+      - 🇸🇬 新加坡 | SGP 16
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 10
+      - 🇺🇸 美国 | USA 11
+      - 🇫🇷 法国 | FRA 2
+      - 🇺🇸 美国 | USA 2
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇺🇸 美国 | USA 3
+      - 🇲🇩 摩尔多瓦 | MDA
+      - 🇬🇧 英国 | GBR 2
+      - 🇩🇪 德国 | DEU 3
+      - 🇺🇸 美国 | USA_1
+      - 🇨🇭 瑞士 | CHE
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇯🇵 日本 | JPN
+      - 🇰🇷_KR_韩国
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 00-Trojan-jp-AI_1
+      - 🇺🇸 美国US 215
+      - 🇺🇸US_23|1.9MB/s
+      - 🇺🇸US_1|5.8MB/s
+      - 🇺🇸 美国US 224
+      - 🇺🇸 美国US 209
+      - 🇺🇸 美国US 210
+      - 🇺🇸_US_美国1
+      - 🇺🇸 美国 1836
+      - 🇭🇰 香港 1235
+      - 🇭🇰 香港 1234
+      - 🇩🇪DE_6|1.6MB/s
+      - 🇩🇪 德国 1198
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - DE VLESS-103 | free-nodes
+      - 🇭🇰HK_1|261KB/s_1
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - VLESS-94 | free-nodes
+      - 🇩🇪 德国DE 1012
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
