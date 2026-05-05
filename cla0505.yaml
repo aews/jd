@@ -1,0 +1,3325 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+proxies:
+  - name: 02-WS-saas.sin.fan
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 03-Trojan-cloudflare88
+    type: trojan
+    server: freeyx.cloudflare88.eu.org
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 03-WS-cloudflare88
+    type: vless
+    server: freeyx.cloudflare88.eu.org
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 00-Trojan-jp-AI
+    type: trojan
+    server: jp.111000.cc.cd
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 00-WS-jp-AI
+    type: vless
+    server: jp.111000.cc.cd
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 02-Trojan-saas.sin.fan
+    type: trojan
+    server: saas.sin.fan
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 01-WS-030101.xyz
+    type: vless
+    server: bestcf.030101.xyz
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 01-Trojan2
+    type: trojan
+    server: bestcf.030101.xyz
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 🇺🇸_US_美国1
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国033
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 224
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国 | USA
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国039
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸US_23|1.9MB/s
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国038
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 210
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国043
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇩🇪 德国 | DEU
+    type: vless
+    server: go.inmobi.com
+    port: 8443
+    uuid: 0905460d-6edc-4a82-8ec8-6b76090b41c8
+    network: ws
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: nginx-f.pages.dev
+    udp: true
+  - name: 英国041
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国044
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 215
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 209
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸US_1|5.8MB/s
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国034
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 12
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国 1836
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 21
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇩🇪 DE 410 | ⬇️ 1MB/s
+    type: vless
+    server: 159.195.82.187
+    port: 9443
+    uuid: 4649d681-7f26-4959-a3f2-02eb8866230f
+    servername: yahoo.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg
+      short-id: 2344766a270a6298
+    udp: true
+  - name: 香港216
+    type: vmess
+    server: 103.181.164.145
+    port: 51556
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇹🇼 TW 020 | ⬇️ 12MB/s
+    type: vless
+    server: 125.227.219.98
+    port: 6235
+    uuid: f6ddddaf-dfd6-4134-9dae-03b93b03d146
+    network: ws
+    servername: baidu.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /xxxxhttp
+      headers:
+        Host: baidu.com
+    udp: true
+  - name: 美国236
+    type: vless
+    server: 69.143.174.201
+    port: 8443
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 🇵🇱 波兰 | POL
+    type: vless
+    server: 144.31.5.23
+    port: 9443
+    uuid: 4649d681-7f26-4959-a3f2-02eb8866230f
+    servername: yahoo.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg
+      short-id: 2344766a270a6298
+    udp: true
+  - name: 🇨🇭 瑞士 | CHE
+    type: vless
+    server: 138.124.9.190
+    port: 16558
+    uuid: 11348c0f-b646-446a-bad7-b2b39c6de767
+    servername: gpuopen.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: vDKgmefC_2JaSrrvQSsb7DU3KBeKUlXG1V0vgdjv_i4
+      short-id: 0a856e071790b1
+    udp: true
+  - name: 🇫🇷 法国 | FRA 2
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41283
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU 3
+    type: vless
+    server: xn-dns.onlineblog.ir
+    port: 2083
+    uuid: b24484be-a335-472c-8dff-060ccd2b8f3b
+    network: ws
+    servername: xn-de.shakhle.ir.
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: xn-de.shakhle.ir.
+    udp: true
+  - name: 新加坡235
+    type: vless
+    server: 20.6.12.145
+    port: 443
+    uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798
+    network: ws
+    servername: sni.skylee4.cloudns.ch
+    tls: true
+    ws-opts:
+      path: /proxyip=ProxyIP.CMLiussss.net
+      headers:
+        Host: sni.skylee4.cloudns.ch
+    udp: true
+  - name: 德国236
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国237
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国238
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国239
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国241
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国242
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国243
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国245
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国244
+    type: vmess
+    server: 103.181.164.145
+    port: 54022
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国246
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国247
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国248
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国249
+    type: ss
+    server: 82.38.31.191
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: k1dBOmOB4oqi7Ump37a1bQ
+    udp: true
+  - name: 美国251
+    type: vmess
+    server: 103.181.164.145
+    port: 51556
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 香港253
+    type: vmess
+    server: 103.181.164.145
+    port: 51556
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国255
+    type: vless
+    server: pq-india1.09vpn.com
+    port: 8443
+    uuid: 05b544a4-d479-4ba4-8208-950bd4411453
+    network: ws
+    servername: pq-India1.09vpn.com
+    tls: true
+    ws-opts:
+      path: /vless/
+    udp: true
+  - name: 德国259
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 美国260
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: SG VLESS-78 | free-nodes
+    type: vless
+    server: 135.84.74.65
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.111000.indevs.in
+    udp: true
+  - name: SS-24 | free-nodes
+    type: ss
+    server: 102.133.165.160
+    port: 16233
+    cipher: chacha20-ietf-poly1305
+    password: Xsy8Ox4yOV3xLlpxtjzs3X
+    udp: true
+  - name: VLESS-55 | free-nodes
+    type: vless
+    server: 138.124.9.190
+    port: 16558
+    uuid: 11348c0f-b646-446a-bad7-b2b39c6de767
+    servername: gpuopen.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: vDKgmefC_2JaSrrvQSsb7DU3KBeKUlXG1V0vgdjv_i4
+      short-id: 0a856e071790b1
+    udp: true
+  - name: 英国 11
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 22
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 33
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 44
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 55
+    type: ss
+    server: 82.38.31.191
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: k1dBOmOB4oqi7Ump37a1bQ
+    udp: true
+  - name: HK_73bd5_0011
+    type: vless
+    server: rhciuib.synccut.de
+    port: 443
+    uuid: cf5a8e10-758c-4564-87a4-a2eeecbd5ed4
+    network: ws
+    servername: rhciuib.synccut.de
+    tls: true
+    client-fingerprint: edge
+    ws-opts:
+      path: /video_clip
+      headers:
+        Host: rhciuib.synccut.de
+    udp: true
+  - name: TW_73bd5_0021
+    type: vless
+    server: 114.34.106.124
+    port: 10443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: xfxl35a.node-edge.gfw.hidns.co
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xfxl35a.node-edge.gfw.hidns.co
+    udp: true
+  - name: TW_73bd5_0022
+    type: vless
+    server: 220.135.92.105
+    port: 2087
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: py7k82mu.api-node-02.gfw.hidns.co
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: py7k82mu.api-node-02.gfw.hidns.co
+    udp: true
+  - name: NN_73bd5_0016
+    type: vless
+    server: 23.177.185.138
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: py7k82mu.api-node-02.gfw.hidns.co
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: py7k82mu.api-node-02.gfw.hidns.co
+    udp: true
+  - name: US_73bd5_0028
+    type: vless
+    server: 45.202.113.123
+    port: 8443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: py7k82mu.api-node-02.gfw.hidns.co
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: py7k82mu.api-node-02.gfw.hidns.co
+    udp: true
+  - name: US_73bd5_0032
+    type: vless
+    server: 83.147.243.194
+    port: 30779
+    uuid: 0cd15d1b-b117-4f34-9aa1-c14fc5bcdd83
+    servername: www.oracle.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: HGlfPrJjZ2gttVLLp8-ZVofYK994S-6wUBRRl1m_lFA
+      short-id: 7a
+    udp: true
+  - name: GB_73bd5_0010
+    type: vless
+    server: 178.62.111.180
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: py7k82mu.api-node-02.gfw.hidns.co
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: py7k82mu.api-node-02.gfw.hidns.co
+    udp: true
+  - name: CH_73bd5_0001
+    type: vless
+    server: 138.124.9.190
+    port: 16558
+    uuid: 11348c0f-b646-446a-bad7-b2b39c6de767
+    servername: gpuopen.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: vDKgmefC_2JaSrrvQSsb7DU3KBeKUlXG1V0vgdjv_i4
+      short-id: 0a856e071790b1
+    udp: true
+  - name: RU_73bd5_0020
+    type: vless
+    server: 45.139.77.52
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.army
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.111000.v6.army
+    udp: true
+  - name: HK_73bd5_0012
+    type: vless
+    server: 103.224.172.99
+    port: 10100
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: py7k82mu.api-node-02.gfw.hidns.co
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: py7k82mu.api-node-02.gfw.hidns.co
+    udp: true
+  - name: 🇸🇬 新加坡 | SGP 4
+    type: vless
+    server: 115.23.103.153
+    port: 20332
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: xfxl35a.node-edge.gfw.hidns.co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng
+      headers:
+        Host: xfxl35a.node-edge.gfw.hidns.co
+    udp: true
+  - name: 🇺🇸 美国 | USA 14
+    type: anytls
+    server: 6a492b95-temhs0-tqx9ef-1k0yf.los.hyhuawei.com
+    port: 443
+    password: 9cc3c03e-21fd-11ee-a642-f23c91369f2d
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇺🇸 美国 | USA 25
+    type: anytls
+    server: ced1607b-tegxs0-tvvhcz-tl32.los.hyhuawei.com
+    port: 443
+    password: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇺🇸 美国 | USA 4
+    type: anytls
+    server: b0f2d97a-tegxs0-tiuovf-v3c2.sj.oshuawei.com
+    port: 8443
+    password: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇺🇸 美国 | USA 9
+    type: anytls
+    server: 94928823-temhs0-tiuovf-v3c2.los.hyhuawei.com
+    port: 443
+    password: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇺🇸 美国 | USA 21
+    type: anytls
+    server: 73398cfa-tegxs0-tubliy-1la7v.sj.oshuawei.com
+    port: 8443
+    password: 460749c2-bcef-11ee-89fc-f23c913c8d2b
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇺🇸 美国 | USA 5
+    type: anytls
+    server: 0ba0eb83-temhs0-tfjz9x-1t5n1.sj.oshuawei.com
+    port: 8443
+    password: ea800f9e-ca6c-11ef-8e74-f23c913c8d2b
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇺🇸 美国 | USA 18
+    type: anytls
+    server: a084a159-tegxs0-tqx9ef-1k0yf.se.hyhuawei.com
+    port: 443
+    password: 9cc3c03e-21fd-11ee-a642-f23c91369f2d
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇫🇷 法国 | FRA
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41164
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇱🇻 拉脱维亚 | LVA 3
+    type: vless
+    server: 150.251.147.97
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.army
+    tls: true
+    ws-opts:
+      path: /?https://t.me/WangCai2🇨🇳
+      headers:
+        Host: sni.111000.v6.army
+    udp: true
+  - name: 🇺🇸 美国 | USA_1
+    type: vless
+    server: 104.19.42.90
+    port: 443
+    uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+    network: ws
+    servername: kalami-eew.pages.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: kalami-eew.pages.dev
+    udp: true
+  - name: 🇫🇮 芬兰 | FIN
+    type: vless
+    server: 135.181.155.97
+    port: 443
+    uuid: 309fa273-6579-4cb2-9143-7cad50401eba
+    servername: www.cloudflare.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
+      short-id: 7cad5040
+    udp: true
+  - name: 🇺🇸 美国 | USA_2
+    type: vless
+    server: 83.147.243.194
+    port: 30779
+    uuid: 0cd15d1b-b117-4f34-9aa1-c14fc5bcdd83
+    servername: www.oracle.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: HGlfPrJjZ2gttVLLp8-ZVofYK994S-6wUBRRl1m_lFA
+      short-id: 7a
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD
+    type: vless
+    server: 185.125.203.33
+    port: 443
+    uuid: b1c72117-f193-47ad-ae96-994e3444a6bf
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: BgDZcLIjx_1FZbLGsaZuu7Pc2dl5OwSd3VErem7ymyA
+      short-id: 8c71
+    udp: true
+  - name: 博茨瓦纳1
+    type: vless
+    server: cf.tencentapp.cn
+    port: 443
+    uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+    network: ws
+    servername: tptpss.pages.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /https://168.167.220.27:443
+      headers:
+        Host: tptpss.pages.dev
+    udp: true
+  - name: 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+    type: vless
+    server: 5.34.222.227
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: ynwta9.api-edge.fgfw.qzz.io
+    tls: true
+    ws-opts:
+      path: /danfengfp=chromefp=chrome
+      headers:
+        Host: ynwta9.api-edge.fgfw.qzz.io
+    udp: true
+  - name: 🇳🇱_NL_荷兰
+    type: vless
+    server: 138.124.16.38
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.army
+    tls: true
+    ws-opts:
+      path: /?https://t.me/WangCai2🇨🇳=
+      headers:
+        Host: sni.111000.v6.army
+    udp: true
+  - name: 🇨🇭_CH_瑞士->🇸🇬_SG_新加坡
+    type: vless
+    server: 167.17.181.190
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: xfxl35a.node-edge.gfw.hidns.co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng?ed=2560fp=chrome
+      headers:
+        Host: xfxl35a.node-edge.gfw.hidns.co
+    udp: true
+  - name: 🇸🇬 SG_289 | ⬇️ 36MB/s
+    type: ss
+    server: 43.160.195.223
+    port: 443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2504 | ⬇️ 14MB/s
+    type: ss
+    server: 222.106.183.207
+    port: 12300
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 00-Trojan-jp-AI_1
+    type: trojan
+    server: jp.111000.cc.cd
+    port: 443
+    password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    sni: sni.111000.dynv6.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: false
+    tls: true
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 🇰🇷 KR_2589 | ⬇️ 20MB/s
+    type: ss
+    server: 59.24.62.82
+    port: 20002
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2729 | ⬇️ 29MB/s
+    type: ss
+    server: 59.31.102.62
+    port: 25565
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2336 | ⬇️ 33MB/s
+    type: ss
+    server: 211.194.210.183
+    port: 30047
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2884 | ⬇️ 22MB/s
+    type: ss
+    server: 169.211.176.84
+    port: 26257
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2742 | ⬇️ 49MB/s
+    type: ss
+    server: 221.148.219.205
+    port: 20201
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2890 | ⬇️ 32MB/s
+    type: ss
+    server: 220.122.42.198
+    port: 10995
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2421 | ⬇️ 29MB/s
+    type: ss
+    server: 221.147.196.150
+    port: 18810
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2443 | ⬇️ 12MB/s
+    type: ss
+    server: 59.4.161.71
+    port: 38241
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2513 | ⬇️ 35MB/s
+    type: ss
+    server: 119.200.244.99
+    port: 32770
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2889 | ⬇️ 27MB/s
+    type: ss
+    server: 218.155.104.63
+    port: 27017
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: US
+    type: ss
+    server: 121.139.161.31
+    port: 25105
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2750 | ⬇️ 29MB/s
+    type: ss
+    server: 121.140.206.109
+    port: 11434
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2681 | ⬇️ 37MB/s
+    type: ss
+    server: 218.155.125.99
+    port: 10001
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2785 | ⬇️ 29MB/s
+    type: ss
+    server: 114.204.217.229
+    port: 25565
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2623 | ⬇️ 47MB/s
+    type: ss
+    server: 59.18.192.132
+    port: 18000
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2372 | ⬇️ 34MB/s
+    type: ss
+    server: 183.103.4.162
+    port: 32677
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2855 | ⬇️ 38MB/s
+    type: ss
+    server: 115.21.253.43
+    port: 35342
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2862 | ⬇️ 32MB/s
+    type: ss
+    server: 183.108.118.211
+    port: 10005
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_284 | ⬇️ 37MB/s
+    type: ss
+    server: 210.99.119.3
+    port: 30019
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2679 | ⬇️ 40MB/s
+    type: ss
+    server: 59.18.192.132
+    port: 20880
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2562 | ⬇️ 29MB/s
+    type: ss
+    server: 121.180.225.222
+    port: 16000
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2875 | ⬇️ 12MB/s
+    type: ss
+    server: 121.178.202.91
+    port: 12380
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2898 | ⬇️ 42MB/s
+    type: ss
+    server: 220.77.18.195
+    port: 36814
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2903 | ⬇️ 14MB/s
+    type: ss
+    server: 121.149.124.119
+    port: 37020
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2863 | ⬇️ 10MB/s
+    type: ss
+    server: 115.22.181.7
+    port: 10030
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2141 | ⬇️ 44MB/s
+    type: ss
+    server: 121.182.16.235
+    port: 18246
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2477 | ⬇️ 13MB/s
+    type: ss
+    server: 220.124.181.77
+    port: 18081
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2869 | ⬇️ 35MB/s
+    type: ss
+    server: 121.179.3.58
+    port: 35342
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2352 | ⬇️ 28MB/s
+    type: ss
+    server: 121.158.3.191
+    port: 32677
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_285 | ⬇️ 24MB/s
+    type: ss
+    server: 175.202.135.114
+    port: 12427
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2792 | ⬇️ 34MB/s
+    type: ss
+    server: 221.167.233.79
+    port: 19888
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2751 | ⬇️ 45MB/s
+    type: ss
+    server: 211.223.9.175
+    port: 20005
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇺🇸 美国US-218
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇬🇧 英国 V2CROSS.COM
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇬🇧 英国-960
+    type: vmess
+    server: 82.198.246.9
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇬🇧 英国-1146
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 224_1
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇩🇪 德国 04
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸_US_美国
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 英国 V2CROSS.COM
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸美国US-98
+    type: anytls
+    server: b51e6b6b-tegxs0-truoje-1uni.sj.oshuawei.com
+    port: 8443
+    password: adbd0a82-3336-11ed-bd7c-f23c913c8d2b
+    sni: b51e6b6b-tegxs0-truoje-1uni.sj.oshuawei.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇺🇸 美国US 210_1
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国US 215_1
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 德国_1
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸 美国-948
+    type: anytls
+    server: 3e32420e-teisg0-tnfe2z-1s4hc.se.hyhuawei.com
+    port: 443
+    password: aafedc64-9c23-11ef-a79f-f23c91cfbbc9
+    sni: 3e32420e-teisg0-tnfe2z-1s4hc.se.hyhuawei.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇩🇪 DE_13 | ⬇️ 13MB/s
+    type: ss
+    server: 57.129.63.158
+    port: 2053
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇺🇸美国US-205
+    type: vmess
+    server: 82.198.246.233
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇫🇷法国FR-90
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41802
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇰🇷 KR_292 | ⬇️ 12MB/s
+    type: ss
+    server: 64.176.226.26
+    port: 8443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇩🇪 DE_20 | ⬇️ 27MB/s
+    type: ss
+    server: 57.129.47.47
+    port: 2053
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇩🇪 DE_322 | ⬇️ 19MB/s
+    type: ss
+    server: 91.107.250.153
+    port: 8443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇩🇪 DE_257 | ⬇️ 28MB/s
+    type: ss
+    server: 91.98.92.244
+    port: 2053
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇺🇸美国US-220
+    type: vmess
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇫🇷法国FR-98
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41283
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷法国FR-80
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41984
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷FR_2|1.1MB/s
+    type: hysteria2
+    server: 163.172.113.118
+    port: 40022
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷FR_3|1.5MB/s
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41211
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺俄罗斯RU-823
+    type: vless
+    server: 95.213.184.3
+    port: 52006
+    uuid: 75807638-6f19-07d0-ae08-38492ee85c88
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    udp: true
+  - name: 🇩🇪 DE_236 | ⬇️ 37MB/s
+    type: ss
+    server: 104.152.49.249
+    port: 443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇫🇷法国FR-88
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41581
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: EE11
+    type: vless
+    server: 178.18.147.163
+    port: 15530
+    uuid: ac121f97-544b-47b3-bf91-eca9c45db548
+    network: xhttp
+    servername: www.microsoft.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: w8JMWRzOsYUuBeI0i_te745nBRlDocMOTgGMMZLioik
+      short-id: aa45df0f
+    udp: true
+    xhttp-opts:
+      path: /github.com/Alvin9999-newpac/fanqiang
+  - name: 🇫🇷法国FR-85
+    type: hysteria2
+    server: 163.172.113.118
+    port: 41689
+    password: dongtaiwang.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰香港HK纯净-420
+    type: vless
+    server: rhciuib.synccut.de
+    port: 443
+    uuid: cf5a8e10-758c-4564-87a4-a2eeecbd5ed4
+    network: ws
+    servername: rhciuib.synccut.de
+    tls: true
+    client-fingerprint: edge
+    ws-opts:
+      path: /video_clip
+      headers:
+        Host: rhciuib.synccut.de
+    udp: true
+  - name: 🇵🇱波兰PL-807
+    type: vless
+    server: 144.31.5.23
+    port: 9443
+    uuid: 4649d681-7f26-4959-a3f2-02eb8866230f
+    servername: yahoo.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg
+      short-id: 2344766a270a6298
+    udp: true
+  - name: 🇵🇱波兰PL-203
+    type: vless
+    server: 144.31.4.166
+    port: 2053
+    uuid: f9d8aa07-589f-4da0-9cb0-fd8f2f0e4fa8
+    network: grpc
+    servername: www.deepl.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU
+      short-id: 0123456789abcdef
+    udp: true
+  - name: 🇵🇱波兰PL-291
+    type: vless
+    server: 45.138.16.62
+    port: 30073
+    uuid: 8f59feef-aab9-4e0b-924c-2a31bb8f446f
+    network: xhttp
+    tls: false
+    udp: true
+    xhttp-opts:
+      path: /secret
+      mode: stream-one
+  - name: 🇩🇪DE_2|2.2MB/s
+    type: hysteria2
+    server: 83.243.86.103
+    port: 12855
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: hysteria2-warp
+    type: hysteria2
+    server: 83.243.86.103
+    port: 38563
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+  - name: "[IPv6] 🇸🇪瑞典SE-191"
+    type: vless
+    server: 95.85.246.16.speed-storage.ru
+    port: 573
+    uuid: 832f76f8-fca3-4efa-80be-870e123ad764
+    network: grpc
+    servername: 95.85.246.16.speed-storage.ru
+    tls: true
+    client-fingerprint: safari
+    grpc-opts:
+      grpc-service-name: /sequre/grpc/
+    udp: true
+  - name: 🇭🇰 HK_293 | ⬇️ 48MB/s
+    type: ss
+    server: 176.98.181.71
+    port: 443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇭🇰 HK_297 | ⬇️ 26MB/s
+    type: ss
+    server: 101.79.165.113
+    port: 443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇸🇬 SG_270 | ⬇️ 42MB/s
+    type: ss
+    server: 143.198.209.123
+    port: 443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇸🇬 SG_287 | ⬇️ 21MB/s
+    type: ss
+    server: 157.245.56.32
+    port: 443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇭🇰 HK_296 | ⬇️ 26MB/s
+    type: ss
+    server: 138.124.111.115
+    port: 443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2385 | ⬇️ 13MB/s
+    type: ss
+    server: 220.122.42.198
+    port: 19071
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2518 | ⬇️ 42MB/s
+    type: ss
+    server: 220.122.42.198
+    port: 10000
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_291 | ⬇️ 43MB/s
+    type: ss
+    server: 211.48.77.114
+    port: 24095
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇸🇬 SG_275 | ⬇️ 40MB/s
+    type: ss
+    server: 168.138.165.174
+    port: 443
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇰🇷 KR_2630 | ⬇️ 28MB/s
+    type: ss
+    server: 175.196.178.94
+    port: 11310
+    cipher: none
+    password: 59fc5f8c-5697-4eb8-acf2-8ae363f203a2
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: woshinidie-et3.pages.dev
+      path: /59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\=2560
+    udp: true
+  - name: 🇹🇼 TW 020 | ⬇️ 12MB/s_1
+    type: vless
+    server: 125.227.219.98
+    port: 6235
+    uuid: f6ddddaf-dfd6-4134-9dae-03b93b03d146
+    network: ws
+    servername: baidu.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /xxxxhttp
+      headers:
+        Host: baidu.com
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 02-WS-saas.sin.fan
+      - 03-Trojan-cloudflare88
+      - 03-WS-cloudflare88
+      - 00-Trojan-jp-AI
+      - 00-WS-jp-AI
+      - 02-Trojan-saas.sin.fan
+      - 01-WS-030101.xyz
+      - 01-Trojan2
+      - 🇺🇸_US_美国1
+      - 英国033
+      - 🇺🇸 美国US 224
+      - 德国
+      - 🇺🇸 美国 | USA
+      - 德国039
+      - 🇺🇸US_23|1.9MB/s
+      - 英国038
+      - 🇺🇸 美国US 210
+      - 美国043
+      - 🇩🇪 德国 | DEU
+      - 英国041
+      - 美国044
+      - 🇺🇸 美国US 215
+      - 🇺🇸 美国US 209
+      - 🇺🇸US_1|5.8MB/s
+      - 英国034
+      - 英国 12
+      - 🇺🇸 美国 1836
+      - 英国 21
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - 香港216
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - 美国236
+      - 🇵🇱 波兰 | POL
+      - 🇨🇭 瑞士 | CHE
+      - 🇫🇷 法国 | FRA 2
+      - 🇩🇪 德国 | DEU 3
+      - 新加坡235
+      - 德国236
+      - 美国237
+      - 美国238
+      - 德国239
+      - 美国241
+      - 德国242
+      - 美国243
+      - 美国245
+      - 美国244
+      - 美国246
+      - 德国247
+      - 美国248
+      - 美国249
+      - 美国251
+      - 香港253
+      - 美国255
+      - 德国259
+      - 美国260
+      - SG VLESS-78 | free-nodes
+      - SS-24 | free-nodes
+      - VLESS-55 | free-nodes
+      - 英国 11
+      - 英国 22
+      - 英国 33
+      - 英国 44
+      - 英国 55
+      - HK_73bd5_0011
+      - TW_73bd5_0021
+      - TW_73bd5_0022
+      - NN_73bd5_0016
+      - US_73bd5_0028
+      - US_73bd5_0032
+      - GB_73bd5_0010
+      - CH_73bd5_0001
+      - RU_73bd5_0020
+      - HK_73bd5_0012
+      - 🇸🇬 新加坡 | SGP 4
+      - 🇺🇸 美国 | USA 14
+      - 🇺🇸 美国 | USA 25
+      - 🇺🇸 美国 | USA 4
+      - 🇺🇸 美国 | USA 9
+      - 🇺🇸 美国 | USA 21
+      - 🇺🇸 美国 | USA 5
+      - 🇺🇸 美国 | USA 18
+      - 🇫🇷 法国 | FRA
+      - 🇱🇻 拉脱维亚 | LVA 3
+      - 🇺🇸 美国 | USA_1
+      - 🇫🇮 芬兰 | FIN
+      - 🇺🇸 美国 | USA_2
+      - 🇳🇱 荷兰 | NLD
+      - 博茨瓦纳1
+      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰
+      - 🇨🇭_CH_瑞士->🇸🇬_SG_新加坡
+      - 🇸🇬 SG_289 | ⬇️ 36MB/s
+      - 🇰🇷 KR_2504 | ⬇️ 14MB/s
+      - 00-Trojan-jp-AI_1
+      - 🇰🇷 KR_2589 | ⬇️ 20MB/s
+      - 🇰🇷 KR_2729 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2336 | ⬇️ 33MB/s
+      - 🇰🇷 KR_2884 | ⬇️ 22MB/s
+      - 🇰🇷 KR_2742 | ⬇️ 49MB/s
+      - 🇰🇷 KR_2890 | ⬇️ 32MB/s
+      - 🇰🇷 KR_2421 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2443 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2513 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2889 | ⬇️ 27MB/s
+      - US
+      - 🇰🇷 KR_2750 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2681 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2785 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2623 | ⬇️ 47MB/s
+      - 🇰🇷 KR_2372 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2855 | ⬇️ 38MB/s
+      - 🇰🇷 KR_2862 | ⬇️ 32MB/s
+      - 🇰🇷 KR_284 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2679 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2562 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2875 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2898 | ⬇️ 42MB/s
+      - 🇰🇷 KR_2903 | ⬇️ 14MB/s
+      - 🇰🇷 KR_2863 | ⬇️ 10MB/s
+      - 🇰🇷 KR_2141 | ⬇️ 44MB/s
+      - 🇰🇷 KR_2477 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2869 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2352 | ⬇️ 28MB/s
+      - 🇰🇷 KR_285 | ⬇️ 24MB/s
+      - 🇰🇷 KR_2792 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2751 | ⬇️ 45MB/s
+      - 🇺🇸 美国US-218
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇬🇧 英国-960
+      - 🇬🇧 英国-1146
+      - 🇺🇸 美国US 224_1
+      - 🇩🇪 德国 04
+      - 🇺🇸_US_美国
+      - 英国 V2CROSS.COM
+      - 🇺🇸美国US-98
+      - 🇺🇸 美国US 210_1
+      - 🇺🇸 美国US 215_1
+      - 德国_1
+      - 🇺🇸 美国-948
+      - 🇩🇪 DE_13 | ⬇️ 13MB/s
+      - 🇺🇸美国US-205
+      - 🇫🇷法国FR-90
+      - 🇰🇷 KR_292 | ⬇️ 12MB/s
+      - 🇩🇪 DE_20 | ⬇️ 27MB/s
+      - 🇩🇪 DE_322 | ⬇️ 19MB/s
+      - 🇩🇪 DE_257 | ⬇️ 28MB/s
+      - 🇺🇸美国US-220
+      - 🇫🇷法国FR-98
+      - 🇫🇷法国FR-80
+      - 🇫🇷FR_2|1.1MB/s
+      - 🇫🇷FR_3|1.5MB/s
+      - 🇷🇺俄罗斯RU-823
+      - 🇩🇪 DE_236 | ⬇️ 37MB/s
+      - 🇫🇷法国FR-88
+      - EE11
+      - 🇫🇷法国FR-85
+      - 🇭🇰香港HK纯净-420
+      - 🇵🇱波兰PL-807
+      - 🇵🇱波兰PL-203
+      - 🇵🇱波兰PL-291
+      - 🇩🇪DE_2|2.2MB/s
+      - hysteria2-warp
+      - "[IPv6] 🇸🇪瑞典SE-191"
+      - 🇭🇰 HK_293 | ⬇️ 48MB/s
+      - 🇭🇰 HK_297 | ⬇️ 26MB/s
+      - 🇸🇬 SG_270 | ⬇️ 42MB/s
+      - 🇸🇬 SG_287 | ⬇️ 21MB/s
+      - 🇭🇰 HK_296 | ⬇️ 26MB/s
+      - 🇰🇷 KR_2385 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2518 | ⬇️ 42MB/s
+      - 🇰🇷 KR_291 | ⬇️ 43MB/s
+      - 🇸🇬 SG_275 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2630 | ⬇️ 28MB/s
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s_1
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 02-WS-saas.sin.fan
+      - 03-Trojan-cloudflare88
+      - 03-WS-cloudflare88
+      - 00-Trojan-jp-AI
+      - 00-WS-jp-AI
+      - 02-Trojan-saas.sin.fan
+      - 01-WS-030101.xyz
+      - 01-Trojan2
+      - 🇺🇸_US_美国1
+      - 英国033
+      - 🇺🇸 美国US 224
+      - 德国
+      - 🇺🇸 美国 | USA
+      - 德国039
+      - 🇺🇸US_23|1.9MB/s
+      - 英国038
+      - 🇺🇸 美国US 210
+      - 美国043
+      - 🇩🇪 德国 | DEU
+      - 英国041
+      - 美国044
+      - 🇺🇸 美国US 215
+      - 🇺🇸 美国US 209
+      - 🇺🇸US_1|5.8MB/s
+      - 英国034
+      - 英国 12
+      - 🇺🇸 美国 1836
+      - 英国 21
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - 香港216
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - 美国236
+      - 🇵🇱 波兰 | POL
+      - 🇨🇭 瑞士 | CHE
+      - 🇫🇷 法国 | FRA 2
+      - 🇩🇪 德国 | DEU 3
+      - 新加坡235
+      - 德国236
+      - 美国237
+      - 美国238
+      - 德国239
+      - 美国241
+      - 德国242
+      - 美国243
+      - 美国245
+      - 美国244
+      - 美国246
+      - 德国247
+      - 美国248
+      - 美国249
+      - 美国251
+      - 香港253
+      - 美国255
+      - 德国259
+      - 美国260
+      - SG VLESS-78 | free-nodes
+      - SS-24 | free-nodes
+      - VLESS-55 | free-nodes
+      - 英国 11
+      - 英国 22
+      - 英国 33
+      - 英国 44
+      - 英国 55
+      - HK_73bd5_0011
+      - TW_73bd5_0021
+      - TW_73bd5_0022
+      - NN_73bd5_0016
+      - US_73bd5_0028
+      - US_73bd5_0032
+      - GB_73bd5_0010
+      - CH_73bd5_0001
+      - RU_73bd5_0020
+      - HK_73bd5_0012
+      - 🇸🇬 新加坡 | SGP 4
+      - 🇺🇸 美国 | USA 14
+      - 🇺🇸 美国 | USA 25
+      - 🇺🇸 美国 | USA 4
+      - 🇺🇸 美国 | USA 9
+      - 🇺🇸 美国 | USA 21
+      - 🇺🇸 美国 | USA 5
+      - 🇺🇸 美国 | USA 18
+      - 🇫🇷 法国 | FRA
+      - 🇱🇻 拉脱维亚 | LVA 3
+      - 🇺🇸 美国 | USA_1
+      - 🇫🇮 芬兰 | FIN
+      - 🇺🇸 美国 | USA_2
+      - 🇳🇱 荷兰 | NLD
+      - 博茨瓦纳1
+      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰
+      - 🇨🇭_CH_瑞士->🇸🇬_SG_新加坡
+      - 🇸🇬 SG_289 | ⬇️ 36MB/s
+      - 🇰🇷 KR_2504 | ⬇️ 14MB/s
+      - 00-Trojan-jp-AI_1
+      - 🇰🇷 KR_2589 | ⬇️ 20MB/s
+      - 🇰🇷 KR_2729 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2336 | ⬇️ 33MB/s
+      - 🇰🇷 KR_2884 | ⬇️ 22MB/s
+      - 🇰🇷 KR_2742 | ⬇️ 49MB/s
+      - 🇰🇷 KR_2890 | ⬇️ 32MB/s
+      - 🇰🇷 KR_2421 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2443 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2513 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2889 | ⬇️ 27MB/s
+      - US
+      - 🇰🇷 KR_2750 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2681 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2785 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2623 | ⬇️ 47MB/s
+      - 🇰🇷 KR_2372 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2855 | ⬇️ 38MB/s
+      - 🇰🇷 KR_2862 | ⬇️ 32MB/s
+      - 🇰🇷 KR_284 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2679 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2562 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2875 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2898 | ⬇️ 42MB/s
+      - 🇰🇷 KR_2903 | ⬇️ 14MB/s
+      - 🇰🇷 KR_2863 | ⬇️ 10MB/s
+      - 🇰🇷 KR_2141 | ⬇️ 44MB/s
+      - 🇰🇷 KR_2477 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2869 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2352 | ⬇️ 28MB/s
+      - 🇰🇷 KR_285 | ⬇️ 24MB/s
+      - 🇰🇷 KR_2792 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2751 | ⬇️ 45MB/s
+      - 🇺🇸 美国US-218
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇬🇧 英国-960
+      - 🇬🇧 英国-1146
+      - 🇺🇸 美国US 224_1
+      - 🇩🇪 德国 04
+      - 🇺🇸_US_美国
+      - 英国 V2CROSS.COM
+      - 🇺🇸美国US-98
+      - 🇺🇸 美国US 210_1
+      - 🇺🇸 美国US 215_1
+      - 德国_1
+      - 🇺🇸 美国-948
+      - 🇩🇪 DE_13 | ⬇️ 13MB/s
+      - 🇺🇸美国US-205
+      - 🇫🇷法国FR-90
+      - 🇰🇷 KR_292 | ⬇️ 12MB/s
+      - 🇩🇪 DE_20 | ⬇️ 27MB/s
+      - 🇩🇪 DE_322 | ⬇️ 19MB/s
+      - 🇩🇪 DE_257 | ⬇️ 28MB/s
+      - 🇺🇸美国US-220
+      - 🇫🇷法国FR-98
+      - 🇫🇷法国FR-80
+      - 🇫🇷FR_2|1.1MB/s
+      - 🇫🇷FR_3|1.5MB/s
+      - 🇷🇺俄罗斯RU-823
+      - 🇩🇪 DE_236 | ⬇️ 37MB/s
+      - 🇫🇷法国FR-88
+      - EE11
+      - 🇫🇷法国FR-85
+      - 🇭🇰香港HK纯净-420
+      - 🇵🇱波兰PL-807
+      - 🇵🇱波兰PL-203
+      - 🇵🇱波兰PL-291
+      - 🇩🇪DE_2|2.2MB/s
+      - hysteria2-warp
+      - "[IPv6] 🇸🇪瑞典SE-191"
+      - 🇭🇰 HK_293 | ⬇️ 48MB/s
+      - 🇭🇰 HK_297 | ⬇️ 26MB/s
+      - 🇸🇬 SG_270 | ⬇️ 42MB/s
+      - 🇸🇬 SG_287 | ⬇️ 21MB/s
+      - 🇭🇰 HK_296 | ⬇️ 26MB/s
+      - 🇰🇷 KR_2385 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2518 | ⬇️ 42MB/s
+      - 🇰🇷 KR_291 | ⬇️ 43MB/s
+      - 🇸🇬 SG_275 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2630 | ⬇️ 28MB/s
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s_1
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 02-WS-saas.sin.fan
+      - 03-Trojan-cloudflare88
+      - 03-WS-cloudflare88
+      - 00-Trojan-jp-AI
+      - 00-WS-jp-AI
+      - 02-Trojan-saas.sin.fan
+      - 01-WS-030101.xyz
+      - 01-Trojan2
+      - 🇺🇸_US_美国1
+      - 英国033
+      - 🇺🇸 美国US 224
+      - 德国
+      - 🇺🇸 美国 | USA
+      - 德国039
+      - 🇺🇸US_23|1.9MB/s
+      - 英国038
+      - 🇺🇸 美国US 210
+      - 美国043
+      - 🇩🇪 德国 | DEU
+      - 英国041
+      - 美国044
+      - 🇺🇸 美国US 215
+      - 🇺🇸 美国US 209
+      - 🇺🇸US_1|5.8MB/s
+      - 英国034
+      - 英国 12
+      - 🇺🇸 美国 1836
+      - 英国 21
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - 香港216
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - 美国236
+      - 🇵🇱 波兰 | POL
+      - 🇨🇭 瑞士 | CHE
+      - 🇫🇷 法国 | FRA 2
+      - 🇩🇪 德国 | DEU 3
+      - 新加坡235
+      - 德国236
+      - 美国237
+      - 美国238
+      - 德国239
+      - 美国241
+      - 德国242
+      - 美国243
+      - 美国245
+      - 美国244
+      - 美国246
+      - 德国247
+      - 美国248
+      - 美国249
+      - 美国251
+      - 香港253
+      - 美国255
+      - 德国259
+      - 美国260
+      - SG VLESS-78 | free-nodes
+      - SS-24 | free-nodes
+      - VLESS-55 | free-nodes
+      - 英国 11
+      - 英国 22
+      - 英国 33
+      - 英国 44
+      - 英国 55
+      - HK_73bd5_0011
+      - TW_73bd5_0021
+      - TW_73bd5_0022
+      - NN_73bd5_0016
+      - US_73bd5_0028
+      - US_73bd5_0032
+      - GB_73bd5_0010
+      - CH_73bd5_0001
+      - RU_73bd5_0020
+      - HK_73bd5_0012
+      - 🇸🇬 新加坡 | SGP 4
+      - 🇺🇸 美国 | USA 14
+      - 🇺🇸 美国 | USA 25
+      - 🇺🇸 美国 | USA 4
+      - 🇺🇸 美国 | USA 9
+      - 🇺🇸 美国 | USA 21
+      - 🇺🇸 美国 | USA 5
+      - 🇺🇸 美国 | USA 18
+      - 🇫🇷 法国 | FRA
+      - 🇱🇻 拉脱维亚 | LVA 3
+      - 🇺🇸 美国 | USA_1
+      - 🇫🇮 芬兰 | FIN
+      - 🇺🇸 美国 | USA_2
+      - 🇳🇱 荷兰 | NLD
+      - 博茨瓦纳1
+      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰
+      - 🇨🇭_CH_瑞士->🇸🇬_SG_新加坡
+      - 🇸🇬 SG_289 | ⬇️ 36MB/s
+      - 🇰🇷 KR_2504 | ⬇️ 14MB/s
+      - 00-Trojan-jp-AI_1
+      - 🇰🇷 KR_2589 | ⬇️ 20MB/s
+      - 🇰🇷 KR_2729 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2336 | ⬇️ 33MB/s
+      - 🇰🇷 KR_2884 | ⬇️ 22MB/s
+      - 🇰🇷 KR_2742 | ⬇️ 49MB/s
+      - 🇰🇷 KR_2890 | ⬇️ 32MB/s
+      - 🇰🇷 KR_2421 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2443 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2513 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2889 | ⬇️ 27MB/s
+      - US
+      - 🇰🇷 KR_2750 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2681 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2785 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2623 | ⬇️ 47MB/s
+      - 🇰🇷 KR_2372 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2855 | ⬇️ 38MB/s
+      - 🇰🇷 KR_2862 | ⬇️ 32MB/s
+      - 🇰🇷 KR_284 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2679 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2562 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2875 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2898 | ⬇️ 42MB/s
+      - 🇰🇷 KR_2903 | ⬇️ 14MB/s
+      - 🇰🇷 KR_2863 | ⬇️ 10MB/s
+      - 🇰🇷 KR_2141 | ⬇️ 44MB/s
+      - 🇰🇷 KR_2477 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2869 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2352 | ⬇️ 28MB/s
+      - 🇰🇷 KR_285 | ⬇️ 24MB/s
+      - 🇰🇷 KR_2792 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2751 | ⬇️ 45MB/s
+      - 🇺🇸 美国US-218
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇬🇧 英国-960
+      - 🇬🇧 英国-1146
+      - 🇺🇸 美国US 224_1
+      - 🇩🇪 德国 04
+      - 🇺🇸_US_美国
+      - 英国 V2CROSS.COM
+      - 🇺🇸美国US-98
+      - 🇺🇸 美国US 210_1
+      - 🇺🇸 美国US 215_1
+      - 德国_1
+      - 🇺🇸 美国-948
+      - 🇩🇪 DE_13 | ⬇️ 13MB/s
+      - 🇺🇸美国US-205
+      - 🇫🇷法国FR-90
+      - 🇰🇷 KR_292 | ⬇️ 12MB/s
+      - 🇩🇪 DE_20 | ⬇️ 27MB/s
+      - 🇩🇪 DE_322 | ⬇️ 19MB/s
+      - 🇩🇪 DE_257 | ⬇️ 28MB/s
+      - 🇺🇸美国US-220
+      - 🇫🇷法国FR-98
+      - 🇫🇷法国FR-80
+      - 🇫🇷FR_2|1.1MB/s
+      - 🇫🇷FR_3|1.5MB/s
+      - 🇷🇺俄罗斯RU-823
+      - 🇩🇪 DE_236 | ⬇️ 37MB/s
+      - 🇫🇷法国FR-88
+      - EE11
+      - 🇫🇷法国FR-85
+      - 🇭🇰香港HK纯净-420
+      - 🇵🇱波兰PL-807
+      - 🇵🇱波兰PL-203
+      - 🇵🇱波兰PL-291
+      - 🇩🇪DE_2|2.2MB/s
+      - hysteria2-warp
+      - "[IPv6] 🇸🇪瑞典SE-191"
+      - 🇭🇰 HK_293 | ⬇️ 48MB/s
+      - 🇭🇰 HK_297 | ⬇️ 26MB/s
+      - 🇸🇬 SG_270 | ⬇️ 42MB/s
+      - 🇸🇬 SG_287 | ⬇️ 21MB/s
+      - 🇭🇰 HK_296 | ⬇️ 26MB/s
+      - 🇰🇷 KR_2385 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2518 | ⬇️ 42MB/s
+      - 🇰🇷 KR_291 | ⬇️ 43MB/s
+      - 🇸🇬 SG_275 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2630 | ⬇️ 28MB/s
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s_1
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 02-WS-saas.sin.fan
+      - 03-Trojan-cloudflare88
+      - 03-WS-cloudflare88
+      - 00-Trojan-jp-AI
+      - 00-WS-jp-AI
+      - 02-Trojan-saas.sin.fan
+      - 01-WS-030101.xyz
+      - 01-Trojan2
+      - 🇺🇸_US_美国1
+      - 英国033
+      - 🇺🇸 美国US 224
+      - 德国
+      - 🇺🇸 美国 | USA
+      - 德国039
+      - 🇺🇸US_23|1.9MB/s
+      - 英国038
+      - 🇺🇸 美国US 210
+      - 美国043
+      - 🇩🇪 德国 | DEU
+      - 英国041
+      - 美国044
+      - 🇺🇸 美国US 215
+      - 🇺🇸 美国US 209
+      - 🇺🇸US_1|5.8MB/s
+      - 英国034
+      - 英国 12
+      - 🇺🇸 美国 1836
+      - 英国 21
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - 香港216
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - 美国236
+      - 🇵🇱 波兰 | POL
+      - 🇨🇭 瑞士 | CHE
+      - 🇫🇷 法国 | FRA 2
+      - 🇩🇪 德国 | DEU 3
+      - 新加坡235
+      - 德国236
+      - 美国237
+      - 美国238
+      - 德国239
+      - 美国241
+      - 德国242
+      - 美国243
+      - 美国245
+      - 美国244
+      - 美国246
+      - 德国247
+      - 美国248
+      - 美国249
+      - 美国251
+      - 香港253
+      - 美国255
+      - 德国259
+      - 美国260
+      - SG VLESS-78 | free-nodes
+      - SS-24 | free-nodes
+      - VLESS-55 | free-nodes
+      - 英国 11
+      - 英国 22
+      - 英国 33
+      - 英国 44
+      - 英国 55
+      - HK_73bd5_0011
+      - TW_73bd5_0021
+      - TW_73bd5_0022
+      - NN_73bd5_0016
+      - US_73bd5_0028
+      - US_73bd5_0032
+      - GB_73bd5_0010
+      - CH_73bd5_0001
+      - RU_73bd5_0020
+      - HK_73bd5_0012
+      - 🇸🇬 新加坡 | SGP 4
+      - 🇺🇸 美国 | USA 14
+      - 🇺🇸 美国 | USA 25
+      - 🇺🇸 美国 | USA 4
+      - 🇺🇸 美国 | USA 9
+      - 🇺🇸 美国 | USA 21
+      - 🇺🇸 美国 | USA 5
+      - 🇺🇸 美国 | USA 18
+      - 🇫🇷 法国 | FRA
+      - 🇱🇻 拉脱维亚 | LVA 3
+      - 🇺🇸 美国 | USA_1
+      - 🇫🇮 芬兰 | FIN
+      - 🇺🇸 美国 | USA_2
+      - 🇳🇱 荷兰 | NLD
+      - 博茨瓦纳1
+      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰
+      - 🇨🇭_CH_瑞士->🇸🇬_SG_新加坡
+      - 🇸🇬 SG_289 | ⬇️ 36MB/s
+      - 🇰🇷 KR_2504 | ⬇️ 14MB/s
+      - 00-Trojan-jp-AI_1
+      - 🇰🇷 KR_2589 | ⬇️ 20MB/s
+      - 🇰🇷 KR_2729 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2336 | ⬇️ 33MB/s
+      - 🇰🇷 KR_2884 | ⬇️ 22MB/s
+      - 🇰🇷 KR_2742 | ⬇️ 49MB/s
+      - 🇰🇷 KR_2890 | ⬇️ 32MB/s
+      - 🇰🇷 KR_2421 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2443 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2513 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2889 | ⬇️ 27MB/s
+      - US
+      - 🇰🇷 KR_2750 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2681 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2785 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2623 | ⬇️ 47MB/s
+      - 🇰🇷 KR_2372 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2855 | ⬇️ 38MB/s
+      - 🇰🇷 KR_2862 | ⬇️ 32MB/s
+      - 🇰🇷 KR_284 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2679 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2562 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2875 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2898 | ⬇️ 42MB/s
+      - 🇰🇷 KR_2903 | ⬇️ 14MB/s
+      - 🇰🇷 KR_2863 | ⬇️ 10MB/s
+      - 🇰🇷 KR_2141 | ⬇️ 44MB/s
+      - 🇰🇷 KR_2477 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2869 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2352 | ⬇️ 28MB/s
+      - 🇰🇷 KR_285 | ⬇️ 24MB/s
+      - 🇰🇷 KR_2792 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2751 | ⬇️ 45MB/s
+      - 🇺🇸 美国US-218
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇬🇧 英国-960
+      - 🇬🇧 英国-1146
+      - 🇺🇸 美国US 224_1
+      - 🇩🇪 德国 04
+      - 🇺🇸_US_美国
+      - 英国 V2CROSS.COM
+      - 🇺🇸美国US-98
+      - 🇺🇸 美国US 210_1
+      - 🇺🇸 美国US 215_1
+      - 德国_1
+      - 🇺🇸 美国-948
+      - 🇩🇪 DE_13 | ⬇️ 13MB/s
+      - 🇺🇸美国US-205
+      - 🇫🇷法国FR-90
+      - 🇰🇷 KR_292 | ⬇️ 12MB/s
+      - 🇩🇪 DE_20 | ⬇️ 27MB/s
+      - 🇩🇪 DE_322 | ⬇️ 19MB/s
+      - 🇩🇪 DE_257 | ⬇️ 28MB/s
+      - 🇺🇸美国US-220
+      - 🇫🇷法国FR-98
+      - 🇫🇷法国FR-80
+      - 🇫🇷FR_2|1.1MB/s
+      - 🇫🇷FR_3|1.5MB/s
+      - 🇷🇺俄罗斯RU-823
+      - 🇩🇪 DE_236 | ⬇️ 37MB/s
+      - 🇫🇷法国FR-88
+      - EE11
+      - 🇫🇷法国FR-85
+      - 🇭🇰香港HK纯净-420
+      - 🇵🇱波兰PL-807
+      - 🇵🇱波兰PL-203
+      - 🇵🇱波兰PL-291
+      - 🇩🇪DE_2|2.2MB/s
+      - hysteria2-warp
+      - "[IPv6] 🇸🇪瑞典SE-191"
+      - 🇭🇰 HK_293 | ⬇️ 48MB/s
+      - 🇭🇰 HK_297 | ⬇️ 26MB/s
+      - 🇸🇬 SG_270 | ⬇️ 42MB/s
+      - 🇸🇬 SG_287 | ⬇️ 21MB/s
+      - 🇭🇰 HK_296 | ⬇️ 26MB/s
+      - 🇰🇷 KR_2385 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2518 | ⬇️ 42MB/s
+      - 🇰🇷 KR_291 | ⬇️ 43MB/s
+      - 🇸🇬 SG_275 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2630 | ⬇️ 28MB/s
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s_1
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 02-WS-saas.sin.fan
+      - 03-Trojan-cloudflare88
+      - 03-WS-cloudflare88
+      - 00-Trojan-jp-AI
+      - 00-WS-jp-AI
+      - 02-Trojan-saas.sin.fan
+      - 01-WS-030101.xyz
+      - 01-Trojan2
+      - 🇺🇸_US_美国1
+      - 英国033
+      - 🇺🇸 美国US 224
+      - 德国
+      - 🇺🇸 美国 | USA
+      - 德国039
+      - 🇺🇸US_23|1.9MB/s
+      - 英国038
+      - 🇺🇸 美国US 210
+      - 美国043
+      - 🇩🇪 德国 | DEU
+      - 英国041
+      - 美国044
+      - 🇺🇸 美国US 215
+      - 🇺🇸 美国US 209
+      - 🇺🇸US_1|5.8MB/s
+      - 英国034
+      - 英国 12
+      - 🇺🇸 美国 1836
+      - 英国 21
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - 香港216
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - 美国236
+      - 🇵🇱 波兰 | POL
+      - 🇨🇭 瑞士 | CHE
+      - 🇫🇷 法国 | FRA 2
+      - 🇩🇪 德国 | DEU 3
+      - 新加坡235
+      - 德国236
+      - 美国237
+      - 美国238
+      - 德国239
+      - 美国241
+      - 德国242
+      - 美国243
+      - 美国245
+      - 美国244
+      - 美国246
+      - 德国247
+      - 美国248
+      - 美国249
+      - 美国251
+      - 香港253
+      - 美国255
+      - 德国259
+      - 美国260
+      - SG VLESS-78 | free-nodes
+      - SS-24 | free-nodes
+      - VLESS-55 | free-nodes
+      - 英国 11
+      - 英国 22
+      - 英国 33
+      - 英国 44
+      - 英国 55
+      - HK_73bd5_0011
+      - TW_73bd5_0021
+      - TW_73bd5_0022
+      - NN_73bd5_0016
+      - US_73bd5_0028
+      - US_73bd5_0032
+      - GB_73bd5_0010
+      - CH_73bd5_0001
+      - RU_73bd5_0020
+      - HK_73bd5_0012
+      - 🇸🇬 新加坡 | SGP 4
+      - 🇺🇸 美国 | USA 14
+      - 🇺🇸 美国 | USA 25
+      - 🇺🇸 美国 | USA 4
+      - 🇺🇸 美国 | USA 9
+      - 🇺🇸 美国 | USA 21
+      - 🇺🇸 美国 | USA 5
+      - 🇺🇸 美国 | USA 18
+      - 🇫🇷 法国 | FRA
+      - 🇱🇻 拉脱维亚 | LVA 3
+      - 🇺🇸 美国 | USA_1
+      - 🇫🇮 芬兰 | FIN
+      - 🇺🇸 美国 | USA_2
+      - 🇳🇱 荷兰 | NLD
+      - 博茨瓦纳1
+      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰
+      - 🇨🇭_CH_瑞士->🇸🇬_SG_新加坡
+      - 🇸🇬 SG_289 | ⬇️ 36MB/s
+      - 🇰🇷 KR_2504 | ⬇️ 14MB/s
+      - 00-Trojan-jp-AI_1
+      - 🇰🇷 KR_2589 | ⬇️ 20MB/s
+      - 🇰🇷 KR_2729 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2336 | ⬇️ 33MB/s
+      - 🇰🇷 KR_2884 | ⬇️ 22MB/s
+      - 🇰🇷 KR_2742 | ⬇️ 49MB/s
+      - 🇰🇷 KR_2890 | ⬇️ 32MB/s
+      - 🇰🇷 KR_2421 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2443 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2513 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2889 | ⬇️ 27MB/s
+      - US
+      - 🇰🇷 KR_2750 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2681 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2785 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2623 | ⬇️ 47MB/s
+      - 🇰🇷 KR_2372 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2855 | ⬇️ 38MB/s
+      - 🇰🇷 KR_2862 | ⬇️ 32MB/s
+      - 🇰🇷 KR_284 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2679 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2562 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2875 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2898 | ⬇️ 42MB/s
+      - 🇰🇷 KR_2903 | ⬇️ 14MB/s
+      - 🇰🇷 KR_2863 | ⬇️ 10MB/s
+      - 🇰🇷 KR_2141 | ⬇️ 44MB/s
+      - 🇰🇷 KR_2477 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2869 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2352 | ⬇️ 28MB/s
+      - 🇰🇷 KR_285 | ⬇️ 24MB/s
+      - 🇰🇷 KR_2792 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2751 | ⬇️ 45MB/s
+      - 🇺🇸 美国US-218
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇬🇧 英国-960
+      - 🇬🇧 英国-1146
+      - 🇺🇸 美国US 224_1
+      - 🇩🇪 德国 04
+      - 🇺🇸_US_美国
+      - 英国 V2CROSS.COM
+      - 🇺🇸美国US-98
+      - 🇺🇸 美国US 210_1
+      - 🇺🇸 美国US 215_1
+      - 德国_1
+      - 🇺🇸 美国-948
+      - 🇩🇪 DE_13 | ⬇️ 13MB/s
+      - 🇺🇸美国US-205
+      - 🇫🇷法国FR-90
+      - 🇰🇷 KR_292 | ⬇️ 12MB/s
+      - 🇩🇪 DE_20 | ⬇️ 27MB/s
+      - 🇩🇪 DE_322 | ⬇️ 19MB/s
+      - 🇩🇪 DE_257 | ⬇️ 28MB/s
+      - 🇺🇸美国US-220
+      - 🇫🇷法国FR-98
+      - 🇫🇷法国FR-80
+      - 🇫🇷FR_2|1.1MB/s
+      - 🇫🇷FR_3|1.5MB/s
+      - 🇷🇺俄罗斯RU-823
+      - 🇩🇪 DE_236 | ⬇️ 37MB/s
+      - 🇫🇷法国FR-88
+      - EE11
+      - 🇫🇷法国FR-85
+      - 🇭🇰香港HK纯净-420
+      - 🇵🇱波兰PL-807
+      - 🇵🇱波兰PL-203
+      - 🇵🇱波兰PL-291
+      - 🇩🇪DE_2|2.2MB/s
+      - hysteria2-warp
+      - "[IPv6] 🇸🇪瑞典SE-191"
+      - 🇭🇰 HK_293 | ⬇️ 48MB/s
+      - 🇭🇰 HK_297 | ⬇️ 26MB/s
+      - 🇸🇬 SG_270 | ⬇️ 42MB/s
+      - 🇸🇬 SG_287 | ⬇️ 21MB/s
+      - 🇭🇰 HK_296 | ⬇️ 26MB/s
+      - 🇰🇷 KR_2385 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2518 | ⬇️ 42MB/s
+      - 🇰🇷 KR_291 | ⬇️ 43MB/s
+      - 🇸🇬 SG_275 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2630 | ⬇️ 28MB/s
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s_1
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 02-WS-saas.sin.fan
+      - 03-Trojan-cloudflare88
+      - 03-WS-cloudflare88
+      - 00-Trojan-jp-AI
+      - 00-WS-jp-AI
+      - 02-Trojan-saas.sin.fan
+      - 01-WS-030101.xyz
+      - 01-Trojan2
+      - 🇺🇸_US_美国1
+      - 英国033
+      - 🇺🇸 美国US 224
+      - 德国
+      - 🇺🇸 美国 | USA
+      - 德国039
+      - 🇺🇸US_23|1.9MB/s
+      - 英国038
+      - 🇺🇸 美国US 210
+      - 美国043
+      - 🇩🇪 德国 | DEU
+      - 英国041
+      - 美国044
+      - 🇺🇸 美国US 215
+      - 🇺🇸 美国US 209
+      - 🇺🇸US_1|5.8MB/s
+      - 英国034
+      - 英国 12
+      - 🇺🇸 美国 1836
+      - 英国 21
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - 香港216
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - 美国236
+      - 🇵🇱 波兰 | POL
+      - 🇨🇭 瑞士 | CHE
+      - 🇫🇷 法国 | FRA 2
+      - 🇩🇪 德国 | DEU 3
+      - 新加坡235
+      - 德国236
+      - 美国237
+      - 美国238
+      - 德国239
+      - 美国241
+      - 德国242
+      - 美国243
+      - 美国245
+      - 美国244
+      - 美国246
+      - 德国247
+      - 美国248
+      - 美国249
+      - 美国251
+      - 香港253
+      - 美国255
+      - 德国259
+      - 美国260
+      - SG VLESS-78 | free-nodes
+      - SS-24 | free-nodes
+      - VLESS-55 | free-nodes
+      - 英国 11
+      - 英国 22
+      - 英国 33
+      - 英国 44
+      - 英国 55
+      - HK_73bd5_0011
+      - TW_73bd5_0021
+      - TW_73bd5_0022
+      - NN_73bd5_0016
+      - US_73bd5_0028
+      - US_73bd5_0032
+      - GB_73bd5_0010
+      - CH_73bd5_0001
+      - RU_73bd5_0020
+      - HK_73bd5_0012
+      - 🇸🇬 新加坡 | SGP 4
+      - 🇺🇸 美国 | USA 14
+      - 🇺🇸 美国 | USA 25
+      - 🇺🇸 美国 | USA 4
+      - 🇺🇸 美国 | USA 9
+      - 🇺🇸 美国 | USA 21
+      - 🇺🇸 美国 | USA 5
+      - 🇺🇸 美国 | USA 18
+      - 🇫🇷 法国 | FRA
+      - 🇱🇻 拉脱维亚 | LVA 3
+      - 🇺🇸 美国 | USA_1
+      - 🇫🇮 芬兰 | FIN
+      - 🇺🇸 美国 | USA_2
+      - 🇳🇱 荷兰 | NLD
+      - 博茨瓦纳1
+      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰
+      - 🇨🇭_CH_瑞士->🇸🇬_SG_新加坡
+      - 🇸🇬 SG_289 | ⬇️ 36MB/s
+      - 🇰🇷 KR_2504 | ⬇️ 14MB/s
+      - 00-Trojan-jp-AI_1
+      - 🇰🇷 KR_2589 | ⬇️ 20MB/s
+      - 🇰🇷 KR_2729 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2336 | ⬇️ 33MB/s
+      - 🇰🇷 KR_2884 | ⬇️ 22MB/s
+      - 🇰🇷 KR_2742 | ⬇️ 49MB/s
+      - 🇰🇷 KR_2890 | ⬇️ 32MB/s
+      - 🇰🇷 KR_2421 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2443 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2513 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2889 | ⬇️ 27MB/s
+      - US
+      - 🇰🇷 KR_2750 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2681 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2785 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2623 | ⬇️ 47MB/s
+      - 🇰🇷 KR_2372 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2855 | ⬇️ 38MB/s
+      - 🇰🇷 KR_2862 | ⬇️ 32MB/s
+      - 🇰🇷 KR_284 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2679 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2562 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2875 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2898 | ⬇️ 42MB/s
+      - 🇰🇷 KR_2903 | ⬇️ 14MB/s
+      - 🇰🇷 KR_2863 | ⬇️ 10MB/s
+      - 🇰🇷 KR_2141 | ⬇️ 44MB/s
+      - 🇰🇷 KR_2477 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2869 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2352 | ⬇️ 28MB/s
+      - 🇰🇷 KR_285 | ⬇️ 24MB/s
+      - 🇰🇷 KR_2792 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2751 | ⬇️ 45MB/s
+      - 🇺🇸 美国US-218
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇬🇧 英国-960
+      - 🇬🇧 英国-1146
+      - 🇺🇸 美国US 224_1
+      - 🇩🇪 德国 04
+      - 🇺🇸_US_美国
+      - 英国 V2CROSS.COM
+      - 🇺🇸美国US-98
+      - 🇺🇸 美国US 210_1
+      - 🇺🇸 美国US 215_1
+      - 德国_1
+      - 🇺🇸 美国-948
+      - 🇩🇪 DE_13 | ⬇️ 13MB/s
+      - 🇺🇸美国US-205
+      - 🇫🇷法国FR-90
+      - 🇰🇷 KR_292 | ⬇️ 12MB/s
+      - 🇩🇪 DE_20 | ⬇️ 27MB/s
+      - 🇩🇪 DE_322 | ⬇️ 19MB/s
+      - 🇩🇪 DE_257 | ⬇️ 28MB/s
+      - 🇺🇸美国US-220
+      - 🇫🇷法国FR-98
+      - 🇫🇷法国FR-80
+      - 🇫🇷FR_2|1.1MB/s
+      - 🇫🇷FR_3|1.5MB/s
+      - 🇷🇺俄罗斯RU-823
+      - 🇩🇪 DE_236 | ⬇️ 37MB/s
+      - 🇫🇷法国FR-88
+      - EE11
+      - 🇫🇷法国FR-85
+      - 🇭🇰香港HK纯净-420
+      - 🇵🇱波兰PL-807
+      - 🇵🇱波兰PL-203
+      - 🇵🇱波兰PL-291
+      - 🇩🇪DE_2|2.2MB/s
+      - hysteria2-warp
+      - "[IPv6] 🇸🇪瑞典SE-191"
+      - 🇭🇰 HK_293 | ⬇️ 48MB/s
+      - 🇭🇰 HK_297 | ⬇️ 26MB/s
+      - 🇸🇬 SG_270 | ⬇️ 42MB/s
+      - 🇸🇬 SG_287 | ⬇️ 21MB/s
+      - 🇭🇰 HK_296 | ⬇️ 26MB/s
+      - 🇰🇷 KR_2385 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2518 | ⬇️ 42MB/s
+      - 🇰🇷 KR_291 | ⬇️ 43MB/s
+      - 🇸🇬 SG_275 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2630 | ⬇️ 28MB/s
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s_1
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 02-WS-saas.sin.fan
+      - 03-Trojan-cloudflare88
+      - 03-WS-cloudflare88
+      - 00-Trojan-jp-AI
+      - 00-WS-jp-AI
+      - 02-Trojan-saas.sin.fan
+      - 01-WS-030101.xyz
+      - 01-Trojan2
+      - 🇺🇸_US_美国1
+      - 英国033
+      - 🇺🇸 美国US 224
+      - 德国
+      - 🇺🇸 美国 | USA
+      - 德国039
+      - 🇺🇸US_23|1.9MB/s
+      - 英国038
+      - 🇺🇸 美国US 210
+      - 美国043
+      - 🇩🇪 德国 | DEU
+      - 英国041
+      - 美国044
+      - 🇺🇸 美国US 215
+      - 🇺🇸 美国US 209
+      - 🇺🇸US_1|5.8MB/s
+      - 英国034
+      - 英国 12
+      - 🇺🇸 美国 1836
+      - 英国 21
+      - 🇩🇪 DE 410 | ⬇️ 1MB/s
+      - 香港216
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s
+      - 美国236
+      - 🇵🇱 波兰 | POL
+      - 🇨🇭 瑞士 | CHE
+      - 🇫🇷 法国 | FRA 2
+      - 🇩🇪 德国 | DEU 3
+      - 新加坡235
+      - 德国236
+      - 美国237
+      - 美国238
+      - 德国239
+      - 美国241
+      - 德国242
+      - 美国243
+      - 美国245
+      - 美国244
+      - 美国246
+      - 德国247
+      - 美国248
+      - 美国249
+      - 美国251
+      - 香港253
+      - 美国255
+      - 德国259
+      - 美国260
+      - SG VLESS-78 | free-nodes
+      - SS-24 | free-nodes
+      - VLESS-55 | free-nodes
+      - 英国 11
+      - 英国 22
+      - 英国 33
+      - 英国 44
+      - 英国 55
+      - HK_73bd5_0011
+      - TW_73bd5_0021
+      - TW_73bd5_0022
+      - NN_73bd5_0016
+      - US_73bd5_0028
+      - US_73bd5_0032
+      - GB_73bd5_0010
+      - CH_73bd5_0001
+      - RU_73bd5_0020
+      - HK_73bd5_0012
+      - 🇸🇬 新加坡 | SGP 4
+      - 🇺🇸 美国 | USA 14
+      - 🇺🇸 美国 | USA 25
+      - 🇺🇸 美国 | USA 4
+      - 🇺🇸 美国 | USA 9
+      - 🇺🇸 美国 | USA 21
+      - 🇺🇸 美国 | USA 5
+      - 🇺🇸 美国 | USA 18
+      - 🇫🇷 法国 | FRA
+      - 🇱🇻 拉脱维亚 | LVA 3
+      - 🇺🇸 美国 | USA_1
+      - 🇫🇮 芬兰 | FIN
+      - 🇺🇸 美国 | USA_2
+      - 🇳🇱 荷兰 | NLD
+      - 博茨瓦纳1
+      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+      - 🇳🇱_NL_荷兰
+      - 🇨🇭_CH_瑞士->🇸🇬_SG_新加坡
+      - 🇸🇬 SG_289 | ⬇️ 36MB/s
+      - 🇰🇷 KR_2504 | ⬇️ 14MB/s
+      - 00-Trojan-jp-AI_1
+      - 🇰🇷 KR_2589 | ⬇️ 20MB/s
+      - 🇰🇷 KR_2729 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2336 | ⬇️ 33MB/s
+      - 🇰🇷 KR_2884 | ⬇️ 22MB/s
+      - 🇰🇷 KR_2742 | ⬇️ 49MB/s
+      - 🇰🇷 KR_2890 | ⬇️ 32MB/s
+      - 🇰🇷 KR_2421 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2443 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2513 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2889 | ⬇️ 27MB/s
+      - US
+      - 🇰🇷 KR_2750 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2681 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2785 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2623 | ⬇️ 47MB/s
+      - 🇰🇷 KR_2372 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2855 | ⬇️ 38MB/s
+      - 🇰🇷 KR_2862 | ⬇️ 32MB/s
+      - 🇰🇷 KR_284 | ⬇️ 37MB/s
+      - 🇰🇷 KR_2679 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2562 | ⬇️ 29MB/s
+      - 🇰🇷 KR_2875 | ⬇️ 12MB/s
+      - 🇰🇷 KR_2898 | ⬇️ 42MB/s
+      - 🇰🇷 KR_2903 | ⬇️ 14MB/s
+      - 🇰🇷 KR_2863 | ⬇️ 10MB/s
+      - 🇰🇷 KR_2141 | ⬇️ 44MB/s
+      - 🇰🇷 KR_2477 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2869 | ⬇️ 35MB/s
+      - 🇰🇷 KR_2352 | ⬇️ 28MB/s
+      - 🇰🇷 KR_285 | ⬇️ 24MB/s
+      - 🇰🇷 KR_2792 | ⬇️ 34MB/s
+      - 🇰🇷 KR_2751 | ⬇️ 45MB/s
+      - 🇺🇸 美国US-218
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇬🇧 英国-960
+      - 🇬🇧 英国-1146
+      - 🇺🇸 美国US 224_1
+      - 🇩🇪 德国 04
+      - 🇺🇸_US_美国
+      - 英国 V2CROSS.COM
+      - 🇺🇸美国US-98
+      - 🇺🇸 美国US 210_1
+      - 🇺🇸 美国US 215_1
+      - 德国_1
+      - 🇺🇸 美国-948
+      - 🇩🇪 DE_13 | ⬇️ 13MB/s
+      - 🇺🇸美国US-205
+      - 🇫🇷法国FR-90
+      - 🇰🇷 KR_292 | ⬇️ 12MB/s
+      - 🇩🇪 DE_20 | ⬇️ 27MB/s
+      - 🇩🇪 DE_322 | ⬇️ 19MB/s
+      - 🇩🇪 DE_257 | ⬇️ 28MB/s
+      - 🇺🇸美国US-220
+      - 🇫🇷法国FR-98
+      - 🇫🇷法国FR-80
+      - 🇫🇷FR_2|1.1MB/s
+      - 🇫🇷FR_3|1.5MB/s
+      - 🇷🇺俄罗斯RU-823
+      - 🇩🇪 DE_236 | ⬇️ 37MB/s
+      - 🇫🇷法国FR-88
+      - EE11
+      - 🇫🇷法国FR-85
+      - 🇭🇰香港HK纯净-420
+      - 🇵🇱波兰PL-807
+      - 🇵🇱波兰PL-203
+      - 🇵🇱波兰PL-291
+      - 🇩🇪DE_2|2.2MB/s
+      - hysteria2-warp
+      - "[IPv6] 🇸🇪瑞典SE-191"
+      - 🇭🇰 HK_293 | ⬇️ 48MB/s
+      - 🇭🇰 HK_297 | ⬇️ 26MB/s
+      - 🇸🇬 SG_270 | ⬇️ 42MB/s
+      - 🇸🇬 SG_287 | ⬇️ 21MB/s
+      - 🇭🇰 HK_296 | ⬇️ 26MB/s
+      - 🇰🇷 KR_2385 | ⬇️ 13MB/s
+      - 🇰🇷 KR_2518 | ⬇️ 42MB/s
+      - 🇰🇷 KR_291 | ⬇️ 43MB/s
+      - 🇸🇬 SG_275 | ⬇️ 40MB/s
+      - 🇰🇷 KR_2630 | ⬇️ 28MB/s
+      - 🇹🇼 TW 020 | ⬇️ 12MB/s_1
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
