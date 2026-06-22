@@ -1,0 +1,2535 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+proxies:
+  - name: 英国  19.32MB/s
+    type: vless
+    server: 152.233.28.201
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪瑞典  4.27MB/s
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴_RO_罗马尼亚
+    type: vless
+    server: 95.173.199.69
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 捷克+7
+    type: vless
+    server: 95.173.199.87
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国33
+    type: vless
+    server: 95.173.199.86
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-242 | free-nodes
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪_SE_瑞典
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 124
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯511
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯504
+    type: vless
+    server: 87.249.139.247
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦_UA_乌克兰
+    type: vless
+    server: 143.244.45.53
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯37
+    type: vless
+    server: 87.249.139.233
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷TR
+    type: vless
+    server: 87.249.139.235
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+加州
+    type: trojan
+    server: 216.24.57.1
+    port: 443
+    password: humanity
+    sni: www.calmloud.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 荷兰507
+    type: vless
+    server: 185.229.191.12
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦_UA_乌克兰_1
+    type: vless
+    server: 143.244.45.50
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱荷兰
+    type: vless
+    server: 185.229.191.13
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD 7
+    type: vless
+    server: 185.229.191.157
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 瑞典519
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱_NL_荷兰
+    type: vless
+    server: 185.229.191.13
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 美国34
+    type: vless
+    server: 152.233.28.201
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU 2
+    type: vless
+    server: 95.173.199.86
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰508
+    type: vless
+    server: 185.229.191.13
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-300 | free-nodes
+    type: vless
+    server: 191.44.118.101
+    port: 443
+    uuid: deecd21a-a24f-444d-b92a-2c8e41a6b05b
+    servername: www.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 69_I9Wm_vP5wQUbiQhdejWS9yLlNYLFjcnF59G-0GAU
+      short-id: 31e36d0ac3355472
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰+2
+    type: vless
+    server: 185.229.191.12
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 瑞典 | SWE
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰35
+    type: vless
+    server: 185.229.191.157
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: VMESS-336 | free-nodes
+    type: vmess
+    server: 160.250.247.70
+    port: 49178
+    uuid: d7c13e10-2ba9-4677-a877-d9e9d1738394
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴罗马尼亚
+    type: vless
+    server: 95.173.199.86
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴罗马尼亚_1
+    type: vless
+    server: 95.173.199.104
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD
+    type: vless
+    server: 185.229.191.157
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国47
+    type: vless
+    server: 95.173.199.116
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 法国49
+    type: vmess
+    server: 69.84.182.49
+    port: 80
+    uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+    udp: true
+  - name: 美国501
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-2461
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: VMESS-333 | free-nodes
+    type: vmess
+    server: 69.84.182.49
+    port: 80
+    uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+    udp: true
+  - name: 捷克+6
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 巴西
+    type: vless
+    server: 152.233.28.200
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷TR_1
+    type: vless
+    server: 87.249.139.247
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 巴西+圣保罗Host1Plus数据中心
+    type: vless
+    server: 191.44.118.101
+    port: 443
+    uuid: deecd21a-a24f-444d-b92a-2c8e41a6b05b
+    servername: www.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 69_I9Wm_vP5wQUbiQhdejWS9yLlNYLFjcnF59G-0GAU
+      short-id: 31e36d0ac3355472
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD 2
+    type: vless
+    server: 185.229.191.13
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 英国 | GBR
+    type: vless
+    server: 152.233.28.200
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 英国 | GBR_1
+    type: vless
+    server: 152.233.28.201
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 英国 | GBR_2
+    type: vless
+    server: 152.233.28.201
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 英国 | GBR 2
+    type: vless
+    server: 152.233.28.200
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU 5
+    type: vless
+    server: 95.173.199.87
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD 3
+    type: vless
+    server: 185.229.191.12
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU 6
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD_1
+    type: vless
+    server: 185.229.191.157
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 瑞典 | SWE_1
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 瑞典 | SWE_2
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU_1
+    type: vless
+    server: 95.173.199.116
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD_2
+    type: vless
+    server: 185.229.191.13
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD_3
+    type: vless
+    server: 185.229.191.157
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU 2_1
+    type: vless
+    server: 95.173.199.104
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU_2
+    type: vless
+    server: 95.173.199.86
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD_4
+    type: vless
+    server: 185.229.191.12
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU_3
+    type: vless
+    server: 95.173.199.69
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU_4
+    type: vless
+    server: 95.173.199.86
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU_5
+    type: vless
+    server: 95.173.199.87
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU 4
+    type: vless
+    server: 95.173.199.116
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR
+    type: vless
+    server: 87.249.139.235
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR 3
+    type: vless
+    server: 87.249.139.235
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦 乌克兰 | UKR
+    type: vless
+    server: 143.244.45.55
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR_1
+    type: vless
+    server: 87.249.139.247
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR_2
+    type: vless
+    server: 87.249.139.233
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR_3
+    type: vless
+    server: 87.249.139.247
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU_6
+    type: vless
+    server: 95.173.199.104
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴 罗马尼亚 | ROU 3
+    type: vless
+    server: 95.173.199.69
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR 2
+    type: vless
+    server: 87.249.139.233
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦 乌克兰 | UKR_1
+    type: vless
+    server: 143.244.45.50
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦 乌克兰 | UKR 2
+    type: vless
+    server: 143.244.45.55
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦 乌克兰 | UKR_2
+    type: vless
+    server: 143.244.45.50
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 美国11
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 乌克兰12
+    type: vless
+    server: 143.244.45.50
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国13
+    type: vless
+    server: 143.244.45.50
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰14
+    type: vless
+    server: 185.229.191.13
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国15
+    type: vless
+    server: 152.233.28.200
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国16
+    type: vless
+    server: 95.173.199.69
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 美国17
+    type: vless
+    server: assets.trorays.com
+    port: 443
+    uuid: b69a71ef-51dc-48c6-b3df-4c3533062606
+    servername: assets.trorays.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰18
+    type: vless
+    server: 185.229.191.12
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 美国19
+    type: vless
+    server: assets.trorays.com
+    port: 443
+    uuid: b69a71ef-51dc-48c6-b3df-4c3533062606
+    servername: assets.trorays.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰20
+    type: vless
+    server: 185.229.191.12
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 乌克兰21
+    type: vless
+    server: 143.244.45.55
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国22
+    type: vless
+    server: 152.233.28.201
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 土耳其23
+    type: vless
+    server: 87.249.139.235
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国24
+    type: vless
+    server: 95.173.199.87
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国 25
+    type: vless
+    server: 191.44.118.101
+    port: 443
+    uuid: deecd21a-a24f-444d-b92a-2c8e41a6b05b
+    servername: www.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 69_I9Wm_vP5wQUbiQhdejWS9yLlNYLFjcnF59G-0GAU
+      short-id: 31e36d0ac3355472
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯26
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国27
+    type: vless
+    server: 87.249.139.247
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 乌克兰28
+    type: vless
+    server: 143.244.45.53
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰29
+    type: vless
+    server: 185.229.191.157
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国30
+    type: vless
+    server: 95.173.199.86
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国31
+    type: vless
+    server: 95.173.199.116
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 美国32
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-335 | free-nodes
+    type: vless
+    server: tw3.miyazono-kaori.com
+    port: 443
+    uuid: 580d81f8-4f30-49d6-ad90-59fb4a850313
+    servername: dlcdnets.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: JE82iOR_U_H7ffxJ5yfoxXeRkMlE-aVu1wxR7n6jrVM
+      short-id: "473277e2"
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-385 | free-nodes
+    type: vless
+    server: 81.90.29.53
+    port: 8443
+    uuid: cf038a28-8f85-41fc-9e86-ba99a3fdd0d9
+    servername: mishaduck.duckdns.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: -FQM2tUbpiBjwjgla2mwkSkFhFIKQU0FQOvRi0ZD_mY
+      short-id: 540f5784c2481b5a
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-115 | free-nodes
+    type: vless
+    server: 109.73.65.116
+    port: 493
+    uuid: 20000020-3063-1376-f000-f6c850c0a020
+    servername: louisvuitton.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: hoJugHeT_SOHhybvTE5gEEgEqsar9KrDtC5uP5qi5GY
+      short-id: 31cf122180c019f7
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-376 | free-nodes
+    type: vless
+    server: assets.trorays.com
+    port: 443
+    uuid: b69a71ef-51dc-48c6-b3df-4c3533062606
+    servername: assets.trorays.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-266 | free-nodes
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-388 | free-nodes
+    type: vless
+    server: sv2.azparadox.ir
+    port: 8880
+    uuid: d9307ab3-1ed0-4b6d-bfd0-e104c7ccc25a
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: azsv2.ir5ive.ir
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-392 | free-nodes
+    type: vless
+    server: 191.44.118.101
+    port: 443
+    uuid: deecd21a-a24f-444d-b92a-2c8e41a6b05b
+    servername: www.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 69_I9Wm_vP5wQUbiQhdejWS9yLlNYLFjcnF59G-0GAU
+      short-id: 31e36d0ac3355472
+    skip-cert-verify: true
+    udp: true
+  - name: VMESS-444 | free-nodes
+    type: vmess
+    server: 69.84.182.49
+    port: 80
+    uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+    udp: true
+  - name: VMESS-422 | free-nodes
+    type: vmess
+    server: 69.84.182.49
+    port: 80
+    uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+    udp: true
+  - name: VMESS-423 | free-nodes
+    type: vmess
+    server: 69.84.182.49
+    port: 80
+    uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+    udp: true
+  - name: 荷兰+1
+    type: vless
+    server: 185.229.191.12
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 捷克+2
+    type: vless
+    server: 95.173.199.116
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 巴西+3
+    type: vless
+    server: 152.233.28.201
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱_NL_荷兰_1
+    type: vless
+    server: 185.229.191.13
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪_SE_瑞典_1
+    type: vless
+    server: 79.127.249.221
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴_RO_罗马尼亚_1
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴_RO_罗马尼亚_2
+    type: vless
+    server: 95.173.199.86
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇱🇻_LV_拉脱维亚
+    type: vless
+    server: assets.trorays.com
+    port: 443
+    uuid: b69a71ef-51dc-48c6-b3df-4c3533062606
+    tls: true
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴_RO_罗马尼亚_3
+    type: vless
+    server: 95.173.199.104
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷_TR_土耳其
+    type: vless
+    server: 87.249.139.235
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷_TR_土耳其_1
+    type: vless
+    server: 87.249.139.233
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦_UA_乌克兰_2
+    type: vless
+    server: 143.244.45.53
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷_TR_土耳其_2
+    type: vless
+    server: 87.249.139.247
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦_UA_乌克兰_3
+    type: vless
+    server: 143.244.45.50
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇮_FI_芬兰
+    type: ss
+    server: 109.107.182.229
+    port: 51544
+    cipher: chacha20-ietf-poly1305
+    password: GnuGEOe4FsNyGsqLc2Ji0F
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱荷兰_1
+    type: vless
+    server: 185.229.191.12
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇮芬兰 原生IP 4.09MB/s 1
+    type: vless
+    server: 8.6.112.121
+    port: 443
+    uuid: 1c3927cb-6141-4473-a17d-4b290f7c6980
+    network: http
+    servername: ProxyVPN11.dns.xn--q9jyb4c
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /xn--q9jyb4c
+      headers:
+        Host:
+          - fi.dns.xn--q9jyb4c
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷TR_2
+    type: vless
+    server: 87.249.139.233
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: "323234"
+    type: vless
+    server: 152.233.28.202
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷法国 原生IP 9.57MB/s 1
+    type: hysteria2
+    server: hy2.313186.xyz
+    port: 18066
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: hy2.313186.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 111原生IP 19.66MB/s
+    type: vless
+    server: 152.233.28.202
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴罗马尼亚11s
+    type: vless
+    server: 95.173.199.106
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱荷兰_2
+    type: vless
+    server: 185.229.191.13
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 123319.32MB/s
+    type: vless
+    server: 152.233.28.201
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬新加坡
+    type: trojan
+    server: jpbgp.netvigor.cc
+    port: 19128
+    password: OccIqeORGQwiNkwS
+    sni: yazhou10.dynu.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇷🇴罗马尼亚12
+    type: vless
+    server: 95.173.199.104
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴罗马尼亚22
+    type: vless
+    server: 95.173.199.116
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 巴西13
+    type: vless
+    server: 191.44.118.101
+    port: 443
+    uuid: deecd21a-a24f-444d-b92a-2c8e41a6b05b
+    servername: www.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 69_I9Wm_vP5wQUbiQhdejWS9yLlNYLFjcnF59G-0GAU
+      short-id: 31e36d0ac3355472
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴罗马尼亚43
+    type: vless
+    server: 95.173.199.86
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴罗马尼亚433
+    type: vless
+    server: 95.173.199.69
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷TR_3
+    type: vless
+    server: 87.249.139.235
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇦UA
+    type: vless
+    server: 143.244.45.55
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国 原生IP 0.67MB/s
+    type: vless
+    server: 191.44.118.101
+    port: 443
+    uuid: deecd21a-a24f-444d-b92a-2c8e41a6b05b
+    servername: www.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 69_I9Wm_vP5wQUbiQhdejWS9yLlNYLFjcnF59G-0GAU
+      short-id: 31e36d0ac3355472
+    skip-cert-verify: true
+    udp: true
+  - name: 1212原生IP 19.24MB/s 1
+    type: vless
+    server: 152.233.28.199
+    port: 8443
+    uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+    servername: ams1.fromblancwithlove.com
+    tls: true
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 英国  19.32MB/s
+      - 🇸🇪瑞典  4.27MB/s
+      - 🇷🇴_RO_罗马尼亚
+      - 捷克+7
+      - 美国33
+      - VLESS-242 | free-nodes
+      - 🇸🇪_SE_瑞典
+      - 🇸🇪 124
+      - 俄罗斯511
+      - 俄罗斯504
+      - 🇺🇦_UA_乌克兰
+      - 俄罗斯37
+      - 🇹🇷TR
+      - 美国+加州
+      - 荷兰507
+      - 🇺🇦_UA_乌克兰_1
+      - 🇳🇱荷兰
+      - 🇳🇱 荷兰 | NLD 7
+      - 瑞典519
+      - 🇳🇱_NL_荷兰
+      - 美国34
+      - 🇷🇴 罗马尼亚 | ROU 2
+      - 荷兰508
+      - VLESS-300 | free-nodes
+      - 荷兰+2
+      - 🇸🇪 瑞典 | SWE
+      - 荷兰35
+      - VMESS-336 | free-nodes
+      - 🇷🇴罗马尼亚
+      - 🇷🇴罗马尼亚_1
+      - 🇳🇱 荷兰 | NLD
+      - 美国47
+      - 法国49
+      - 美国501
+      - VLESS-2461
+      - VMESS-333 | free-nodes
+      - 捷克+6
+      - 巴西
+      - 🇹🇷TR_1
+      - 巴西+圣保罗Host1Plus数据中心
+      - 🇳🇱 荷兰 | NLD 2
+      - 🇬🇧 英国 | GBR
+      - 🇬🇧 英国 | GBR_1
+      - 🇬🇧 英国 | GBR_2
+      - 🇬🇧 英国 | GBR 2
+      - 🇷🇴 罗马尼亚 | ROU 5
+      - 🇳🇱 荷兰 | NLD 3
+      - 🇷🇴 罗马尼亚 | ROU 6
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇸🇪 瑞典 | SWE_1
+      - 🇸🇪 瑞典 | SWE_2
+      - 🇷🇴 罗马尼亚 | ROU
+      - 🇷🇴 罗马尼亚 | ROU_1
+      - 🇳🇱 荷兰 | NLD_2
+      - 🇳🇱 荷兰 | NLD_3
+      - 🇷🇴 罗马尼亚 | ROU 2_1
+      - 🇷🇴 罗马尼亚 | ROU_2
+      - 🇳🇱 荷兰 | NLD_4
+      - 🇷🇴 罗马尼亚 | ROU_3
+      - 🇷🇴 罗马尼亚 | ROU_4
+      - 🇷🇴 罗马尼亚 | ROU_5
+      - 🇷🇴 罗马尼亚 | ROU 4
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR 3
+      - 🇺🇦 乌克兰 | UKR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇹🇷 土耳其 | TUR_3
+      - 🇷🇴 罗马尼亚 | ROU_6
+      - 🇷🇴 罗马尼亚 | ROU 3
+      - 🇹🇷 土耳其 | TUR 2
+      - 🇺🇦 乌克兰 | UKR_1
+      - 🇺🇦 乌克兰 | UKR 2
+      - 🇺🇦 乌克兰 | UKR_2
+      - 美国11
+      - 乌克兰12
+      - 美国13
+      - 荷兰14
+      - 美国15
+      - 美国16
+      - 美国17
+      - 荷兰18
+      - 美国19
+      - 荷兰20
+      - 乌克兰21
+      - 美国22
+      - 土耳其23
+      - 美国24
+      - 美国 25
+      - 俄罗斯26
+      - 美国27
+      - 乌克兰28
+      - 荷兰29
+      - 美国30
+      - 美国31
+      - 美国32
+      - VLESS-335 | free-nodes
+      - VLESS-385 | free-nodes
+      - VLESS-115 | free-nodes
+      - VLESS-376 | free-nodes
+      - VLESS-266 | free-nodes
+      - VLESS-388 | free-nodes
+      - VLESS-392 | free-nodes
+      - VMESS-444 | free-nodes
+      - VMESS-422 | free-nodes
+      - VMESS-423 | free-nodes
+      - 荷兰+1
+      - 捷克+2
+      - 巴西+3
+      - 🇳🇱_NL_荷兰_1
+      - 🇸🇪_SE_瑞典_1
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇷🇴_RO_罗马尼亚_2
+      - 🇱🇻_LV_拉脱维亚
+      - 🇷🇴_RO_罗马尼亚_3
+      - 🇹🇷_TR_土耳其
+      - 🇹🇷_TR_土耳其_1
+      - 🇺🇦_UA_乌克兰_2
+      - 🇹🇷_TR_土耳其_2
+      - 🇺🇦_UA_乌克兰_3
+      - 🇫🇮_FI_芬兰
+      - 🇳🇱荷兰_1
+      - 🇫🇮芬兰 原生IP 4.09MB/s 1
+      - 🇹🇷TR_2
+      - "323234"
+      - 🇫🇷法国 原生IP 9.57MB/s 1
+      - 111原生IP 19.66MB/s
+      - 🇷🇴罗马尼亚11s
+      - 🇳🇱荷兰_2
+      - 123319.32MB/s
+      - 🇸🇬新加坡
+      - 🇷🇴罗马尼亚12
+      - 🇷🇴罗马尼亚22
+      - 巴西13
+      - 🇷🇴罗马尼亚43
+      - 🇷🇴罗马尼亚433
+      - 🇹🇷TR_3
+      - 🇺🇦UA
+      - 🇺🇸美国 原生IP 0.67MB/s
+      - 1212原生IP 19.24MB/s 1
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 英国  19.32MB/s
+      - 🇸🇪瑞典  4.27MB/s
+      - 🇷🇴_RO_罗马尼亚
+      - 捷克+7
+      - 美国33
+      - VLESS-242 | free-nodes
+      - 🇸🇪_SE_瑞典
+      - 🇸🇪 124
+      - 俄罗斯511
+      - 俄罗斯504
+      - 🇺🇦_UA_乌克兰
+      - 俄罗斯37
+      - 🇹🇷TR
+      - 美国+加州
+      - 荷兰507
+      - 🇺🇦_UA_乌克兰_1
+      - 🇳🇱荷兰
+      - 🇳🇱 荷兰 | NLD 7
+      - 瑞典519
+      - 🇳🇱_NL_荷兰
+      - 美国34
+      - 🇷🇴 罗马尼亚 | ROU 2
+      - 荷兰508
+      - VLESS-300 | free-nodes
+      - 荷兰+2
+      - 🇸🇪 瑞典 | SWE
+      - 荷兰35
+      - VMESS-336 | free-nodes
+      - 🇷🇴罗马尼亚
+      - 🇷🇴罗马尼亚_1
+      - 🇳🇱 荷兰 | NLD
+      - 美国47
+      - 法国49
+      - 美国501
+      - VLESS-2461
+      - VMESS-333 | free-nodes
+      - 捷克+6
+      - 巴西
+      - 🇹🇷TR_1
+      - 巴西+圣保罗Host1Plus数据中心
+      - 🇳🇱 荷兰 | NLD 2
+      - 🇬🇧 英国 | GBR
+      - 🇬🇧 英国 | GBR_1
+      - 🇬🇧 英国 | GBR_2
+      - 🇬🇧 英国 | GBR 2
+      - 🇷🇴 罗马尼亚 | ROU 5
+      - 🇳🇱 荷兰 | NLD 3
+      - 🇷🇴 罗马尼亚 | ROU 6
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇸🇪 瑞典 | SWE_1
+      - 🇸🇪 瑞典 | SWE_2
+      - 🇷🇴 罗马尼亚 | ROU
+      - 🇷🇴 罗马尼亚 | ROU_1
+      - 🇳🇱 荷兰 | NLD_2
+      - 🇳🇱 荷兰 | NLD_3
+      - 🇷🇴 罗马尼亚 | ROU 2_1
+      - 🇷🇴 罗马尼亚 | ROU_2
+      - 🇳🇱 荷兰 | NLD_4
+      - 🇷🇴 罗马尼亚 | ROU_3
+      - 🇷🇴 罗马尼亚 | ROU_4
+      - 🇷🇴 罗马尼亚 | ROU_5
+      - 🇷🇴 罗马尼亚 | ROU 4
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR 3
+      - 🇺🇦 乌克兰 | UKR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇹🇷 土耳其 | TUR_3
+      - 🇷🇴 罗马尼亚 | ROU_6
+      - 🇷🇴 罗马尼亚 | ROU 3
+      - 🇹🇷 土耳其 | TUR 2
+      - 🇺🇦 乌克兰 | UKR_1
+      - 🇺🇦 乌克兰 | UKR 2
+      - 🇺🇦 乌克兰 | UKR_2
+      - 美国11
+      - 乌克兰12
+      - 美国13
+      - 荷兰14
+      - 美国15
+      - 美国16
+      - 美国17
+      - 荷兰18
+      - 美国19
+      - 荷兰20
+      - 乌克兰21
+      - 美国22
+      - 土耳其23
+      - 美国24
+      - 美国 25
+      - 俄罗斯26
+      - 美国27
+      - 乌克兰28
+      - 荷兰29
+      - 美国30
+      - 美国31
+      - 美国32
+      - VLESS-335 | free-nodes
+      - VLESS-385 | free-nodes
+      - VLESS-115 | free-nodes
+      - VLESS-376 | free-nodes
+      - VLESS-266 | free-nodes
+      - VLESS-388 | free-nodes
+      - VLESS-392 | free-nodes
+      - VMESS-444 | free-nodes
+      - VMESS-422 | free-nodes
+      - VMESS-423 | free-nodes
+      - 荷兰+1
+      - 捷克+2
+      - 巴西+3
+      - 🇳🇱_NL_荷兰_1
+      - 🇸🇪_SE_瑞典_1
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇷🇴_RO_罗马尼亚_2
+      - 🇱🇻_LV_拉脱维亚
+      - 🇷🇴_RO_罗马尼亚_3
+      - 🇹🇷_TR_土耳其
+      - 🇹🇷_TR_土耳其_1
+      - 🇺🇦_UA_乌克兰_2
+      - 🇹🇷_TR_土耳其_2
+      - 🇺🇦_UA_乌克兰_3
+      - 🇫🇮_FI_芬兰
+      - 🇳🇱荷兰_1
+      - 🇫🇮芬兰 原生IP 4.09MB/s 1
+      - 🇹🇷TR_2
+      - "323234"
+      - 🇫🇷法国 原生IP 9.57MB/s 1
+      - 111原生IP 19.66MB/s
+      - 🇷🇴罗马尼亚11s
+      - 🇳🇱荷兰_2
+      - 123319.32MB/s
+      - 🇸🇬新加坡
+      - 🇷🇴罗马尼亚12
+      - 🇷🇴罗马尼亚22
+      - 巴西13
+      - 🇷🇴罗马尼亚43
+      - 🇷🇴罗马尼亚433
+      - 🇹🇷TR_3
+      - 🇺🇦UA
+      - 🇺🇸美国 原生IP 0.67MB/s
+      - 1212原生IP 19.24MB/s 1
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 英国  19.32MB/s
+      - 🇸🇪瑞典  4.27MB/s
+      - 🇷🇴_RO_罗马尼亚
+      - 捷克+7
+      - 美国33
+      - VLESS-242 | free-nodes
+      - 🇸🇪_SE_瑞典
+      - 🇸🇪 124
+      - 俄罗斯511
+      - 俄罗斯504
+      - 🇺🇦_UA_乌克兰
+      - 俄罗斯37
+      - 🇹🇷TR
+      - 美国+加州
+      - 荷兰507
+      - 🇺🇦_UA_乌克兰_1
+      - 🇳🇱荷兰
+      - 🇳🇱 荷兰 | NLD 7
+      - 瑞典519
+      - 🇳🇱_NL_荷兰
+      - 美国34
+      - 🇷🇴 罗马尼亚 | ROU 2
+      - 荷兰508
+      - VLESS-300 | free-nodes
+      - 荷兰+2
+      - 🇸🇪 瑞典 | SWE
+      - 荷兰35
+      - VMESS-336 | free-nodes
+      - 🇷🇴罗马尼亚
+      - 🇷🇴罗马尼亚_1
+      - 🇳🇱 荷兰 | NLD
+      - 美国47
+      - 法国49
+      - 美国501
+      - VLESS-2461
+      - VMESS-333 | free-nodes
+      - 捷克+6
+      - 巴西
+      - 🇹🇷TR_1
+      - 巴西+圣保罗Host1Plus数据中心
+      - 🇳🇱 荷兰 | NLD 2
+      - 🇬🇧 英国 | GBR
+      - 🇬🇧 英国 | GBR_1
+      - 🇬🇧 英国 | GBR_2
+      - 🇬🇧 英国 | GBR 2
+      - 🇷🇴 罗马尼亚 | ROU 5
+      - 🇳🇱 荷兰 | NLD 3
+      - 🇷🇴 罗马尼亚 | ROU 6
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇸🇪 瑞典 | SWE_1
+      - 🇸🇪 瑞典 | SWE_2
+      - 🇷🇴 罗马尼亚 | ROU
+      - 🇷🇴 罗马尼亚 | ROU_1
+      - 🇳🇱 荷兰 | NLD_2
+      - 🇳🇱 荷兰 | NLD_3
+      - 🇷🇴 罗马尼亚 | ROU 2_1
+      - 🇷🇴 罗马尼亚 | ROU_2
+      - 🇳🇱 荷兰 | NLD_4
+      - 🇷🇴 罗马尼亚 | ROU_3
+      - 🇷🇴 罗马尼亚 | ROU_4
+      - 🇷🇴 罗马尼亚 | ROU_5
+      - 🇷🇴 罗马尼亚 | ROU 4
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR 3
+      - 🇺🇦 乌克兰 | UKR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇹🇷 土耳其 | TUR_3
+      - 🇷🇴 罗马尼亚 | ROU_6
+      - 🇷🇴 罗马尼亚 | ROU 3
+      - 🇹🇷 土耳其 | TUR 2
+      - 🇺🇦 乌克兰 | UKR_1
+      - 🇺🇦 乌克兰 | UKR 2
+      - 🇺🇦 乌克兰 | UKR_2
+      - 美国11
+      - 乌克兰12
+      - 美国13
+      - 荷兰14
+      - 美国15
+      - 美国16
+      - 美国17
+      - 荷兰18
+      - 美国19
+      - 荷兰20
+      - 乌克兰21
+      - 美国22
+      - 土耳其23
+      - 美国24
+      - 美国 25
+      - 俄罗斯26
+      - 美国27
+      - 乌克兰28
+      - 荷兰29
+      - 美国30
+      - 美国31
+      - 美国32
+      - VLESS-335 | free-nodes
+      - VLESS-385 | free-nodes
+      - VLESS-115 | free-nodes
+      - VLESS-376 | free-nodes
+      - VLESS-266 | free-nodes
+      - VLESS-388 | free-nodes
+      - VLESS-392 | free-nodes
+      - VMESS-444 | free-nodes
+      - VMESS-422 | free-nodes
+      - VMESS-423 | free-nodes
+      - 荷兰+1
+      - 捷克+2
+      - 巴西+3
+      - 🇳🇱_NL_荷兰_1
+      - 🇸🇪_SE_瑞典_1
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇷🇴_RO_罗马尼亚_2
+      - 🇱🇻_LV_拉脱维亚
+      - 🇷🇴_RO_罗马尼亚_3
+      - 🇹🇷_TR_土耳其
+      - 🇹🇷_TR_土耳其_1
+      - 🇺🇦_UA_乌克兰_2
+      - 🇹🇷_TR_土耳其_2
+      - 🇺🇦_UA_乌克兰_3
+      - 🇫🇮_FI_芬兰
+      - 🇳🇱荷兰_1
+      - 🇫🇮芬兰 原生IP 4.09MB/s 1
+      - 🇹🇷TR_2
+      - "323234"
+      - 🇫🇷法国 原生IP 9.57MB/s 1
+      - 111原生IP 19.66MB/s
+      - 🇷🇴罗马尼亚11s
+      - 🇳🇱荷兰_2
+      - 123319.32MB/s
+      - 🇸🇬新加坡
+      - 🇷🇴罗马尼亚12
+      - 🇷🇴罗马尼亚22
+      - 巴西13
+      - 🇷🇴罗马尼亚43
+      - 🇷🇴罗马尼亚433
+      - 🇹🇷TR_3
+      - 🇺🇦UA
+      - 🇺🇸美国 原生IP 0.67MB/s
+      - 1212原生IP 19.24MB/s 1
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 英国  19.32MB/s
+      - 🇸🇪瑞典  4.27MB/s
+      - 🇷🇴_RO_罗马尼亚
+      - 捷克+7
+      - 美国33
+      - VLESS-242 | free-nodes
+      - 🇸🇪_SE_瑞典
+      - 🇸🇪 124
+      - 俄罗斯511
+      - 俄罗斯504
+      - 🇺🇦_UA_乌克兰
+      - 俄罗斯37
+      - 🇹🇷TR
+      - 美国+加州
+      - 荷兰507
+      - 🇺🇦_UA_乌克兰_1
+      - 🇳🇱荷兰
+      - 🇳🇱 荷兰 | NLD 7
+      - 瑞典519
+      - 🇳🇱_NL_荷兰
+      - 美国34
+      - 🇷🇴 罗马尼亚 | ROU 2
+      - 荷兰508
+      - VLESS-300 | free-nodes
+      - 荷兰+2
+      - 🇸🇪 瑞典 | SWE
+      - 荷兰35
+      - VMESS-336 | free-nodes
+      - 🇷🇴罗马尼亚
+      - 🇷🇴罗马尼亚_1
+      - 🇳🇱 荷兰 | NLD
+      - 美国47
+      - 法国49
+      - 美国501
+      - VLESS-2461
+      - VMESS-333 | free-nodes
+      - 捷克+6
+      - 巴西
+      - 🇹🇷TR_1
+      - 巴西+圣保罗Host1Plus数据中心
+      - 🇳🇱 荷兰 | NLD 2
+      - 🇬🇧 英国 | GBR
+      - 🇬🇧 英国 | GBR_1
+      - 🇬🇧 英国 | GBR_2
+      - 🇬🇧 英国 | GBR 2
+      - 🇷🇴 罗马尼亚 | ROU 5
+      - 🇳🇱 荷兰 | NLD 3
+      - 🇷🇴 罗马尼亚 | ROU 6
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇸🇪 瑞典 | SWE_1
+      - 🇸🇪 瑞典 | SWE_2
+      - 🇷🇴 罗马尼亚 | ROU
+      - 🇷🇴 罗马尼亚 | ROU_1
+      - 🇳🇱 荷兰 | NLD_2
+      - 🇳🇱 荷兰 | NLD_3
+      - 🇷🇴 罗马尼亚 | ROU 2_1
+      - 🇷🇴 罗马尼亚 | ROU_2
+      - 🇳🇱 荷兰 | NLD_4
+      - 🇷🇴 罗马尼亚 | ROU_3
+      - 🇷🇴 罗马尼亚 | ROU_4
+      - 🇷🇴 罗马尼亚 | ROU_5
+      - 🇷🇴 罗马尼亚 | ROU 4
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR 3
+      - 🇺🇦 乌克兰 | UKR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇹🇷 土耳其 | TUR_3
+      - 🇷🇴 罗马尼亚 | ROU_6
+      - 🇷🇴 罗马尼亚 | ROU 3
+      - 🇹🇷 土耳其 | TUR 2
+      - 🇺🇦 乌克兰 | UKR_1
+      - 🇺🇦 乌克兰 | UKR 2
+      - 🇺🇦 乌克兰 | UKR_2
+      - 美国11
+      - 乌克兰12
+      - 美国13
+      - 荷兰14
+      - 美国15
+      - 美国16
+      - 美国17
+      - 荷兰18
+      - 美国19
+      - 荷兰20
+      - 乌克兰21
+      - 美国22
+      - 土耳其23
+      - 美国24
+      - 美国 25
+      - 俄罗斯26
+      - 美国27
+      - 乌克兰28
+      - 荷兰29
+      - 美国30
+      - 美国31
+      - 美国32
+      - VLESS-335 | free-nodes
+      - VLESS-385 | free-nodes
+      - VLESS-115 | free-nodes
+      - VLESS-376 | free-nodes
+      - VLESS-266 | free-nodes
+      - VLESS-388 | free-nodes
+      - VLESS-392 | free-nodes
+      - VMESS-444 | free-nodes
+      - VMESS-422 | free-nodes
+      - VMESS-423 | free-nodes
+      - 荷兰+1
+      - 捷克+2
+      - 巴西+3
+      - 🇳🇱_NL_荷兰_1
+      - 🇸🇪_SE_瑞典_1
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇷🇴_RO_罗马尼亚_2
+      - 🇱🇻_LV_拉脱维亚
+      - 🇷🇴_RO_罗马尼亚_3
+      - 🇹🇷_TR_土耳其
+      - 🇹🇷_TR_土耳其_1
+      - 🇺🇦_UA_乌克兰_2
+      - 🇹🇷_TR_土耳其_2
+      - 🇺🇦_UA_乌克兰_3
+      - 🇫🇮_FI_芬兰
+      - 🇳🇱荷兰_1
+      - 🇫🇮芬兰 原生IP 4.09MB/s 1
+      - 🇹🇷TR_2
+      - "323234"
+      - 🇫🇷法国 原生IP 9.57MB/s 1
+      - 111原生IP 19.66MB/s
+      - 🇷🇴罗马尼亚11s
+      - 🇳🇱荷兰_2
+      - 123319.32MB/s
+      - 🇸🇬新加坡
+      - 🇷🇴罗马尼亚12
+      - 🇷🇴罗马尼亚22
+      - 巴西13
+      - 🇷🇴罗马尼亚43
+      - 🇷🇴罗马尼亚433
+      - 🇹🇷TR_3
+      - 🇺🇦UA
+      - 🇺🇸美国 原生IP 0.67MB/s
+      - 1212原生IP 19.24MB/s 1
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 英国  19.32MB/s
+      - 🇸🇪瑞典  4.27MB/s
+      - 🇷🇴_RO_罗马尼亚
+      - 捷克+7
+      - 美国33
+      - VLESS-242 | free-nodes
+      - 🇸🇪_SE_瑞典
+      - 🇸🇪 124
+      - 俄罗斯511
+      - 俄罗斯504
+      - 🇺🇦_UA_乌克兰
+      - 俄罗斯37
+      - 🇹🇷TR
+      - 美国+加州
+      - 荷兰507
+      - 🇺🇦_UA_乌克兰_1
+      - 🇳🇱荷兰
+      - 🇳🇱 荷兰 | NLD 7
+      - 瑞典519
+      - 🇳🇱_NL_荷兰
+      - 美国34
+      - 🇷🇴 罗马尼亚 | ROU 2
+      - 荷兰508
+      - VLESS-300 | free-nodes
+      - 荷兰+2
+      - 🇸🇪 瑞典 | SWE
+      - 荷兰35
+      - VMESS-336 | free-nodes
+      - 🇷🇴罗马尼亚
+      - 🇷🇴罗马尼亚_1
+      - 🇳🇱 荷兰 | NLD
+      - 美国47
+      - 法国49
+      - 美国501
+      - VLESS-2461
+      - VMESS-333 | free-nodes
+      - 捷克+6
+      - 巴西
+      - 🇹🇷TR_1
+      - 巴西+圣保罗Host1Plus数据中心
+      - 🇳🇱 荷兰 | NLD 2
+      - 🇬🇧 英国 | GBR
+      - 🇬🇧 英国 | GBR_1
+      - 🇬🇧 英国 | GBR_2
+      - 🇬🇧 英国 | GBR 2
+      - 🇷🇴 罗马尼亚 | ROU 5
+      - 🇳🇱 荷兰 | NLD 3
+      - 🇷🇴 罗马尼亚 | ROU 6
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇸🇪 瑞典 | SWE_1
+      - 🇸🇪 瑞典 | SWE_2
+      - 🇷🇴 罗马尼亚 | ROU
+      - 🇷🇴 罗马尼亚 | ROU_1
+      - 🇳🇱 荷兰 | NLD_2
+      - 🇳🇱 荷兰 | NLD_3
+      - 🇷🇴 罗马尼亚 | ROU 2_1
+      - 🇷🇴 罗马尼亚 | ROU_2
+      - 🇳🇱 荷兰 | NLD_4
+      - 🇷🇴 罗马尼亚 | ROU_3
+      - 🇷🇴 罗马尼亚 | ROU_4
+      - 🇷🇴 罗马尼亚 | ROU_5
+      - 🇷🇴 罗马尼亚 | ROU 4
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR 3
+      - 🇺🇦 乌克兰 | UKR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇹🇷 土耳其 | TUR_3
+      - 🇷🇴 罗马尼亚 | ROU_6
+      - 🇷🇴 罗马尼亚 | ROU 3
+      - 🇹🇷 土耳其 | TUR 2
+      - 🇺🇦 乌克兰 | UKR_1
+      - 🇺🇦 乌克兰 | UKR 2
+      - 🇺🇦 乌克兰 | UKR_2
+      - 美国11
+      - 乌克兰12
+      - 美国13
+      - 荷兰14
+      - 美国15
+      - 美国16
+      - 美国17
+      - 荷兰18
+      - 美国19
+      - 荷兰20
+      - 乌克兰21
+      - 美国22
+      - 土耳其23
+      - 美国24
+      - 美国 25
+      - 俄罗斯26
+      - 美国27
+      - 乌克兰28
+      - 荷兰29
+      - 美国30
+      - 美国31
+      - 美国32
+      - VLESS-335 | free-nodes
+      - VLESS-385 | free-nodes
+      - VLESS-115 | free-nodes
+      - VLESS-376 | free-nodes
+      - VLESS-266 | free-nodes
+      - VLESS-388 | free-nodes
+      - VLESS-392 | free-nodes
+      - VMESS-444 | free-nodes
+      - VMESS-422 | free-nodes
+      - VMESS-423 | free-nodes
+      - 荷兰+1
+      - 捷克+2
+      - 巴西+3
+      - 🇳🇱_NL_荷兰_1
+      - 🇸🇪_SE_瑞典_1
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇷🇴_RO_罗马尼亚_2
+      - 🇱🇻_LV_拉脱维亚
+      - 🇷🇴_RO_罗马尼亚_3
+      - 🇹🇷_TR_土耳其
+      - 🇹🇷_TR_土耳其_1
+      - 🇺🇦_UA_乌克兰_2
+      - 🇹🇷_TR_土耳其_2
+      - 🇺🇦_UA_乌克兰_3
+      - 🇫🇮_FI_芬兰
+      - 🇳🇱荷兰_1
+      - 🇫🇮芬兰 原生IP 4.09MB/s 1
+      - 🇹🇷TR_2
+      - "323234"
+      - 🇫🇷法国 原生IP 9.57MB/s 1
+      - 111原生IP 19.66MB/s
+      - 🇷🇴罗马尼亚11s
+      - 🇳🇱荷兰_2
+      - 123319.32MB/s
+      - 🇸🇬新加坡
+      - 🇷🇴罗马尼亚12
+      - 🇷🇴罗马尼亚22
+      - 巴西13
+      - 🇷🇴罗马尼亚43
+      - 🇷🇴罗马尼亚433
+      - 🇹🇷TR_3
+      - 🇺🇦UA
+      - 🇺🇸美国 原生IP 0.67MB/s
+      - 1212原生IP 19.24MB/s 1
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 英国  19.32MB/s
+      - 🇸🇪瑞典  4.27MB/s
+      - 🇷🇴_RO_罗马尼亚
+      - 捷克+7
+      - 美国33
+      - VLESS-242 | free-nodes
+      - 🇸🇪_SE_瑞典
+      - 🇸🇪 124
+      - 俄罗斯511
+      - 俄罗斯504
+      - 🇺🇦_UA_乌克兰
+      - 俄罗斯37
+      - 🇹🇷TR
+      - 美国+加州
+      - 荷兰507
+      - 🇺🇦_UA_乌克兰_1
+      - 🇳🇱荷兰
+      - 🇳🇱 荷兰 | NLD 7
+      - 瑞典519
+      - 🇳🇱_NL_荷兰
+      - 美国34
+      - 🇷🇴 罗马尼亚 | ROU 2
+      - 荷兰508
+      - VLESS-300 | free-nodes
+      - 荷兰+2
+      - 🇸🇪 瑞典 | SWE
+      - 荷兰35
+      - VMESS-336 | free-nodes
+      - 🇷🇴罗马尼亚
+      - 🇷🇴罗马尼亚_1
+      - 🇳🇱 荷兰 | NLD
+      - 美国47
+      - 法国49
+      - 美国501
+      - VLESS-2461
+      - VMESS-333 | free-nodes
+      - 捷克+6
+      - 巴西
+      - 🇹🇷TR_1
+      - 巴西+圣保罗Host1Plus数据中心
+      - 🇳🇱 荷兰 | NLD 2
+      - 🇬🇧 英国 | GBR
+      - 🇬🇧 英国 | GBR_1
+      - 🇬🇧 英国 | GBR_2
+      - 🇬🇧 英国 | GBR 2
+      - 🇷🇴 罗马尼亚 | ROU 5
+      - 🇳🇱 荷兰 | NLD 3
+      - 🇷🇴 罗马尼亚 | ROU 6
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇸🇪 瑞典 | SWE_1
+      - 🇸🇪 瑞典 | SWE_2
+      - 🇷🇴 罗马尼亚 | ROU
+      - 🇷🇴 罗马尼亚 | ROU_1
+      - 🇳🇱 荷兰 | NLD_2
+      - 🇳🇱 荷兰 | NLD_3
+      - 🇷🇴 罗马尼亚 | ROU 2_1
+      - 🇷🇴 罗马尼亚 | ROU_2
+      - 🇳🇱 荷兰 | NLD_4
+      - 🇷🇴 罗马尼亚 | ROU_3
+      - 🇷🇴 罗马尼亚 | ROU_4
+      - 🇷🇴 罗马尼亚 | ROU_5
+      - 🇷🇴 罗马尼亚 | ROU 4
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR 3
+      - 🇺🇦 乌克兰 | UKR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇹🇷 土耳其 | TUR_3
+      - 🇷🇴 罗马尼亚 | ROU_6
+      - 🇷🇴 罗马尼亚 | ROU 3
+      - 🇹🇷 土耳其 | TUR 2
+      - 🇺🇦 乌克兰 | UKR_1
+      - 🇺🇦 乌克兰 | UKR 2
+      - 🇺🇦 乌克兰 | UKR_2
+      - 美国11
+      - 乌克兰12
+      - 美国13
+      - 荷兰14
+      - 美国15
+      - 美国16
+      - 美国17
+      - 荷兰18
+      - 美国19
+      - 荷兰20
+      - 乌克兰21
+      - 美国22
+      - 土耳其23
+      - 美国24
+      - 美国 25
+      - 俄罗斯26
+      - 美国27
+      - 乌克兰28
+      - 荷兰29
+      - 美国30
+      - 美国31
+      - 美国32
+      - VLESS-335 | free-nodes
+      - VLESS-385 | free-nodes
+      - VLESS-115 | free-nodes
+      - VLESS-376 | free-nodes
+      - VLESS-266 | free-nodes
+      - VLESS-388 | free-nodes
+      - VLESS-392 | free-nodes
+      - VMESS-444 | free-nodes
+      - VMESS-422 | free-nodes
+      - VMESS-423 | free-nodes
+      - 荷兰+1
+      - 捷克+2
+      - 巴西+3
+      - 🇳🇱_NL_荷兰_1
+      - 🇸🇪_SE_瑞典_1
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇷🇴_RO_罗马尼亚_2
+      - 🇱🇻_LV_拉脱维亚
+      - 🇷🇴_RO_罗马尼亚_3
+      - 🇹🇷_TR_土耳其
+      - 🇹🇷_TR_土耳其_1
+      - 🇺🇦_UA_乌克兰_2
+      - 🇹🇷_TR_土耳其_2
+      - 🇺🇦_UA_乌克兰_3
+      - 🇫🇮_FI_芬兰
+      - 🇳🇱荷兰_1
+      - 🇫🇮芬兰 原生IP 4.09MB/s 1
+      - 🇹🇷TR_2
+      - "323234"
+      - 🇫🇷法国 原生IP 9.57MB/s 1
+      - 111原生IP 19.66MB/s
+      - 🇷🇴罗马尼亚11s
+      - 🇳🇱荷兰_2
+      - 123319.32MB/s
+      - 🇸🇬新加坡
+      - 🇷🇴罗马尼亚12
+      - 🇷🇴罗马尼亚22
+      - 巴西13
+      - 🇷🇴罗马尼亚43
+      - 🇷🇴罗马尼亚433
+      - 🇹🇷TR_3
+      - 🇺🇦UA
+      - 🇺🇸美国 原生IP 0.67MB/s
+      - 1212原生IP 19.24MB/s 1
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 英国  19.32MB/s
+      - 🇸🇪瑞典  4.27MB/s
+      - 🇷🇴_RO_罗马尼亚
+      - 捷克+7
+      - 美国33
+      - VLESS-242 | free-nodes
+      - 🇸🇪_SE_瑞典
+      - 🇸🇪 124
+      - 俄罗斯511
+      - 俄罗斯504
+      - 🇺🇦_UA_乌克兰
+      - 俄罗斯37
+      - 🇹🇷TR
+      - 美国+加州
+      - 荷兰507
+      - 🇺🇦_UA_乌克兰_1
+      - 🇳🇱荷兰
+      - 🇳🇱 荷兰 | NLD 7
+      - 瑞典519
+      - 🇳🇱_NL_荷兰
+      - 美国34
+      - 🇷🇴 罗马尼亚 | ROU 2
+      - 荷兰508
+      - VLESS-300 | free-nodes
+      - 荷兰+2
+      - 🇸🇪 瑞典 | SWE
+      - 荷兰35
+      - VMESS-336 | free-nodes
+      - 🇷🇴罗马尼亚
+      - 🇷🇴罗马尼亚_1
+      - 🇳🇱 荷兰 | NLD
+      - 美国47
+      - 法国49
+      - 美国501
+      - VLESS-2461
+      - VMESS-333 | free-nodes
+      - 捷克+6
+      - 巴西
+      - 🇹🇷TR_1
+      - 巴西+圣保罗Host1Plus数据中心
+      - 🇳🇱 荷兰 | NLD 2
+      - 🇬🇧 英国 | GBR
+      - 🇬🇧 英国 | GBR_1
+      - 🇬🇧 英国 | GBR_2
+      - 🇬🇧 英国 | GBR 2
+      - 🇷🇴 罗马尼亚 | ROU 5
+      - 🇳🇱 荷兰 | NLD 3
+      - 🇷🇴 罗马尼亚 | ROU 6
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇸🇪 瑞典 | SWE_1
+      - 🇸🇪 瑞典 | SWE_2
+      - 🇷🇴 罗马尼亚 | ROU
+      - 🇷🇴 罗马尼亚 | ROU_1
+      - 🇳🇱 荷兰 | NLD_2
+      - 🇳🇱 荷兰 | NLD_3
+      - 🇷🇴 罗马尼亚 | ROU 2_1
+      - 🇷🇴 罗马尼亚 | ROU_2
+      - 🇳🇱 荷兰 | NLD_4
+      - 🇷🇴 罗马尼亚 | ROU_3
+      - 🇷🇴 罗马尼亚 | ROU_4
+      - 🇷🇴 罗马尼亚 | ROU_5
+      - 🇷🇴 罗马尼亚 | ROU 4
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR 3
+      - 🇺🇦 乌克兰 | UKR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇹🇷 土耳其 | TUR_3
+      - 🇷🇴 罗马尼亚 | ROU_6
+      - 🇷🇴 罗马尼亚 | ROU 3
+      - 🇹🇷 土耳其 | TUR 2
+      - 🇺🇦 乌克兰 | UKR_1
+      - 🇺🇦 乌克兰 | UKR 2
+      - 🇺🇦 乌克兰 | UKR_2
+      - 美国11
+      - 乌克兰12
+      - 美国13
+      - 荷兰14
+      - 美国15
+      - 美国16
+      - 美国17
+      - 荷兰18
+      - 美国19
+      - 荷兰20
+      - 乌克兰21
+      - 美国22
+      - 土耳其23
+      - 美国24
+      - 美国 25
+      - 俄罗斯26
+      - 美国27
+      - 乌克兰28
+      - 荷兰29
+      - 美国30
+      - 美国31
+      - 美国32
+      - VLESS-335 | free-nodes
+      - VLESS-385 | free-nodes
+      - VLESS-115 | free-nodes
+      - VLESS-376 | free-nodes
+      - VLESS-266 | free-nodes
+      - VLESS-388 | free-nodes
+      - VLESS-392 | free-nodes
+      - VMESS-444 | free-nodes
+      - VMESS-422 | free-nodes
+      - VMESS-423 | free-nodes
+      - 荷兰+1
+      - 捷克+2
+      - 巴西+3
+      - 🇳🇱_NL_荷兰_1
+      - 🇸🇪_SE_瑞典_1
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇷🇴_RO_罗马尼亚_2
+      - 🇱🇻_LV_拉脱维亚
+      - 🇷🇴_RO_罗马尼亚_3
+      - 🇹🇷_TR_土耳其
+      - 🇹🇷_TR_土耳其_1
+      - 🇺🇦_UA_乌克兰_2
+      - 🇹🇷_TR_土耳其_2
+      - 🇺🇦_UA_乌克兰_3
+      - 🇫🇮_FI_芬兰
+      - 🇳🇱荷兰_1
+      - 🇫🇮芬兰 原生IP 4.09MB/s 1
+      - 🇹🇷TR_2
+      - "323234"
+      - 🇫🇷法国 原生IP 9.57MB/s 1
+      - 111原生IP 19.66MB/s
+      - 🇷🇴罗马尼亚11s
+      - 🇳🇱荷兰_2
+      - 123319.32MB/s
+      - 🇸🇬新加坡
+      - 🇷🇴罗马尼亚12
+      - 🇷🇴罗马尼亚22
+      - 巴西13
+      - 🇷🇴罗马尼亚43
+      - 🇷🇴罗马尼亚433
+      - 🇹🇷TR_3
+      - 🇺🇦UA
+      - 🇺🇸美国 原生IP 0.67MB/s
+      - 1212原生IP 19.24MB/s 1
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
