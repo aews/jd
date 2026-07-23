@@ -1,0 +1,4612 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 新加坡365
+    type: vless
+    server: 162.159.13.196
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 日本u12
+    type: vless
+    server: 172.64.53.65
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡365_1
+    type: vless
+    server: 162.159.1.170
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡365_2
+    type: vless
+    server: 172.64.145.186
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡365_3
+    type: vless
+    server: 162.159.32.29
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365
+    type: vless
+    server: 104.18.35.13
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡365_4
+    type: vless
+    server: 162.159.41.198
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 日本u12_1
+    type: vless
+    server: 172.64.53.65
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12
+    type: vless
+    server: 172.64.53.34
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_1
+    type: vless
+    server: 172.64.40.84
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_1
+    type: vless
+    server: 172.64.41.202
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_2
+    type: vless
+    server: 162.159.38.101
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国365
+    type: vless
+    server: 162.159.38.25
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_2
+    type: vless
+    server: 162.159.48.245
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国365_1
+    type: vless
+    server: 162.159.10.87
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_3
+    type: vless
+    server: 162.159.46.226
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_4
+    type: vless
+    server: 162.159.46.24
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_5
+    type: vless
+    server: 104.18.45.249
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+CloudFlare节点
+    type: vless
+    server: 172.64.153.159
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_3
+    type: vless
+    server: 162.159.11.57
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 日本u12_2
+    type: vless
+    server: 162.159.44.180
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_4
+    type: vless
+    server: 162.159.21.206
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_6
+    type: vless
+    server: 108.162.198.43
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_7
+    type: vless
+    server: 162.159.4.221
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国365_2
+    type: vless
+    server: 108.162.196.3
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_8
+    type: vless
+    server: 172.64.53.65
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_9
+    type: vless
+    server: 172.64.52.152
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_10
+    type: vless
+    server: 172.64.52.134
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_11
+    type: vless
+    server: 172.64.35.206
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_5
+    type: vless
+    server: 172.64.40.79
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_12
+    type: vless
+    server: 162.159.45.218
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_13
+    type: vless
+    server: 162.159.14.252
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_6
+    type: vless
+    server: 162.159.8.42
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_7
+    type: vless
+    server: 162.159.42.182
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_14
+    type: vless
+    server: 162.159.3.141
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_15
+    type: vless
+    server: 162.159.4.221
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_16
+    type: vless
+    server: 162.159.48.245
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大u12
+    type: vless
+    server: 172.64.42.44
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_17
+    type: vless
+    server: 172.64.35.37
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_18
+    type: vless
+    server: 162.159.42.163
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_19
+    type: vless
+    server: 162.159.8.123
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_20
+    type: vless
+    server: 172.64.53.27
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_8
+    type: vless
+    server: 108.162.196.3
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_21
+    type: vless
+    server: 162.159.45.201
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_22
+    type: vless
+    server: 162.159.44.172
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大365_9
+    type: vless
+    server: 162.159.46.67
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大u12_1
+    type: vless
+    server: 162.159.3.48
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_23
+    type: vless
+    server: 172.64.40.49
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_24
+    type: vless
+    server: 162.159.60.167
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_25
+    type: vless
+    server: 104.18.44.198
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_26
+    type: vless
+    server: 172.64.52.240
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_27
+    type: vless
+    server: 162.159.38.101
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_28
+    type: vless
+    server: 162.159.45.15
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_29
+    type: vless
+    server: 162.159.21.235
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_30
+    type: vless
+    server: 172.64.52.18
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇰🇷 韩国 | KOR
+    type: vless
+    server: 151.245.106.49
+    port: 2053
+    uuid: a5a82872-616b-49f6-a40a-6a54feeb5dd0
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 9HIcma6Y5a0yddTqa3_zNUyItI3J-g99GdT0u0Moqzw
+      short-id: 87478274a30fcaea
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_31
+    type: vless
+    server: 104.16.148.8
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 法国u12
+    type: vless
+    server: cloudflare-ip.mofashi.ltd
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_32
+    type: vless
+    server: gr1.fifapes.monster
+    port: 8882
+    uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_33
+    type: vless
+    server: gr1.fifapes.monster
+    port: 8882
+    uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美国u12_34
+    type: vless
+    server: 104.17.184.155
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: NL
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.multiplydose.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.multiplydose.com
+    udp: true
+  - name: 美国ee56
+    type: vless
+    server: 104.18.35.13
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_1
+    type: vless
+    server: 162.159.38.25
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56
+    type: vless
+    server: 162.159.12.210
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_2
+    type: vless
+    server: 172.64.53.65
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_3
+    type: vless
+    server: 162.159.21.235
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_4
+    type: vless
+    server: 108.162.198.43
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_5
+    type: vless
+    server: 162.159.45.218
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_6
+    type: vless
+    server: 172.64.53.65
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_7
+    type: vless
+    server: 172.64.149.209
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_1
+    type: vless
+    server: 172.64.40.49
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_8
+    type: vless
+    server: 172.64.53.27
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_9
+    type: vless
+    server: 172.64.35.206
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_2
+    type: vless
+    server: 172.64.52.18
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_10
+    type: vless
+    server: 162.159.44.172
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_3
+    type: vless
+    server: 162.159.4.2
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_11
+    type: vless
+    server: 162.159.44.180
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_4
+    type: vless
+    server: 172.64.35.206
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_5
+    type: vless
+    server: 198.41.223.238
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_12
+    type: vless
+    server: 162.159.46.67
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_13
+    type: trojan
+    server: 188.164.248.122
+    port: 443
+    password: c206d543-023d-46cc-9d5a-1f0f2fc16323
+    sni: space.byu.id.yxls.eu.cc
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /in-pdr
+    udp: true
+  - name: 美国ee56_14
+    type: vless
+    server: 172.64.40.84
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_6
+    type: vless
+    server: cf.877774.xyz
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_7
+    type: vless
+    server: 172.64.145.2
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_15
+    type: vless
+    server: 162.159.44.180
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_16
+    type: vless
+    server: 162.159.38.101
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 法国ee56
+    type: vless
+    server: cf.877774.xyz
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_8
+    type: vless
+    server: 172.64.41.202
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_17
+    type: vless
+    server: 162.159.60.167
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_18
+    type: vless
+    server: 172.64.40.79
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_9
+    type: vless
+    server: 172.64.52.134
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_19
+    type: vless
+    server: 162.159.44.172
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_10
+    type: vless
+    server: 172.64.52.152
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_20
+    type: vless
+    server: 162.159.4.221
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_21
+    type: vless
+    server: 172.64.147.104
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_22
+    type: vless
+    server: 172.64.52.240
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_23
+    type: vless
+    server: 108.162.196.3
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_11
+    type: vless
+    server: 162.159.21.206
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_12
+    type: vless
+    server: 162.159.11.57
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_24
+    type: vless
+    server: 162.159.45.201
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_25
+    type: vless
+    server: 162.159.21.235
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_26
+    type: vless
+    server: 162.159.10.87
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_13
+    type: vless
+    server: 162.159.4.221
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_27
+    type: vless
+    server: 172.64.150.246
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_14
+    type: vless
+    server: 162.159.46.226
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_15
+    type: vless
+    server: 172.64.42.44
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_28
+    type: vless
+    server: 162.159.48.245
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_29
+    type: vless
+    server: 172.64.35.37
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_30
+    type: vless
+    server: 162.159.46.24
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_31
+    type: vless
+    server: 108.162.196.3
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_16
+    type: vless
+    server: 104.18.37.237
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_32
+    type: vless
+    server: 162.159.46.24
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_33
+    type: vless
+    server: 162.159.36.166
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 香港ee56
+    type: anytls
+    server: jpaws.ccwink.photos
+    port: 58044
+    password: 6eca3cb7-eab5-4a96-b95d-444eb566309b
+    sni: thebofh.org
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 美国ee56_34
+    type: vless
+    server: 162.159.21.206
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_17
+    type: vless
+    server: 162.159.41.198
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大ee56_18
+    type: vless
+    server: 172.64.40.79
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_35
+    type: vless
+    server: 104.16.148.8
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_36
+    type: vless
+    server: 104.16.253.227
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_37
+    type: vless
+    server: 104.17.184.155
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_38
+    type: vless
+    server: 104.16.148.8
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 法国ee56_1
+    type: vless
+    server: cloudflare-ip.mofashi.ltd
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_39
+    type: anytls
+    server: anytls2.934618.xyz
+    port: 22880
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: anytls2.934618.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 美国ee56_40
+    type: hysteria2
+    server: 92.118.205.239
+    port: 8443
+    password: Apt1923_N9x234gn_Nal5Nx3j_s
+    sni: grape-power-pl.ddnsguru.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_41
+    type: vless
+    server: 5.129.194.34
+    port: 4100
+    uuid: 9b44bfb4-9d28-4870-9fc3-5154d6d462ff
+    network: ws
+    tls: false
+    ws-opts:
+      path: /v1
+      headers:
+        Host: live.ok.ru
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_42
+    type: vless
+    server: gr1.fifapes.monster
+    port: 8882
+    uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_43
+    type: vless
+    server: 194.87.161.60
+    port: 4100
+    uuid: 9b44bfb4-9d28-4870-9fc3-5154d6d462ff
+    network: ws
+    tls: false
+    ws-opts:
+      path: /v1
+      headers:
+        Host: live.ok.ru
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_44
+    type: vless
+    server: fn.fifapes.monster
+    port: 2090
+    uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+    servername: /?
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_45
+    type: vless
+    server: fn.fifapes.monster
+    port: 2090
+    uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+    tls: false
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_46
+    type: vless
+    server: fn.fifapes.monster
+    port: 2090
+    uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡ee56
+    type: vless
+    server: cdn.ai-4-science.com
+    port: 443
+    uuid: 85c38af5-5a88-4ef1-b87a-a6dee6772285
+    network: ws
+    servername: cdn.ai-4-science.com
+    tls: true
+    ws-opts:
+      path: /api/v1/stream
+      headers:
+        Host: cdn.ai-4-science.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_47
+    type: hysteria2
+    server: 194.247.182.201
+    port: 8080
+    password: grape_288923
+    sni: grape-coffee-fi.gleeze.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee56_48
+    type: hysteria2
+    server: 194.247.182.201
+    port: 8443
+    password: grape_288923
+    sni: grape-coffee-fi.gleeze.com
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-517 | free-nodes
+    type: vless
+    server: 141.133.172.222
+    port: 20342
+    uuid: 5eecb34f-c905-4c77-b7fb-d830b451cd11
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-718 | free-nodes
+    type: vless
+    server: 18.239.134.69
+    port: 80
+    uuid: f55ce6cc-3f6b-40fc-9e3b-abe26db17009
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2e1v87ko56lyw.cloudfront.net:assets.opensignal.com
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-538 | free-nodes
+    type: vless
+    server: 104.16.72.101
+    port: 443
+    uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
+    network: ws
+    servername: shegeftihaaa.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /rsedgws
+      headers:
+        Host: shegeftihaaa.net
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-687 | free-nodes
+    type: vless
+    server: 92.223.109.89
+    port: 443
+    uuid: c436d7dc-170d-40bf-b2b8-6cf468db5e65
+    servername: ads.x5.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: wlCVdU8TCIBjIKRPWA6kpmptW0MV9rCP8WfWLSapsjU
+      short-id: cc7dc5fb
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-544 | free-nodes
+    type: vless
+    server: cdn.ai-4-science.com
+    port: 443
+    uuid: 85c38af5-5a88-4ef1-b87a-a6dee6772285
+    network: ws
+    servername: cdn.ai-4-science.com
+    tls: true
+    ws-opts:
+      path: /api/v1/stream
+      headers:
+        Host: cdn.ai-4-science.com
+    skip-cert-verify: true
+    udp: true
+  - name: 伊朗+1
+    type: vless
+    server: 151.245.106.49
+    port: 2053
+    uuid: a5a82872-616b-49f6-a40a-6a54feeb5dd0
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 9HIcma6Y5a0yddTqa3_zNUyItI3J-g99GdT0u0Moqzw
+      short-id: 87478274a30fcaea
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA
+    type: vless
+    server: 104.16.72.41
+    port: 443
+    uuid: c19735a7-ff97-a112-3f07-60e500f7719b
+    network: ws
+    servername: l-j-uu-MiTiVPN---MiTiVPN-o.MAQROR.ir
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN=finland
+      headers:
+        Host: l-j-iii-MiTiVPN---MiTiVPN-o.MAQROR.ir
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA_1
+    type: vless
+    server: 104.16.100.66
+    port: 443
+    uuid: c19735a7-ff97-a112-3f07-60e500f7719b
+    network: ws
+    servername: l-jo--hMiTiVPN---MiTiVPN-o.MAQROR.ir
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN=usa
+      headers:
+        Host: l-j-v-MiTiVPN---MiTiVPN-o.MAQROR.ir
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU
+    type: vless
+    server: ad-005.novayjr9g.info
+    port: 8443
+    uuid: 2e1eb27b-9b56-40e9-a2f8-b959bc71736e
+    network: ws
+    servername: ad-005.novayjr9g.info
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ad-005.novayjr9g.info
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL
+    type: vless
+    server: 45.196.201.109
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA_2
+    type: vless
+    server: 154.193.55.183
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: EMS0wzISeSbEe4JABPD8EgDnyLXgDmrX4_lcfG6VVX4
+      short-id: c76ba2c2fb172e8b
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_1
+    type: vless
+    server: 45.196.201.37
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD
+    type: vless
+    server: 89.125.48.179
+    port: 443
+    uuid: 40a9bfd0-c0e4-4736-a8c3-1ae41ef0fdb3
+    servername: www.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: lWJaKBaMPs0NYHGCbfsrmn64R4juEQEvfmHNnL741Ek
+      short-id: 27d53dfed8185f24
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_2
+    type: vless
+    server: 45.196.201.74
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_3
+    type: vless
+    server: 45.196.201.100
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_4
+    type: vless
+    server: 45.196.201.108
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_5
+    type: vless
+    server: 45.196.201.10
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_6
+    type: vless
+    server: 45.196.201.195
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_7
+    type: vless
+    server: 45.196.201.105
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_8
+    type: vless
+    server: 45.196.201.53
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇱 波兰 | POL
+    type: vless
+    server: pl1.raketa-balance.com
+    port: 443
+    uuid: d7fc372d-c057-43ce-8070-9b96abbc60f3
+    servername: pl1.raketa-balance.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY
+      short-id: 6c6082a2223c1d03
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS
+    type: vless
+    server: 46.29.163.32
+    port: 29311
+    uuid: dee59997-f3f0-4dc5-bb26-ae24ae63ec5a
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_1
+    type: vless
+    server: 93.114.194.116
+    port: 448
+    uuid: bc5b801f-49a7-4db7-ac92-a2c57d42d132
+    servername: www.samsung.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: qX6IJfWNN-SNray6xJugb8pCpgY_zjeyCfvq9IUyd3w
+      short-id: e1bdc95c1554c8eb
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇭 泰国 | THA
+    type: vless
+    server: 18.239.134.69
+    port: 80
+    uuid: f55ce6cc-3f6b-40fc-9e3b-abe26db17009
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2e1v87ko56lyw.cloudfront.net:assets.opensignal.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_9
+    type: vless
+    server: 45.196.201.73
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇱🇹 立陶宛 | LTU
+    type: vless
+    server: lt-vlss.w-mebel.pro
+    port: 443
+    uuid: c1d62d53-2fcd-4951-ab96-c81486f59775
+    servername: w-mebel.pro
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 3ioSDy998cS2J-O6M9rzh8fDaybnOJ2PDPfd7ulFpH4
+      short-id: 51941b7edff5bc55
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇭 瑞士 | CHE
+    type: vless
+    server: 45.131.212.11
+    port: 443
+    uuid: 2a77a470-315c-493d-b690-59b814a804cb
+    servername: abuse.sellflow.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇭 菲律宾 | PHL_10
+    type: vless
+    server: 45.196.201.88
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国44.57MB/s
+    type: vless
+    server: 162.159.38.101
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国39.70MB/s
+    type: vless
+    server: 108.162.198.43
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国8.86MB/s
+    type: vless
+    server: 162.159.45.201
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大39.23MB/s
+    type: vless
+    server: 172.64.52.152
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大26.84MB/s
+    type: vless
+    server: 172.64.52.134
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL 2.59MB/s
+    type: vless
+    server: 162.159.4.221
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国NL 50.94MB/s
+    type: vless
+    server: 162.159.45.218
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL 33.38MB/s
+    type: vless
+    server: 172.64.52.18
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大8.88MB/s
+    type: vless
+    server: 172.64.145.186
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL28.70MB/s
+    type: vless
+    server: 172.64.53.27
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大37.00MB/s
+    type: vless
+    server: 172.64.52.152
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大34.46MB/s
+    type: vless
+    server: 172.64.145.2
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大38.93MB/s
+    type: vless
+    server: cf.877774.xyz
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国39.70MB/s_1
+    type: vless
+    server: 108.162.198.43
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大41.24MB/s
+    type: vless
+    server: 172.64.52.240
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大33.95MB/s
+    type: vless
+    server: 162.159.48.245
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大6.32MB/s
+    type: vless
+    server: cf.877774.xyz
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大33.58MB/s
+    type: vless
+    server: 172.64.52.240
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大31.28MB/s
+    type: vless
+    server: 172.64.53.65
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国83.31MB/s
+    type: vless
+    server: 162.159.44.180
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大 udptoos.com 3.87MB/s
+    type: vless
+    server: 162.159.60.167
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL30.12MB/s
+    type: vless
+    server: 162.159.41.198
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大24.63MB/s
+    type: vless
+    server: 172.64.151.158
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国44.57MB/s_1
+    type: vless
+    server: 162.159.38.101
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国51.00MB/s
+    type: vless
+    server: 162.159.45.15
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大37.08MB/s
+    type: vless
+    server: 198.41.223.238
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大30.32MB/s
+    type: vless
+    server: 162.159.46.24
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸美国8.86MB/s_1
+    type: vless
+    server: 162.159.45.201
+    port: 2083
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大30.32MB/s_1
+    type: vless
+    server: 162.159.46.24
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大11.60MB/s
+    type: vless
+    server: 162.159.42.182
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大34.78MB/s
+    type: vless
+    server: 172.64.53.34
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL 36.87MB/s
+    type: vless
+    server: 162.159.24.39
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: " | US Node"
+    type: trojan
+    server: 172.64.152.23
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.calmlunch.com
+    udp: true
+  - name: 🇨🇦加拿大34.51MB/s
+    type: vless
+    server: 162.159.46.226
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL 39.23MB/s
+    type: vless
+    server: 172.64.40.49
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大27.15MB/s
+    type: vless
+    server: 172.64.42.44
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL 37.86MB/s
+    type: vless
+    server: 172.64.145.2
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大34.29MB/s
+    type: vless
+    server: 162.159.1.37
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大35.91MB/s
+    type: vless
+    server: 162.159.4.2
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大3.87MB/s
+    type: vless
+    server: 162.159.60.167
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大24.91MB/s
+    type: vless
+    server: 162.159.32.29
+    port: 8443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇱波兰22.37MB/s
+    type: hysteria2
+    server: 92.118.205.239
+    port: 8443
+    password: Apt1923_N9x234gn_Nal5Nx3j_s
+    sni: grape-power-pl.ddnsguru.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL24.14MB/s
+    type: vless
+    server: 162.159.34.23
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大NL30.01MB/s
+    type: vless
+    server: 162.159.1.170
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦加拿大27.81MB/s
+    type: vless
+    server: 172.64.35.206
+    port: 443
+    uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+    network: ws
+    servername: t1s1.rittbo.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: t1s1.rittbo.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇱GL23.04MB/s
+    type: hysteria2
+    server: 194.247.182.201
+    port: 8080
+    password: grape_288923
+    sni: grape-coffee-fi.gleeze.com
+    skip-cert-verify: true
+    udp: true
+  - name: FR
+    type: trojan
+    server: 104.16.174.117
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: github-anytls-1
+    type: anytls
+    server: anytls2.934618.xyz
+    port: 22880
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: anytls2.934618.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 新加坡365
+      - 日本u12
+      - 新加坡365_1
+      - 新加坡365_2
+      - 新加坡365_3
+      - 加拿大365
+      - 新加坡365_4
+      - 日本u12_1
+      - 美国u12
+      - 美国u12_1
+      - 加拿大365_1
+      - 美国u12_2
+      - 美国365
+      - 加拿大365_2
+      - 美国365_1
+      - 美国u12_3
+      - 美国u12_4
+      - 美国u12_5
+      - 美国+CloudFlare节点
+      - 加拿大365_3
+      - 日本u12_2
+      - 加拿大365_4
+      - 美国u12_6
+      - 美国u12_7
+      - 美国365_2
+      - 美国u12_8
+      - 美国u12_9
+      - 美国u12_10
+      - 美国u12_11
+      - 加拿大365_5
+      - 美国u12_12
+      - 美国u12_13
+      - 加拿大365_6
+      - 加拿大365_7
+      - 美国u12_14
+      - 美国u12_15
+      - 美国u12_16
+      - 加拿大u12
+      - 美国u12_17
+      - 美国u12_18
+      - 美国u12_19
+      - 美国u12_20
+      - 加拿大365_8
+      - 美国u12_21
+      - 美国u12_22
+      - 加拿大365_9
+      - 加拿大u12_1
+      - 美国u12_23
+      - 美国u12_24
+      - 美国u12_25
+      - 美国u12_26
+      - 美国u12_27
+      - 美国u12_28
+      - 美国u12_29
+      - 美国u12_30
+      - 🇰🇷 韩国 | KOR
+      - 美国u12_31
+      - 法国u12
+      - 美国u12_32
+      - 美国u12_33
+      - 美国u12_34
+      - NL
+      - 美国ee56
+      - 美国ee56_1
+      - 加拿大ee56
+      - 美国ee56_2
+      - 美国ee56_3
+      - 美国ee56_4
+      - 美国ee56_5
+      - 美国ee56_6
+      - 美国ee56_7
+      - 加拿大ee56_1
+      - 美国ee56_8
+      - 美国ee56_9
+      - 加拿大ee56_2
+      - 美国ee56_10
+      - 加拿大ee56_3
+      - 美国ee56_11
+      - 加拿大ee56_4
+      - 加拿大ee56_5
+      - 美国ee56_12
+      - 美国ee56_13
+      - 美国ee56_14
+      - 加拿大ee56_6
+      - 加拿大ee56_7
+      - 美国ee56_15
+      - 美国ee56_16
+      - 法国ee56
+      - 加拿大ee56_8
+      - 美国ee56_17
+      - 美国ee56_18
+      - 加拿大ee56_9
+      - 美国ee56_19
+      - 加拿大ee56_10
+      - 美国ee56_20
+      - 美国ee56_21
+      - 美国ee56_22
+      - 美国ee56_23
+      - 加拿大ee56_11
+      - 加拿大ee56_12
+      - 美国ee56_24
+      - 美国ee56_25
+      - 美国ee56_26
+      - 加拿大ee56_13
+      - 美国ee56_27
+      - 加拿大ee56_14
+      - 加拿大ee56_15
+      - 美国ee56_28
+      - 美国ee56_29
+      - 美国ee56_30
+      - 美国ee56_31
+      - 加拿大ee56_16
+      - 美国ee56_32
+      - 美国ee56_33
+      - 香港ee56
+      - 美国ee56_34
+      - 加拿大ee56_17
+      - 加拿大ee56_18
+      - 美国ee56_35
+      - 美国ee56_36
+      - 美国ee56_37
+      - 美国ee56_38
+      - 法国ee56_1
+      - 美国ee56_39
+      - 美国ee56_40
+      - 美国ee56_41
+      - 美国ee56_42
+      - 美国ee56_43
+      - 美国ee56_44
+      - 美国ee56_45
+      - 美国ee56_46
+      - 新加坡ee56
+      - 美国ee56_47
+      - 美国ee56_48
+      - VLESS-517 | free-nodes
+      - VLESS-718 | free-nodes
+      - VLESS-538 | free-nodes
+      - VLESS-687 | free-nodes
+      - VLESS-544 | free-nodes
+      - 伊朗+1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU
+      - 🇵🇭 菲律宾 | PHL
+      - 🇺🇸 美国 | USA_2
+      - 🇵🇭 菲律宾 | PHL_1
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇭 菲律宾 | PHL_2
+      - 🇵🇭 菲律宾 | PHL_3
+      - 🇵🇭 菲律宾 | PHL_4
+      - 🇵🇭 菲律宾 | PHL_5
+      - 🇵🇭 菲律宾 | PHL_6
+      - 🇵🇭 菲律宾 | PHL_7
+      - 🇵🇭 菲律宾 | PHL_8
+      - 🇵🇱 波兰 | POL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇩🇪 德国 | DEU_1
+      - 🇹🇭 泰国 | THA
+      - 🇵🇭 菲律宾 | PHL_9
+      - 🇱🇹 立陶宛 | LTU
+      - 🇨🇭 瑞士 | CHE
+      - 🇵🇭 菲律宾 | PHL_10
+      - 🇺🇸美国44.57MB/s
+      - 🇺🇸美国39.70MB/s
+      - 🇺🇸美国8.86MB/s
+      - 🇨🇦加拿大39.23MB/s
+      - 🇨🇦加拿大26.84MB/s
+      - 🇨🇦加拿大NL 2.59MB/s
+      - 🇺🇸美国NL 50.94MB/s
+      - 🇨🇦加拿大NL 33.38MB/s
+      - 🇨🇦加拿大8.88MB/s
+      - 🇨🇦加拿大NL28.70MB/s
+      - 🇨🇦加拿大37.00MB/s
+      - 🇨🇦加拿大34.46MB/s
+      - 🇨🇦加拿大38.93MB/s
+      - 🇺🇸美国39.70MB/s_1
+      - 🇨🇦加拿大41.24MB/s
+      - 🇨🇦加拿大33.95MB/s
+      - 🇨🇦加拿大6.32MB/s
+      - 🇨🇦加拿大33.58MB/s
+      - 🇨🇦加拿大31.28MB/s
+      - 🇺🇸美国83.31MB/s
+      - 🇨🇦加拿大 udptoos.com 3.87MB/s
+      - 🇨🇦加拿大NL30.12MB/s
+      - 🇨🇦加拿大24.63MB/s
+      - 🇺🇸美国44.57MB/s_1
+      - 🇺🇸美国51.00MB/s
+      - 🇨🇦加拿大37.08MB/s
+      - 🇨🇦加拿大30.32MB/s
+      - 🇺🇸美国8.86MB/s_1
+      - 🇨🇦加拿大30.32MB/s_1
+      - 🇨🇦加拿大11.60MB/s
+      - 🇨🇦加拿大34.78MB/s
+      - 🇨🇦加拿大NL 36.87MB/s
+      - " | US Node"
+      - 🇨🇦加拿大34.51MB/s
+      - 🇨🇦加拿大NL 39.23MB/s
+      - 🇨🇦加拿大27.15MB/s
+      - 🇨🇦加拿大NL 37.86MB/s
+      - 🇨🇦加拿大34.29MB/s
+      - 🇨🇦加拿大35.91MB/s
+      - 🇨🇦加拿大3.87MB/s
+      - 🇨🇦加拿大24.91MB/s
+      - 🇵🇱波兰22.37MB/s
+      - 🇨🇦加拿大NL24.14MB/s
+      - 🇨🇦加拿大NL30.01MB/s
+      - 🇨🇦加拿大27.81MB/s
+      - 🇬🇱GL23.04MB/s
+      - FR
+      - github-anytls-1
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 新加坡365
+      - 日本u12
+      - 新加坡365_1
+      - 新加坡365_2
+      - 新加坡365_3
+      - 加拿大365
+      - 新加坡365_4
+      - 日本u12_1
+      - 美国u12
+      - 美国u12_1
+      - 加拿大365_1
+      - 美国u12_2
+      - 美国365
+      - 加拿大365_2
+      - 美国365_1
+      - 美国u12_3
+      - 美国u12_4
+      - 美国u12_5
+      - 美国+CloudFlare节点
+      - 加拿大365_3
+      - 日本u12_2
+      - 加拿大365_4
+      - 美国u12_6
+      - 美国u12_7
+      - 美国365_2
+      - 美国u12_8
+      - 美国u12_9
+      - 美国u12_10
+      - 美国u12_11
+      - 加拿大365_5
+      - 美国u12_12
+      - 美国u12_13
+      - 加拿大365_6
+      - 加拿大365_7
+      - 美国u12_14
+      - 美国u12_15
+      - 美国u12_16
+      - 加拿大u12
+      - 美国u12_17
+      - 美国u12_18
+      - 美国u12_19
+      - 美国u12_20
+      - 加拿大365_8
+      - 美国u12_21
+      - 美国u12_22
+      - 加拿大365_9
+      - 加拿大u12_1
+      - 美国u12_23
+      - 美国u12_24
+      - 美国u12_25
+      - 美国u12_26
+      - 美国u12_27
+      - 美国u12_28
+      - 美国u12_29
+      - 美国u12_30
+      - 🇰🇷 韩国 | KOR
+      - 美国u12_31
+      - 法国u12
+      - 美国u12_32
+      - 美国u12_33
+      - 美国u12_34
+      - NL
+      - 美国ee56
+      - 美国ee56_1
+      - 加拿大ee56
+      - 美国ee56_2
+      - 美国ee56_3
+      - 美国ee56_4
+      - 美国ee56_5
+      - 美国ee56_6
+      - 美国ee56_7
+      - 加拿大ee56_1
+      - 美国ee56_8
+      - 美国ee56_9
+      - 加拿大ee56_2
+      - 美国ee56_10
+      - 加拿大ee56_3
+      - 美国ee56_11
+      - 加拿大ee56_4
+      - 加拿大ee56_5
+      - 美国ee56_12
+      - 美国ee56_13
+      - 美国ee56_14
+      - 加拿大ee56_6
+      - 加拿大ee56_7
+      - 美国ee56_15
+      - 美国ee56_16
+      - 法国ee56
+      - 加拿大ee56_8
+      - 美国ee56_17
+      - 美国ee56_18
+      - 加拿大ee56_9
+      - 美国ee56_19
+      - 加拿大ee56_10
+      - 美国ee56_20
+      - 美国ee56_21
+      - 美国ee56_22
+      - 美国ee56_23
+      - 加拿大ee56_11
+      - 加拿大ee56_12
+      - 美国ee56_24
+      - 美国ee56_25
+      - 美国ee56_26
+      - 加拿大ee56_13
+      - 美国ee56_27
+      - 加拿大ee56_14
+      - 加拿大ee56_15
+      - 美国ee56_28
+      - 美国ee56_29
+      - 美国ee56_30
+      - 美国ee56_31
+      - 加拿大ee56_16
+      - 美国ee56_32
+      - 美国ee56_33
+      - 香港ee56
+      - 美国ee56_34
+      - 加拿大ee56_17
+      - 加拿大ee56_18
+      - 美国ee56_35
+      - 美国ee56_36
+      - 美国ee56_37
+      - 美国ee56_38
+      - 法国ee56_1
+      - 美国ee56_39
+      - 美国ee56_40
+      - 美国ee56_41
+      - 美国ee56_42
+      - 美国ee56_43
+      - 美国ee56_44
+      - 美国ee56_45
+      - 美国ee56_46
+      - 新加坡ee56
+      - 美国ee56_47
+      - 美国ee56_48
+      - VLESS-517 | free-nodes
+      - VLESS-718 | free-nodes
+      - VLESS-538 | free-nodes
+      - VLESS-687 | free-nodes
+      - VLESS-544 | free-nodes
+      - 伊朗+1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU
+      - 🇵🇭 菲律宾 | PHL
+      - 🇺🇸 美国 | USA_2
+      - 🇵🇭 菲律宾 | PHL_1
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇭 菲律宾 | PHL_2
+      - 🇵🇭 菲律宾 | PHL_3
+      - 🇵🇭 菲律宾 | PHL_4
+      - 🇵🇭 菲律宾 | PHL_5
+      - 🇵🇭 菲律宾 | PHL_6
+      - 🇵🇭 菲律宾 | PHL_7
+      - 🇵🇭 菲律宾 | PHL_8
+      - 🇵🇱 波兰 | POL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇩🇪 德国 | DEU_1
+      - 🇹🇭 泰国 | THA
+      - 🇵🇭 菲律宾 | PHL_9
+      - 🇱🇹 立陶宛 | LTU
+      - 🇨🇭 瑞士 | CHE
+      - 🇵🇭 菲律宾 | PHL_10
+      - 🇺🇸美国44.57MB/s
+      - 🇺🇸美国39.70MB/s
+      - 🇺🇸美国8.86MB/s
+      - 🇨🇦加拿大39.23MB/s
+      - 🇨🇦加拿大26.84MB/s
+      - 🇨🇦加拿大NL 2.59MB/s
+      - 🇺🇸美国NL 50.94MB/s
+      - 🇨🇦加拿大NL 33.38MB/s
+      - 🇨🇦加拿大8.88MB/s
+      - 🇨🇦加拿大NL28.70MB/s
+      - 🇨🇦加拿大37.00MB/s
+      - 🇨🇦加拿大34.46MB/s
+      - 🇨🇦加拿大38.93MB/s
+      - 🇺🇸美国39.70MB/s_1
+      - 🇨🇦加拿大41.24MB/s
+      - 🇨🇦加拿大33.95MB/s
+      - 🇨🇦加拿大6.32MB/s
+      - 🇨🇦加拿大33.58MB/s
+      - 🇨🇦加拿大31.28MB/s
+      - 🇺🇸美国83.31MB/s
+      - 🇨🇦加拿大 udptoos.com 3.87MB/s
+      - 🇨🇦加拿大NL30.12MB/s
+      - 🇨🇦加拿大24.63MB/s
+      - 🇺🇸美国44.57MB/s_1
+      - 🇺🇸美国51.00MB/s
+      - 🇨🇦加拿大37.08MB/s
+      - 🇨🇦加拿大30.32MB/s
+      - 🇺🇸美国8.86MB/s_1
+      - 🇨🇦加拿大30.32MB/s_1
+      - 🇨🇦加拿大11.60MB/s
+      - 🇨🇦加拿大34.78MB/s
+      - 🇨🇦加拿大NL 36.87MB/s
+      - " | US Node"
+      - 🇨🇦加拿大34.51MB/s
+      - 🇨🇦加拿大NL 39.23MB/s
+      - 🇨🇦加拿大27.15MB/s
+      - 🇨🇦加拿大NL 37.86MB/s
+      - 🇨🇦加拿大34.29MB/s
+      - 🇨🇦加拿大35.91MB/s
+      - 🇨🇦加拿大3.87MB/s
+      - 🇨🇦加拿大24.91MB/s
+      - 🇵🇱波兰22.37MB/s
+      - 🇨🇦加拿大NL24.14MB/s
+      - 🇨🇦加拿大NL30.01MB/s
+      - 🇨🇦加拿大27.81MB/s
+      - 🇬🇱GL23.04MB/s
+      - FR
+      - github-anytls-1
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 新加坡365
+      - 日本u12
+      - 新加坡365_1
+      - 新加坡365_2
+      - 新加坡365_3
+      - 加拿大365
+      - 新加坡365_4
+      - 日本u12_1
+      - 美国u12
+      - 美国u12_1
+      - 加拿大365_1
+      - 美国u12_2
+      - 美国365
+      - 加拿大365_2
+      - 美国365_1
+      - 美国u12_3
+      - 美国u12_4
+      - 美国u12_5
+      - 美国+CloudFlare节点
+      - 加拿大365_3
+      - 日本u12_2
+      - 加拿大365_4
+      - 美国u12_6
+      - 美国u12_7
+      - 美国365_2
+      - 美国u12_8
+      - 美国u12_9
+      - 美国u12_10
+      - 美国u12_11
+      - 加拿大365_5
+      - 美国u12_12
+      - 美国u12_13
+      - 加拿大365_6
+      - 加拿大365_7
+      - 美国u12_14
+      - 美国u12_15
+      - 美国u12_16
+      - 加拿大u12
+      - 美国u12_17
+      - 美国u12_18
+      - 美国u12_19
+      - 美国u12_20
+      - 加拿大365_8
+      - 美国u12_21
+      - 美国u12_22
+      - 加拿大365_9
+      - 加拿大u12_1
+      - 美国u12_23
+      - 美国u12_24
+      - 美国u12_25
+      - 美国u12_26
+      - 美国u12_27
+      - 美国u12_28
+      - 美国u12_29
+      - 美国u12_30
+      - 🇰🇷 韩国 | KOR
+      - 美国u12_31
+      - 法国u12
+      - 美国u12_32
+      - 美国u12_33
+      - 美国u12_34
+      - NL
+      - 美国ee56
+      - 美国ee56_1
+      - 加拿大ee56
+      - 美国ee56_2
+      - 美国ee56_3
+      - 美国ee56_4
+      - 美国ee56_5
+      - 美国ee56_6
+      - 美国ee56_7
+      - 加拿大ee56_1
+      - 美国ee56_8
+      - 美国ee56_9
+      - 加拿大ee56_2
+      - 美国ee56_10
+      - 加拿大ee56_3
+      - 美国ee56_11
+      - 加拿大ee56_4
+      - 加拿大ee56_5
+      - 美国ee56_12
+      - 美国ee56_13
+      - 美国ee56_14
+      - 加拿大ee56_6
+      - 加拿大ee56_7
+      - 美国ee56_15
+      - 美国ee56_16
+      - 法国ee56
+      - 加拿大ee56_8
+      - 美国ee56_17
+      - 美国ee56_18
+      - 加拿大ee56_9
+      - 美国ee56_19
+      - 加拿大ee56_10
+      - 美国ee56_20
+      - 美国ee56_21
+      - 美国ee56_22
+      - 美国ee56_23
+      - 加拿大ee56_11
+      - 加拿大ee56_12
+      - 美国ee56_24
+      - 美国ee56_25
+      - 美国ee56_26
+      - 加拿大ee56_13
+      - 美国ee56_27
+      - 加拿大ee56_14
+      - 加拿大ee56_15
+      - 美国ee56_28
+      - 美国ee56_29
+      - 美国ee56_30
+      - 美国ee56_31
+      - 加拿大ee56_16
+      - 美国ee56_32
+      - 美国ee56_33
+      - 香港ee56
+      - 美国ee56_34
+      - 加拿大ee56_17
+      - 加拿大ee56_18
+      - 美国ee56_35
+      - 美国ee56_36
+      - 美国ee56_37
+      - 美国ee56_38
+      - 法国ee56_1
+      - 美国ee56_39
+      - 美国ee56_40
+      - 美国ee56_41
+      - 美国ee56_42
+      - 美国ee56_43
+      - 美国ee56_44
+      - 美国ee56_45
+      - 美国ee56_46
+      - 新加坡ee56
+      - 美国ee56_47
+      - 美国ee56_48
+      - VLESS-517 | free-nodes
+      - VLESS-718 | free-nodes
+      - VLESS-538 | free-nodes
+      - VLESS-687 | free-nodes
+      - VLESS-544 | free-nodes
+      - 伊朗+1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU
+      - 🇵🇭 菲律宾 | PHL
+      - 🇺🇸 美国 | USA_2
+      - 🇵🇭 菲律宾 | PHL_1
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇭 菲律宾 | PHL_2
+      - 🇵🇭 菲律宾 | PHL_3
+      - 🇵🇭 菲律宾 | PHL_4
+      - 🇵🇭 菲律宾 | PHL_5
+      - 🇵🇭 菲律宾 | PHL_6
+      - 🇵🇭 菲律宾 | PHL_7
+      - 🇵🇭 菲律宾 | PHL_8
+      - 🇵🇱 波兰 | POL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇩🇪 德国 | DEU_1
+      - 🇹🇭 泰国 | THA
+      - 🇵🇭 菲律宾 | PHL_9
+      - 🇱🇹 立陶宛 | LTU
+      - 🇨🇭 瑞士 | CHE
+      - 🇵🇭 菲律宾 | PHL_10
+      - 🇺🇸美国44.57MB/s
+      - 🇺🇸美国39.70MB/s
+      - 🇺🇸美国8.86MB/s
+      - 🇨🇦加拿大39.23MB/s
+      - 🇨🇦加拿大26.84MB/s
+      - 🇨🇦加拿大NL 2.59MB/s
+      - 🇺🇸美国NL 50.94MB/s
+      - 🇨🇦加拿大NL 33.38MB/s
+      - 🇨🇦加拿大8.88MB/s
+      - 🇨🇦加拿大NL28.70MB/s
+      - 🇨🇦加拿大37.00MB/s
+      - 🇨🇦加拿大34.46MB/s
+      - 🇨🇦加拿大38.93MB/s
+      - 🇺🇸美国39.70MB/s_1
+      - 🇨🇦加拿大41.24MB/s
+      - 🇨🇦加拿大33.95MB/s
+      - 🇨🇦加拿大6.32MB/s
+      - 🇨🇦加拿大33.58MB/s
+      - 🇨🇦加拿大31.28MB/s
+      - 🇺🇸美国83.31MB/s
+      - 🇨🇦加拿大 udptoos.com 3.87MB/s
+      - 🇨🇦加拿大NL30.12MB/s
+      - 🇨🇦加拿大24.63MB/s
+      - 🇺🇸美国44.57MB/s_1
+      - 🇺🇸美国51.00MB/s
+      - 🇨🇦加拿大37.08MB/s
+      - 🇨🇦加拿大30.32MB/s
+      - 🇺🇸美国8.86MB/s_1
+      - 🇨🇦加拿大30.32MB/s_1
+      - 🇨🇦加拿大11.60MB/s
+      - 🇨🇦加拿大34.78MB/s
+      - 🇨🇦加拿大NL 36.87MB/s
+      - " | US Node"
+      - 🇨🇦加拿大34.51MB/s
+      - 🇨🇦加拿大NL 39.23MB/s
+      - 🇨🇦加拿大27.15MB/s
+      - 🇨🇦加拿大NL 37.86MB/s
+      - 🇨🇦加拿大34.29MB/s
+      - 🇨🇦加拿大35.91MB/s
+      - 🇨🇦加拿大3.87MB/s
+      - 🇨🇦加拿大24.91MB/s
+      - 🇵🇱波兰22.37MB/s
+      - 🇨🇦加拿大NL24.14MB/s
+      - 🇨🇦加拿大NL30.01MB/s
+      - 🇨🇦加拿大27.81MB/s
+      - 🇬🇱GL23.04MB/s
+      - FR
+      - github-anytls-1
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 新加坡365
+      - 日本u12
+      - 新加坡365_1
+      - 新加坡365_2
+      - 新加坡365_3
+      - 加拿大365
+      - 新加坡365_4
+      - 日本u12_1
+      - 美国u12
+      - 美国u12_1
+      - 加拿大365_1
+      - 美国u12_2
+      - 美国365
+      - 加拿大365_2
+      - 美国365_1
+      - 美国u12_3
+      - 美国u12_4
+      - 美国u12_5
+      - 美国+CloudFlare节点
+      - 加拿大365_3
+      - 日本u12_2
+      - 加拿大365_4
+      - 美国u12_6
+      - 美国u12_7
+      - 美国365_2
+      - 美国u12_8
+      - 美国u12_9
+      - 美国u12_10
+      - 美国u12_11
+      - 加拿大365_5
+      - 美国u12_12
+      - 美国u12_13
+      - 加拿大365_6
+      - 加拿大365_7
+      - 美国u12_14
+      - 美国u12_15
+      - 美国u12_16
+      - 加拿大u12
+      - 美国u12_17
+      - 美国u12_18
+      - 美国u12_19
+      - 美国u12_20
+      - 加拿大365_8
+      - 美国u12_21
+      - 美国u12_22
+      - 加拿大365_9
+      - 加拿大u12_1
+      - 美国u12_23
+      - 美国u12_24
+      - 美国u12_25
+      - 美国u12_26
+      - 美国u12_27
+      - 美国u12_28
+      - 美国u12_29
+      - 美国u12_30
+      - 🇰🇷 韩国 | KOR
+      - 美国u12_31
+      - 法国u12
+      - 美国u12_32
+      - 美国u12_33
+      - 美国u12_34
+      - NL
+      - 美国ee56
+      - 美国ee56_1
+      - 加拿大ee56
+      - 美国ee56_2
+      - 美国ee56_3
+      - 美国ee56_4
+      - 美国ee56_5
+      - 美国ee56_6
+      - 美国ee56_7
+      - 加拿大ee56_1
+      - 美国ee56_8
+      - 美国ee56_9
+      - 加拿大ee56_2
+      - 美国ee56_10
+      - 加拿大ee56_3
+      - 美国ee56_11
+      - 加拿大ee56_4
+      - 加拿大ee56_5
+      - 美国ee56_12
+      - 美国ee56_13
+      - 美国ee56_14
+      - 加拿大ee56_6
+      - 加拿大ee56_7
+      - 美国ee56_15
+      - 美国ee56_16
+      - 法国ee56
+      - 加拿大ee56_8
+      - 美国ee56_17
+      - 美国ee56_18
+      - 加拿大ee56_9
+      - 美国ee56_19
+      - 加拿大ee56_10
+      - 美国ee56_20
+      - 美国ee56_21
+      - 美国ee56_22
+      - 美国ee56_23
+      - 加拿大ee56_11
+      - 加拿大ee56_12
+      - 美国ee56_24
+      - 美国ee56_25
+      - 美国ee56_26
+      - 加拿大ee56_13
+      - 美国ee56_27
+      - 加拿大ee56_14
+      - 加拿大ee56_15
+      - 美国ee56_28
+      - 美国ee56_29
+      - 美国ee56_30
+      - 美国ee56_31
+      - 加拿大ee56_16
+      - 美国ee56_32
+      - 美国ee56_33
+      - 香港ee56
+      - 美国ee56_34
+      - 加拿大ee56_17
+      - 加拿大ee56_18
+      - 美国ee56_35
+      - 美国ee56_36
+      - 美国ee56_37
+      - 美国ee56_38
+      - 法国ee56_1
+      - 美国ee56_39
+      - 美国ee56_40
+      - 美国ee56_41
+      - 美国ee56_42
+      - 美国ee56_43
+      - 美国ee56_44
+      - 美国ee56_45
+      - 美国ee56_46
+      - 新加坡ee56
+      - 美国ee56_47
+      - 美国ee56_48
+      - VLESS-517 | free-nodes
+      - VLESS-718 | free-nodes
+      - VLESS-538 | free-nodes
+      - VLESS-687 | free-nodes
+      - VLESS-544 | free-nodes
+      - 伊朗+1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU
+      - 🇵🇭 菲律宾 | PHL
+      - 🇺🇸 美国 | USA_2
+      - 🇵🇭 菲律宾 | PHL_1
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇭 菲律宾 | PHL_2
+      - 🇵🇭 菲律宾 | PHL_3
+      - 🇵🇭 菲律宾 | PHL_4
+      - 🇵🇭 菲律宾 | PHL_5
+      - 🇵🇭 菲律宾 | PHL_6
+      - 🇵🇭 菲律宾 | PHL_7
+      - 🇵🇭 菲律宾 | PHL_8
+      - 🇵🇱 波兰 | POL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇩🇪 德国 | DEU_1
+      - 🇹🇭 泰国 | THA
+      - 🇵🇭 菲律宾 | PHL_9
+      - 🇱🇹 立陶宛 | LTU
+      - 🇨🇭 瑞士 | CHE
+      - 🇵🇭 菲律宾 | PHL_10
+      - 🇺🇸美国44.57MB/s
+      - 🇺🇸美国39.70MB/s
+      - 🇺🇸美国8.86MB/s
+      - 🇨🇦加拿大39.23MB/s
+      - 🇨🇦加拿大26.84MB/s
+      - 🇨🇦加拿大NL 2.59MB/s
+      - 🇺🇸美国NL 50.94MB/s
+      - 🇨🇦加拿大NL 33.38MB/s
+      - 🇨🇦加拿大8.88MB/s
+      - 🇨🇦加拿大NL28.70MB/s
+      - 🇨🇦加拿大37.00MB/s
+      - 🇨🇦加拿大34.46MB/s
+      - 🇨🇦加拿大38.93MB/s
+      - 🇺🇸美国39.70MB/s_1
+      - 🇨🇦加拿大41.24MB/s
+      - 🇨🇦加拿大33.95MB/s
+      - 🇨🇦加拿大6.32MB/s
+      - 🇨🇦加拿大33.58MB/s
+      - 🇨🇦加拿大31.28MB/s
+      - 🇺🇸美国83.31MB/s
+      - 🇨🇦加拿大 udptoos.com 3.87MB/s
+      - 🇨🇦加拿大NL30.12MB/s
+      - 🇨🇦加拿大24.63MB/s
+      - 🇺🇸美国44.57MB/s_1
+      - 🇺🇸美国51.00MB/s
+      - 🇨🇦加拿大37.08MB/s
+      - 🇨🇦加拿大30.32MB/s
+      - 🇺🇸美国8.86MB/s_1
+      - 🇨🇦加拿大30.32MB/s_1
+      - 🇨🇦加拿大11.60MB/s
+      - 🇨🇦加拿大34.78MB/s
+      - 🇨🇦加拿大NL 36.87MB/s
+      - " | US Node"
+      - 🇨🇦加拿大34.51MB/s
+      - 🇨🇦加拿大NL 39.23MB/s
+      - 🇨🇦加拿大27.15MB/s
+      - 🇨🇦加拿大NL 37.86MB/s
+      - 🇨🇦加拿大34.29MB/s
+      - 🇨🇦加拿大35.91MB/s
+      - 🇨🇦加拿大3.87MB/s
+      - 🇨🇦加拿大24.91MB/s
+      - 🇵🇱波兰22.37MB/s
+      - 🇨🇦加拿大NL24.14MB/s
+      - 🇨🇦加拿大NL30.01MB/s
+      - 🇨🇦加拿大27.81MB/s
+      - 🇬🇱GL23.04MB/s
+      - FR
+      - github-anytls-1
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 新加坡365
+      - 日本u12
+      - 新加坡365_1
+      - 新加坡365_2
+      - 新加坡365_3
+      - 加拿大365
+      - 新加坡365_4
+      - 日本u12_1
+      - 美国u12
+      - 美国u12_1
+      - 加拿大365_1
+      - 美国u12_2
+      - 美国365
+      - 加拿大365_2
+      - 美国365_1
+      - 美国u12_3
+      - 美国u12_4
+      - 美国u12_5
+      - 美国+CloudFlare节点
+      - 加拿大365_3
+      - 日本u12_2
+      - 加拿大365_4
+      - 美国u12_6
+      - 美国u12_7
+      - 美国365_2
+      - 美国u12_8
+      - 美国u12_9
+      - 美国u12_10
+      - 美国u12_11
+      - 加拿大365_5
+      - 美国u12_12
+      - 美国u12_13
+      - 加拿大365_6
+      - 加拿大365_7
+      - 美国u12_14
+      - 美国u12_15
+      - 美国u12_16
+      - 加拿大u12
+      - 美国u12_17
+      - 美国u12_18
+      - 美国u12_19
+      - 美国u12_20
+      - 加拿大365_8
+      - 美国u12_21
+      - 美国u12_22
+      - 加拿大365_9
+      - 加拿大u12_1
+      - 美国u12_23
+      - 美国u12_24
+      - 美国u12_25
+      - 美国u12_26
+      - 美国u12_27
+      - 美国u12_28
+      - 美国u12_29
+      - 美国u12_30
+      - 🇰🇷 韩国 | KOR
+      - 美国u12_31
+      - 法国u12
+      - 美国u12_32
+      - 美国u12_33
+      - 美国u12_34
+      - NL
+      - 美国ee56
+      - 美国ee56_1
+      - 加拿大ee56
+      - 美国ee56_2
+      - 美国ee56_3
+      - 美国ee56_4
+      - 美国ee56_5
+      - 美国ee56_6
+      - 美国ee56_7
+      - 加拿大ee56_1
+      - 美国ee56_8
+      - 美国ee56_9
+      - 加拿大ee56_2
+      - 美国ee56_10
+      - 加拿大ee56_3
+      - 美国ee56_11
+      - 加拿大ee56_4
+      - 加拿大ee56_5
+      - 美国ee56_12
+      - 美国ee56_13
+      - 美国ee56_14
+      - 加拿大ee56_6
+      - 加拿大ee56_7
+      - 美国ee56_15
+      - 美国ee56_16
+      - 法国ee56
+      - 加拿大ee56_8
+      - 美国ee56_17
+      - 美国ee56_18
+      - 加拿大ee56_9
+      - 美国ee56_19
+      - 加拿大ee56_10
+      - 美国ee56_20
+      - 美国ee56_21
+      - 美国ee56_22
+      - 美国ee56_23
+      - 加拿大ee56_11
+      - 加拿大ee56_12
+      - 美国ee56_24
+      - 美国ee56_25
+      - 美国ee56_26
+      - 加拿大ee56_13
+      - 美国ee56_27
+      - 加拿大ee56_14
+      - 加拿大ee56_15
+      - 美国ee56_28
+      - 美国ee56_29
+      - 美国ee56_30
+      - 美国ee56_31
+      - 加拿大ee56_16
+      - 美国ee56_32
+      - 美国ee56_33
+      - 香港ee56
+      - 美国ee56_34
+      - 加拿大ee56_17
+      - 加拿大ee56_18
+      - 美国ee56_35
+      - 美国ee56_36
+      - 美国ee56_37
+      - 美国ee56_38
+      - 法国ee56_1
+      - 美国ee56_39
+      - 美国ee56_40
+      - 美国ee56_41
+      - 美国ee56_42
+      - 美国ee56_43
+      - 美国ee56_44
+      - 美国ee56_45
+      - 美国ee56_46
+      - 新加坡ee56
+      - 美国ee56_47
+      - 美国ee56_48
+      - VLESS-517 | free-nodes
+      - VLESS-718 | free-nodes
+      - VLESS-538 | free-nodes
+      - VLESS-687 | free-nodes
+      - VLESS-544 | free-nodes
+      - 伊朗+1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU
+      - 🇵🇭 菲律宾 | PHL
+      - 🇺🇸 美国 | USA_2
+      - 🇵🇭 菲律宾 | PHL_1
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇭 菲律宾 | PHL_2
+      - 🇵🇭 菲律宾 | PHL_3
+      - 🇵🇭 菲律宾 | PHL_4
+      - 🇵🇭 菲律宾 | PHL_5
+      - 🇵🇭 菲律宾 | PHL_6
+      - 🇵🇭 菲律宾 | PHL_7
+      - 🇵🇭 菲律宾 | PHL_8
+      - 🇵🇱 波兰 | POL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇩🇪 德国 | DEU_1
+      - 🇹🇭 泰国 | THA
+      - 🇵🇭 菲律宾 | PHL_9
+      - 🇱🇹 立陶宛 | LTU
+      - 🇨🇭 瑞士 | CHE
+      - 🇵🇭 菲律宾 | PHL_10
+      - 🇺🇸美国44.57MB/s
+      - 🇺🇸美国39.70MB/s
+      - 🇺🇸美国8.86MB/s
+      - 🇨🇦加拿大39.23MB/s
+      - 🇨🇦加拿大26.84MB/s
+      - 🇨🇦加拿大NL 2.59MB/s
+      - 🇺🇸美国NL 50.94MB/s
+      - 🇨🇦加拿大NL 33.38MB/s
+      - 🇨🇦加拿大8.88MB/s
+      - 🇨🇦加拿大NL28.70MB/s
+      - 🇨🇦加拿大37.00MB/s
+      - 🇨🇦加拿大34.46MB/s
+      - 🇨🇦加拿大38.93MB/s
+      - 🇺🇸美国39.70MB/s_1
+      - 🇨🇦加拿大41.24MB/s
+      - 🇨🇦加拿大33.95MB/s
+      - 🇨🇦加拿大6.32MB/s
+      - 🇨🇦加拿大33.58MB/s
+      - 🇨🇦加拿大31.28MB/s
+      - 🇺🇸美国83.31MB/s
+      - 🇨🇦加拿大 udptoos.com 3.87MB/s
+      - 🇨🇦加拿大NL30.12MB/s
+      - 🇨🇦加拿大24.63MB/s
+      - 🇺🇸美国44.57MB/s_1
+      - 🇺🇸美国51.00MB/s
+      - 🇨🇦加拿大37.08MB/s
+      - 🇨🇦加拿大30.32MB/s
+      - 🇺🇸美国8.86MB/s_1
+      - 🇨🇦加拿大30.32MB/s_1
+      - 🇨🇦加拿大11.60MB/s
+      - 🇨🇦加拿大34.78MB/s
+      - 🇨🇦加拿大NL 36.87MB/s
+      - " | US Node"
+      - 🇨🇦加拿大34.51MB/s
+      - 🇨🇦加拿大NL 39.23MB/s
+      - 🇨🇦加拿大27.15MB/s
+      - 🇨🇦加拿大NL 37.86MB/s
+      - 🇨🇦加拿大34.29MB/s
+      - 🇨🇦加拿大35.91MB/s
+      - 🇨🇦加拿大3.87MB/s
+      - 🇨🇦加拿大24.91MB/s
+      - 🇵🇱波兰22.37MB/s
+      - 🇨🇦加拿大NL24.14MB/s
+      - 🇨🇦加拿大NL30.01MB/s
+      - 🇨🇦加拿大27.81MB/s
+      - 🇬🇱GL23.04MB/s
+      - FR
+      - github-anytls-1
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 新加坡365
+      - 日本u12
+      - 新加坡365_1
+      - 新加坡365_2
+      - 新加坡365_3
+      - 加拿大365
+      - 新加坡365_4
+      - 日本u12_1
+      - 美国u12
+      - 美国u12_1
+      - 加拿大365_1
+      - 美国u12_2
+      - 美国365
+      - 加拿大365_2
+      - 美国365_1
+      - 美国u12_3
+      - 美国u12_4
+      - 美国u12_5
+      - 美国+CloudFlare节点
+      - 加拿大365_3
+      - 日本u12_2
+      - 加拿大365_4
+      - 美国u12_6
+      - 美国u12_7
+      - 美国365_2
+      - 美国u12_8
+      - 美国u12_9
+      - 美国u12_10
+      - 美国u12_11
+      - 加拿大365_5
+      - 美国u12_12
+      - 美国u12_13
+      - 加拿大365_6
+      - 加拿大365_7
+      - 美国u12_14
+      - 美国u12_15
+      - 美国u12_16
+      - 加拿大u12
+      - 美国u12_17
+      - 美国u12_18
+      - 美国u12_19
+      - 美国u12_20
+      - 加拿大365_8
+      - 美国u12_21
+      - 美国u12_22
+      - 加拿大365_9
+      - 加拿大u12_1
+      - 美国u12_23
+      - 美国u12_24
+      - 美国u12_25
+      - 美国u12_26
+      - 美国u12_27
+      - 美国u12_28
+      - 美国u12_29
+      - 美国u12_30
+      - 🇰🇷 韩国 | KOR
+      - 美国u12_31
+      - 法国u12
+      - 美国u12_32
+      - 美国u12_33
+      - 美国u12_34
+      - NL
+      - 美国ee56
+      - 美国ee56_1
+      - 加拿大ee56
+      - 美国ee56_2
+      - 美国ee56_3
+      - 美国ee56_4
+      - 美国ee56_5
+      - 美国ee56_6
+      - 美国ee56_7
+      - 加拿大ee56_1
+      - 美国ee56_8
+      - 美国ee56_9
+      - 加拿大ee56_2
+      - 美国ee56_10
+      - 加拿大ee56_3
+      - 美国ee56_11
+      - 加拿大ee56_4
+      - 加拿大ee56_5
+      - 美国ee56_12
+      - 美国ee56_13
+      - 美国ee56_14
+      - 加拿大ee56_6
+      - 加拿大ee56_7
+      - 美国ee56_15
+      - 美国ee56_16
+      - 法国ee56
+      - 加拿大ee56_8
+      - 美国ee56_17
+      - 美国ee56_18
+      - 加拿大ee56_9
+      - 美国ee56_19
+      - 加拿大ee56_10
+      - 美国ee56_20
+      - 美国ee56_21
+      - 美国ee56_22
+      - 美国ee56_23
+      - 加拿大ee56_11
+      - 加拿大ee56_12
+      - 美国ee56_24
+      - 美国ee56_25
+      - 美国ee56_26
+      - 加拿大ee56_13
+      - 美国ee56_27
+      - 加拿大ee56_14
+      - 加拿大ee56_15
+      - 美国ee56_28
+      - 美国ee56_29
+      - 美国ee56_30
+      - 美国ee56_31
+      - 加拿大ee56_16
+      - 美国ee56_32
+      - 美国ee56_33
+      - 香港ee56
+      - 美国ee56_34
+      - 加拿大ee56_17
+      - 加拿大ee56_18
+      - 美国ee56_35
+      - 美国ee56_36
+      - 美国ee56_37
+      - 美国ee56_38
+      - 法国ee56_1
+      - 美国ee56_39
+      - 美国ee56_40
+      - 美国ee56_41
+      - 美国ee56_42
+      - 美国ee56_43
+      - 美国ee56_44
+      - 美国ee56_45
+      - 美国ee56_46
+      - 新加坡ee56
+      - 美国ee56_47
+      - 美国ee56_48
+      - VLESS-517 | free-nodes
+      - VLESS-718 | free-nodes
+      - VLESS-538 | free-nodes
+      - VLESS-687 | free-nodes
+      - VLESS-544 | free-nodes
+      - 伊朗+1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU
+      - 🇵🇭 菲律宾 | PHL
+      - 🇺🇸 美国 | USA_2
+      - 🇵🇭 菲律宾 | PHL_1
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇭 菲律宾 | PHL_2
+      - 🇵🇭 菲律宾 | PHL_3
+      - 🇵🇭 菲律宾 | PHL_4
+      - 🇵🇭 菲律宾 | PHL_5
+      - 🇵🇭 菲律宾 | PHL_6
+      - 🇵🇭 菲律宾 | PHL_7
+      - 🇵🇭 菲律宾 | PHL_8
+      - 🇵🇱 波兰 | POL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇩🇪 德国 | DEU_1
+      - 🇹🇭 泰国 | THA
+      - 🇵🇭 菲律宾 | PHL_9
+      - 🇱🇹 立陶宛 | LTU
+      - 🇨🇭 瑞士 | CHE
+      - 🇵🇭 菲律宾 | PHL_10
+      - 🇺🇸美国44.57MB/s
+      - 🇺🇸美国39.70MB/s
+      - 🇺🇸美国8.86MB/s
+      - 🇨🇦加拿大39.23MB/s
+      - 🇨🇦加拿大26.84MB/s
+      - 🇨🇦加拿大NL 2.59MB/s
+      - 🇺🇸美国NL 50.94MB/s
+      - 🇨🇦加拿大NL 33.38MB/s
+      - 🇨🇦加拿大8.88MB/s
+      - 🇨🇦加拿大NL28.70MB/s
+      - 🇨🇦加拿大37.00MB/s
+      - 🇨🇦加拿大34.46MB/s
+      - 🇨🇦加拿大38.93MB/s
+      - 🇺🇸美国39.70MB/s_1
+      - 🇨🇦加拿大41.24MB/s
+      - 🇨🇦加拿大33.95MB/s
+      - 🇨🇦加拿大6.32MB/s
+      - 🇨🇦加拿大33.58MB/s
+      - 🇨🇦加拿大31.28MB/s
+      - 🇺🇸美国83.31MB/s
+      - 🇨🇦加拿大 udptoos.com 3.87MB/s
+      - 🇨🇦加拿大NL30.12MB/s
+      - 🇨🇦加拿大24.63MB/s
+      - 🇺🇸美国44.57MB/s_1
+      - 🇺🇸美国51.00MB/s
+      - 🇨🇦加拿大37.08MB/s
+      - 🇨🇦加拿大30.32MB/s
+      - 🇺🇸美国8.86MB/s_1
+      - 🇨🇦加拿大30.32MB/s_1
+      - 🇨🇦加拿大11.60MB/s
+      - 🇨🇦加拿大34.78MB/s
+      - 🇨🇦加拿大NL 36.87MB/s
+      - " | US Node"
+      - 🇨🇦加拿大34.51MB/s
+      - 🇨🇦加拿大NL 39.23MB/s
+      - 🇨🇦加拿大27.15MB/s
+      - 🇨🇦加拿大NL 37.86MB/s
+      - 🇨🇦加拿大34.29MB/s
+      - 🇨🇦加拿大35.91MB/s
+      - 🇨🇦加拿大3.87MB/s
+      - 🇨🇦加拿大24.91MB/s
+      - 🇵🇱波兰22.37MB/s
+      - 🇨🇦加拿大NL24.14MB/s
+      - 🇨🇦加拿大NL30.01MB/s
+      - 🇨🇦加拿大27.81MB/s
+      - 🇬🇱GL23.04MB/s
+      - FR
+      - github-anytls-1
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 新加坡365
+      - 日本u12
+      - 新加坡365_1
+      - 新加坡365_2
+      - 新加坡365_3
+      - 加拿大365
+      - 新加坡365_4
+      - 日本u12_1
+      - 美国u12
+      - 美国u12_1
+      - 加拿大365_1
+      - 美国u12_2
+      - 美国365
+      - 加拿大365_2
+      - 美国365_1
+      - 美国u12_3
+      - 美国u12_4
+      - 美国u12_5
+      - 美国+CloudFlare节点
+      - 加拿大365_3
+      - 日本u12_2
+      - 加拿大365_4
+      - 美国u12_6
+      - 美国u12_7
+      - 美国365_2
+      - 美国u12_8
+      - 美国u12_9
+      - 美国u12_10
+      - 美国u12_11
+      - 加拿大365_5
+      - 美国u12_12
+      - 美国u12_13
+      - 加拿大365_6
+      - 加拿大365_7
+      - 美国u12_14
+      - 美国u12_15
+      - 美国u12_16
+      - 加拿大u12
+      - 美国u12_17
+      - 美国u12_18
+      - 美国u12_19
+      - 美国u12_20
+      - 加拿大365_8
+      - 美国u12_21
+      - 美国u12_22
+      - 加拿大365_9
+      - 加拿大u12_1
+      - 美国u12_23
+      - 美国u12_24
+      - 美国u12_25
+      - 美国u12_26
+      - 美国u12_27
+      - 美国u12_28
+      - 美国u12_29
+      - 美国u12_30
+      - 🇰🇷 韩国 | KOR
+      - 美国u12_31
+      - 法国u12
+      - 美国u12_32
+      - 美国u12_33
+      - 美国u12_34
+      - NL
+      - 美国ee56
+      - 美国ee56_1
+      - 加拿大ee56
+      - 美国ee56_2
+      - 美国ee56_3
+      - 美国ee56_4
+      - 美国ee56_5
+      - 美国ee56_6
+      - 美国ee56_7
+      - 加拿大ee56_1
+      - 美国ee56_8
+      - 美国ee56_9
+      - 加拿大ee56_2
+      - 美国ee56_10
+      - 加拿大ee56_3
+      - 美国ee56_11
+      - 加拿大ee56_4
+      - 加拿大ee56_5
+      - 美国ee56_12
+      - 美国ee56_13
+      - 美国ee56_14
+      - 加拿大ee56_6
+      - 加拿大ee56_7
+      - 美国ee56_15
+      - 美国ee56_16
+      - 法国ee56
+      - 加拿大ee56_8
+      - 美国ee56_17
+      - 美国ee56_18
+      - 加拿大ee56_9
+      - 美国ee56_19
+      - 加拿大ee56_10
+      - 美国ee56_20
+      - 美国ee56_21
+      - 美国ee56_22
+      - 美国ee56_23
+      - 加拿大ee56_11
+      - 加拿大ee56_12
+      - 美国ee56_24
+      - 美国ee56_25
+      - 美国ee56_26
+      - 加拿大ee56_13
+      - 美国ee56_27
+      - 加拿大ee56_14
+      - 加拿大ee56_15
+      - 美国ee56_28
+      - 美国ee56_29
+      - 美国ee56_30
+      - 美国ee56_31
+      - 加拿大ee56_16
+      - 美国ee56_32
+      - 美国ee56_33
+      - 香港ee56
+      - 美国ee56_34
+      - 加拿大ee56_17
+      - 加拿大ee56_18
+      - 美国ee56_35
+      - 美国ee56_36
+      - 美国ee56_37
+      - 美国ee56_38
+      - 法国ee56_1
+      - 美国ee56_39
+      - 美国ee56_40
+      - 美国ee56_41
+      - 美国ee56_42
+      - 美国ee56_43
+      - 美国ee56_44
+      - 美国ee56_45
+      - 美国ee56_46
+      - 新加坡ee56
+      - 美国ee56_47
+      - 美国ee56_48
+      - VLESS-517 | free-nodes
+      - VLESS-718 | free-nodes
+      - VLESS-538 | free-nodes
+      - VLESS-687 | free-nodes
+      - VLESS-544 | free-nodes
+      - 伊朗+1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU
+      - 🇵🇭 菲律宾 | PHL
+      - 🇺🇸 美国 | USA_2
+      - 🇵🇭 菲律宾 | PHL_1
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇭 菲律宾 | PHL_2
+      - 🇵🇭 菲律宾 | PHL_3
+      - 🇵🇭 菲律宾 | PHL_4
+      - 🇵🇭 菲律宾 | PHL_5
+      - 🇵🇭 菲律宾 | PHL_6
+      - 🇵🇭 菲律宾 | PHL_7
+      - 🇵🇭 菲律宾 | PHL_8
+      - 🇵🇱 波兰 | POL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇩🇪 德国 | DEU_1
+      - 🇹🇭 泰国 | THA
+      - 🇵🇭 菲律宾 | PHL_9
+      - 🇱🇹 立陶宛 | LTU
+      - 🇨🇭 瑞士 | CHE
+      - 🇵🇭 菲律宾 | PHL_10
+      - 🇺🇸美国44.57MB/s
+      - 🇺🇸美国39.70MB/s
+      - 🇺🇸美国8.86MB/s
+      - 🇨🇦加拿大39.23MB/s
+      - 🇨🇦加拿大26.84MB/s
+      - 🇨🇦加拿大NL 2.59MB/s
+      - 🇺🇸美国NL 50.94MB/s
+      - 🇨🇦加拿大NL 33.38MB/s
+      - 🇨🇦加拿大8.88MB/s
+      - 🇨🇦加拿大NL28.70MB/s
+      - 🇨🇦加拿大37.00MB/s
+      - 🇨🇦加拿大34.46MB/s
+      - 🇨🇦加拿大38.93MB/s
+      - 🇺🇸美国39.70MB/s_1
+      - 🇨🇦加拿大41.24MB/s
+      - 🇨🇦加拿大33.95MB/s
+      - 🇨🇦加拿大6.32MB/s
+      - 🇨🇦加拿大33.58MB/s
+      - 🇨🇦加拿大31.28MB/s
+      - 🇺🇸美国83.31MB/s
+      - 🇨🇦加拿大 udptoos.com 3.87MB/s
+      - 🇨🇦加拿大NL30.12MB/s
+      - 🇨🇦加拿大24.63MB/s
+      - 🇺🇸美国44.57MB/s_1
+      - 🇺🇸美国51.00MB/s
+      - 🇨🇦加拿大37.08MB/s
+      - 🇨🇦加拿大30.32MB/s
+      - 🇺🇸美国8.86MB/s_1
+      - 🇨🇦加拿大30.32MB/s_1
+      - 🇨🇦加拿大11.60MB/s
+      - 🇨🇦加拿大34.78MB/s
+      - 🇨🇦加拿大NL 36.87MB/s
+      - " | US Node"
+      - 🇨🇦加拿大34.51MB/s
+      - 🇨🇦加拿大NL 39.23MB/s
+      - 🇨🇦加拿大27.15MB/s
+      - 🇨🇦加拿大NL 37.86MB/s
+      - 🇨🇦加拿大34.29MB/s
+      - 🇨🇦加拿大35.91MB/s
+      - 🇨🇦加拿大3.87MB/s
+      - 🇨🇦加拿大24.91MB/s
+      - 🇵🇱波兰22.37MB/s
+      - 🇨🇦加拿大NL24.14MB/s
+      - 🇨🇦加拿大NL30.01MB/s
+      - 🇨🇦加拿大27.81MB/s
+      - 🇬🇱GL23.04MB/s
+      - FR
+      - github-anytls-1
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
