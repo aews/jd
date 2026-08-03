@@ -1,0 +1,3058 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 希腊+22
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_1
+    type: vless
+    server: 88.218.44.4
+    port: 8443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: grpc
+    servername: dl.google.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_2
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_3
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: swcdn.apple.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_4
+    type: vless
+    server: 88.218.44.4
+    port: 8443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_5
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_6
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_7
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: swcdn.apple.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_8
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_9
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: dl.google.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_10
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_11
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_12
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-559 | free-nodes
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳CN 19.38MB/s
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 西班牙+33
+    type: vless
+    server: getsavesafe.net
+    port: 443
+    uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+    servername: getsavesafe.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
+      short-id: 82f5d3a1e9c0b661
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-389 | free-nodes
+    type: vless
+    server: getsavesafe.net
+    port: 443
+    uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+    servername: getsavesafe.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
+      short-id: 82f5d3a1e9c0b661
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-388 | free-nodes
+    type: vless
+    server: getsavesafe.net
+    port: 443
+    uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+    servername: getsavesafe.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
+      short-id: 82f5d3a1e9c0b661
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_13
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_14
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-531 | free-nodes
+    type: vless
+    server: 170.168.97.3
+    port: 8443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_1
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_15
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-225 | free-nodes
+    type: vless
+    server: 45.155.52.231
+    port: 443
+    uuid: 219f9fec-8983-4f6f-af8c-31bd0c6dbf19
+    servername: ru2.skydrgn-online.online
+    tls: true
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 6p0aVCkOgd-xaxqSMANYABL6O4Tdbftnxjiy5qcmISQ
+      short-id: 0b
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_16
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_17
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳CN  19.38MB/s
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_18
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 以色列1
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_19
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 西班牙ee12
+    type: vless
+    server: 170.168.97.3
+    port: 8443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 美国we11
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee12_20
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳CN 11.21MB/s
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪_DE_德国->🇹🇭_TH_泰国
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    servername: d2pwbkmfr5lxa4.cloudfront.net
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_1
+    type: vless
+    server: 170.168.99.3
+    port: 443
+    uuid: e51796bb-3305-ac88-f39d-22fd9dd63b4f
+    network: http
+    servername: cdn.steamstatic.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - cdn.steamstatic.com
+    reality-opts:
+      public-key: R8Mogel1wypEIpcUXnGmG1cuzT9POghNhqJcw4-CLx0
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_2
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_3
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_4
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_5
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: dl.google.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_6
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_7
+    type: hysteria2
+    server: usa1.spectrumproxy.shop
+    port: 443
+    password: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
+    sni: usa1.spectrumproxy.shop
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_8
+    type: vless
+    server: 170.168.97.3
+    port: 8443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_9
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_10
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_11
+    type: vless
+    server: 88.218.44.4
+    port: 8443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_12
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: swcdn.apple.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_13
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_14
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_15
+    type: vless
+    server: 88.218.44.4
+    port: 8443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: grpc
+    servername: dl.google.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_16
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_17
+    type: hysteria2
+    server: 205.237.109.212
+    port: 8443
+    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+    sni: grape-turbo-fr.roxa.org
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_18
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_19
+    type: vless
+    server: 162.248.163.237
+    port: 443
+    uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+    servername: sw.tunnelx.space
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: L1mMPvSystB6rMgj4GnHizy37M_M1gj_krywNf3hfHc
+      short-id: c1a3b5d7e9f02468
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_20
+    type: vless
+    server: 170.168.99.3
+    port: 443
+    uuid: e51796bb-3305-ac88-f39d-22fd9dd63b4f
+    network: http
+    servername: cdn.steamstatic.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: R8Mogel1wypEIpcUXnGmG1cuzT9POghNhqJcw4-CLx0
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯ewe1
+    type: vless
+    server: 212.233.123.185
+    port: 8443
+    uuid: c46e2605-be24-4555-b7db-0fc6773ad004
+    network: http
+    servername: rus07.routex-cloud.space
+    tls: true
+    client-fingerprint: firefox
+    http-opts:
+      path:
+        - /api/uploadFile/
+      headers:
+        Host:
+          - rus07.routex-cloud.space
+    reality-opts:
+      public-key: N20oGhwfXOP-H9nuvWlJG_UNHwxWWhrTAV-KsjgZFDA
+      short-id: 23697e
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_21
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_22
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_23
+    type: vless
+    server: tr.tunnelx.space
+    port: 443
+    uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+    servername: tr.tunnelx.space
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zvbLa6BrfAeAKIg4TZ2AASiEZ9ntYCSEFhgkbqWwkQg
+      short-id: 4e9b5c2d1a3f5728
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_24
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_25
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_26
+    type: vless
+    server: 45.137.43.70
+    port: 30160
+    uuid: c46e2605-be24-4555-b7db-0fc6773ad004
+    network: http
+    servername: yandex.tr
+    tls: true
+    client-fingerprint: firefox
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: vqr3sFlSCpzBjw61NnufMWLDfevzkuT24qo1SaEhp1k
+    skip-cert-verify: true
+    udp: true
+  - name: 香港12
+    type: vmess
+    server: board-02.ddnskunlun.com
+    port: 11985
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_27
+    type: vless
+    server: 31.76.251.127.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.251.127.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /10336/2GCOqG7bvA
+      headers:
+        Host: 31.76.251.127.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_28
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 香港13
+    type: vmess
+    server: board-02.ddnskunlun.com
+    port: 11885
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 香港14
+    type: vmess
+    server: select-us.ddnskunlun.com
+    port: 9028
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 香港15
+    type: vmess
+    server: select-hk.ddnskunlun.com
+    port: 9006
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 德国ewe1
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: 德国ewe1_1
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_29
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    servername: d2pwbkmfr5lxa4.cloudfront.net
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 德国ewe1_2
+    type: vless
+    server: 31.76.11.46.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.11.46.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /52872/BNzG4FvIAr
+      headers:
+        Host: 31.76.11.46.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_30
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 香港16
+    type: vmess
+    server: board-04.ddnskunlun.com
+    port: 11973
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_31
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: swcdn.apple.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ewe1_32
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: SS-26 | free-nodes
+    type: ss
+    server: xunlinknode.csdjhajkshdjkas.com
+    port: 40028
+    cipher: chacha20-ietf-poly1305
+    password: 28789988-887e-4e41-83cd-27bbfb7999ad
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-580 | free-nodes
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-581 | free-nodes
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-562 | free-nodes
+    type: vless
+    server: 170.168.97.3
+    port: 8443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-584 | free-nodes
+    type: vless
+    server: zjmy.zywm.eu.org
+    port: 443
+    uuid: 83564060-4069-40b4-e657-adccef9c4b62
+    network: ws
+    servername: zjmy.zywm.eu.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /mmy
+      headers:
+        Host: zjmy.zywm.eu.org
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-599 | free-nodes
+    type: vless
+    server: hentai.colorbox.space
+    port: 80
+    uuid: 8c7752f1-c2fc-47ff-8357-3ed5150d0338
+    network: ws
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-591 | free-nodes
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    servername: d2pwbkmfr5lxa4.cloudfront.net
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯+11
+    type: vless
+    server: 91.107.167.7
+    port: 2083
+    uuid: ac1110a3-5082-47f0-8191-31c2b6a81aa0
+    servername: aws-us-east-1.amazon.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: pO_QaG_aSWCly8o_a3py50xraUYgek8d71glro05ymk
+      short-id: 18e13283e9e781
+    skip-cert-verify: true
+    udp: true
+  - name: 南非+111
+    type: vless
+    server: 45.196.201.185
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 南非+112
+    type: vless
+    server: 45.196.201.4
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+113
+    type: hysteria2
+    server: 205.237.109.212
+    port: 8443
+    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+    sni: grape-turbo-fr.roxa.org
+    skip-cert-verify: true
+    udp: true
+  - name: 伊朗+114
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 5c192fd7-ef98-4112-a20c-129108fcd7e9
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    client-fingerprint: firefox
+    skip-cert-verify: true
+    udp: true
+  - name: 英国+115
+    type: vless
+    server: 31.76.11.46.cdn-one.org
+    port: 443
+    uuid: 2a6b708e-6799-473e-85e9-d4b116c5eedc
+    network: ws
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /52872/BNzG4FvIAr
+      headers:
+        Host: 31.76.11.46.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_2
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 5c192fd7-ef98-4112-a20c-129108fcd7e9
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    client-fingerprint: firefox
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA_1
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR_1
+    type: vless
+    server: 45.196.201.26
+    port: 443
+    uuid: f75814f6-8f81-4847-b792-168c41f2dc85
+    servername: storage.yandex.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
+      short-id: c6ef72e4635d15a5
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS
+    type: vless
+    server: 201.51.0.38
+    port: 4100
+    uuid: e7299042-7d8f-440f-8368-2516b0e69341
+    network: ws
+    tls: false
+    ws-opts:
+      path: /v1
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 英国 | GBR
+    type: vless
+    server: 89.167.81.142
+    port: 22012
+    uuid: de5dcb9e-6a72-45a2-8d3d-de00e5431426
+    servername: login.yahoo.com
+    tls: true
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: OncWhxWwzrKOFH21JT9WxcenacQuc7ZmuQy_rZFJ8xg
+      short-id: c6e19c434dc87df7
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD
+    type: vless
+    server: pol01.routexvpn.space
+    port: 30160
+    uuid: c46e2605-be24-4555-b7db-0fc6773ad004
+    network: http
+    servername: yandex.tr
+    tls: true
+    client-fingerprint: firefox
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: vqr3sFlSCpzBjw61NnufMWLDfevzkuT24qo1SaEhp1k
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS_1
+    type: vless
+    server: 77.222.37.89
+    port: 4100
+    uuid: b79c54f3-68e9-4e9d-8b57-22cbbe978730
+    network: ws
+    tls: false
+    ws-opts:
+      path: /v1
+      headers:
+        Host: live.ok.ru
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_3
+    type: vless
+    server: 45.89.232.141
+    port: 8443
+    uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+    network: ws
+    servername: rubifen.adaspoloandco.com
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /GOrbEh
+      headers:
+        Host: rubifen.adaspoloandco.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷 土耳其 | TUR_2
+    type: vless
+    server: 185.71.219.199
+    port: 25129
+    uuid: 6af3672b-8994-4cf1-aa15-23ce6574ebf0
+    servername: cloudflare.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: cJ8_eQYfNhbi1CzbO53KSyhAA2QfIrr_0ssbYNNgYDw
+      short-id: 8e2b7f9d0c4a3516
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬 新加坡 | SGP
+    type: vless
+    server: 5.253.42.164
+    port: 40443
+    uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+    servername: deepl.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+      short-id: 68a8
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_4
+    type: vless
+    server: 199.232.78.159
+    port: 443
+    uuid: 2d18c9f7-ee9b-4c82-8d8c-0454404be61b
+    network: ws
+    servername: ssl.fastly.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: BankMelat.glObal.ssl.faStly.nEt.
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_5
+    type: vless
+    server: 199.232.78.159
+    port: 443
+    uuid: 5de3f60c-7cc2-4f66-9177-706a2693dc19
+    network: ws
+    servername: ssl.fastly.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: BankMelat.glObal.ssl.faStly.nEt.
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA_2
+    type: vless
+    server: ad-010.zen2bswa.info
+    port: 8443
+    uuid: 9047efd2-5aa4-4c9c-a58f-a5791b06c79e
+    network: ws
+    servername: ad-010.zen2bswa.info
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ad-010.zen2bswa.info
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA_3
+    type: vless
+    server: 91.193.59.181
+    port: 2087
+    uuid: f0841bb1-00ff-4841-ba14-a3ec24d94bb5
+    network: ws
+    servername: edt.akkk.qzz.io
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: edt.akkk.qzz.io
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_6
+    type: vless
+    server: 31.76.11.46.cdn-one.org
+    port: 443
+    uuid: 2a6b708e-6799-473e-85e9-d4b116c5eedc
+    network: ws
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /52872/BNzG4FvIAr
+      headers:
+        Host: 31.76.11.46.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_7
+    type: vless
+    server: 199.232.78.159
+    port: 443
+    uuid: 0c0b895d-b954-4bec-94e6-5770677e7925
+    network: ws
+    servername: ssl.fastly.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053
+      headers:
+        Host: pan1.global.ssl.fastly.neT
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 瑞典 | SWE
+    type: vless
+    server: 170.168.99.3
+    port: 443
+    uuid: e51796bb-3305-ac88-f39d-22fd9dd63b4f
+    network: http
+    servername: cdn.steamstatic.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: R8Mogel1wypEIpcUXnGmG1cuzT9POghNhqJcw4-CLx0
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_8
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪_DE_德国->🇹🇭_TH_泰国_1
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    servername: d2pwbkmfr5lxa4.cloudfront.net
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 美国_🇺🇸_US_69
+    type: vless
+    server: zjmy.zywm.eu.org
+    port: 443
+    uuid: 83564060-4069-40b4-e657-adccef9c4b62
+    network: ws
+    servername: zjmy.zywm.eu.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /mmy
+      headers:
+        Host: zjmy.zywm.eu.org
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 Japan1
+    type: trojan
+    server: oplosgru-c.catcat321.com
+    port: 20004
+    password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇫🇮 FI 679 | ⬇️ 1MB/s
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 美国_🇺🇸_US_43
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国_🇺🇸_US_18
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 美国_🇺🇸_US_31
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: 美国_🇺🇸_US_45
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 阿拉伯联合酋长国_🇦🇪_AE_53
+    type: vless
+    server: ddc-akn.astralweb.tech
+    port: 443
+    uuid: 04b9e828-43ed-4faf-8952-41069ec08355
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 官网 zhuhai.uk15
+    type: vless
+    server: 178.17.58.166
+    port: 3443
+    uuid: afb182fa-9b0a-4a1d-9a85-dab179018088
+    network: ws
+    servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 阿拉伯联合酋长国_🇦🇪_AE_3
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 04b9e828-43ed-4faf-8952-41069ec08355
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    client-fingerprint: firefox
+    skip-cert-verify: true
+    udp: true
+  - name: 阿拉伯联合酋长国_🇦🇪_AE_63
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 5c192fd7-ef98-4112-a20c-129108fcd7e9
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    client-fingerprint: firefox
+    skip-cert-verify: true
+    udp: true
+  - name: 阿拉伯联合酋长国_🇦🇪_AE_112
+    type: vless
+    server: ddc-akn.astralweb.tech
+    port: 443
+    uuid: 04b9e828-43ed-4faf-8952-41069ec08355
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 波兰_🇵🇱_PL_66
+    type: vless
+    server: 31.76.251.127.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.251.127.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /10336/2GCOqG7bvA
+      headers:
+        Host: 31.76.251.127.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: 土耳其_🇹🇷_TR_17
+    type: vless
+    server: 87.120.106.126
+    port: 443
+    uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+    servername: tr.tunnelx.space
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zvbLa6BrfAeAKIg4TZ2AASiEZ9ntYCSEFhgkbqWwkQg
+      short-id: 4e9b5c2d1a3f5728
+    skip-cert-verify: true
+    udp: true
+  - name: 香港|12
+    type: vless
+    server: 45.144.174.171
+    port: 40149
+    uuid: 2af30aff-de7a-44b9-b929-158081b4f3e6
+    servername: www.speedtest.org
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 9rx7JwMO-KRZZEM9TQBO19BOAmmGjJyjN86ll2J7uVc
+    skip-cert-verify: true
+    udp: true
+  - name: 德国_🇩🇪_DE_65
+    type: vless
+    server: 31.76.11.46.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.11.46.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /52872/BNzG4FvIAr
+      headers:
+        Host: 31.76.11.46.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: 香港_🇭🇰HK_47
+    type: vmess
+    server: select-hk.ddnskunlun.com
+    port: 9006
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 印度_🇮🇳_IN_68
+    type: vless
+    server: 185.67.126.178
+    port: 443
+    uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+    servername: ind.tunnelx.space
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: loAFNSTbdM9g-9dyps76y996jHPfBNJBq5F5Vd0Sekw
+      short-id: 4e9b5c2d1a3f5748
+    skip-cert-verify: true
+    udp: true
+  - name: 美国_🇺🇸_US_42
+    type: vless
+    server: 199.232.78.159
+    port: 443
+    uuid: 5de3f60c-7cc2-4f66-9177-706a2693dc19
+    network: ws
+    servername: ssl.fastly.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: BankMelat.glObal.ssl.faStly.nEt.
+    skip-cert-verify: true
+    udp: true
+  - name: 香港
+    type: vmess
+    server: select-us.ddnskunlun.com
+    port: 9027
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 香港_1
+    type: vmess
+    server: select-us.ddnskunlun.com
+    port: 9028
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 香港_2
+    type: vmess
+    server: board-04.ddnskunlun.com
+    port: 11973
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 香港_3
+    type: vmess
+    server: board-02.ddnskunlun.com
+    port: 11885
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 香港_4
+    type: vmess
+    server: board-02.ddnskunlun.com
+    port: 11985
+    uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-573 | free-nodes
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    servername: d2pwbkmfr5lxa4.cloudfront.net
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 希腊+22
+      - 美国ee12
+      - 美国ee12_1
+      - 美国ee12_2
+      - 美国ee12_3
+      - 美国ee12_4
+      - 美国ee12_5
+      - 美国ee12_6
+      - 美国ee12_7
+      - 🇺🇸 美国 | USA
+      - 美国ee12_8
+      - 美国ee12_9
+      - 美国ee12_10
+      - 美国ee12_11
+      - 美国ee12_12
+      - VLESS-559 | free-nodes
+      - 🇨🇳CN 19.38MB/s
+      - 🇩🇪 德国 | DEU
+      - 西班牙+33
+      - VLESS-389 | free-nodes
+      - VLESS-388 | free-nodes
+      - 美国ee12_13
+      - 美国ee12_14
+      - VLESS-531 | free-nodes
+      - 🇩🇪 德国 | DEU_1
+      - 美国ee12_15
+      - VLESS-225 | free-nodes
+      - 美国ee12_16
+      - 美国ee12_17
+      - 🇨🇳CN  19.38MB/s
+      - 美国ee12_18
+      - 以色列1
+      - 美国ee12_19
+      - 西班牙ee12
+      - 美国we11
+      - 美国ee12_20
+      - 🇨🇳CN 11.21MB/s
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国
+      - 美国ewe1
+      - 美国ewe1_1
+      - 美国ewe1_2
+      - 美国ewe1_3
+      - 美国ewe1_4
+      - 美国ewe1_5
+      - 美国ewe1_6
+      - 美国ewe1_7
+      - 美国ewe1_8
+      - 美国ewe1_9
+      - 美国ewe1_10
+      - 美国ewe1_11
+      - 美国ewe1_12
+      - 美国ewe1_13
+      - 美国ewe1_14
+      - 美国ewe1_15
+      - 美国ewe1_16
+      - 美国ewe1_17
+      - 美国ewe1_18
+      - 美国ewe1_19
+      - 美国ewe1_20
+      - 俄罗斯ewe1
+      - 美国ewe1_21
+      - 美国ewe1_22
+      - 美国ewe1_23
+      - 美国ewe1_24
+      - 美国ewe1_25
+      - 美国ewe1_26
+      - 香港12
+      - 美国ewe1_27
+      - 美国ewe1_28
+      - 香港13
+      - 香港14
+      - 香港15
+      - 德国ewe1
+      - 德国ewe1_1
+      - 美国ewe1_29
+      - 德国ewe1_2
+      - 美国ewe1_30
+      - 香港16
+      - 美国ewe1_31
+      - 美国ewe1_32
+      - SS-26 | free-nodes
+      - VLESS-580 | free-nodes
+      - VLESS-581 | free-nodes
+      - VLESS-562 | free-nodes
+      - VLESS-584 | free-nodes
+      - VLESS-599 | free-nodes
+      - VLESS-591 | free-nodes
+      - 俄罗斯+11
+      - 南非+111
+      - 南非+112
+      - 美国+113
+      - 伊朗+114
+      - 英国+115
+      - 🇩🇪 德国 | DEU_2
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇬🇧 英国 | GBR
+      - 🇳🇱 荷兰 | NLD
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇩🇪 德国 | DEU_3
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇸🇬 新加坡 | SGP
+      - 🇩🇪 德国 | DEU_4
+      - 🇩🇪 德国 | DEU_5
+      - 🇺🇸 美国 | USA_2
+      - 🇺🇸 美国 | USA_3
+      - 🇩🇪 德国 | DEU_6
+      - 🇩🇪 德国 | DEU_7
+      - 🇸🇪 瑞典 | SWE
+      - 🇩🇪 德国 | DEU_8
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国_1
+      - 美国_🇺🇸_US_69
+      - 🇯🇵 Japan1
+      - 🇫🇮 FI 679 | ⬇️ 1MB/s
+      - 美国_🇺🇸_US_43
+      - 美国_🇺🇸_US_18
+      - 美国_🇺🇸_US_31
+      - 美国_🇺🇸_US_45
+      - 阿拉伯联合酋长国_🇦🇪_AE_53
+      - 官网 zhuhai.uk15
+      - 阿拉伯联合酋长国_🇦🇪_AE_3
+      - 阿拉伯联合酋长国_🇦🇪_AE_63
+      - 阿拉伯联合酋长国_🇦🇪_AE_112
+      - 波兰_🇵🇱_PL_66
+      - 土耳其_🇹🇷_TR_17
+      - 香港|12
+      - 德国_🇩🇪_DE_65
+      - 香港_🇭🇰HK_47
+      - 印度_🇮🇳_IN_68
+      - 美国_🇺🇸_US_42
+      - 香港
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 香港_4
+      - VLESS-573 | free-nodes
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 希腊+22
+      - 美国ee12
+      - 美国ee12_1
+      - 美国ee12_2
+      - 美国ee12_3
+      - 美国ee12_4
+      - 美国ee12_5
+      - 美国ee12_6
+      - 美国ee12_7
+      - 🇺🇸 美国 | USA
+      - 美国ee12_8
+      - 美国ee12_9
+      - 美国ee12_10
+      - 美国ee12_11
+      - 美国ee12_12
+      - VLESS-559 | free-nodes
+      - 🇨🇳CN 19.38MB/s
+      - 🇩🇪 德国 | DEU
+      - 西班牙+33
+      - VLESS-389 | free-nodes
+      - VLESS-388 | free-nodes
+      - 美国ee12_13
+      - 美国ee12_14
+      - VLESS-531 | free-nodes
+      - 🇩🇪 德国 | DEU_1
+      - 美国ee12_15
+      - VLESS-225 | free-nodes
+      - 美国ee12_16
+      - 美国ee12_17
+      - 🇨🇳CN  19.38MB/s
+      - 美国ee12_18
+      - 以色列1
+      - 美国ee12_19
+      - 西班牙ee12
+      - 美国we11
+      - 美国ee12_20
+      - 🇨🇳CN 11.21MB/s
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国
+      - 美国ewe1
+      - 美国ewe1_1
+      - 美国ewe1_2
+      - 美国ewe1_3
+      - 美国ewe1_4
+      - 美国ewe1_5
+      - 美国ewe1_6
+      - 美国ewe1_7
+      - 美国ewe1_8
+      - 美国ewe1_9
+      - 美国ewe1_10
+      - 美国ewe1_11
+      - 美国ewe1_12
+      - 美国ewe1_13
+      - 美国ewe1_14
+      - 美国ewe1_15
+      - 美国ewe1_16
+      - 美国ewe1_17
+      - 美国ewe1_18
+      - 美国ewe1_19
+      - 美国ewe1_20
+      - 俄罗斯ewe1
+      - 美国ewe1_21
+      - 美国ewe1_22
+      - 美国ewe1_23
+      - 美国ewe1_24
+      - 美国ewe1_25
+      - 美国ewe1_26
+      - 香港12
+      - 美国ewe1_27
+      - 美国ewe1_28
+      - 香港13
+      - 香港14
+      - 香港15
+      - 德国ewe1
+      - 德国ewe1_1
+      - 美国ewe1_29
+      - 德国ewe1_2
+      - 美国ewe1_30
+      - 香港16
+      - 美国ewe1_31
+      - 美国ewe1_32
+      - SS-26 | free-nodes
+      - VLESS-580 | free-nodes
+      - VLESS-581 | free-nodes
+      - VLESS-562 | free-nodes
+      - VLESS-584 | free-nodes
+      - VLESS-599 | free-nodes
+      - VLESS-591 | free-nodes
+      - 俄罗斯+11
+      - 南非+111
+      - 南非+112
+      - 美国+113
+      - 伊朗+114
+      - 英国+115
+      - 🇩🇪 德国 | DEU_2
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇬🇧 英国 | GBR
+      - 🇳🇱 荷兰 | NLD
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇩🇪 德国 | DEU_3
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇸🇬 新加坡 | SGP
+      - 🇩🇪 德国 | DEU_4
+      - 🇩🇪 德国 | DEU_5
+      - 🇺🇸 美国 | USA_2
+      - 🇺🇸 美国 | USA_3
+      - 🇩🇪 德国 | DEU_6
+      - 🇩🇪 德国 | DEU_7
+      - 🇸🇪 瑞典 | SWE
+      - 🇩🇪 德国 | DEU_8
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国_1
+      - 美国_🇺🇸_US_69
+      - 🇯🇵 Japan1
+      - 🇫🇮 FI 679 | ⬇️ 1MB/s
+      - 美国_🇺🇸_US_43
+      - 美国_🇺🇸_US_18
+      - 美国_🇺🇸_US_31
+      - 美国_🇺🇸_US_45
+      - 阿拉伯联合酋长国_🇦🇪_AE_53
+      - 官网 zhuhai.uk15
+      - 阿拉伯联合酋长国_🇦🇪_AE_3
+      - 阿拉伯联合酋长国_🇦🇪_AE_63
+      - 阿拉伯联合酋长国_🇦🇪_AE_112
+      - 波兰_🇵🇱_PL_66
+      - 土耳其_🇹🇷_TR_17
+      - 香港|12
+      - 德国_🇩🇪_DE_65
+      - 香港_🇭🇰HK_47
+      - 印度_🇮🇳_IN_68
+      - 美国_🇺🇸_US_42
+      - 香港
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 香港_4
+      - VLESS-573 | free-nodes
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 希腊+22
+      - 美国ee12
+      - 美国ee12_1
+      - 美国ee12_2
+      - 美国ee12_3
+      - 美国ee12_4
+      - 美国ee12_5
+      - 美国ee12_6
+      - 美国ee12_7
+      - 🇺🇸 美国 | USA
+      - 美国ee12_8
+      - 美国ee12_9
+      - 美国ee12_10
+      - 美国ee12_11
+      - 美国ee12_12
+      - VLESS-559 | free-nodes
+      - 🇨🇳CN 19.38MB/s
+      - 🇩🇪 德国 | DEU
+      - 西班牙+33
+      - VLESS-389 | free-nodes
+      - VLESS-388 | free-nodes
+      - 美国ee12_13
+      - 美国ee12_14
+      - VLESS-531 | free-nodes
+      - 🇩🇪 德国 | DEU_1
+      - 美国ee12_15
+      - VLESS-225 | free-nodes
+      - 美国ee12_16
+      - 美国ee12_17
+      - 🇨🇳CN  19.38MB/s
+      - 美国ee12_18
+      - 以色列1
+      - 美国ee12_19
+      - 西班牙ee12
+      - 美国we11
+      - 美国ee12_20
+      - 🇨🇳CN 11.21MB/s
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国
+      - 美国ewe1
+      - 美国ewe1_1
+      - 美国ewe1_2
+      - 美国ewe1_3
+      - 美国ewe1_4
+      - 美国ewe1_5
+      - 美国ewe1_6
+      - 美国ewe1_7
+      - 美国ewe1_8
+      - 美国ewe1_9
+      - 美国ewe1_10
+      - 美国ewe1_11
+      - 美国ewe1_12
+      - 美国ewe1_13
+      - 美国ewe1_14
+      - 美国ewe1_15
+      - 美国ewe1_16
+      - 美国ewe1_17
+      - 美国ewe1_18
+      - 美国ewe1_19
+      - 美国ewe1_20
+      - 俄罗斯ewe1
+      - 美国ewe1_21
+      - 美国ewe1_22
+      - 美国ewe1_23
+      - 美国ewe1_24
+      - 美国ewe1_25
+      - 美国ewe1_26
+      - 香港12
+      - 美国ewe1_27
+      - 美国ewe1_28
+      - 香港13
+      - 香港14
+      - 香港15
+      - 德国ewe1
+      - 德国ewe1_1
+      - 美国ewe1_29
+      - 德国ewe1_2
+      - 美国ewe1_30
+      - 香港16
+      - 美国ewe1_31
+      - 美国ewe1_32
+      - SS-26 | free-nodes
+      - VLESS-580 | free-nodes
+      - VLESS-581 | free-nodes
+      - VLESS-562 | free-nodes
+      - VLESS-584 | free-nodes
+      - VLESS-599 | free-nodes
+      - VLESS-591 | free-nodes
+      - 俄罗斯+11
+      - 南非+111
+      - 南非+112
+      - 美国+113
+      - 伊朗+114
+      - 英国+115
+      - 🇩🇪 德国 | DEU_2
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇬🇧 英国 | GBR
+      - 🇳🇱 荷兰 | NLD
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇩🇪 德国 | DEU_3
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇸🇬 新加坡 | SGP
+      - 🇩🇪 德国 | DEU_4
+      - 🇩🇪 德国 | DEU_5
+      - 🇺🇸 美国 | USA_2
+      - 🇺🇸 美国 | USA_3
+      - 🇩🇪 德国 | DEU_6
+      - 🇩🇪 德国 | DEU_7
+      - 🇸🇪 瑞典 | SWE
+      - 🇩🇪 德国 | DEU_8
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国_1
+      - 美国_🇺🇸_US_69
+      - 🇯🇵 Japan1
+      - 🇫🇮 FI 679 | ⬇️ 1MB/s
+      - 美国_🇺🇸_US_43
+      - 美国_🇺🇸_US_18
+      - 美国_🇺🇸_US_31
+      - 美国_🇺🇸_US_45
+      - 阿拉伯联合酋长国_🇦🇪_AE_53
+      - 官网 zhuhai.uk15
+      - 阿拉伯联合酋长国_🇦🇪_AE_3
+      - 阿拉伯联合酋长国_🇦🇪_AE_63
+      - 阿拉伯联合酋长国_🇦🇪_AE_112
+      - 波兰_🇵🇱_PL_66
+      - 土耳其_🇹🇷_TR_17
+      - 香港|12
+      - 德国_🇩🇪_DE_65
+      - 香港_🇭🇰HK_47
+      - 印度_🇮🇳_IN_68
+      - 美国_🇺🇸_US_42
+      - 香港
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 香港_4
+      - VLESS-573 | free-nodes
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 希腊+22
+      - 美国ee12
+      - 美国ee12_1
+      - 美国ee12_2
+      - 美国ee12_3
+      - 美国ee12_4
+      - 美国ee12_5
+      - 美国ee12_6
+      - 美国ee12_7
+      - 🇺🇸 美国 | USA
+      - 美国ee12_8
+      - 美国ee12_9
+      - 美国ee12_10
+      - 美国ee12_11
+      - 美国ee12_12
+      - VLESS-559 | free-nodes
+      - 🇨🇳CN 19.38MB/s
+      - 🇩🇪 德国 | DEU
+      - 西班牙+33
+      - VLESS-389 | free-nodes
+      - VLESS-388 | free-nodes
+      - 美国ee12_13
+      - 美国ee12_14
+      - VLESS-531 | free-nodes
+      - 🇩🇪 德国 | DEU_1
+      - 美国ee12_15
+      - VLESS-225 | free-nodes
+      - 美国ee12_16
+      - 美国ee12_17
+      - 🇨🇳CN  19.38MB/s
+      - 美国ee12_18
+      - 以色列1
+      - 美国ee12_19
+      - 西班牙ee12
+      - 美国we11
+      - 美国ee12_20
+      - 🇨🇳CN 11.21MB/s
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国
+      - 美国ewe1
+      - 美国ewe1_1
+      - 美国ewe1_2
+      - 美国ewe1_3
+      - 美国ewe1_4
+      - 美国ewe1_5
+      - 美国ewe1_6
+      - 美国ewe1_7
+      - 美国ewe1_8
+      - 美国ewe1_9
+      - 美国ewe1_10
+      - 美国ewe1_11
+      - 美国ewe1_12
+      - 美国ewe1_13
+      - 美国ewe1_14
+      - 美国ewe1_15
+      - 美国ewe1_16
+      - 美国ewe1_17
+      - 美国ewe1_18
+      - 美国ewe1_19
+      - 美国ewe1_20
+      - 俄罗斯ewe1
+      - 美国ewe1_21
+      - 美国ewe1_22
+      - 美国ewe1_23
+      - 美国ewe1_24
+      - 美国ewe1_25
+      - 美国ewe1_26
+      - 香港12
+      - 美国ewe1_27
+      - 美国ewe1_28
+      - 香港13
+      - 香港14
+      - 香港15
+      - 德国ewe1
+      - 德国ewe1_1
+      - 美国ewe1_29
+      - 德国ewe1_2
+      - 美国ewe1_30
+      - 香港16
+      - 美国ewe1_31
+      - 美国ewe1_32
+      - SS-26 | free-nodes
+      - VLESS-580 | free-nodes
+      - VLESS-581 | free-nodes
+      - VLESS-562 | free-nodes
+      - VLESS-584 | free-nodes
+      - VLESS-599 | free-nodes
+      - VLESS-591 | free-nodes
+      - 俄罗斯+11
+      - 南非+111
+      - 南非+112
+      - 美国+113
+      - 伊朗+114
+      - 英国+115
+      - 🇩🇪 德国 | DEU_2
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇬🇧 英国 | GBR
+      - 🇳🇱 荷兰 | NLD
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇩🇪 德国 | DEU_3
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇸🇬 新加坡 | SGP
+      - 🇩🇪 德国 | DEU_4
+      - 🇩🇪 德国 | DEU_5
+      - 🇺🇸 美国 | USA_2
+      - 🇺🇸 美国 | USA_3
+      - 🇩🇪 德国 | DEU_6
+      - 🇩🇪 德国 | DEU_7
+      - 🇸🇪 瑞典 | SWE
+      - 🇩🇪 德国 | DEU_8
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国_1
+      - 美国_🇺🇸_US_69
+      - 🇯🇵 Japan1
+      - 🇫🇮 FI 679 | ⬇️ 1MB/s
+      - 美国_🇺🇸_US_43
+      - 美国_🇺🇸_US_18
+      - 美国_🇺🇸_US_31
+      - 美国_🇺🇸_US_45
+      - 阿拉伯联合酋长国_🇦🇪_AE_53
+      - 官网 zhuhai.uk15
+      - 阿拉伯联合酋长国_🇦🇪_AE_3
+      - 阿拉伯联合酋长国_🇦🇪_AE_63
+      - 阿拉伯联合酋长国_🇦🇪_AE_112
+      - 波兰_🇵🇱_PL_66
+      - 土耳其_🇹🇷_TR_17
+      - 香港|12
+      - 德国_🇩🇪_DE_65
+      - 香港_🇭🇰HK_47
+      - 印度_🇮🇳_IN_68
+      - 美国_🇺🇸_US_42
+      - 香港
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 香港_4
+      - VLESS-573 | free-nodes
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 希腊+22
+      - 美国ee12
+      - 美国ee12_1
+      - 美国ee12_2
+      - 美国ee12_3
+      - 美国ee12_4
+      - 美国ee12_5
+      - 美国ee12_6
+      - 美国ee12_7
+      - 🇺🇸 美国 | USA
+      - 美国ee12_8
+      - 美国ee12_9
+      - 美国ee12_10
+      - 美国ee12_11
+      - 美国ee12_12
+      - VLESS-559 | free-nodes
+      - 🇨🇳CN 19.38MB/s
+      - 🇩🇪 德国 | DEU
+      - 西班牙+33
+      - VLESS-389 | free-nodes
+      - VLESS-388 | free-nodes
+      - 美国ee12_13
+      - 美国ee12_14
+      - VLESS-531 | free-nodes
+      - 🇩🇪 德国 | DEU_1
+      - 美国ee12_15
+      - VLESS-225 | free-nodes
+      - 美国ee12_16
+      - 美国ee12_17
+      - 🇨🇳CN  19.38MB/s
+      - 美国ee12_18
+      - 以色列1
+      - 美国ee12_19
+      - 西班牙ee12
+      - 美国we11
+      - 美国ee12_20
+      - 🇨🇳CN 11.21MB/s
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国
+      - 美国ewe1
+      - 美国ewe1_1
+      - 美国ewe1_2
+      - 美国ewe1_3
+      - 美国ewe1_4
+      - 美国ewe1_5
+      - 美国ewe1_6
+      - 美国ewe1_7
+      - 美国ewe1_8
+      - 美国ewe1_9
+      - 美国ewe1_10
+      - 美国ewe1_11
+      - 美国ewe1_12
+      - 美国ewe1_13
+      - 美国ewe1_14
+      - 美国ewe1_15
+      - 美国ewe1_16
+      - 美国ewe1_17
+      - 美国ewe1_18
+      - 美国ewe1_19
+      - 美国ewe1_20
+      - 俄罗斯ewe1
+      - 美国ewe1_21
+      - 美国ewe1_22
+      - 美国ewe1_23
+      - 美国ewe1_24
+      - 美国ewe1_25
+      - 美国ewe1_26
+      - 香港12
+      - 美国ewe1_27
+      - 美国ewe1_28
+      - 香港13
+      - 香港14
+      - 香港15
+      - 德国ewe1
+      - 德国ewe1_1
+      - 美国ewe1_29
+      - 德国ewe1_2
+      - 美国ewe1_30
+      - 香港16
+      - 美国ewe1_31
+      - 美国ewe1_32
+      - SS-26 | free-nodes
+      - VLESS-580 | free-nodes
+      - VLESS-581 | free-nodes
+      - VLESS-562 | free-nodes
+      - VLESS-584 | free-nodes
+      - VLESS-599 | free-nodes
+      - VLESS-591 | free-nodes
+      - 俄罗斯+11
+      - 南非+111
+      - 南非+112
+      - 美国+113
+      - 伊朗+114
+      - 英国+115
+      - 🇩🇪 德国 | DEU_2
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇬🇧 英国 | GBR
+      - 🇳🇱 荷兰 | NLD
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇩🇪 德国 | DEU_3
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇸🇬 新加坡 | SGP
+      - 🇩🇪 德国 | DEU_4
+      - 🇩🇪 德国 | DEU_5
+      - 🇺🇸 美国 | USA_2
+      - 🇺🇸 美国 | USA_3
+      - 🇩🇪 德国 | DEU_6
+      - 🇩🇪 德国 | DEU_7
+      - 🇸🇪 瑞典 | SWE
+      - 🇩🇪 德国 | DEU_8
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国_1
+      - 美国_🇺🇸_US_69
+      - 🇯🇵 Japan1
+      - 🇫🇮 FI 679 | ⬇️ 1MB/s
+      - 美国_🇺🇸_US_43
+      - 美国_🇺🇸_US_18
+      - 美国_🇺🇸_US_31
+      - 美国_🇺🇸_US_45
+      - 阿拉伯联合酋长国_🇦🇪_AE_53
+      - 官网 zhuhai.uk15
+      - 阿拉伯联合酋长国_🇦🇪_AE_3
+      - 阿拉伯联合酋长国_🇦🇪_AE_63
+      - 阿拉伯联合酋长国_🇦🇪_AE_112
+      - 波兰_🇵🇱_PL_66
+      - 土耳其_🇹🇷_TR_17
+      - 香港|12
+      - 德国_🇩🇪_DE_65
+      - 香港_🇭🇰HK_47
+      - 印度_🇮🇳_IN_68
+      - 美国_🇺🇸_US_42
+      - 香港
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 香港_4
+      - VLESS-573 | free-nodes
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 希腊+22
+      - 美国ee12
+      - 美国ee12_1
+      - 美国ee12_2
+      - 美国ee12_3
+      - 美国ee12_4
+      - 美国ee12_5
+      - 美国ee12_6
+      - 美国ee12_7
+      - 🇺🇸 美国 | USA
+      - 美国ee12_8
+      - 美国ee12_9
+      - 美国ee12_10
+      - 美国ee12_11
+      - 美国ee12_12
+      - VLESS-559 | free-nodes
+      - 🇨🇳CN 19.38MB/s
+      - 🇩🇪 德国 | DEU
+      - 西班牙+33
+      - VLESS-389 | free-nodes
+      - VLESS-388 | free-nodes
+      - 美国ee12_13
+      - 美国ee12_14
+      - VLESS-531 | free-nodes
+      - 🇩🇪 德国 | DEU_1
+      - 美国ee12_15
+      - VLESS-225 | free-nodes
+      - 美国ee12_16
+      - 美国ee12_17
+      - 🇨🇳CN  19.38MB/s
+      - 美国ee12_18
+      - 以色列1
+      - 美国ee12_19
+      - 西班牙ee12
+      - 美国we11
+      - 美国ee12_20
+      - 🇨🇳CN 11.21MB/s
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国
+      - 美国ewe1
+      - 美国ewe1_1
+      - 美国ewe1_2
+      - 美国ewe1_3
+      - 美国ewe1_4
+      - 美国ewe1_5
+      - 美国ewe1_6
+      - 美国ewe1_7
+      - 美国ewe1_8
+      - 美国ewe1_9
+      - 美国ewe1_10
+      - 美国ewe1_11
+      - 美国ewe1_12
+      - 美国ewe1_13
+      - 美国ewe1_14
+      - 美国ewe1_15
+      - 美国ewe1_16
+      - 美国ewe1_17
+      - 美国ewe1_18
+      - 美国ewe1_19
+      - 美国ewe1_20
+      - 俄罗斯ewe1
+      - 美国ewe1_21
+      - 美国ewe1_22
+      - 美国ewe1_23
+      - 美国ewe1_24
+      - 美国ewe1_25
+      - 美国ewe1_26
+      - 香港12
+      - 美国ewe1_27
+      - 美国ewe1_28
+      - 香港13
+      - 香港14
+      - 香港15
+      - 德国ewe1
+      - 德国ewe1_1
+      - 美国ewe1_29
+      - 德国ewe1_2
+      - 美国ewe1_30
+      - 香港16
+      - 美国ewe1_31
+      - 美国ewe1_32
+      - SS-26 | free-nodes
+      - VLESS-580 | free-nodes
+      - VLESS-581 | free-nodes
+      - VLESS-562 | free-nodes
+      - VLESS-584 | free-nodes
+      - VLESS-599 | free-nodes
+      - VLESS-591 | free-nodes
+      - 俄罗斯+11
+      - 南非+111
+      - 南非+112
+      - 美国+113
+      - 伊朗+114
+      - 英国+115
+      - 🇩🇪 德国 | DEU_2
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇬🇧 英国 | GBR
+      - 🇳🇱 荷兰 | NLD
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇩🇪 德国 | DEU_3
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇸🇬 新加坡 | SGP
+      - 🇩🇪 德国 | DEU_4
+      - 🇩🇪 德国 | DEU_5
+      - 🇺🇸 美国 | USA_2
+      - 🇺🇸 美国 | USA_3
+      - 🇩🇪 德国 | DEU_6
+      - 🇩🇪 德国 | DEU_7
+      - 🇸🇪 瑞典 | SWE
+      - 🇩🇪 德国 | DEU_8
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国_1
+      - 美国_🇺🇸_US_69
+      - 🇯🇵 Japan1
+      - 🇫🇮 FI 679 | ⬇️ 1MB/s
+      - 美国_🇺🇸_US_43
+      - 美国_🇺🇸_US_18
+      - 美国_🇺🇸_US_31
+      - 美国_🇺🇸_US_45
+      - 阿拉伯联合酋长国_🇦🇪_AE_53
+      - 官网 zhuhai.uk15
+      - 阿拉伯联合酋长国_🇦🇪_AE_3
+      - 阿拉伯联合酋长国_🇦🇪_AE_63
+      - 阿拉伯联合酋长国_🇦🇪_AE_112
+      - 波兰_🇵🇱_PL_66
+      - 土耳其_🇹🇷_TR_17
+      - 香港|12
+      - 德国_🇩🇪_DE_65
+      - 香港_🇭🇰HK_47
+      - 印度_🇮🇳_IN_68
+      - 美国_🇺🇸_US_42
+      - 香港
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 香港_4
+      - VLESS-573 | free-nodes
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 希腊+22
+      - 美国ee12
+      - 美国ee12_1
+      - 美国ee12_2
+      - 美国ee12_3
+      - 美国ee12_4
+      - 美国ee12_5
+      - 美国ee12_6
+      - 美国ee12_7
+      - 🇺🇸 美国 | USA
+      - 美国ee12_8
+      - 美国ee12_9
+      - 美国ee12_10
+      - 美国ee12_11
+      - 美国ee12_12
+      - VLESS-559 | free-nodes
+      - 🇨🇳CN 19.38MB/s
+      - 🇩🇪 德国 | DEU
+      - 西班牙+33
+      - VLESS-389 | free-nodes
+      - VLESS-388 | free-nodes
+      - 美国ee12_13
+      - 美国ee12_14
+      - VLESS-531 | free-nodes
+      - 🇩🇪 德国 | DEU_1
+      - 美国ee12_15
+      - VLESS-225 | free-nodes
+      - 美国ee12_16
+      - 美国ee12_17
+      - 🇨🇳CN  19.38MB/s
+      - 美国ee12_18
+      - 以色列1
+      - 美国ee12_19
+      - 西班牙ee12
+      - 美国we11
+      - 美国ee12_20
+      - 🇨🇳CN 11.21MB/s
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国
+      - 美国ewe1
+      - 美国ewe1_1
+      - 美国ewe1_2
+      - 美国ewe1_3
+      - 美国ewe1_4
+      - 美国ewe1_5
+      - 美国ewe1_6
+      - 美国ewe1_7
+      - 美国ewe1_8
+      - 美国ewe1_9
+      - 美国ewe1_10
+      - 美国ewe1_11
+      - 美国ewe1_12
+      - 美国ewe1_13
+      - 美国ewe1_14
+      - 美国ewe1_15
+      - 美国ewe1_16
+      - 美国ewe1_17
+      - 美国ewe1_18
+      - 美国ewe1_19
+      - 美国ewe1_20
+      - 俄罗斯ewe1
+      - 美国ewe1_21
+      - 美国ewe1_22
+      - 美国ewe1_23
+      - 美国ewe1_24
+      - 美国ewe1_25
+      - 美国ewe1_26
+      - 香港12
+      - 美国ewe1_27
+      - 美国ewe1_28
+      - 香港13
+      - 香港14
+      - 香港15
+      - 德国ewe1
+      - 德国ewe1_1
+      - 美国ewe1_29
+      - 德国ewe1_2
+      - 美国ewe1_30
+      - 香港16
+      - 美国ewe1_31
+      - 美国ewe1_32
+      - SS-26 | free-nodes
+      - VLESS-580 | free-nodes
+      - VLESS-581 | free-nodes
+      - VLESS-562 | free-nodes
+      - VLESS-584 | free-nodes
+      - VLESS-599 | free-nodes
+      - VLESS-591 | free-nodes
+      - 俄罗斯+11
+      - 南非+111
+      - 南非+112
+      - 美国+113
+      - 伊朗+114
+      - 英国+115
+      - 🇩🇪 德国 | DEU_2
+      - 🇺🇸 美国 | USA_1
+      - 🇹🇷 土耳其 | TUR
+      - 🇹🇷 土耳其 | TUR_1
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇬🇧 英国 | GBR
+      - 🇳🇱 荷兰 | NLD
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇩🇪 德国 | DEU_3
+      - 🇹🇷 土耳其 | TUR_2
+      - 🇸🇬 新加坡 | SGP
+      - 🇩🇪 德国 | DEU_4
+      - 🇩🇪 德国 | DEU_5
+      - 🇺🇸 美国 | USA_2
+      - 🇺🇸 美国 | USA_3
+      - 🇩🇪 德国 | DEU_6
+      - 🇩🇪 德国 | DEU_7
+      - 🇸🇪 瑞典 | SWE
+      - 🇩🇪 德国 | DEU_8
+      - 🇩🇪_DE_德国->🇹🇭_TH_泰国_1
+      - 美国_🇺🇸_US_69
+      - 🇯🇵 Japan1
+      - 🇫🇮 FI 679 | ⬇️ 1MB/s
+      - 美国_🇺🇸_US_43
+      - 美国_🇺🇸_US_18
+      - 美国_🇺🇸_US_31
+      - 美国_🇺🇸_US_45
+      - 阿拉伯联合酋长国_🇦🇪_AE_53
+      - 官网 zhuhai.uk15
+      - 阿拉伯联合酋长国_🇦🇪_AE_3
+      - 阿拉伯联合酋长国_🇦🇪_AE_63
+      - 阿拉伯联合酋长国_🇦🇪_AE_112
+      - 波兰_🇵🇱_PL_66
+      - 土耳其_🇹🇷_TR_17
+      - 香港|12
+      - 德国_🇩🇪_DE_65
+      - 香港_🇭🇰HK_47
+      - 印度_🇮🇳_IN_68
+      - 美国_🇺🇸_US_42
+      - 香港
+      - 香港_1
+      - 香港_2
+      - 香港_3
+      - 香港_4
+      - VLESS-573 | free-nodes
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
