@@ -1,0 +1,3079 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 美国ee99
+    type: trojan
+    server: 104.18.152.108
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+5
+    type: trojan
+    server: 104.18.152.152
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 🇫🇮 芬兰FI-1026
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-657 | free-nodes
+    type: vless
+    server: www.true.th
+    port: 443
+    uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+    network: ws
+    servername: d1yxsk0zprgivr.cloudfront.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: d1yxsk0zprgivr.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-641 | free-nodes
+    type: vless
+    server: www.true.th
+    port: 443
+    uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+    network: ws
+    servername: d1yxsk0zprgivr.cloudfront.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: d1yxsk0zprgivr.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰 香港 | HKG
+    type: vless
+    server: 103.242.2.214
+    port: 8443
+    uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+    network: ws
+    servername: rubifen.adaspoloandco.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /GOrbEh
+      headers:
+        Host: rubifen.adaspoloandco.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+6
+    type: trojan
+    server: 104.18.152.207
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee99_1
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee99_2
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee23
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee99_3
+    type: vless
+    server: www.true.th
+    port: 443
+    uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+    network: ws
+    servername: d1yxsk0zprgivr.cloudfront.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: d1yxsk0zprgivr.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇭 泰国 | THA
+    type: vless
+    server: 18.239.134.69
+    port: 80
+    uuid: de27291c-15a9-4256-9ba7-ad517569877e
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2e1v87ko56lyw.cloudfront.net:assets.opensignal.com
+    skip-cert-verify: true
+    udp: true
+  - name: 香港13
+    type: vmess
+    server: 47.83.247.150
+    port: 800
+    uuid: 59c06976-3009-48d5-89f3-bd94d4a120a0
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡12
+    type: vless
+    server: 104.18.37.228
+    port: 443
+    uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+    network: ws
+    servername: josni.hoyes.cloudns.ch
+    tls: true
+    ws-opts:
+      path: /sg-melbi
+      headers:
+        Host: josni.hoyes.cloudns.ch
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰11
+    type: vmess
+    server: 185.246.152.159
+    port: 443
+    uuid: 5f72f180-b21b-4b7a-8484-240759012604
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /5f72f180-b21b-4b7a-8484-240759096785
+      headers:
+        Host: apjhdggyx.com
+    udp: true
+  - name: 美国13
+    type: vmess
+    server: 5.181.134.24
+    port: 443
+    uuid: 5f72f180-b21b-4b7a-8484-240759012604
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /5f72f180-b21b-4b7a-8484-240759096785
+      headers:
+        Host: apjhdggyx.com
+    udp: true
+  - name: 美国ee22
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 瑞典ee22
+    type: vless
+    server: 2.27.56.109
+    port: 443
+    uuid: 5d577f62-28a8-4b7e-9441-9307b6132065
+    servername: stacks.vk-portal.net
+    tls: true
+    client-fingerprint: edge
+    reality-opts:
+      public-key: 8R416wHsKA_fipQLIw2gceCaTTBJIZRMwGjNTURAx3I
+      short-id: ad55857184e91aad
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_1
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 瑞典ee22_1
+    type: vless
+    server: 2.27.56.216
+    port: 443
+    uuid: 5d577f62-28a8-4b7e-9441-9307b6132065
+    network: http
+    servername: sun10-67.vkuserphoto.ru
+    tls: true
+    client-fingerprint: firefox
+    http-opts:
+      path:
+        - /api/v1/events
+    reality-opts:
+      public-key: 8R416wHsKA_fipQLIw2gceCaTTBJIZRMwGjNTURAx3I
+      short-id: ad55857184e91aad
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_2
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 瑞典ee22_2
+    type: vless
+    server: 2.27.56.109
+    port: 443
+    uuid: 5d577f62-28a8-4b7e-9441-9307b6132065
+    servername: stacks.vk-portal.net
+    tls: true
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 8R416wHsKA_fipQLIw2gceCaTTBJIZRMwGjNTURAx3I
+      short-id: ad55857184e91aad
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_3
+    type: trojan
+    server: 104.16.174.34
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 荷兰ee22
+    type: vless
+    server: 199.232.78.159
+    port: 443
+    uuid: 0f350a5d-e801-4eca-a1b9-abe9798ad48a
+    network: ws
+    servername: ssl.fastly.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053
+      headers:
+        Host: pan1.global.ssl.fastly.net
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_4
+    type: trojan
+    server: 104.17.111.8
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_5
+    type: vless
+    server: 104.21.80.209
+    port: 443
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    network: ws
+    servername: vps.181110.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cf63446e-vl
+      headers:
+        Host: vps.181110.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_6
+    type: trojan
+    server: 104.18.152.229
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 德国ee22
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_7
+    type: trojan
+    server: 104.16.7.70
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大ee22
+    type: trojan
+    server: 104.17.111.8
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_8
+    type: trojan
+    server: 104.18.23.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国ee22
+    type: trojan
+    server: 86.38.214.205
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_9
+    type: trojan
+    server: 104.18.152.229
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_10
+    type: vless
+    server: 162.159.160.22
+    port: 443
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    network: ws
+    servername: vps.181110.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cf63446e-vl
+      headers:
+        Host: vps.181110.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_11
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_12
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_13
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_14
+    type: trojan
+    server: 104.18.152.159
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_15
+    type: trojan
+    server: 104.18.152.108
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国ee22_1
+    type: trojan
+    server: 8.6.112.6
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_16
+    type: trojan
+    server: 104.18.152.144
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_17
+    type: trojan
+    server: 104.18.152.207
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_18
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_19
+    type: trojan
+    server: 104.18.152.207
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_20
+    type: trojan
+    server: 104.16.174.46
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_21
+    type: trojan
+    server: 104.18.152.225
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_22
+    type: trojan
+    server: 104.18.152.219
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_23
+    type: trojan
+    server: 104.18.152.187
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_24
+    type: trojan
+    server: 104.18.152.225
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_25
+    type: trojan
+    server: 104.16.7.70
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_26
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_27
+    type: trojan
+    server: 86.38.214.205
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_28
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_29
+    type: trojan
+    server: 104.16.73.213
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_30
+    type: trojan
+    server: 104.16.174.72
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_31
+    type: trojan
+    server: 104.16.174.44
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_32
+    type: trojan
+    server: 104.18.152.133
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_33
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_34
+    type: trojan
+    server: 104.16.174.71
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_35
+    type: trojan
+    server: 104.17.177.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_36
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_37
+    type: trojan
+    server: 104.18.152.159
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_38
+    type: trojan
+    server: 104.16.174.22
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: //assignment
+    udp: true
+  - name: 美国ee22_39
+    type: trojan
+    server: 104.18.152.113
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_40
+    type: trojan
+    server: 104.18.152.187
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_41
+    type: trojan
+    server: 104.18.152.108
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 德国ee22_1
+    type: hysteria2
+    server: 86.53.105.117
+    port: 33015
+    password: dbab9df7-5c0a-4726-8574-11e34972b67d
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_42
+    type: trojan
+    server: 104.18.152.175
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_43
+    type: trojan
+    server: 104.16.174.72
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_44
+    type: trojan
+    server: 104.18.12.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_45
+    type: trojan
+    server: 8.6.112.6
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_46
+    type: trojan
+    server: 198.41.223.96
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+      - h2
+      - h3
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_47
+    type: trojan
+    server: 104.18.152.210
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_48
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国ee22_2
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_49
+    type: trojan
+    server: 104.18.152.219
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_50
+    type: trojan
+    server: 104.16.174.37
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 法国ee22_3
+    type: trojan
+    server: 216.24.57.1
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_51
+    type: trojan
+    server: 104.18.152.77
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_52
+    type: trojan
+    server: 104.18.152.108
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_53
+    type: trojan
+    server: www.ignitelimit.com
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 德国ee22_2
+    type: tuic
+    server: 86.53.105.117
+    port: 33014
+    uuid: dbab9df7-5c0a-4726-8574-11e34972b67d
+    password: dbab9df7-5c0a-4726-8574-11e34972b67d
+    sni: www.bing.com
+    alpn:
+      - h3
+    congestion-controller: bbr
+    skip-cert-verify: true
+    disable-sni: false
+    udp: true
+  - name: 美国ee22_54
+    type: trojan
+    server: 104.18.152.103
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_55
+    type: trojan
+    server: 104.18.152.210
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_56
+    type: trojan
+    server: 104.18.152.103
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_57
+    type: trojan
+    server: 104.18.152.133
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_58
+    type: trojan
+    server: 104.16.174.46
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_59
+    type: trojan
+    server: 104.16.174.121
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_60
+    type: trojan
+    server: 104.16.73.213
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_61
+    type: trojan
+    server: 104.18.152.133
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_62
+    type: trojan
+    server: 104.18.152.175
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_63
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_64
+    type: trojan
+    server: 104.17.111.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_65
+    type: trojan
+    server: 104.17.111.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_66
+    type: trojan
+    server: ip.myip2.qzz.io
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_67
+    type: trojan
+    server: 104.16.174.22
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: //assignment
+    udp: true
+  - name: 法国ee22_4
+    type: trojan
+    server: 104.18.152.219
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_68
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_69
+    type: trojan
+    server: 2.144.21.150
+    port: 2000
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_70
+    type: vless
+    server: www.true.th
+    port: 443
+    uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+    network: ws
+    servername: d1yxsk0zprgivr.cloudfront.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_71
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_72
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_73
+    type: vless
+    server: www.true.th
+    port: 443
+    uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+    network: ws
+    servername: d1yxsk0zprgivr.cloudfront.net
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: d1yxsk0zprgivr.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 美国ee22_74
+    type: trojan
+    server: 172.67.221.242
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_75
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_76
+    type: trojan
+    server: 104.16.174.36
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_77
+    type: vless
+    server: 18.198.227.161
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: titandarkness.mooo.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /21381/0kO2id8FMQ
+      headers:
+        Host: titandarkness.mooo.com
+    skip-cert-verify: true
+    udp: true
+  - name: 美国12
+    type: vmess
+    server: 185.246.152.159
+    port: 443
+    uuid: 5f72f180-b21b-4b7a-8484-240759012604
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: apjhdggyx.com
+    network: ws
+    ws-opts:
+      path: /5f72f180-b21b-4b7a-8484-240759096785
+      headers:
+        Host: apjhdggyx.com
+    udp: true
+  - name: 美国ee22_78
+    type: trojan
+    server: www.ignitelimit.com
+    port: 443
+    password: humanity
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_79
+    type: trojan
+    server: 104.26.14.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_80
+    type: trojan
+    server: 104.18.152.152
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22_81
+    type: trojan
+    server: www.speedtest.org
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: VLESS-570 | free-nodes
+    type: vless
+    server: premium-us-ca-01-gthost.efgwf.online
+    port: 8080
+    uuid: 4e0f4e59-3613-4f0c-b824-7348413d20e6
+    network: ws
+    tls: false
+    ws-opts:
+      path: /ws-6Tta3kYF
+      headers:
+        Host: premium-us-ca-01-gthost.efgwf.online
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-576 | free-nodes
+    type: vless
+    server: fr15.mechvpn.online
+    port: 443
+    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+    tls: true
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+CloudFlare节点
+    type: vless
+    server: cmcc.cloudflare.seeck.cn
+    port: 443
+    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+    network: ws
+    servername: 0h3qt.oqwt.pl0.hh.vavava.kdns.fr
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: 0h3qt.oqwt.pl0.hh.vavava.kdns.fr
+    skip-cert-verify: true
+    udp: true
+  - name: 爱尔兰+2
+    type: vless
+    server: 78.17.158.155
+    port: 13868
+    uuid: 06d44c57-8e1a-41f4-b9c4-65d35869e078
+    servername: www.ea.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo
+      short-id: e852dc
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+1
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_1
+    type: trojan
+    server: 104.16.174.36
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_2
+    type: trojan
+    server: 104.18.152.187
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_3
+    type: trojan
+    server: 104.18.152.233
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_4
+    type: trojan
+    server: 104.18.152.159
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_5
+    type: trojan
+    server: 104.17.111.4
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国巴黎+CloudFlare节点
+    type: trojan
+    server: 141.101.90.101
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_6
+    type: trojan
+    server: 104.18.152.108
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_7
+    type: trojan
+    server: 104.18.152.77
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_8
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_9
+    type: trojan
+    server: 104.18.23.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_10
+    type: trojan
+    server: 104.16.174.22
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: //assignment
+    udp: true
+  - name: 🇩🇪 德国 | DEU
+    type: vless
+    server: de151.mechvpn.online
+    port: 443
+    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷 法国 | FRA
+    type: vless
+    server: fr199.mechvpn.online
+    port: 443
+    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA
+    type: vless
+    server: 104.20.37.53
+    port: 80
+    uuid: 50414e45-4c5f-5a45-5553-b52a90ada6ab
+    network: ws
+    servername: trex-panel-ew6n46.zeus-e0oqfp.workers.dev
+    tls: false
+    ws-opts:
+      path: /stream/TrexBridge/b52a90ada6ab
+      headers:
+        Host: trex-panel-ew6n46.zeus-e0oqfp.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇱 波兰 | POL
+    type: vless
+    server: pl.rexten.cc
+    port: 443
+    uuid: f61025f4-7973-4e3e-883c-a0fe85f0489c
+    servername: pl.rexten.cc
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_1
+    type: vless
+    server: 45.192.200.133
+    port: 8443
+    uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+    network: ws
+    servername: rubifen.adaspoloandco.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /GOrbEh
+      headers:
+        Host: rubifen.adaspoloandco.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇱 波兰 | POL_1
+    type: vless
+    server: 31.77.56.229
+    port: 443
+    uuid: f61025f4-7973-4e3e-883c-a0fe85f0489c
+    servername: pl.rexten.cc
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇭 泰国 | THA_1
+    type: vless
+    server: 108.138.26.70
+    port: 443
+    uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+    network: ws
+    servername: d1yxsk0zprgivr.cloudfront.net
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /
+      headers:
+        Host: d1yxsk0zprgivr.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_2
+    type: vless
+    server: 209.33.173.7
+    port: 8443
+    uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+    network: ws
+    servername: rubifen.adaspoloandco.com
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /GOrbEh
+      headers:
+        Host: rubifen.adaspoloandco.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵_JP_日本->🇹🇭_TH_泰国
+    type: vless
+    server: www.true.th
+    port: 443
+    uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+    network: ws
+    servername: d1yxsk0zprgivr.cloudfront.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: d1yxsk0zprgivr.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬新加坡40.42MB/s
+    type: vless
+    server: 172.66.44.97
+    port: 443
+    uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+    network: ws
+    servername: josni.hoyes.cloudns.ch
+    tls: true
+    ws-opts:
+      path: /sg-melbi
+      headers:
+        Host: josni.hoyes.cloudns.ch
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬新加坡40.42MB/s_1
+    type: vless
+    server: 172.66.44.97
+    port: 443
+    uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+    network: ws
+    servername: josni.hoyes.cloudns.ch
+    tls: true
+    ws-opts:
+      path: /sg-melbi
+      headers:
+        Host: josni.hoyes.cloudns.ch
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 CNServer 25
+    type: vless
+    server: cf.0sm.com
+    port: 443
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    network: ws
+    servername: vps.181110.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cf63446e-vl
+      headers:
+        Host: vps.181110.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: SI-1
+    type: vless
+    server: 2.27.56.109
+    port: 443
+    uuid: 5d577f62-28a8-4b7e-9441-9307b6132065
+    servername: stacks.vk-portal.net
+    tls: true
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 8R416wHsKA_fipQLIw2gceCaTTBJIZRMwGjNTURAx3I
+      short-id: ad55857184e91aad
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇴CO21.76MB/s
+    type: vless
+    server: 157.137.214.248
+    port: 62145
+    uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇮SI25.64MB/s
+    type: vless
+    server: 2.27.56.109
+    port: 443
+    uuid: 5d577f62-28a8-4b7e-9441-9307b6132065
+    servername: stacks.vk-portal.net
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 8R416wHsKA_fipQLIw2gceCaTTBJIZRMwGjNTURAx3I
+      short-id: ad55857184e91aad
+    skip-cert-verify: true
+    udp: true
+  - name: TROJAN-304 | free-nodes
+    type: trojan
+    server: 104.19.229.21
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.calmlunch.com
+    udp: true
+  - name: SI-Ljubljana-210810118-ldfm
+    type: vless
+    server: 2.27.56.109
+    port: 443
+    uuid: 5d577f62-28a8-4b7e-9441-9307b6132065
+    servername: stacks.vk-portal.net
+    tls: true
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 8R416wHsKA_fipQLIw2gceCaTTBJIZRMwGjNTURAx3I
+      short-id: ad55857184e91aad
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 CNServer 15
+    type: vless
+    server: 104.21.80.209
+    port: 443
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    network: ws
+    servername: vps.181110.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cf63446e-vl
+      headers:
+        Host: vps.181110.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 CNServer 16
+    type: vless
+    server: 162.159.160.22
+    port: 443
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    network: ws
+    servername: vps.181110.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cf63446e-vl
+      headers:
+        Host: vps.181110.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇮 芬兰FI-1026_1
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇴罗马尼亚19.91MB/s
+    type: vless
+    server: 104.21.80.209
+    port: 443
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    network: ws
+    servername: vps.181110.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cf63446e-vl
+      headers:
+        Host: vps.181110.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: US-2
+    type: vless
+    server: 104.21.74.8
+    port: 443
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    network: ws
+    servername: vps.181110.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cf63446e-vl
+      headers:
+        Host: vps.181110.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 CNServer 21
+    type: vless
+    server: 104.21.74.8
+    port: 443
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    network: ws
+    servername: vps.181110.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cf63446e-vl
+      headers:
+        Host: vps.181110.xyz
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 美国ee99
+      - 美国+5
+      - 🇫🇮 芬兰FI-1026
+      - VLESS-657 | free-nodes
+      - VLESS-641 | free-nodes
+      - 🇭🇰 香港 | HKG
+      - 美国+6
+      - 美国ee99_1
+      - 美国ee99_2
+      - 美国ee23
+      - 美国ee99_3
+      - 🇹🇭 泰国 | THA
+      - 香港13
+      - 新加坡12
+      - 荷兰11
+      - 美国13
+      - 美国ee22
+      - 瑞典ee22
+      - 美国ee22_1
+      - 瑞典ee22_1
+      - 美国ee22_2
+      - 瑞典ee22_2
+      - 美国ee22_3
+      - 荷兰ee22
+      - 美国ee22_4
+      - 美国ee22_5
+      - 美国ee22_6
+      - 德国ee22
+      - 美国ee22_7
+      - 加拿大ee22
+      - 美国ee22_8
+      - 法国ee22
+      - 美国ee22_9
+      - 美国ee22_10
+      - 美国ee22_11
+      - 美国ee22_12
+      - 美国ee22_13
+      - 美国ee22_14
+      - 美国ee22_15
+      - 法国ee22_1
+      - 美国ee22_16
+      - 美国ee22_17
+      - 美国ee22_18
+      - 美国ee22_19
+      - 美国ee22_20
+      - 美国ee22_21
+      - 美国ee22_22
+      - 美国ee22_23
+      - 美国ee22_24
+      - 美国ee22_25
+      - 美国ee22_26
+      - 美国ee22_27
+      - 美国ee22_28
+      - 美国ee22_29
+      - 美国ee22_30
+      - 美国ee22_31
+      - 美国ee22_32
+      - 美国ee22_33
+      - 美国ee22_34
+      - 美国ee22_35
+      - 美国ee22_36
+      - 美国ee22_37
+      - 美国ee22_38
+      - 美国ee22_39
+      - 美国ee22_40
+      - 美国ee22_41
+      - 德国ee22_1
+      - 美国ee22_42
+      - 美国ee22_43
+      - 美国ee22_44
+      - 美国ee22_45
+      - 美国ee22_46
+      - 美国ee22_47
+      - 美国ee22_48
+      - 法国ee22_2
+      - 美国ee22_49
+      - 美国ee22_50
+      - 法国ee22_3
+      - 美国ee22_51
+      - 美国ee22_52
+      - 美国ee22_53
+      - 德国ee22_2
+      - 美国ee22_54
+      - 美国ee22_55
+      - 美国ee22_56
+      - 美国ee22_57
+      - 美国ee22_58
+      - 美国ee22_59
+      - 美国ee22_60
+      - 美国ee22_61
+      - 美国ee22_62
+      - 美国ee22_63
+      - 美国ee22_64
+      - 美国ee22_65
+      - 美国ee22_66
+      - 美国ee22_67
+      - 法国ee22_4
+      - 美国ee22_68
+      - 美国ee22_69
+      - 美国ee22_70
+      - 美国ee22_71
+      - 美国ee22_72
+      - 美国ee22_73
+      - 美国ee22_74
+      - 美国ee22_75
+      - 美国ee22_76
+      - 美国ee22_77
+      - 美国12
+      - 美国ee22_78
+      - 美国ee22_79
+      - 美国ee22_80
+      - 美国ee22_81
+      - VLESS-570 | free-nodes
+      - VLESS-576 | free-nodes
+      - 美国+CloudFlare节点
+      - 爱尔兰+2
+      - 美国+1
+      - 美国+CloudFlare节点_1
+      - 美国+CloudFlare节点_2
+      - 美国+CloudFlare节点_3
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 法国巴黎+CloudFlare节点
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 法国 | FRA
+      - 🇺🇸 美国 | USA
+      - 🇵🇱 波兰 | POL
+      - 🇩🇪 德国 | DEU_1
+      - 🇵🇱 波兰 | POL_1
+      - 🇹🇭 泰国 | THA_1
+      - 🇩🇪 德国 | DEU_2
+      - 🇯🇵_JP_日本->🇹🇭_TH_泰国
+      - 🇸🇬新加坡40.42MB/s
+      - 🇸🇬新加坡40.42MB/s_1
+      - 🇺🇸 美国 CNServer 25
+      - SI-1
+      - 🇨🇴CO21.76MB/s
+      - 🇸🇮SI25.64MB/s
+      - TROJAN-304 | free-nodes
+      - SI-Ljubljana-210810118-ldfm
+      - 🇺🇸 美国 CNServer 15
+      - 🇺🇸 美国 CNServer 16
+      - 🇫🇮 芬兰FI-1026_1
+      - 🇷🇴罗马尼亚19.91MB/s
+      - US-2
+      - 🇺🇸 美国 CNServer 21
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 美国ee99
+      - 美国+5
+      - 🇫🇮 芬兰FI-1026
+      - VLESS-657 | free-nodes
+      - VLESS-641 | free-nodes
+      - 🇭🇰 香港 | HKG
+      - 美国+6
+      - 美国ee99_1
+      - 美国ee99_2
+      - 美国ee23
+      - 美国ee99_3
+      - 🇹🇭 泰国 | THA
+      - 香港13
+      - 新加坡12
+      - 荷兰11
+      - 美国13
+      - 美国ee22
+      - 瑞典ee22
+      - 美国ee22_1
+      - 瑞典ee22_1
+      - 美国ee22_2
+      - 瑞典ee22_2
+      - 美国ee22_3
+      - 荷兰ee22
+      - 美国ee22_4
+      - 美国ee22_5
+      - 美国ee22_6
+      - 德国ee22
+      - 美国ee22_7
+      - 加拿大ee22
+      - 美国ee22_8
+      - 法国ee22
+      - 美国ee22_9
+      - 美国ee22_10
+      - 美国ee22_11
+      - 美国ee22_12
+      - 美国ee22_13
+      - 美国ee22_14
+      - 美国ee22_15
+      - 法国ee22_1
+      - 美国ee22_16
+      - 美国ee22_17
+      - 美国ee22_18
+      - 美国ee22_19
+      - 美国ee22_20
+      - 美国ee22_21
+      - 美国ee22_22
+      - 美国ee22_23
+      - 美国ee22_24
+      - 美国ee22_25
+      - 美国ee22_26
+      - 美国ee22_27
+      - 美国ee22_28
+      - 美国ee22_29
+      - 美国ee22_30
+      - 美国ee22_31
+      - 美国ee22_32
+      - 美国ee22_33
+      - 美国ee22_34
+      - 美国ee22_35
+      - 美国ee22_36
+      - 美国ee22_37
+      - 美国ee22_38
+      - 美国ee22_39
+      - 美国ee22_40
+      - 美国ee22_41
+      - 德国ee22_1
+      - 美国ee22_42
+      - 美国ee22_43
+      - 美国ee22_44
+      - 美国ee22_45
+      - 美国ee22_46
+      - 美国ee22_47
+      - 美国ee22_48
+      - 法国ee22_2
+      - 美国ee22_49
+      - 美国ee22_50
+      - 法国ee22_3
+      - 美国ee22_51
+      - 美国ee22_52
+      - 美国ee22_53
+      - 德国ee22_2
+      - 美国ee22_54
+      - 美国ee22_55
+      - 美国ee22_56
+      - 美国ee22_57
+      - 美国ee22_58
+      - 美国ee22_59
+      - 美国ee22_60
+      - 美国ee22_61
+      - 美国ee22_62
+      - 美国ee22_63
+      - 美国ee22_64
+      - 美国ee22_65
+      - 美国ee22_66
+      - 美国ee22_67
+      - 法国ee22_4
+      - 美国ee22_68
+      - 美国ee22_69
+      - 美国ee22_70
+      - 美国ee22_71
+      - 美国ee22_72
+      - 美国ee22_73
+      - 美国ee22_74
+      - 美国ee22_75
+      - 美国ee22_76
+      - 美国ee22_77
+      - 美国12
+      - 美国ee22_78
+      - 美国ee22_79
+      - 美国ee22_80
+      - 美国ee22_81
+      - VLESS-570 | free-nodes
+      - VLESS-576 | free-nodes
+      - 美国+CloudFlare节点
+      - 爱尔兰+2
+      - 美国+1
+      - 美国+CloudFlare节点_1
+      - 美国+CloudFlare节点_2
+      - 美国+CloudFlare节点_3
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 法国巴黎+CloudFlare节点
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 法国 | FRA
+      - 🇺🇸 美国 | USA
+      - 🇵🇱 波兰 | POL
+      - 🇩🇪 德国 | DEU_1
+      - 🇵🇱 波兰 | POL_1
+      - 🇹🇭 泰国 | THA_1
+      - 🇩🇪 德国 | DEU_2
+      - 🇯🇵_JP_日本->🇹🇭_TH_泰国
+      - 🇸🇬新加坡40.42MB/s
+      - 🇸🇬新加坡40.42MB/s_1
+      - 🇺🇸 美国 CNServer 25
+      - SI-1
+      - 🇨🇴CO21.76MB/s
+      - 🇸🇮SI25.64MB/s
+      - TROJAN-304 | free-nodes
+      - SI-Ljubljana-210810118-ldfm
+      - 🇺🇸 美国 CNServer 15
+      - 🇺🇸 美国 CNServer 16
+      - 🇫🇮 芬兰FI-1026_1
+      - 🇷🇴罗马尼亚19.91MB/s
+      - US-2
+      - 🇺🇸 美国 CNServer 21
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 美国ee99
+      - 美国+5
+      - 🇫🇮 芬兰FI-1026
+      - VLESS-657 | free-nodes
+      - VLESS-641 | free-nodes
+      - 🇭🇰 香港 | HKG
+      - 美国+6
+      - 美国ee99_1
+      - 美国ee99_2
+      - 美国ee23
+      - 美国ee99_3
+      - 🇹🇭 泰国 | THA
+      - 香港13
+      - 新加坡12
+      - 荷兰11
+      - 美国13
+      - 美国ee22
+      - 瑞典ee22
+      - 美国ee22_1
+      - 瑞典ee22_1
+      - 美国ee22_2
+      - 瑞典ee22_2
+      - 美国ee22_3
+      - 荷兰ee22
+      - 美国ee22_4
+      - 美国ee22_5
+      - 美国ee22_6
+      - 德国ee22
+      - 美国ee22_7
+      - 加拿大ee22
+      - 美国ee22_8
+      - 法国ee22
+      - 美国ee22_9
+      - 美国ee22_10
+      - 美国ee22_11
+      - 美国ee22_12
+      - 美国ee22_13
+      - 美国ee22_14
+      - 美国ee22_15
+      - 法国ee22_1
+      - 美国ee22_16
+      - 美国ee22_17
+      - 美国ee22_18
+      - 美国ee22_19
+      - 美国ee22_20
+      - 美国ee22_21
+      - 美国ee22_22
+      - 美国ee22_23
+      - 美国ee22_24
+      - 美国ee22_25
+      - 美国ee22_26
+      - 美国ee22_27
+      - 美国ee22_28
+      - 美国ee22_29
+      - 美国ee22_30
+      - 美国ee22_31
+      - 美国ee22_32
+      - 美国ee22_33
+      - 美国ee22_34
+      - 美国ee22_35
+      - 美国ee22_36
+      - 美国ee22_37
+      - 美国ee22_38
+      - 美国ee22_39
+      - 美国ee22_40
+      - 美国ee22_41
+      - 德国ee22_1
+      - 美国ee22_42
+      - 美国ee22_43
+      - 美国ee22_44
+      - 美国ee22_45
+      - 美国ee22_46
+      - 美国ee22_47
+      - 美国ee22_48
+      - 法国ee22_2
+      - 美国ee22_49
+      - 美国ee22_50
+      - 法国ee22_3
+      - 美国ee22_51
+      - 美国ee22_52
+      - 美国ee22_53
+      - 德国ee22_2
+      - 美国ee22_54
+      - 美国ee22_55
+      - 美国ee22_56
+      - 美国ee22_57
+      - 美国ee22_58
+      - 美国ee22_59
+      - 美国ee22_60
+      - 美国ee22_61
+      - 美国ee22_62
+      - 美国ee22_63
+      - 美国ee22_64
+      - 美国ee22_65
+      - 美国ee22_66
+      - 美国ee22_67
+      - 法国ee22_4
+      - 美国ee22_68
+      - 美国ee22_69
+      - 美国ee22_70
+      - 美国ee22_71
+      - 美国ee22_72
+      - 美国ee22_73
+      - 美国ee22_74
+      - 美国ee22_75
+      - 美国ee22_76
+      - 美国ee22_77
+      - 美国12
+      - 美国ee22_78
+      - 美国ee22_79
+      - 美国ee22_80
+      - 美国ee22_81
+      - VLESS-570 | free-nodes
+      - VLESS-576 | free-nodes
+      - 美国+CloudFlare节点
+      - 爱尔兰+2
+      - 美国+1
+      - 美国+CloudFlare节点_1
+      - 美国+CloudFlare节点_2
+      - 美国+CloudFlare节点_3
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 法国巴黎+CloudFlare节点
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 法国 | FRA
+      - 🇺🇸 美国 | USA
+      - 🇵🇱 波兰 | POL
+      - 🇩🇪 德国 | DEU_1
+      - 🇵🇱 波兰 | POL_1
+      - 🇹🇭 泰国 | THA_1
+      - 🇩🇪 德国 | DEU_2
+      - 🇯🇵_JP_日本->🇹🇭_TH_泰国
+      - 🇸🇬新加坡40.42MB/s
+      - 🇸🇬新加坡40.42MB/s_1
+      - 🇺🇸 美国 CNServer 25
+      - SI-1
+      - 🇨🇴CO21.76MB/s
+      - 🇸🇮SI25.64MB/s
+      - TROJAN-304 | free-nodes
+      - SI-Ljubljana-210810118-ldfm
+      - 🇺🇸 美国 CNServer 15
+      - 🇺🇸 美国 CNServer 16
+      - 🇫🇮 芬兰FI-1026_1
+      - 🇷🇴罗马尼亚19.91MB/s
+      - US-2
+      - 🇺🇸 美国 CNServer 21
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 美国ee99
+      - 美国+5
+      - 🇫🇮 芬兰FI-1026
+      - VLESS-657 | free-nodes
+      - VLESS-641 | free-nodes
+      - 🇭🇰 香港 | HKG
+      - 美国+6
+      - 美国ee99_1
+      - 美国ee99_2
+      - 美国ee23
+      - 美国ee99_3
+      - 🇹🇭 泰国 | THA
+      - 香港13
+      - 新加坡12
+      - 荷兰11
+      - 美国13
+      - 美国ee22
+      - 瑞典ee22
+      - 美国ee22_1
+      - 瑞典ee22_1
+      - 美国ee22_2
+      - 瑞典ee22_2
+      - 美国ee22_3
+      - 荷兰ee22
+      - 美国ee22_4
+      - 美国ee22_5
+      - 美国ee22_6
+      - 德国ee22
+      - 美国ee22_7
+      - 加拿大ee22
+      - 美国ee22_8
+      - 法国ee22
+      - 美国ee22_9
+      - 美国ee22_10
+      - 美国ee22_11
+      - 美国ee22_12
+      - 美国ee22_13
+      - 美国ee22_14
+      - 美国ee22_15
+      - 法国ee22_1
+      - 美国ee22_16
+      - 美国ee22_17
+      - 美国ee22_18
+      - 美国ee22_19
+      - 美国ee22_20
+      - 美国ee22_21
+      - 美国ee22_22
+      - 美国ee22_23
+      - 美国ee22_24
+      - 美国ee22_25
+      - 美国ee22_26
+      - 美国ee22_27
+      - 美国ee22_28
+      - 美国ee22_29
+      - 美国ee22_30
+      - 美国ee22_31
+      - 美国ee22_32
+      - 美国ee22_33
+      - 美国ee22_34
+      - 美国ee22_35
+      - 美国ee22_36
+      - 美国ee22_37
+      - 美国ee22_38
+      - 美国ee22_39
+      - 美国ee22_40
+      - 美国ee22_41
+      - 德国ee22_1
+      - 美国ee22_42
+      - 美国ee22_43
+      - 美国ee22_44
+      - 美国ee22_45
+      - 美国ee22_46
+      - 美国ee22_47
+      - 美国ee22_48
+      - 法国ee22_2
+      - 美国ee22_49
+      - 美国ee22_50
+      - 法国ee22_3
+      - 美国ee22_51
+      - 美国ee22_52
+      - 美国ee22_53
+      - 德国ee22_2
+      - 美国ee22_54
+      - 美国ee22_55
+      - 美国ee22_56
+      - 美国ee22_57
+      - 美国ee22_58
+      - 美国ee22_59
+      - 美国ee22_60
+      - 美国ee22_61
+      - 美国ee22_62
+      - 美国ee22_63
+      - 美国ee22_64
+      - 美国ee22_65
+      - 美国ee22_66
+      - 美国ee22_67
+      - 法国ee22_4
+      - 美国ee22_68
+      - 美国ee22_69
+      - 美国ee22_70
+      - 美国ee22_71
+      - 美国ee22_72
+      - 美国ee22_73
+      - 美国ee22_74
+      - 美国ee22_75
+      - 美国ee22_76
+      - 美国ee22_77
+      - 美国12
+      - 美国ee22_78
+      - 美国ee22_79
+      - 美国ee22_80
+      - 美国ee22_81
+      - VLESS-570 | free-nodes
+      - VLESS-576 | free-nodes
+      - 美国+CloudFlare节点
+      - 爱尔兰+2
+      - 美国+1
+      - 美国+CloudFlare节点_1
+      - 美国+CloudFlare节点_2
+      - 美国+CloudFlare节点_3
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 法国巴黎+CloudFlare节点
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 法国 | FRA
+      - 🇺🇸 美国 | USA
+      - 🇵🇱 波兰 | POL
+      - 🇩🇪 德国 | DEU_1
+      - 🇵🇱 波兰 | POL_1
+      - 🇹🇭 泰国 | THA_1
+      - 🇩🇪 德国 | DEU_2
+      - 🇯🇵_JP_日本->🇹🇭_TH_泰国
+      - 🇸🇬新加坡40.42MB/s
+      - 🇸🇬新加坡40.42MB/s_1
+      - 🇺🇸 美国 CNServer 25
+      - SI-1
+      - 🇨🇴CO21.76MB/s
+      - 🇸🇮SI25.64MB/s
+      - TROJAN-304 | free-nodes
+      - SI-Ljubljana-210810118-ldfm
+      - 🇺🇸 美国 CNServer 15
+      - 🇺🇸 美国 CNServer 16
+      - 🇫🇮 芬兰FI-1026_1
+      - 🇷🇴罗马尼亚19.91MB/s
+      - US-2
+      - 🇺🇸 美国 CNServer 21
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 美国ee99
+      - 美国+5
+      - 🇫🇮 芬兰FI-1026
+      - VLESS-657 | free-nodes
+      - VLESS-641 | free-nodes
+      - 🇭🇰 香港 | HKG
+      - 美国+6
+      - 美国ee99_1
+      - 美国ee99_2
+      - 美国ee23
+      - 美国ee99_3
+      - 🇹🇭 泰国 | THA
+      - 香港13
+      - 新加坡12
+      - 荷兰11
+      - 美国13
+      - 美国ee22
+      - 瑞典ee22
+      - 美国ee22_1
+      - 瑞典ee22_1
+      - 美国ee22_2
+      - 瑞典ee22_2
+      - 美国ee22_3
+      - 荷兰ee22
+      - 美国ee22_4
+      - 美国ee22_5
+      - 美国ee22_6
+      - 德国ee22
+      - 美国ee22_7
+      - 加拿大ee22
+      - 美国ee22_8
+      - 法国ee22
+      - 美国ee22_9
+      - 美国ee22_10
+      - 美国ee22_11
+      - 美国ee22_12
+      - 美国ee22_13
+      - 美国ee22_14
+      - 美国ee22_15
+      - 法国ee22_1
+      - 美国ee22_16
+      - 美国ee22_17
+      - 美国ee22_18
+      - 美国ee22_19
+      - 美国ee22_20
+      - 美国ee22_21
+      - 美国ee22_22
+      - 美国ee22_23
+      - 美国ee22_24
+      - 美国ee22_25
+      - 美国ee22_26
+      - 美国ee22_27
+      - 美国ee22_28
+      - 美国ee22_29
+      - 美国ee22_30
+      - 美国ee22_31
+      - 美国ee22_32
+      - 美国ee22_33
+      - 美国ee22_34
+      - 美国ee22_35
+      - 美国ee22_36
+      - 美国ee22_37
+      - 美国ee22_38
+      - 美国ee22_39
+      - 美国ee22_40
+      - 美国ee22_41
+      - 德国ee22_1
+      - 美国ee22_42
+      - 美国ee22_43
+      - 美国ee22_44
+      - 美国ee22_45
+      - 美国ee22_46
+      - 美国ee22_47
+      - 美国ee22_48
+      - 法国ee22_2
+      - 美国ee22_49
+      - 美国ee22_50
+      - 法国ee22_3
+      - 美国ee22_51
+      - 美国ee22_52
+      - 美国ee22_53
+      - 德国ee22_2
+      - 美国ee22_54
+      - 美国ee22_55
+      - 美国ee22_56
+      - 美国ee22_57
+      - 美国ee22_58
+      - 美国ee22_59
+      - 美国ee22_60
+      - 美国ee22_61
+      - 美国ee22_62
+      - 美国ee22_63
+      - 美国ee22_64
+      - 美国ee22_65
+      - 美国ee22_66
+      - 美国ee22_67
+      - 法国ee22_4
+      - 美国ee22_68
+      - 美国ee22_69
+      - 美国ee22_70
+      - 美国ee22_71
+      - 美国ee22_72
+      - 美国ee22_73
+      - 美国ee22_74
+      - 美国ee22_75
+      - 美国ee22_76
+      - 美国ee22_77
+      - 美国12
+      - 美国ee22_78
+      - 美国ee22_79
+      - 美国ee22_80
+      - 美国ee22_81
+      - VLESS-570 | free-nodes
+      - VLESS-576 | free-nodes
+      - 美国+CloudFlare节点
+      - 爱尔兰+2
+      - 美国+1
+      - 美国+CloudFlare节点_1
+      - 美国+CloudFlare节点_2
+      - 美国+CloudFlare节点_3
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 法国巴黎+CloudFlare节点
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 法国 | FRA
+      - 🇺🇸 美国 | USA
+      - 🇵🇱 波兰 | POL
+      - 🇩🇪 德国 | DEU_1
+      - 🇵🇱 波兰 | POL_1
+      - 🇹🇭 泰国 | THA_1
+      - 🇩🇪 德国 | DEU_2
+      - 🇯🇵_JP_日本->🇹🇭_TH_泰国
+      - 🇸🇬新加坡40.42MB/s
+      - 🇸🇬新加坡40.42MB/s_1
+      - 🇺🇸 美国 CNServer 25
+      - SI-1
+      - 🇨🇴CO21.76MB/s
+      - 🇸🇮SI25.64MB/s
+      - TROJAN-304 | free-nodes
+      - SI-Ljubljana-210810118-ldfm
+      - 🇺🇸 美国 CNServer 15
+      - 🇺🇸 美国 CNServer 16
+      - 🇫🇮 芬兰FI-1026_1
+      - 🇷🇴罗马尼亚19.91MB/s
+      - US-2
+      - 🇺🇸 美国 CNServer 21
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 美国ee99
+      - 美国+5
+      - 🇫🇮 芬兰FI-1026
+      - VLESS-657 | free-nodes
+      - VLESS-641 | free-nodes
+      - 🇭🇰 香港 | HKG
+      - 美国+6
+      - 美国ee99_1
+      - 美国ee99_2
+      - 美国ee23
+      - 美国ee99_3
+      - 🇹🇭 泰国 | THA
+      - 香港13
+      - 新加坡12
+      - 荷兰11
+      - 美国13
+      - 美国ee22
+      - 瑞典ee22
+      - 美国ee22_1
+      - 瑞典ee22_1
+      - 美国ee22_2
+      - 瑞典ee22_2
+      - 美国ee22_3
+      - 荷兰ee22
+      - 美国ee22_4
+      - 美国ee22_5
+      - 美国ee22_6
+      - 德国ee22
+      - 美国ee22_7
+      - 加拿大ee22
+      - 美国ee22_8
+      - 法国ee22
+      - 美国ee22_9
+      - 美国ee22_10
+      - 美国ee22_11
+      - 美国ee22_12
+      - 美国ee22_13
+      - 美国ee22_14
+      - 美国ee22_15
+      - 法国ee22_1
+      - 美国ee22_16
+      - 美国ee22_17
+      - 美国ee22_18
+      - 美国ee22_19
+      - 美国ee22_20
+      - 美国ee22_21
+      - 美国ee22_22
+      - 美国ee22_23
+      - 美国ee22_24
+      - 美国ee22_25
+      - 美国ee22_26
+      - 美国ee22_27
+      - 美国ee22_28
+      - 美国ee22_29
+      - 美国ee22_30
+      - 美国ee22_31
+      - 美国ee22_32
+      - 美国ee22_33
+      - 美国ee22_34
+      - 美国ee22_35
+      - 美国ee22_36
+      - 美国ee22_37
+      - 美国ee22_38
+      - 美国ee22_39
+      - 美国ee22_40
+      - 美国ee22_41
+      - 德国ee22_1
+      - 美国ee22_42
+      - 美国ee22_43
+      - 美国ee22_44
+      - 美国ee22_45
+      - 美国ee22_46
+      - 美国ee22_47
+      - 美国ee22_48
+      - 法国ee22_2
+      - 美国ee22_49
+      - 美国ee22_50
+      - 法国ee22_3
+      - 美国ee22_51
+      - 美国ee22_52
+      - 美国ee22_53
+      - 德国ee22_2
+      - 美国ee22_54
+      - 美国ee22_55
+      - 美国ee22_56
+      - 美国ee22_57
+      - 美国ee22_58
+      - 美国ee22_59
+      - 美国ee22_60
+      - 美国ee22_61
+      - 美国ee22_62
+      - 美国ee22_63
+      - 美国ee22_64
+      - 美国ee22_65
+      - 美国ee22_66
+      - 美国ee22_67
+      - 法国ee22_4
+      - 美国ee22_68
+      - 美国ee22_69
+      - 美国ee22_70
+      - 美国ee22_71
+      - 美国ee22_72
+      - 美国ee22_73
+      - 美国ee22_74
+      - 美国ee22_75
+      - 美国ee22_76
+      - 美国ee22_77
+      - 美国12
+      - 美国ee22_78
+      - 美国ee22_79
+      - 美国ee22_80
+      - 美国ee22_81
+      - VLESS-570 | free-nodes
+      - VLESS-576 | free-nodes
+      - 美国+CloudFlare节点
+      - 爱尔兰+2
+      - 美国+1
+      - 美国+CloudFlare节点_1
+      - 美国+CloudFlare节点_2
+      - 美国+CloudFlare节点_3
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 法国巴黎+CloudFlare节点
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 法国 | FRA
+      - 🇺🇸 美国 | USA
+      - 🇵🇱 波兰 | POL
+      - 🇩🇪 德国 | DEU_1
+      - 🇵🇱 波兰 | POL_1
+      - 🇹🇭 泰国 | THA_1
+      - 🇩🇪 德国 | DEU_2
+      - 🇯🇵_JP_日本->🇹🇭_TH_泰国
+      - 🇸🇬新加坡40.42MB/s
+      - 🇸🇬新加坡40.42MB/s_1
+      - 🇺🇸 美国 CNServer 25
+      - SI-1
+      - 🇨🇴CO21.76MB/s
+      - 🇸🇮SI25.64MB/s
+      - TROJAN-304 | free-nodes
+      - SI-Ljubljana-210810118-ldfm
+      - 🇺🇸 美国 CNServer 15
+      - 🇺🇸 美国 CNServer 16
+      - 🇫🇮 芬兰FI-1026_1
+      - 🇷🇴罗马尼亚19.91MB/s
+      - US-2
+      - 🇺🇸 美国 CNServer 21
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 美国ee99
+      - 美国+5
+      - 🇫🇮 芬兰FI-1026
+      - VLESS-657 | free-nodes
+      - VLESS-641 | free-nodes
+      - 🇭🇰 香港 | HKG
+      - 美国+6
+      - 美国ee99_1
+      - 美国ee99_2
+      - 美国ee23
+      - 美国ee99_3
+      - 🇹🇭 泰国 | THA
+      - 香港13
+      - 新加坡12
+      - 荷兰11
+      - 美国13
+      - 美国ee22
+      - 瑞典ee22
+      - 美国ee22_1
+      - 瑞典ee22_1
+      - 美国ee22_2
+      - 瑞典ee22_2
+      - 美国ee22_3
+      - 荷兰ee22
+      - 美国ee22_4
+      - 美国ee22_5
+      - 美国ee22_6
+      - 德国ee22
+      - 美国ee22_7
+      - 加拿大ee22
+      - 美国ee22_8
+      - 法国ee22
+      - 美国ee22_9
+      - 美国ee22_10
+      - 美国ee22_11
+      - 美国ee22_12
+      - 美国ee22_13
+      - 美国ee22_14
+      - 美国ee22_15
+      - 法国ee22_1
+      - 美国ee22_16
+      - 美国ee22_17
+      - 美国ee22_18
+      - 美国ee22_19
+      - 美国ee22_20
+      - 美国ee22_21
+      - 美国ee22_22
+      - 美国ee22_23
+      - 美国ee22_24
+      - 美国ee22_25
+      - 美国ee22_26
+      - 美国ee22_27
+      - 美国ee22_28
+      - 美国ee22_29
+      - 美国ee22_30
+      - 美国ee22_31
+      - 美国ee22_32
+      - 美国ee22_33
+      - 美国ee22_34
+      - 美国ee22_35
+      - 美国ee22_36
+      - 美国ee22_37
+      - 美国ee22_38
+      - 美国ee22_39
+      - 美国ee22_40
+      - 美国ee22_41
+      - 德国ee22_1
+      - 美国ee22_42
+      - 美国ee22_43
+      - 美国ee22_44
+      - 美国ee22_45
+      - 美国ee22_46
+      - 美国ee22_47
+      - 美国ee22_48
+      - 法国ee22_2
+      - 美国ee22_49
+      - 美国ee22_50
+      - 法国ee22_3
+      - 美国ee22_51
+      - 美国ee22_52
+      - 美国ee22_53
+      - 德国ee22_2
+      - 美国ee22_54
+      - 美国ee22_55
+      - 美国ee22_56
+      - 美国ee22_57
+      - 美国ee22_58
+      - 美国ee22_59
+      - 美国ee22_60
+      - 美国ee22_61
+      - 美国ee22_62
+      - 美国ee22_63
+      - 美国ee22_64
+      - 美国ee22_65
+      - 美国ee22_66
+      - 美国ee22_67
+      - 法国ee22_4
+      - 美国ee22_68
+      - 美国ee22_69
+      - 美国ee22_70
+      - 美国ee22_71
+      - 美国ee22_72
+      - 美国ee22_73
+      - 美国ee22_74
+      - 美国ee22_75
+      - 美国ee22_76
+      - 美国ee22_77
+      - 美国12
+      - 美国ee22_78
+      - 美国ee22_79
+      - 美国ee22_80
+      - 美国ee22_81
+      - VLESS-570 | free-nodes
+      - VLESS-576 | free-nodes
+      - 美国+CloudFlare节点
+      - 爱尔兰+2
+      - 美国+1
+      - 美国+CloudFlare节点_1
+      - 美国+CloudFlare节点_2
+      - 美国+CloudFlare节点_3
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 法国巴黎+CloudFlare节点
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 法国 | FRA
+      - 🇺🇸 美国 | USA
+      - 🇵🇱 波兰 | POL
+      - 🇩🇪 德国 | DEU_1
+      - 🇵🇱 波兰 | POL_1
+      - 🇹🇭 泰国 | THA_1
+      - 🇩🇪 德国 | DEU_2
+      - 🇯🇵_JP_日本->🇹🇭_TH_泰国
+      - 🇸🇬新加坡40.42MB/s
+      - 🇸🇬新加坡40.42MB/s_1
+      - 🇺🇸 美国 CNServer 25
+      - SI-1
+      - 🇨🇴CO21.76MB/s
+      - 🇸🇮SI25.64MB/s
+      - TROJAN-304 | free-nodes
+      - SI-Ljubljana-210810118-ldfm
+      - 🇺🇸 美国 CNServer 15
+      - 🇺🇸 美国 CNServer 16
+      - 🇫🇮 芬兰FI-1026_1
+      - 🇷🇴罗马尼亚19.91MB/s
+      - US-2
+      - 🇺🇸 美国 CNServer 21
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
