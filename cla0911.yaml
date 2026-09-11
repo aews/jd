@@ -1,0 +1,4715 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 法国89
+    type: trojan
+    server: 172.67.74.2
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国189
+    type: trojan
+    server: 188.114.97.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国3
+    type: trojan
+    server: 198.41.223.96
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国4
+    type: trojan
+    server: 172.67.74.2
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 香港ee89
+    type: trojan
+    server: www.speedtest.org
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89
+    type: trojan
+    server: 104.18.23.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25
+    type: trojan
+    server: 104.18.23.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_1
+    type: trojan
+    server: join-telegram-channel.tirexnet.kdns.fr
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_2
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_1
+    type: trojan
+    server: 104.18.22.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_3
+    type: trojan
+    server: 104.20.6.134
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_2
+    type: trojan
+    server: 172.67.221.242
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大25
+    type: trojan
+    server: 104.18.22.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_4
+    type: trojan
+    server: 104.26.15.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_3
+    type: trojan
+    server: 188.114.97.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee77
+    type: trojan
+    server: 172.67.221.242
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国rr12
+    type: trojan
+    server: 198.41.223.96
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 加拿大25_1
+    type: trojan
+    server: 104.18.22.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_4
+    type: trojan
+    server: 104.26.15.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 香港25
+    type: trojan
+    server: 104.18.23.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_5
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_5
+    type: trojan
+    server: 104.18.23.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 法国25
+    type: trojan
+    server: 104.20.6.134
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 法国rr12
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_6
+    type: trojan
+    server: 104.26.14.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大25_2
+    type: trojan
+    server: 188.114.97.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 加拿大ee89
+    type: trojan
+    server: 104.16.174.71
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_6
+    type: trojan
+    server: 104.16.174.12
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_7
+    type: trojan
+    server: 104.18.152.179
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_8
+    type: trojan
+    server: 104.18.152.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee77_1
+    type: trojan
+    server: 104.18.152.159
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_9
+    type: trojan
+    server: 104.17.111.8
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_10
+    type: trojan
+    server: 104.18.152.152
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_7
+    type: trojan
+    server: 104.18.152.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_8
+    type: trojan
+    server: 104.18.152.244
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_11
+    type: trojan
+    server: 104.16.174.148
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国25_1
+    type: trojan
+    server: 216.24.57.1
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_12
+    type: trojan
+    server: www.ignitelimit.com
+    port: 443
+    password: humanity
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_13
+    type: trojan
+    server: 86.38.214.205
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_9
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_10
+    type: trojan
+    server: 104.16.174.148
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee77_2
+    type: trojan
+    server: 104.18.152.207
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_14
+    type: trojan
+    server: 104.16.174.12
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_15
+    type: trojan
+    server: 104.18.152.204
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee77_3
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_16
+    type: trojan
+    server: 104.16.174.101
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_17
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_18
+    type: trojan
+    server: 104.16.73.213
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_11
+    type: trojan
+    server: 104.18.152.108
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_19
+    type: trojan
+    server: 104.16.7.70
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 法国25_2
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_20
+    type: trojan
+    server: 104.16.174.72
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国25_3
+    type: trojan
+    server: 45.130.125.158
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国rr12_1
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_1
+    type: trojan
+    server: 104.18.152.144
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_21
+    type: trojan
+    server: 104.16.7.70
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_22
+    type: trojan
+    server: 104.18.152.144
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_12
+    type: trojan
+    server: 104.18.152.113
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_13
+    type: trojan
+    server: 216.24.57.1
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_23
+    type: trojan
+    server: 104.18.152.208
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_14
+    type: trojan
+    server: 104.18.152.108
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_24
+    type: trojan
+    server: 104.16.174.37
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_25
+    type: trojan
+    server: 104.19.229.21
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: assignment
+    udp: true
+  - name: 美国25_15
+    type: trojan
+    server: 104.16.174.46
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_16
+    type: trojan
+    server: 104.16.174.185
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_17
+    type: trojan
+    server: 104.19.229.21
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_18
+    type: trojan
+    server: 104.17.111.4
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_19
+    type: trojan
+    server: 104.18.152.210
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_20
+    type: trojan
+    server: 104.18.152.233
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_21
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_22
+    type: trojan
+    server: 104.16.174.37
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国25_4
+    type: trojan
+    server: 104.16.174.109
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大25_3
+    type: trojan
+    server: 104.18.152.229
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国25_5
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_26
+    type: trojan
+    server: 104.16.174.148
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_23
+    type: trojan
+    server: 104.18.152.133
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大25_4
+    type: trojan
+    server: 104.16.174.36
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_27
+    type: trojan
+    server: 104.16.174.101
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大25_5
+    type: trojan
+    server: 104.18.152.207
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_28
+    type: trojan
+    server: 104.18.152.179
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_29
+    type: trojan
+    server: 104.16.174.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 法国ee89
+    type: trojan
+    server: render.com
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee22
+    type: trojan
+    server: 104.16.174.71
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_30
+    type: trojan
+    server: 104.17.177.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_24
+    type: trojan
+    server: 104.16.73.213
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_25
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大25_6
+    type: trojan
+    server: 104.16.174.44
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 加拿大25_7
+    type: trojan
+    server: 104.18.152.73
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee77_4
+    type: trojan
+    server: 104.16.174.6
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_31
+    type: trojan
+    server: 104.16.174.36
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_26
+    type: trojan
+    server: 104.18.152.230
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国25_6
+    type: trojan
+    server: 104.16.174.124
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_27
+    type: trojan
+    server: 130.250.137.171
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_32
+    type: trojan
+    server: 104.18.152.155
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_28
+    type: trojan
+    server: 104.18.152.219
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 加拿大25_8
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_33
+    type: trojan
+    server: 104.18.152.187
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_34
+    type: trojan
+    server: 104.16.174.34
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_29
+    type: trojan
+    server: 104.17.177.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_35
+    type: trojan
+    server: 104.18.152.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22_1
+    type: trojan
+    server: 104.16.73.213
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_30
+    type: trojan
+    server: 104.19.229.21
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_31
+    type: trojan
+    server: 104.16.7.70
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_32
+    type: trojan
+    server: 104.18.152.103
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 加拿大25_9
+    type: trojan
+    server: 104.18.12.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_36
+    type: trojan
+    server: 104.16.174.22
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_33
+    type: trojan
+    server: 104.16.174.44
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_34
+    type: trojan
+    server: 104.18.152.103
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_35
+    type: trojan
+    server: 104.18.152.225
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_36
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_2
+    type: trojan
+    server: 104.18.152.207
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_37
+    type: trojan
+    server: 104.16.174.117
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_38
+    type: trojan
+    server: 104.18.152.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国25_7
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee77_5
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_37
+    type: trojan
+    server: 104.16.174.121
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_38
+    type: trojan
+    server: 104.16.174.121
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_39
+    type: trojan
+    server: 104.17.111.1
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_40
+    type: trojan
+    server: 104.17.111.1
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_41
+    type: trojan
+    server: 86.38.214.205
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_42
+    type: trojan
+    server: 104.18.12.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_43
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大25_10
+    type: trojan
+    server: 104.17.177.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_39
+    type: trojan
+    server: 104.16.174.124
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_44
+    type: trojan
+    server: 104.18.12.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_45
+    type: trojan
+    server: 104.19.229.21
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_46
+    type: trojan
+    server: 104.18.152.210
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_47
+    type: trojan
+    server: 104.18.152.140
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_40
+    type: trojan
+    server: 104.17.111.8
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_48
+    type: trojan
+    server: 104.16.174.44
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国rr12_2
+    type: trojan
+    server: 165.215.250.14
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_41
+    type: trojan
+    server: 104.18.152.233
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_42
+    type: trojan
+    server: 104.16.174.72
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_43
+    type: trojan
+    server: 141.101.90.101
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_49
+    type: vless
+    server: 95.163.232.171
+    port: 14443
+    uuid: fb67fd37-8d41-43a9-a093-c0b807fc5299
+    network: ws
+    servername: pr-media.pepro.site
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws
+    skip-cert-verify: true
+    udp: true
+  - name: 法国25_8
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国rr12_3
+    type: trojan
+    server: 130.250.137.171
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_3
+    type: trojan
+    server: 104.18.152.225
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_50
+    type: trojan
+    server: 104.18.152.204
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_51
+    type: trojan
+    server: 104.16.174.121
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_4
+    type: trojan
+    server: 104.18.152.204
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_44
+    type: trojan
+    server: 104.18.152.161
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国rr12_4
+    type: trojan
+    server: 104.18.152.229
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_45
+    type: trojan
+    server: 104.16.174.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国ee89_46
+    type: trojan
+    server: 104.16.174.22
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: //assignment
+    udp: true
+  - name: 美国25_52
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_53
+    type: trojan
+    server: 104.18.152.133
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_54
+    type: trojan
+    server: 104.18.152.229
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_55
+    type: trojan
+    server: 141.101.90.101
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89_47
+    type: trojan
+    server: 176.97.66.175
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 法国25_9
+    type: trojan
+    server: 141.101.90.101
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_56
+    type: trojan
+    server: 104.16.174.14
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国25_10
+    type: trojan
+    server: 130.250.137.171
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_57
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_5
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国26
+    type: trojan
+    server: join-telegram-channel-tirexnet.trex.kdns.fr
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国26_1
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国26_2
+    type: trojan
+    server: 104.16.174.109
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国26_3
+    type: trojan
+    server: 104.16.174.124
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国26_4
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国26_5
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国26_6
+    type: trojan
+    server: 45.130.125.158
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 法国26_7
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大26
+    type: trojan
+    server: 104.18.22.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大26_1
+    type: trojan
+    server: 104.16.174.72
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 加拿大26_2
+    type: trojan
+    server: 104.18.152.73
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大26_3
+    type: trojan
+    server: 86.38.214.205
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 加拿大26_4
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26
+    type: vless
+    server: 91.193.59.255
+    port: 2096
+    uuid: 42c62a5a-cd31-4551-80ef-908732370287
+    network: ws
+    servername: fq.jp188.dpdns.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57
+      headers:
+        Host: fq.jp188.dpdns.org
+    skip-cert-verify: true
+    udp: true
+  - name: 美国26_1
+    type: vless
+    server: 104.17.62.176
+    port: 2096
+    uuid: 42c62a5a-cd31-4551-80ef-908732370287
+    network: ws
+    servername: fq.jp188.dpdns.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57
+      headers:
+        Host: fq.jp188.dpdns.org
+    skip-cert-verify: true
+    udp: true
+  - name: 美国26_2
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_3
+    type: vless
+    server: 103.119.18.30
+    port: 443
+    uuid: 8666ab45-8e3d-4988-841b-2561d91e32d5
+    network: ws
+    servername: mianfei-73q.pages.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=154.3.33.43
+      headers:
+        Host: mianfei-73q.pages.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 美国26_4
+    type: trojan
+    server: 188.114.97.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_5
+    type: trojan
+    server: 104.26.15.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_6
+    type: trojan
+    server: 104.18.22.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_7
+    type: trojan
+    server: join-telegram-channel-tirexnet.trex.kdns.fr
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_8
+    type: trojan
+    server: 172.67.221.242
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_9
+    type: trojan
+    server: join-telegram-channel-tirexnet.trex.kdns.fr
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_10
+    type: trojan
+    server: 172.67.221.242
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_11
+    type: trojan
+    server: 104.26.15.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_12
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_13
+    type: trojan
+    server: 104.20.6.134
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_14
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_15
+    type: trojan
+    server: www.ignitelimit.com
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_16
+    type: trojan
+    server: 198.41.223.96
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_17
+    type: trojan
+    server: 104.18.152.219
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_18
+    type: trojan
+    server: 104.16.174.44
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_19
+    type: trojan
+    server: 104.18.152.207
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_20
+    type: trojan
+    server: 104.18.12.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_21
+    type: trojan
+    server: 104.16.174.34
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_22
+    type: trojan
+    server: 104.17.111.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_23
+    type: trojan
+    server: 104.16.174.148
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_24
+    type: trojan
+    server: 86.38.214.205
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_25
+    type: trojan
+    server: 104.18.152.103
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_26
+    type: trojan
+    server: 104.16.7.70
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_27
+    type: trojan
+    server: 104.16.174.185
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_28
+    type: trojan
+    server: 104.17.111.1
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_29
+    type: trojan
+    server: 104.16.174.185
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_30
+    type: trojan
+    server: 104.16.174.33
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_31
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_32
+    type: trojan
+    server: 104.16.174.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_33
+    type: trojan
+    server: 104.16.174.185
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_34
+    type: trojan
+    server: 104.16.174.37
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_35
+    type: trojan
+    server: 104.17.111.8
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_36
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_37
+    type: trojan
+    server: 104.16.73.213
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_38
+    type: trojan
+    server: 104.16.174.36
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_39
+    type: trojan
+    server: 104.16.174.148
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_40
+    type: trojan
+    server: 104.16.174.46
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_41
+    type: trojan
+    server: 104.16.174.12
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_42
+    type: trojan
+    server: 104.18.23.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_43
+    type: trojan
+    server: 104.16.174.124
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_44
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_45
+    type: trojan
+    server: 104.16.174.14
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_46
+    type: trojan
+    server: 104.16.174.6
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_47
+    type: trojan
+    server: 104.18.152.208
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_48
+    type: trojan
+    server: 130.250.137.171
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_49
+    type: trojan
+    server: 104.16.174.37
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_50
+    type: trojan
+    server: 104.16.174.46
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_51
+    type: trojan
+    server: 8.6.112.0
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_52
+    type: trojan
+    server: 104.16.7.70
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_53
+    type: trojan
+    server: 104.16.174.101
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_54
+    type: trojan
+    server: 104.18.12.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_55
+    type: trojan
+    server: 104.16.174.148
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_56
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_57
+    type: trojan
+    server: 104.18.152.210
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_58
+    type: trojan
+    server: 104.18.152.73
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_59
+    type: trojan
+    server: 104.18.12.149
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_60
+    type: trojan
+    server: 216.24.57.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_61
+    type: trojan
+    server: 104.16.73.213
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_62
+    type: trojan
+    server: 104.18.152.77
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_63
+    type: trojan
+    server: 104.16.174.117
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_64
+    type: trojan
+    server: 104.16.174.117
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_65
+    type: trojan
+    server: 104.16.174.14
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_66
+    type: trojan
+    server: 104.16.174.36
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_67
+    type: trojan
+    server: 104.16.174.71
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_68
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_69
+    type: trojan
+    server: 104.16.174.37
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_70
+    type: trojan
+    server: 104.17.111.8
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_71
+    type: trojan
+    server: 104.16.174.12
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_72
+    type: trojan
+    server: render.com
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26_73
+    type: trojan
+    server: 104.16.174.22
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: //assignment
+    udp: true
+  - name: 美国26_74
+    type: trojan
+    server: 45.130.125.158
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 俄罗斯+12
+    type: hysteria2
+    server: 91.240.86.70
+    port: 22443
+    password: 5beff945-adaa-492f-85c6-8aaf5df6cfa5
+    sni: hy.quattro-tech.ru
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+CloudFlare节点_6
+    type: trojan
+    server: 172.67.221.242
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_7
+    type: trojan
+    server: 104.18.152.140
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_8
+    type: trojan
+    server: 104.18.152.246
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_9
+    type: trojan
+    server: 104.16.174.34
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_10
+    type: trojan
+    server: 104.18.152.233
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_11
+    type: trojan
+    server: 104.16.174.36
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 🇺🇸 美国 | USA
+    type: vless
+    server: 172.67.67.241
+    port: 2053
+    uuid: 8666ab45-8e3d-4988-841b-2561d91e32d5
+    network: ws
+    servername: mianfei-73q.pages.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /proxyip=154.3.33.43
+      headers:
+        Host: mianfei-73q.pages.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪 瑞典 | SWE
+    type: vless
+    server: 87.121.82.237.vhubtest.ru
+    port: 443
+    uuid: 49d39628-53cf-5345-a8d7-b31e0069b545
+    network: ws
+    servername: 87.121.82.237.vhubtest.ru
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /websocket?ed=2560
+      headers:
+        Host: 87.121.82.237.vhubtest.ru
+    skip-cert-verify: true
+    udp: true
+  - name: 美国 06
+    type: vless
+    server: 95.163.232.171
+    port: 14443
+    uuid: fb67fd37-8d41-43a9-a093-c0b807fc5299
+    network: ws
+    servername: pr-media.pepro.site
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 法国89
+      - 法国189
+      - 法国3
+      - 法国4
+      - 香港ee89
+      - 美国ee89
+      - 美国25
+      - 美国ee89_1
+      - 美国ee89_2
+      - 美国25_1
+      - 美国ee89_3
+      - 美国25_2
+      - 加拿大25
+      - 美国ee89_4
+      - 美国25_3
+      - 美国ee77
+      - 美国rr12
+      - 加拿大25_1
+      - 美国25_4
+      - 香港25
+      - 美国25_5
+      - 美国ee89_5
+      - 美国+CloudFlare节点
+      - 法国25
+      - 法国rr12
+      - 美国25_6
+      - 加拿大25_2
+      - 加拿大ee89
+      - 美国ee89_6
+      - 美国ee89_7
+      - 美国ee89_8
+      - 美国ee77_1
+      - 美国ee89_9
+      - 美国ee89_10
+      - 美国25_7
+      - 美国25_8
+      - 美国ee89_11
+      - 法国25_1
+      - 美国ee89_12
+      - 美国ee89_13
+      - 美国25_9
+      - 美国25_10
+      - 美国ee77_2
+      - 美国ee89_14
+      - 美国ee89_15
+      - 美国ee77_3
+      - 美国ee89_16
+      - 美国ee89_17
+      - 美国ee89_18
+      - 美国25_11
+      - 美国ee89_19
+      - 法国25_2
+      - 美国ee89_20
+      - 法国25_3
+      - 美国rr12_1
+      - 美国+CloudFlare节点_1
+      - 美国ee89_21
+      - 美国ee89_22
+      - 美国25_12
+      - 美国25_13
+      - 美国ee89_23
+      - 美国25_14
+      - 美国ee89_24
+      - 美国ee89_25
+      - 美国25_15
+      - 美国25_16
+      - 美国25_17
+      - 美国25_18
+      - 美国25_19
+      - 美国25_20
+      - 美国25_21
+      - 美国25_22
+      - 法国25_4
+      - 加拿大25_3
+      - 法国25_5
+      - 美国ee89_26
+      - 美国25_23
+      - 加拿大25_4
+      - 美国ee89_27
+      - 加拿大25_5
+      - 美国ee89_28
+      - 美国ee89_29
+      - 法国ee89
+      - 美国ee22
+      - 美国ee89_30
+      - 美国25_24
+      - 美国25_25
+      - 加拿大25_6
+      - 加拿大25_7
+      - 美国ee77_4
+      - 美国ee89_31
+      - 美国25_26
+      - 法国25_6
+      - 美国25_27
+      - 美国ee89_32
+      - 美国25_28
+      - 加拿大25_8
+      - 美国ee89_33
+      - 美国ee89_34
+      - 美国25_29
+      - 美国ee89_35
+      - 美国ee22_1
+      - 美国25_30
+      - 美国25_31
+      - 美国25_32
+      - 加拿大25_9
+      - 美国ee89_36
+      - 美国25_33
+      - 美国25_34
+      - 美国25_35
+      - 美国25_36
+      - 美国+CloudFlare节点_2
+      - 美国25_37
+      - 美国25_38
+      - 法国25_7
+      - 美国ee77_5
+      - 美国ee89_37
+      - 美国ee89_38
+      - 美国25_39
+      - 美国25_40
+      - 美国25_41
+      - 美国25_42
+      - 美国25_43
+      - 加拿大25_10
+      - 美国ee89_39
+      - 美国25_44
+      - 美国25_45
+      - 美国25_46
+      - 美国25_47
+      - 美国ee89_40
+      - 美国25_48
+      - 美国rr12_2
+      - 美国ee89_41
+      - 美国ee89_42
+      - 美国ee89_43
+      - 美国25_49
+      - 法国25_8
+      - 美国rr12_3
+      - 美国+CloudFlare节点_3
+      - 美国25_50
+      - 美国25_51
+      - 美国+CloudFlare节点_4
+      - 美国ee89_44
+      - 美国rr12_4
+      - 美国ee89_45
+      - 美国ee89_46
+      - 美国25_52
+      - 美国25_53
+      - 美国25_54
+      - 美国25_55
+      - 美国ee89_47
+      - 法国25_9
+      - 美国25_56
+      - 法国25_10
+      - 美国25_57
+      - 美国+CloudFlare节点_5
+      - 法国26
+      - 法国26_1
+      - 法国26_2
+      - 法国26_3
+      - 法国26_4
+      - 法国26_5
+      - 法国26_6
+      - 法国26_7
+      - 加拿大26
+      - 加拿大26_1
+      - 加拿大26_2
+      - 加拿大26_3
+      - 加拿大26_4
+      - 美国26
+      - 美国26_1
+      - 美国26_2
+      - 美国26_3
+      - 美国26_4
+      - 美国26_5
+      - 美国26_6
+      - 美国26_7
+      - 美国26_8
+      - 美国26_9
+      - 美国26_10
+      - 美国26_11
+      - 美国26_12
+      - 美国26_13
+      - 美国26_14
+      - 美国26_15
+      - 美国26_16
+      - 美国26_17
+      - 美国26_18
+      - 美国26_19
+      - 美国26_20
+      - 美国26_21
+      - 美国26_22
+      - 美国26_23
+      - 美国26_24
+      - 美国26_25
+      - 美国26_26
+      - 美国26_27
+      - 美国26_28
+      - 美国26_29
+      - 美国26_30
+      - 美国26_31
+      - 美国26_32
+      - 美国26_33
+      - 美国26_34
+      - 美国26_35
+      - 美国26_36
+      - 美国26_37
+      - 美国26_38
+      - 美国26_39
+      - 美国26_40
+      - 美国26_41
+      - 美国26_42
+      - 美国26_43
+      - 美国26_44
+      - 美国26_45
+      - 美国26_46
+      - 美国26_47
+      - 美国26_48
+      - 美国26_49
+      - 美国26_50
+      - 美国26_51
+      - 美国26_52
+      - 美国26_53
+      - 美国26_54
+      - 美国26_55
+      - 美国26_56
+      - 美国26_57
+      - 美国26_58
+      - 美国26_59
+      - 美国26_60
+      - 美国26_61
+      - 美国26_62
+      - 美国26_63
+      - 美国26_64
+      - 美国26_65
+      - 美国26_66
+      - 美国26_67
+      - 美国26_68
+      - 美国26_69
+      - 美国26_70
+      - 美国26_71
+      - 美国26_72
+      - 美国26_73
+      - 美国26_74
+      - 俄罗斯+12
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 美国+CloudFlare节点_11
+      - 🇺🇸 美国 | USA
+      - 🇸🇪 瑞典 | SWE
+      - 美国 06
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 法国89
+      - 法国189
+      - 法国3
+      - 法国4
+      - 香港ee89
+      - 美国ee89
+      - 美国25
+      - 美国ee89_1
+      - 美国ee89_2
+      - 美国25_1
+      - 美国ee89_3
+      - 美国25_2
+      - 加拿大25
+      - 美国ee89_4
+      - 美国25_3
+      - 美国ee77
+      - 美国rr12
+      - 加拿大25_1
+      - 美国25_4
+      - 香港25
+      - 美国25_5
+      - 美国ee89_5
+      - 美国+CloudFlare节点
+      - 法国25
+      - 法国rr12
+      - 美国25_6
+      - 加拿大25_2
+      - 加拿大ee89
+      - 美国ee89_6
+      - 美国ee89_7
+      - 美国ee89_8
+      - 美国ee77_1
+      - 美国ee89_9
+      - 美国ee89_10
+      - 美国25_7
+      - 美国25_8
+      - 美国ee89_11
+      - 法国25_1
+      - 美国ee89_12
+      - 美国ee89_13
+      - 美国25_9
+      - 美国25_10
+      - 美国ee77_2
+      - 美国ee89_14
+      - 美国ee89_15
+      - 美国ee77_3
+      - 美国ee89_16
+      - 美国ee89_17
+      - 美国ee89_18
+      - 美国25_11
+      - 美国ee89_19
+      - 法国25_2
+      - 美国ee89_20
+      - 法国25_3
+      - 美国rr12_1
+      - 美国+CloudFlare节点_1
+      - 美国ee89_21
+      - 美国ee89_22
+      - 美国25_12
+      - 美国25_13
+      - 美国ee89_23
+      - 美国25_14
+      - 美国ee89_24
+      - 美国ee89_25
+      - 美国25_15
+      - 美国25_16
+      - 美国25_17
+      - 美国25_18
+      - 美国25_19
+      - 美国25_20
+      - 美国25_21
+      - 美国25_22
+      - 法国25_4
+      - 加拿大25_3
+      - 法国25_5
+      - 美国ee89_26
+      - 美国25_23
+      - 加拿大25_4
+      - 美国ee89_27
+      - 加拿大25_5
+      - 美国ee89_28
+      - 美国ee89_29
+      - 法国ee89
+      - 美国ee22
+      - 美国ee89_30
+      - 美国25_24
+      - 美国25_25
+      - 加拿大25_6
+      - 加拿大25_7
+      - 美国ee77_4
+      - 美国ee89_31
+      - 美国25_26
+      - 法国25_6
+      - 美国25_27
+      - 美国ee89_32
+      - 美国25_28
+      - 加拿大25_8
+      - 美国ee89_33
+      - 美国ee89_34
+      - 美国25_29
+      - 美国ee89_35
+      - 美国ee22_1
+      - 美国25_30
+      - 美国25_31
+      - 美国25_32
+      - 加拿大25_9
+      - 美国ee89_36
+      - 美国25_33
+      - 美国25_34
+      - 美国25_35
+      - 美国25_36
+      - 美国+CloudFlare节点_2
+      - 美国25_37
+      - 美国25_38
+      - 法国25_7
+      - 美国ee77_5
+      - 美国ee89_37
+      - 美国ee89_38
+      - 美国25_39
+      - 美国25_40
+      - 美国25_41
+      - 美国25_42
+      - 美国25_43
+      - 加拿大25_10
+      - 美国ee89_39
+      - 美国25_44
+      - 美国25_45
+      - 美国25_46
+      - 美国25_47
+      - 美国ee89_40
+      - 美国25_48
+      - 美国rr12_2
+      - 美国ee89_41
+      - 美国ee89_42
+      - 美国ee89_43
+      - 美国25_49
+      - 法国25_8
+      - 美国rr12_3
+      - 美国+CloudFlare节点_3
+      - 美国25_50
+      - 美国25_51
+      - 美国+CloudFlare节点_4
+      - 美国ee89_44
+      - 美国rr12_4
+      - 美国ee89_45
+      - 美国ee89_46
+      - 美国25_52
+      - 美国25_53
+      - 美国25_54
+      - 美国25_55
+      - 美国ee89_47
+      - 法国25_9
+      - 美国25_56
+      - 法国25_10
+      - 美国25_57
+      - 美国+CloudFlare节点_5
+      - 法国26
+      - 法国26_1
+      - 法国26_2
+      - 法国26_3
+      - 法国26_4
+      - 法国26_5
+      - 法国26_6
+      - 法国26_7
+      - 加拿大26
+      - 加拿大26_1
+      - 加拿大26_2
+      - 加拿大26_3
+      - 加拿大26_4
+      - 美国26
+      - 美国26_1
+      - 美国26_2
+      - 美国26_3
+      - 美国26_4
+      - 美国26_5
+      - 美国26_6
+      - 美国26_7
+      - 美国26_8
+      - 美国26_9
+      - 美国26_10
+      - 美国26_11
+      - 美国26_12
+      - 美国26_13
+      - 美国26_14
+      - 美国26_15
+      - 美国26_16
+      - 美国26_17
+      - 美国26_18
+      - 美国26_19
+      - 美国26_20
+      - 美国26_21
+      - 美国26_22
+      - 美国26_23
+      - 美国26_24
+      - 美国26_25
+      - 美国26_26
+      - 美国26_27
+      - 美国26_28
+      - 美国26_29
+      - 美国26_30
+      - 美国26_31
+      - 美国26_32
+      - 美国26_33
+      - 美国26_34
+      - 美国26_35
+      - 美国26_36
+      - 美国26_37
+      - 美国26_38
+      - 美国26_39
+      - 美国26_40
+      - 美国26_41
+      - 美国26_42
+      - 美国26_43
+      - 美国26_44
+      - 美国26_45
+      - 美国26_46
+      - 美国26_47
+      - 美国26_48
+      - 美国26_49
+      - 美国26_50
+      - 美国26_51
+      - 美国26_52
+      - 美国26_53
+      - 美国26_54
+      - 美国26_55
+      - 美国26_56
+      - 美国26_57
+      - 美国26_58
+      - 美国26_59
+      - 美国26_60
+      - 美国26_61
+      - 美国26_62
+      - 美国26_63
+      - 美国26_64
+      - 美国26_65
+      - 美国26_66
+      - 美国26_67
+      - 美国26_68
+      - 美国26_69
+      - 美国26_70
+      - 美国26_71
+      - 美国26_72
+      - 美国26_73
+      - 美国26_74
+      - 俄罗斯+12
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 美国+CloudFlare节点_11
+      - 🇺🇸 美国 | USA
+      - 🇸🇪 瑞典 | SWE
+      - 美国 06
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 法国89
+      - 法国189
+      - 法国3
+      - 法国4
+      - 香港ee89
+      - 美国ee89
+      - 美国25
+      - 美国ee89_1
+      - 美国ee89_2
+      - 美国25_1
+      - 美国ee89_3
+      - 美国25_2
+      - 加拿大25
+      - 美国ee89_4
+      - 美国25_3
+      - 美国ee77
+      - 美国rr12
+      - 加拿大25_1
+      - 美国25_4
+      - 香港25
+      - 美国25_5
+      - 美国ee89_5
+      - 美国+CloudFlare节点
+      - 法国25
+      - 法国rr12
+      - 美国25_6
+      - 加拿大25_2
+      - 加拿大ee89
+      - 美国ee89_6
+      - 美国ee89_7
+      - 美国ee89_8
+      - 美国ee77_1
+      - 美国ee89_9
+      - 美国ee89_10
+      - 美国25_7
+      - 美国25_8
+      - 美国ee89_11
+      - 法国25_1
+      - 美国ee89_12
+      - 美国ee89_13
+      - 美国25_9
+      - 美国25_10
+      - 美国ee77_2
+      - 美国ee89_14
+      - 美国ee89_15
+      - 美国ee77_3
+      - 美国ee89_16
+      - 美国ee89_17
+      - 美国ee89_18
+      - 美国25_11
+      - 美国ee89_19
+      - 法国25_2
+      - 美国ee89_20
+      - 法国25_3
+      - 美国rr12_1
+      - 美国+CloudFlare节点_1
+      - 美国ee89_21
+      - 美国ee89_22
+      - 美国25_12
+      - 美国25_13
+      - 美国ee89_23
+      - 美国25_14
+      - 美国ee89_24
+      - 美国ee89_25
+      - 美国25_15
+      - 美国25_16
+      - 美国25_17
+      - 美国25_18
+      - 美国25_19
+      - 美国25_20
+      - 美国25_21
+      - 美国25_22
+      - 法国25_4
+      - 加拿大25_3
+      - 法国25_5
+      - 美国ee89_26
+      - 美国25_23
+      - 加拿大25_4
+      - 美国ee89_27
+      - 加拿大25_5
+      - 美国ee89_28
+      - 美国ee89_29
+      - 法国ee89
+      - 美国ee22
+      - 美国ee89_30
+      - 美国25_24
+      - 美国25_25
+      - 加拿大25_6
+      - 加拿大25_7
+      - 美国ee77_4
+      - 美国ee89_31
+      - 美国25_26
+      - 法国25_6
+      - 美国25_27
+      - 美国ee89_32
+      - 美国25_28
+      - 加拿大25_8
+      - 美国ee89_33
+      - 美国ee89_34
+      - 美国25_29
+      - 美国ee89_35
+      - 美国ee22_1
+      - 美国25_30
+      - 美国25_31
+      - 美国25_32
+      - 加拿大25_9
+      - 美国ee89_36
+      - 美国25_33
+      - 美国25_34
+      - 美国25_35
+      - 美国25_36
+      - 美国+CloudFlare节点_2
+      - 美国25_37
+      - 美国25_38
+      - 法国25_7
+      - 美国ee77_5
+      - 美国ee89_37
+      - 美国ee89_38
+      - 美国25_39
+      - 美国25_40
+      - 美国25_41
+      - 美国25_42
+      - 美国25_43
+      - 加拿大25_10
+      - 美国ee89_39
+      - 美国25_44
+      - 美国25_45
+      - 美国25_46
+      - 美国25_47
+      - 美国ee89_40
+      - 美国25_48
+      - 美国rr12_2
+      - 美国ee89_41
+      - 美国ee89_42
+      - 美国ee89_43
+      - 美国25_49
+      - 法国25_8
+      - 美国rr12_3
+      - 美国+CloudFlare节点_3
+      - 美国25_50
+      - 美国25_51
+      - 美国+CloudFlare节点_4
+      - 美国ee89_44
+      - 美国rr12_4
+      - 美国ee89_45
+      - 美国ee89_46
+      - 美国25_52
+      - 美国25_53
+      - 美国25_54
+      - 美国25_55
+      - 美国ee89_47
+      - 法国25_9
+      - 美国25_56
+      - 法国25_10
+      - 美国25_57
+      - 美国+CloudFlare节点_5
+      - 法国26
+      - 法国26_1
+      - 法国26_2
+      - 法国26_3
+      - 法国26_4
+      - 法国26_5
+      - 法国26_6
+      - 法国26_7
+      - 加拿大26
+      - 加拿大26_1
+      - 加拿大26_2
+      - 加拿大26_3
+      - 加拿大26_4
+      - 美国26
+      - 美国26_1
+      - 美国26_2
+      - 美国26_3
+      - 美国26_4
+      - 美国26_5
+      - 美国26_6
+      - 美国26_7
+      - 美国26_8
+      - 美国26_9
+      - 美国26_10
+      - 美国26_11
+      - 美国26_12
+      - 美国26_13
+      - 美国26_14
+      - 美国26_15
+      - 美国26_16
+      - 美国26_17
+      - 美国26_18
+      - 美国26_19
+      - 美国26_20
+      - 美国26_21
+      - 美国26_22
+      - 美国26_23
+      - 美国26_24
+      - 美国26_25
+      - 美国26_26
+      - 美国26_27
+      - 美国26_28
+      - 美国26_29
+      - 美国26_30
+      - 美国26_31
+      - 美国26_32
+      - 美国26_33
+      - 美国26_34
+      - 美国26_35
+      - 美国26_36
+      - 美国26_37
+      - 美国26_38
+      - 美国26_39
+      - 美国26_40
+      - 美国26_41
+      - 美国26_42
+      - 美国26_43
+      - 美国26_44
+      - 美国26_45
+      - 美国26_46
+      - 美国26_47
+      - 美国26_48
+      - 美国26_49
+      - 美国26_50
+      - 美国26_51
+      - 美国26_52
+      - 美国26_53
+      - 美国26_54
+      - 美国26_55
+      - 美国26_56
+      - 美国26_57
+      - 美国26_58
+      - 美国26_59
+      - 美国26_60
+      - 美国26_61
+      - 美国26_62
+      - 美国26_63
+      - 美国26_64
+      - 美国26_65
+      - 美国26_66
+      - 美国26_67
+      - 美国26_68
+      - 美国26_69
+      - 美国26_70
+      - 美国26_71
+      - 美国26_72
+      - 美国26_73
+      - 美国26_74
+      - 俄罗斯+12
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 美国+CloudFlare节点_11
+      - 🇺🇸 美国 | USA
+      - 🇸🇪 瑞典 | SWE
+      - 美国 06
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 法国89
+      - 法国189
+      - 法国3
+      - 法国4
+      - 香港ee89
+      - 美国ee89
+      - 美国25
+      - 美国ee89_1
+      - 美国ee89_2
+      - 美国25_1
+      - 美国ee89_3
+      - 美国25_2
+      - 加拿大25
+      - 美国ee89_4
+      - 美国25_3
+      - 美国ee77
+      - 美国rr12
+      - 加拿大25_1
+      - 美国25_4
+      - 香港25
+      - 美国25_5
+      - 美国ee89_5
+      - 美国+CloudFlare节点
+      - 法国25
+      - 法国rr12
+      - 美国25_6
+      - 加拿大25_2
+      - 加拿大ee89
+      - 美国ee89_6
+      - 美国ee89_7
+      - 美国ee89_8
+      - 美国ee77_1
+      - 美国ee89_9
+      - 美国ee89_10
+      - 美国25_7
+      - 美国25_8
+      - 美国ee89_11
+      - 法国25_1
+      - 美国ee89_12
+      - 美国ee89_13
+      - 美国25_9
+      - 美国25_10
+      - 美国ee77_2
+      - 美国ee89_14
+      - 美国ee89_15
+      - 美国ee77_3
+      - 美国ee89_16
+      - 美国ee89_17
+      - 美国ee89_18
+      - 美国25_11
+      - 美国ee89_19
+      - 法国25_2
+      - 美国ee89_20
+      - 法国25_3
+      - 美国rr12_1
+      - 美国+CloudFlare节点_1
+      - 美国ee89_21
+      - 美国ee89_22
+      - 美国25_12
+      - 美国25_13
+      - 美国ee89_23
+      - 美国25_14
+      - 美国ee89_24
+      - 美国ee89_25
+      - 美国25_15
+      - 美国25_16
+      - 美国25_17
+      - 美国25_18
+      - 美国25_19
+      - 美国25_20
+      - 美国25_21
+      - 美国25_22
+      - 法国25_4
+      - 加拿大25_3
+      - 法国25_5
+      - 美国ee89_26
+      - 美国25_23
+      - 加拿大25_4
+      - 美国ee89_27
+      - 加拿大25_5
+      - 美国ee89_28
+      - 美国ee89_29
+      - 法国ee89
+      - 美国ee22
+      - 美国ee89_30
+      - 美国25_24
+      - 美国25_25
+      - 加拿大25_6
+      - 加拿大25_7
+      - 美国ee77_4
+      - 美国ee89_31
+      - 美国25_26
+      - 法国25_6
+      - 美国25_27
+      - 美国ee89_32
+      - 美国25_28
+      - 加拿大25_8
+      - 美国ee89_33
+      - 美国ee89_34
+      - 美国25_29
+      - 美国ee89_35
+      - 美国ee22_1
+      - 美国25_30
+      - 美国25_31
+      - 美国25_32
+      - 加拿大25_9
+      - 美国ee89_36
+      - 美国25_33
+      - 美国25_34
+      - 美国25_35
+      - 美国25_36
+      - 美国+CloudFlare节点_2
+      - 美国25_37
+      - 美国25_38
+      - 法国25_7
+      - 美国ee77_5
+      - 美国ee89_37
+      - 美国ee89_38
+      - 美国25_39
+      - 美国25_40
+      - 美国25_41
+      - 美国25_42
+      - 美国25_43
+      - 加拿大25_10
+      - 美国ee89_39
+      - 美国25_44
+      - 美国25_45
+      - 美国25_46
+      - 美国25_47
+      - 美国ee89_40
+      - 美国25_48
+      - 美国rr12_2
+      - 美国ee89_41
+      - 美国ee89_42
+      - 美国ee89_43
+      - 美国25_49
+      - 法国25_8
+      - 美国rr12_3
+      - 美国+CloudFlare节点_3
+      - 美国25_50
+      - 美国25_51
+      - 美国+CloudFlare节点_4
+      - 美国ee89_44
+      - 美国rr12_4
+      - 美国ee89_45
+      - 美国ee89_46
+      - 美国25_52
+      - 美国25_53
+      - 美国25_54
+      - 美国25_55
+      - 美国ee89_47
+      - 法国25_9
+      - 美国25_56
+      - 法国25_10
+      - 美国25_57
+      - 美国+CloudFlare节点_5
+      - 法国26
+      - 法国26_1
+      - 法国26_2
+      - 法国26_3
+      - 法国26_4
+      - 法国26_5
+      - 法国26_6
+      - 法国26_7
+      - 加拿大26
+      - 加拿大26_1
+      - 加拿大26_2
+      - 加拿大26_3
+      - 加拿大26_4
+      - 美国26
+      - 美国26_1
+      - 美国26_2
+      - 美国26_3
+      - 美国26_4
+      - 美国26_5
+      - 美国26_6
+      - 美国26_7
+      - 美国26_8
+      - 美国26_9
+      - 美国26_10
+      - 美国26_11
+      - 美国26_12
+      - 美国26_13
+      - 美国26_14
+      - 美国26_15
+      - 美国26_16
+      - 美国26_17
+      - 美国26_18
+      - 美国26_19
+      - 美国26_20
+      - 美国26_21
+      - 美国26_22
+      - 美国26_23
+      - 美国26_24
+      - 美国26_25
+      - 美国26_26
+      - 美国26_27
+      - 美国26_28
+      - 美国26_29
+      - 美国26_30
+      - 美国26_31
+      - 美国26_32
+      - 美国26_33
+      - 美国26_34
+      - 美国26_35
+      - 美国26_36
+      - 美国26_37
+      - 美国26_38
+      - 美国26_39
+      - 美国26_40
+      - 美国26_41
+      - 美国26_42
+      - 美国26_43
+      - 美国26_44
+      - 美国26_45
+      - 美国26_46
+      - 美国26_47
+      - 美国26_48
+      - 美国26_49
+      - 美国26_50
+      - 美国26_51
+      - 美国26_52
+      - 美国26_53
+      - 美国26_54
+      - 美国26_55
+      - 美国26_56
+      - 美国26_57
+      - 美国26_58
+      - 美国26_59
+      - 美国26_60
+      - 美国26_61
+      - 美国26_62
+      - 美国26_63
+      - 美国26_64
+      - 美国26_65
+      - 美国26_66
+      - 美国26_67
+      - 美国26_68
+      - 美国26_69
+      - 美国26_70
+      - 美国26_71
+      - 美国26_72
+      - 美国26_73
+      - 美国26_74
+      - 俄罗斯+12
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 美国+CloudFlare节点_11
+      - 🇺🇸 美国 | USA
+      - 🇸🇪 瑞典 | SWE
+      - 美国 06
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 法国89
+      - 法国189
+      - 法国3
+      - 法国4
+      - 香港ee89
+      - 美国ee89
+      - 美国25
+      - 美国ee89_1
+      - 美国ee89_2
+      - 美国25_1
+      - 美国ee89_3
+      - 美国25_2
+      - 加拿大25
+      - 美国ee89_4
+      - 美国25_3
+      - 美国ee77
+      - 美国rr12
+      - 加拿大25_1
+      - 美国25_4
+      - 香港25
+      - 美国25_5
+      - 美国ee89_5
+      - 美国+CloudFlare节点
+      - 法国25
+      - 法国rr12
+      - 美国25_6
+      - 加拿大25_2
+      - 加拿大ee89
+      - 美国ee89_6
+      - 美国ee89_7
+      - 美国ee89_8
+      - 美国ee77_1
+      - 美国ee89_9
+      - 美国ee89_10
+      - 美国25_7
+      - 美国25_8
+      - 美国ee89_11
+      - 法国25_1
+      - 美国ee89_12
+      - 美国ee89_13
+      - 美国25_9
+      - 美国25_10
+      - 美国ee77_2
+      - 美国ee89_14
+      - 美国ee89_15
+      - 美国ee77_3
+      - 美国ee89_16
+      - 美国ee89_17
+      - 美国ee89_18
+      - 美国25_11
+      - 美国ee89_19
+      - 法国25_2
+      - 美国ee89_20
+      - 法国25_3
+      - 美国rr12_1
+      - 美国+CloudFlare节点_1
+      - 美国ee89_21
+      - 美国ee89_22
+      - 美国25_12
+      - 美国25_13
+      - 美国ee89_23
+      - 美国25_14
+      - 美国ee89_24
+      - 美国ee89_25
+      - 美国25_15
+      - 美国25_16
+      - 美国25_17
+      - 美国25_18
+      - 美国25_19
+      - 美国25_20
+      - 美国25_21
+      - 美国25_22
+      - 法国25_4
+      - 加拿大25_3
+      - 法国25_5
+      - 美国ee89_26
+      - 美国25_23
+      - 加拿大25_4
+      - 美国ee89_27
+      - 加拿大25_5
+      - 美国ee89_28
+      - 美国ee89_29
+      - 法国ee89
+      - 美国ee22
+      - 美国ee89_30
+      - 美国25_24
+      - 美国25_25
+      - 加拿大25_6
+      - 加拿大25_7
+      - 美国ee77_4
+      - 美国ee89_31
+      - 美国25_26
+      - 法国25_6
+      - 美国25_27
+      - 美国ee89_32
+      - 美国25_28
+      - 加拿大25_8
+      - 美国ee89_33
+      - 美国ee89_34
+      - 美国25_29
+      - 美国ee89_35
+      - 美国ee22_1
+      - 美国25_30
+      - 美国25_31
+      - 美国25_32
+      - 加拿大25_9
+      - 美国ee89_36
+      - 美国25_33
+      - 美国25_34
+      - 美国25_35
+      - 美国25_36
+      - 美国+CloudFlare节点_2
+      - 美国25_37
+      - 美国25_38
+      - 法国25_7
+      - 美国ee77_5
+      - 美国ee89_37
+      - 美国ee89_38
+      - 美国25_39
+      - 美国25_40
+      - 美国25_41
+      - 美国25_42
+      - 美国25_43
+      - 加拿大25_10
+      - 美国ee89_39
+      - 美国25_44
+      - 美国25_45
+      - 美国25_46
+      - 美国25_47
+      - 美国ee89_40
+      - 美国25_48
+      - 美国rr12_2
+      - 美国ee89_41
+      - 美国ee89_42
+      - 美国ee89_43
+      - 美国25_49
+      - 法国25_8
+      - 美国rr12_3
+      - 美国+CloudFlare节点_3
+      - 美国25_50
+      - 美国25_51
+      - 美国+CloudFlare节点_4
+      - 美国ee89_44
+      - 美国rr12_4
+      - 美国ee89_45
+      - 美国ee89_46
+      - 美国25_52
+      - 美国25_53
+      - 美国25_54
+      - 美国25_55
+      - 美国ee89_47
+      - 法国25_9
+      - 美国25_56
+      - 法国25_10
+      - 美国25_57
+      - 美国+CloudFlare节点_5
+      - 法国26
+      - 法国26_1
+      - 法国26_2
+      - 法国26_3
+      - 法国26_4
+      - 法国26_5
+      - 法国26_6
+      - 法国26_7
+      - 加拿大26
+      - 加拿大26_1
+      - 加拿大26_2
+      - 加拿大26_3
+      - 加拿大26_4
+      - 美国26
+      - 美国26_1
+      - 美国26_2
+      - 美国26_3
+      - 美国26_4
+      - 美国26_5
+      - 美国26_6
+      - 美国26_7
+      - 美国26_8
+      - 美国26_9
+      - 美国26_10
+      - 美国26_11
+      - 美国26_12
+      - 美国26_13
+      - 美国26_14
+      - 美国26_15
+      - 美国26_16
+      - 美国26_17
+      - 美国26_18
+      - 美国26_19
+      - 美国26_20
+      - 美国26_21
+      - 美国26_22
+      - 美国26_23
+      - 美国26_24
+      - 美国26_25
+      - 美国26_26
+      - 美国26_27
+      - 美国26_28
+      - 美国26_29
+      - 美国26_30
+      - 美国26_31
+      - 美国26_32
+      - 美国26_33
+      - 美国26_34
+      - 美国26_35
+      - 美国26_36
+      - 美国26_37
+      - 美国26_38
+      - 美国26_39
+      - 美国26_40
+      - 美国26_41
+      - 美国26_42
+      - 美国26_43
+      - 美国26_44
+      - 美国26_45
+      - 美国26_46
+      - 美国26_47
+      - 美国26_48
+      - 美国26_49
+      - 美国26_50
+      - 美国26_51
+      - 美国26_52
+      - 美国26_53
+      - 美国26_54
+      - 美国26_55
+      - 美国26_56
+      - 美国26_57
+      - 美国26_58
+      - 美国26_59
+      - 美国26_60
+      - 美国26_61
+      - 美国26_62
+      - 美国26_63
+      - 美国26_64
+      - 美国26_65
+      - 美国26_66
+      - 美国26_67
+      - 美国26_68
+      - 美国26_69
+      - 美国26_70
+      - 美国26_71
+      - 美国26_72
+      - 美国26_73
+      - 美国26_74
+      - 俄罗斯+12
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 美国+CloudFlare节点_11
+      - 🇺🇸 美国 | USA
+      - 🇸🇪 瑞典 | SWE
+      - 美国 06
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 法国89
+      - 法国189
+      - 法国3
+      - 法国4
+      - 香港ee89
+      - 美国ee89
+      - 美国25
+      - 美国ee89_1
+      - 美国ee89_2
+      - 美国25_1
+      - 美国ee89_3
+      - 美国25_2
+      - 加拿大25
+      - 美国ee89_4
+      - 美国25_3
+      - 美国ee77
+      - 美国rr12
+      - 加拿大25_1
+      - 美国25_4
+      - 香港25
+      - 美国25_5
+      - 美国ee89_5
+      - 美国+CloudFlare节点
+      - 法国25
+      - 法国rr12
+      - 美国25_6
+      - 加拿大25_2
+      - 加拿大ee89
+      - 美国ee89_6
+      - 美国ee89_7
+      - 美国ee89_8
+      - 美国ee77_1
+      - 美国ee89_9
+      - 美国ee89_10
+      - 美国25_7
+      - 美国25_8
+      - 美国ee89_11
+      - 法国25_1
+      - 美国ee89_12
+      - 美国ee89_13
+      - 美国25_9
+      - 美国25_10
+      - 美国ee77_2
+      - 美国ee89_14
+      - 美国ee89_15
+      - 美国ee77_3
+      - 美国ee89_16
+      - 美国ee89_17
+      - 美国ee89_18
+      - 美国25_11
+      - 美国ee89_19
+      - 法国25_2
+      - 美国ee89_20
+      - 法国25_3
+      - 美国rr12_1
+      - 美国+CloudFlare节点_1
+      - 美国ee89_21
+      - 美国ee89_22
+      - 美国25_12
+      - 美国25_13
+      - 美国ee89_23
+      - 美国25_14
+      - 美国ee89_24
+      - 美国ee89_25
+      - 美国25_15
+      - 美国25_16
+      - 美国25_17
+      - 美国25_18
+      - 美国25_19
+      - 美国25_20
+      - 美国25_21
+      - 美国25_22
+      - 法国25_4
+      - 加拿大25_3
+      - 法国25_5
+      - 美国ee89_26
+      - 美国25_23
+      - 加拿大25_4
+      - 美国ee89_27
+      - 加拿大25_5
+      - 美国ee89_28
+      - 美国ee89_29
+      - 法国ee89
+      - 美国ee22
+      - 美国ee89_30
+      - 美国25_24
+      - 美国25_25
+      - 加拿大25_6
+      - 加拿大25_7
+      - 美国ee77_4
+      - 美国ee89_31
+      - 美国25_26
+      - 法国25_6
+      - 美国25_27
+      - 美国ee89_32
+      - 美国25_28
+      - 加拿大25_8
+      - 美国ee89_33
+      - 美国ee89_34
+      - 美国25_29
+      - 美国ee89_35
+      - 美国ee22_1
+      - 美国25_30
+      - 美国25_31
+      - 美国25_32
+      - 加拿大25_9
+      - 美国ee89_36
+      - 美国25_33
+      - 美国25_34
+      - 美国25_35
+      - 美国25_36
+      - 美国+CloudFlare节点_2
+      - 美国25_37
+      - 美国25_38
+      - 法国25_7
+      - 美国ee77_5
+      - 美国ee89_37
+      - 美国ee89_38
+      - 美国25_39
+      - 美国25_40
+      - 美国25_41
+      - 美国25_42
+      - 美国25_43
+      - 加拿大25_10
+      - 美国ee89_39
+      - 美国25_44
+      - 美国25_45
+      - 美国25_46
+      - 美国25_47
+      - 美国ee89_40
+      - 美国25_48
+      - 美国rr12_2
+      - 美国ee89_41
+      - 美国ee89_42
+      - 美国ee89_43
+      - 美国25_49
+      - 法国25_8
+      - 美国rr12_3
+      - 美国+CloudFlare节点_3
+      - 美国25_50
+      - 美国25_51
+      - 美国+CloudFlare节点_4
+      - 美国ee89_44
+      - 美国rr12_4
+      - 美国ee89_45
+      - 美国ee89_46
+      - 美国25_52
+      - 美国25_53
+      - 美国25_54
+      - 美国25_55
+      - 美国ee89_47
+      - 法国25_9
+      - 美国25_56
+      - 法国25_10
+      - 美国25_57
+      - 美国+CloudFlare节点_5
+      - 法国26
+      - 法国26_1
+      - 法国26_2
+      - 法国26_3
+      - 法国26_4
+      - 法国26_5
+      - 法国26_6
+      - 法国26_7
+      - 加拿大26
+      - 加拿大26_1
+      - 加拿大26_2
+      - 加拿大26_3
+      - 加拿大26_4
+      - 美国26
+      - 美国26_1
+      - 美国26_2
+      - 美国26_3
+      - 美国26_4
+      - 美国26_5
+      - 美国26_6
+      - 美国26_7
+      - 美国26_8
+      - 美国26_9
+      - 美国26_10
+      - 美国26_11
+      - 美国26_12
+      - 美国26_13
+      - 美国26_14
+      - 美国26_15
+      - 美国26_16
+      - 美国26_17
+      - 美国26_18
+      - 美国26_19
+      - 美国26_20
+      - 美国26_21
+      - 美国26_22
+      - 美国26_23
+      - 美国26_24
+      - 美国26_25
+      - 美国26_26
+      - 美国26_27
+      - 美国26_28
+      - 美国26_29
+      - 美国26_30
+      - 美国26_31
+      - 美国26_32
+      - 美国26_33
+      - 美国26_34
+      - 美国26_35
+      - 美国26_36
+      - 美国26_37
+      - 美国26_38
+      - 美国26_39
+      - 美国26_40
+      - 美国26_41
+      - 美国26_42
+      - 美国26_43
+      - 美国26_44
+      - 美国26_45
+      - 美国26_46
+      - 美国26_47
+      - 美国26_48
+      - 美国26_49
+      - 美国26_50
+      - 美国26_51
+      - 美国26_52
+      - 美国26_53
+      - 美国26_54
+      - 美国26_55
+      - 美国26_56
+      - 美国26_57
+      - 美国26_58
+      - 美国26_59
+      - 美国26_60
+      - 美国26_61
+      - 美国26_62
+      - 美国26_63
+      - 美国26_64
+      - 美国26_65
+      - 美国26_66
+      - 美国26_67
+      - 美国26_68
+      - 美国26_69
+      - 美国26_70
+      - 美国26_71
+      - 美国26_72
+      - 美国26_73
+      - 美国26_74
+      - 俄罗斯+12
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 美国+CloudFlare节点_11
+      - 🇺🇸 美国 | USA
+      - 🇸🇪 瑞典 | SWE
+      - 美国 06
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 法国89
+      - 法国189
+      - 法国3
+      - 法国4
+      - 香港ee89
+      - 美国ee89
+      - 美国25
+      - 美国ee89_1
+      - 美国ee89_2
+      - 美国25_1
+      - 美国ee89_3
+      - 美国25_2
+      - 加拿大25
+      - 美国ee89_4
+      - 美国25_3
+      - 美国ee77
+      - 美国rr12
+      - 加拿大25_1
+      - 美国25_4
+      - 香港25
+      - 美国25_5
+      - 美国ee89_5
+      - 美国+CloudFlare节点
+      - 法国25
+      - 法国rr12
+      - 美国25_6
+      - 加拿大25_2
+      - 加拿大ee89
+      - 美国ee89_6
+      - 美国ee89_7
+      - 美国ee89_8
+      - 美国ee77_1
+      - 美国ee89_9
+      - 美国ee89_10
+      - 美国25_7
+      - 美国25_8
+      - 美国ee89_11
+      - 法国25_1
+      - 美国ee89_12
+      - 美国ee89_13
+      - 美国25_9
+      - 美国25_10
+      - 美国ee77_2
+      - 美国ee89_14
+      - 美国ee89_15
+      - 美国ee77_3
+      - 美国ee89_16
+      - 美国ee89_17
+      - 美国ee89_18
+      - 美国25_11
+      - 美国ee89_19
+      - 法国25_2
+      - 美国ee89_20
+      - 法国25_3
+      - 美国rr12_1
+      - 美国+CloudFlare节点_1
+      - 美国ee89_21
+      - 美国ee89_22
+      - 美国25_12
+      - 美国25_13
+      - 美国ee89_23
+      - 美国25_14
+      - 美国ee89_24
+      - 美国ee89_25
+      - 美国25_15
+      - 美国25_16
+      - 美国25_17
+      - 美国25_18
+      - 美国25_19
+      - 美国25_20
+      - 美国25_21
+      - 美国25_22
+      - 法国25_4
+      - 加拿大25_3
+      - 法国25_5
+      - 美国ee89_26
+      - 美国25_23
+      - 加拿大25_4
+      - 美国ee89_27
+      - 加拿大25_5
+      - 美国ee89_28
+      - 美国ee89_29
+      - 法国ee89
+      - 美国ee22
+      - 美国ee89_30
+      - 美国25_24
+      - 美国25_25
+      - 加拿大25_6
+      - 加拿大25_7
+      - 美国ee77_4
+      - 美国ee89_31
+      - 美国25_26
+      - 法国25_6
+      - 美国25_27
+      - 美国ee89_32
+      - 美国25_28
+      - 加拿大25_8
+      - 美国ee89_33
+      - 美国ee89_34
+      - 美国25_29
+      - 美国ee89_35
+      - 美国ee22_1
+      - 美国25_30
+      - 美国25_31
+      - 美国25_32
+      - 加拿大25_9
+      - 美国ee89_36
+      - 美国25_33
+      - 美国25_34
+      - 美国25_35
+      - 美国25_36
+      - 美国+CloudFlare节点_2
+      - 美国25_37
+      - 美国25_38
+      - 法国25_7
+      - 美国ee77_5
+      - 美国ee89_37
+      - 美国ee89_38
+      - 美国25_39
+      - 美国25_40
+      - 美国25_41
+      - 美国25_42
+      - 美国25_43
+      - 加拿大25_10
+      - 美国ee89_39
+      - 美国25_44
+      - 美国25_45
+      - 美国25_46
+      - 美国25_47
+      - 美国ee89_40
+      - 美国25_48
+      - 美国rr12_2
+      - 美国ee89_41
+      - 美国ee89_42
+      - 美国ee89_43
+      - 美国25_49
+      - 法国25_8
+      - 美国rr12_3
+      - 美国+CloudFlare节点_3
+      - 美国25_50
+      - 美国25_51
+      - 美国+CloudFlare节点_4
+      - 美国ee89_44
+      - 美国rr12_4
+      - 美国ee89_45
+      - 美国ee89_46
+      - 美国25_52
+      - 美国25_53
+      - 美国25_54
+      - 美国25_55
+      - 美国ee89_47
+      - 法国25_9
+      - 美国25_56
+      - 法国25_10
+      - 美国25_57
+      - 美国+CloudFlare节点_5
+      - 法国26
+      - 法国26_1
+      - 法国26_2
+      - 法国26_3
+      - 法国26_4
+      - 法国26_5
+      - 法国26_6
+      - 法国26_7
+      - 加拿大26
+      - 加拿大26_1
+      - 加拿大26_2
+      - 加拿大26_3
+      - 加拿大26_4
+      - 美国26
+      - 美国26_1
+      - 美国26_2
+      - 美国26_3
+      - 美国26_4
+      - 美国26_5
+      - 美国26_6
+      - 美国26_7
+      - 美国26_8
+      - 美国26_9
+      - 美国26_10
+      - 美国26_11
+      - 美国26_12
+      - 美国26_13
+      - 美国26_14
+      - 美国26_15
+      - 美国26_16
+      - 美国26_17
+      - 美国26_18
+      - 美国26_19
+      - 美国26_20
+      - 美国26_21
+      - 美国26_22
+      - 美国26_23
+      - 美国26_24
+      - 美国26_25
+      - 美国26_26
+      - 美国26_27
+      - 美国26_28
+      - 美国26_29
+      - 美国26_30
+      - 美国26_31
+      - 美国26_32
+      - 美国26_33
+      - 美国26_34
+      - 美国26_35
+      - 美国26_36
+      - 美国26_37
+      - 美国26_38
+      - 美国26_39
+      - 美国26_40
+      - 美国26_41
+      - 美国26_42
+      - 美国26_43
+      - 美国26_44
+      - 美国26_45
+      - 美国26_46
+      - 美国26_47
+      - 美国26_48
+      - 美国26_49
+      - 美国26_50
+      - 美国26_51
+      - 美国26_52
+      - 美国26_53
+      - 美国26_54
+      - 美国26_55
+      - 美国26_56
+      - 美国26_57
+      - 美国26_58
+      - 美国26_59
+      - 美国26_60
+      - 美国26_61
+      - 美国26_62
+      - 美国26_63
+      - 美国26_64
+      - 美国26_65
+      - 美国26_66
+      - 美国26_67
+      - 美国26_68
+      - 美国26_69
+      - 美国26_70
+      - 美国26_71
+      - 美国26_72
+      - 美国26_73
+      - 美国26_74
+      - 俄罗斯+12
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国+CloudFlare节点_8
+      - 美国+CloudFlare节点_9
+      - 美国+CloudFlare节点_10
+      - 美国+CloudFlare节点_11
+      - 🇺🇸 美国 | USA
+      - 🇸🇪 瑞典 | SWE
+      - 美国 06
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
