@@ -1,0 +1,3223 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 美国21
+    type: vless
+    server: 45.9.156.24
+    port: 443
+    uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+    network: grpc
+    servername: bg2.univesalsrv.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: api.v2.PushService
+    reality-opts:
+      public-key: 0f0dh_FUju5cHgQcIwUjHvxQb9aIZ00p0kZRHeE7Ey4
+      short-id: 501ab3325b77e1ca
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_1
+    type: vless
+    server: 150.40.126.19
+    port: 443
+    uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+    network: grpc
+    servername: rs2.univesalsrv.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: media.v1.ObjectService
+    reality-opts:
+      public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
+      short-id: 1469af2040b7c323
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_2
+    type: vless
+    server: 94.183.209.243
+    port: 8443
+    uuid: 7ab9fe4f-6699-427f-a828-9fcf2496d714
+    network: grpc
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: a8a08a507c
+    reality-opts:
+      public-key: GYGRmooJbciRJqgRyAhyuY4taALwvAGNN721zIKA4g0
+      short-id: d2f6787eda1b6fa0
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_3
+    type: vless
+    server: rs2.univesalsrv.com
+    port: 443
+    uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+    network: grpc
+    servername: rs2.univesalsrv.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: media.v1.ObjectService
+    reality-opts:
+      public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
+      short-id: 1469af2040b7c323
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_4
+    type: vless
+    server: 150.40.126.19
+    port: 443
+    uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+    network: grpc
+    servername: rs2.univesalsrv.com
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: media.v1.ObjectService
+    reality-opts:
+      public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
+      short-id: 1469af2040b7c323
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_5
+    type: vless
+    server: rs2.univesalsrv.com
+    port: 443
+    uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+    network: grpc
+    servername: rs2.univesalsrv.com
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: media.v1.ObjectService
+    reality-opts:
+      public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
+      short-id: 1469af2040b7c323
+    skip-cert-verify: true
+    udp: true
+  - name: 美国261
+    type: trojan
+    server: 104.26.14.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 法国261
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国261_1
+    type: trojan
+    server: 172.67.188.109
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国261_2
+    type: trojan
+    server: 104.26.15.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国261_3
+    type: trojan
+    server: 172.67.221.242
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_6
+    type: trojan
+    server: 162.159.136.234
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国21_7
+    type: trojan
+    server: 188.114.97.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_8
+    type: trojan
+    server: 172.67.221.242
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国261_4
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点
+    type: trojan
+    server: www.speedtest.org
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国21_9
+    type: trojan
+    server: 172.67.74.2
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_10
+    type: trojan
+    server: 104.21.8.107
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_11
+    type: trojan
+    server: 188.114.97.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国21_12
+    type: trojan
+    server: 104.20.6.134
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国21_13
+    type: trojan
+    server: 104.26.14.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国261_5
+    type: trojan
+    server: 104.21.8.107
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国261_6
+    type: trojan
+    server: 172.67.188.109
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国261_7
+    type: trojan
+    server: 188.114.97.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_14
+    type: trojan
+    server: 104.20.6.134
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 香港ee89
+    type: trojan
+    server: www.speedtest.org
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_15
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国261_8
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_16
+    type: trojan
+    server: 104.20.6.134
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25
+    type: trojan
+    server: 104.18.22.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_17
+    type: trojan
+    server: 172.67.188.109
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_18
+    type: trojan
+    server: 104.21.8.107
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_19
+    type: trojan
+    server: 104.16.174.143
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国21_20
+    type: trojan
+    server: 104.16.174.109
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_21
+    type: trojan
+    server: 104.21.46.3
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee89
+    type: trojan
+    server: 104.16.174.72
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_1
+    type: trojan
+    server: 104.17.111.4
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国26
+    type: trojan
+    server: www.ignitelimit.com
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_22
+    type: trojan
+    server: 104.21.8.107
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国261_9
+    type: trojan
+    server: 104.18.152.229
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国261_10
+    type: trojan
+    server: 104.18.152.113
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国26_1
+    type: trojan
+    server: 104.16.174.37
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 法国21
+    type: trojan
+    server: 86.38.214.205
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_23
+    type: trojan
+    server: 104.18.15.230
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_1
+    type: trojan
+    server: 104.18.152.140
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_24
+    type: trojan
+    server: 104.18.152.77
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国ee22
+    type: trojan
+    server: 104.16.174.71
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国261_11
+    type: trojan
+    server: 104.18.152.77
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_25
+    type: trojan
+    server: 104.19.229.21
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: assignment
+    udp: true
+  - name: 美国21_26
+    type: trojan
+    server: 104.17.111.4
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国+CloudFlare节点_2
+    type: trojan
+    server: 104.16.174.34
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_27
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_2
+    type: trojan
+    server: 104.16.174.121
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_28
+    type: trojan
+    server: 104.16.174.121
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: //assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国261_12
+    type: trojan
+    server: 104.16.174.22
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: //assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 加拿大21
+    type: trojan
+    server: 104.18.22.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国25_3
+    type: trojan
+    server: 104.18.152.97
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国25_4
+    type: trojan
+    server: 104.18.152.108
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_29
+    type: trojan
+    server: 104.16.174.117
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国21_30
+    type: trojan
+    server: 104.16.174.148
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国21_31
+    type: trojan
+    server: 104.16.174.148
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23
+    type: vless
+    server: hk01.alilago.org
+    port: 443
+    uuid: 9fc428ed-70fd-4885-8964-636c4678044e
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Vc8ycAgKqfRvtXjvGP0ry_U91o5wgrQlqOhHq72HYRs
+      short-id: 1bc2c1ef1c
+    skip-cert-verify: true
+    udp: true
+  - name: 台湾23
+    type: anytls
+    server: 6ivh.pnuqcnp.cn
+    port: 443
+    password: 9sK2mP8xQ7vL3nZ6
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 台湾23_1
+    type: anytls
+    server: 6ivh.pnuqcnp.cn
+    port: 443
+    password: 9sK2mP8xQ7vL3nZ6
+    sni: images.ctfassets.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国23_1
+    type: ss
+    server: 124.151.25.50
+    port: 8024
+    cipher: aes-128-gcm
+    password: 2wsxcde4
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_2
+    type: ss
+    server: 124.151.25.50
+    port: 8020
+    cipher: aes-128-gcm
+    password: 2wsxcde3
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_3
+    type: vless
+    server: 72.56.41.33
+    port: 40443
+    uuid: 5be7fb02-b6a5-450f-b041-3243b98e8420
+    servername: deepl.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Uvj5H9pDJP0HX2bN7NN7sCQwVCrC5N2NbKf-yuy1ikE
+      short-id: ee33
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_4
+    type: vless
+    server: 217.60.183.29
+    port: 8443
+    uuid: 7ab9fe4f-6699-427f-a828-9fcf2496d714
+    network: grpc
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: e9bf2bffe4
+    reality-opts:
+      public-key: yrWGEL08vAohm7D5SB8zygATsagro3YL265rgZPjLgg
+      short-id: 5c687e4713991ed6
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_5
+    type: vless
+    server: 5.39.202.118
+    port: 443
+    uuid: f495298f-2bdb-4fd8-9ac9-5dd33d1b482a
+    servername: cze1.somiki.best
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: sg6UZorSKWbfwmfxh0SyfZ-SszlhitX43LHtRGTZU2Y
+      short-id: a4c4e97b89446dcd
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_6
+    type: trojan
+    server: join-telegram-channel.tirexnet.kdns.fr
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_7
+    type: trojan
+    server: 188.114.97.7
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_8
+    type: vless
+    server: 34.51.83.115
+    port: 443
+    uuid: 9ad81959-02c6-4679-a419-2af6a16ca07a
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 8vHditYTXXNZ37iNTraU4w129svOplF0QUhZwX2n3FA
+      short-id: dcabbf24adf88abc
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_9
+    type: trojan
+    server: 104.26.14.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国23_10
+    type: trojan
+    server: 104.18.152.73
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国23_11
+    type: trojan
+    server: 104.16.174.72
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_12
+    type: vless
+    server: 172.67.142.235
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 8.I0-4.dE5.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 8.I0-4.De5.NEt
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_13
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: mMmMm.HUANGsHAng.hiDnS.Co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: mmMmm.hUAnGshANG.hidNs.CO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_14
+    type: vless
+    server: 104.21.90.232
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: EEEE.00000.BOND
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: eEee.00000.BoNd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_15
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 4444.hUaNgShaNg.hiDNS.cO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 4444.HuaNGSHAng.hIdNs.cO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_16
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: c.hUaNGShaNG.Hidns.cO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: C.HUaNgsHAnG.hiDNs.Co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_17
+    type: vless
+    server: 172.67.162.57
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: e.00000.BoNd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: e.00000.BonD
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_18
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国23_19
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 2.huaNGshaNG.hIDNS.CO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 2.HUanGsHANg.HiDns.Co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_20
+    type: vless
+    server: 104.21.9.194
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: eeEeEeEee.huaNgsHANG.HidNs.Co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: EEeEeEeEe.HuanGsHanG.hIdNS.co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 韩国23
+    type: hysteria2
+    server: 193.122.115.52
+    port: 20000
+    password: C0DD7bgChaltqnh/T2az6ijM
+    sni: rmgyvpn.rest
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: C0DD7bgChaltqnh/T2az6ijM
+    ports: 20000-30000
+    udp: true
+  - name: 美国23_21
+    type: vless
+    server: 172.67.162.57
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: eE.00000.bONd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: Ee.00000.BoNd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_22
+    type: vless
+    server: 104.21.9.194
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: v.hUaNGSHanG.hiDNS.CO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: V.HUANGShANG.HiDNs.Co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_23
+    type: trojan
+    server: 104.16.174.34
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_24
+    type: trojan
+    server: 162.159.136.234
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国23_25
+    type: vless
+    server: 104.21.38.63
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 6-7.HUAnGsHaNg.bONd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 6-7.HuANGshANG.bond
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_26
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: kkKkK.HuangshANg.HIdns.cO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: KKKkK.HUangsHAnG.HiDnS.co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_27
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: m.hUANGSHang.HIDns.Co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: M.HUaNGShANG.HIDns.co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_28
+    type: trojan
+    server: 104.18.152.225
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 加拿大23
+    type: trojan
+    server: 198.41.223.96
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.ignitelimit.com
+    udp: true
+  - name: 美国23_29
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 3-4.HuanGSHANg.Bond
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 3-4.huANgshAnG.bond
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_30
+    type: trojan
+    server: 216.24.57.1
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_31
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: LlL.hUangShANg.hIDns.cO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: LLL.HUanGshANG.HiDnS.Co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_32
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: ggGgG.HuangShaNG.hidNS.cO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: gGGgg.HuaNGShang.HIdns.Co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_33
+    type: vless
+    server: 104.21.38.63
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 6-1.HUANgShAng.bond
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 6-1.HUANgsHANG.BOnd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_34
+    type: vless
+    server: 172.67.162.57
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: TTT.00000.Bond
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: tTt.00000.BOnd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_35
+    type: trojan
+    server: 104.26.15.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_36
+    type: trojan
+    server: 104.18.152.204
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_37
+    type: vless
+    server: 104.21.38.63
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: aAAAAA.HuANgSHAnG.BONd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: aaaAAa.HuanGShAnG.boNd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_38
+    type: trojan
+    server: 104.17.111.1
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_39
+    type: vless
+    server: 104.21.38.63
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 7-5.HUANGshaNG.BOnD
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 7-5.huAnGshanG.BOND
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_40
+    type: vless
+    server: 104.21.90.232
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: YYY.00000.BONd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: yYy.00000.bond
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_41
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: ee.HUangshAnG.HIdNS.co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: EE.hUaNGsHang.hIdns.cO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_42
+    type: trojan
+    server: 172.67.74.2
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_43
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 4444444.HUaNGshanG.Hidns.Co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 4444444.HUanGshAng.hIdNs.CO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_44
+    type: vless
+    server: 104.21.90.232
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: vvvVvv.00000.boNd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: VvvvVv.00000.BOnd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_45
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 5-2.huaNgsHAnG.bOnd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 5-2.huaNGSHanG.bONd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_46
+    type: vless
+    server: 172.67.162.57
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: iiIii.00000.BonD
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: iiIIi.00000.bONd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_47
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: GGGgGG.HUaNgShANg.HidNS.CO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: GGGgGg.HuangsHaNg.HIdNS.Co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_48
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 7-8.HUANgSHANG.boNd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 7-8.HuanGshang.BOnD
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_49
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 7-7.HuangSHANG.boND
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 7-7.HuAnGSHAnG.bOnD
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_50
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 1-8.hUangShang.bonD
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 1-8.hUAnGShANg.bONd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_51
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 1.HuANgsHaNG.hiDnS.co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 1.hUaNgshANg.HiDNS.cO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_52
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: sssSS.hUaNgsHang.BonD
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: Sssss.huANgsHaNg.BONd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_53
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: mmmM.hUAngsHanG.HidNS.co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: MmmM.HuAngSHaNg.HiDNs.co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_54
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 8-7.HuANGSHang.BoND
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 8-7.hUAnGsHaNg.BOnd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_55
+    type: vless
+    server: 104.21.90.232
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 99999.00000.boNd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 99999.00000.BOnD
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯23
+    type: vless
+    server: tr3.wba-pn.ru
+    port: 443
+    uuid: af2a0c18-b08c-471f-baa3-259ac2ce3a85
+    network: ws
+    servername: tr3.wba-pn.ru
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_56
+    type: trojan
+    server: 45.130.125.158
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    alpn:
+      - h3
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_57
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: CCCC.hUaNgShAnG.hiDNs.CO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: CCcC.huANGShang.HIdns.co
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_58
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: QQQqq.huAngshaNg.HIDNs.CO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: qqqQq.huANgSHaNG.HIDnS.CO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_59
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 5-5.HUaNgsHANG.bOND
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 5-5.HuANgShaNG.bONd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_60
+    type: vless
+    server: 104.21.9.194
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: lllLlL.huANGsHANG.HiDnS.CO
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: LLLLll.hUaNGshAnG.hIdNS.cO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_61
+    type: trojan
+    server: 172.67.149.60
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_62
+    type: vless
+    server: 104.21.38.63
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 4-9.hUanGshang.BOND
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 4-9.huANgSHaNG.bONd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_63
+    type: vless
+    server: 172.67.142.235
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 6.i0-4.De5.NEt
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 6.I0-4.DE5.Net
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_64
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 5-4.HuaNGSHang.bONd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 5-4.hUANgsHANg.BOnd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_65
+    type: trojan
+    server: 104.18.23.63
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国23_66
+    type: vless
+    server: 172.67.219.181
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: a.huANGshang.BOND
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: A.hUANGsHAnG.BonD
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_67
+    type: vless
+    server: 172.67.162.57
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: N.00000.boND
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: N.00000.BonD
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国23_68
+    type: vless
+    server: 172.67.189.137
+    port: 443
+    uuid: 62e499fe-458e-47da-a0c8-cae69144ebe9
+    network: ws
+    servername: 1111.huAngShANG.HIDnS.Co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /FbLtzaav4GSW7GPL6LUGsEkZ
+      headers:
+        Host: 1111.huangsHANg.HIDnS.cO
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 比利时+2
+    type: vless
+    server: 146.103.42.119
+    port: 9543
+    uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
+    servername: storage.yandexcloud.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+      short-id: 123abcdf
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+CloudFlare节点_3
+    type: trojan
+    server: 172.67.188.109
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 英国+1
+    type: hysteria2
+    server: 82.38.64.239
+    port: 8443
+    password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
+    sni: hopp-swizland-new.mysynology.net
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+CloudFlare节点_4
+    type: trojan
+    server: 104.18.152.50
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_5
+    type: trojan
+    server: 104.16.73.213
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 美国+CloudFlare节点_6
+    type: trojan
+    server: 104.26.14.137
+    port: 443
+    password: humanity
+    sni: www.ignitelimit.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 🇯🇵 日本 | JPN
+    type: vless
+    server: jp-1.gsafevpnapi.com
+    port: 20270
+    uuid: 537f8b38-8015-4431-84bb-63ada2d0bf89
+    servername: www.yahoo.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: gaFVpIOW9RJGuFFisfXVvITfYY5ikKn-4gB89ZQCFHI
+      short-id: 89fecfdaf45cd76d
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 日本 | JPN_1
+    type: vless
+    server: high-speed-test-01.linkpc.net
+    port: 443
+    uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
+    servername: aws.amazon.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
+      short-id: 21270a66
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA
+    type: vless
+    server: 45.62.106.145
+    port: 8443
+    uuid: a3054186-5e1d-4c95-a849-a79ee1e447b2
+    network: ws
+    servername: 45.62.106.145
+    tls: false
+    ws-opts:
+      path: /vless-ws
+      headers:
+        Host: 45.62.106.145
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA_1
+    type: vless
+    server: bounded-crammed.video-streams.org
+    port: 443
+    uuid: 2957d7ed-4697-4dda-8939-0caf7a0e93af
+    network: ws
+    servername: bounded-crammed.video-streams.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws
+      headers:
+        Host: bounded-crammed.video-streams.org
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 🇪🇪 爱沙尼亚 | EST
+    type: vless
+    server: 144.31.170.72
+    port: 443
+    uuid: deea5046-3543-4b1b-a17f-3d08a65db91d
+    servername: est.bopen.bond
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: fkZTYNydTBVO-1LSiTvDcyBMx-zBP5Am780jECmUgg0
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD
+    type: vless
+    server: nl2.gursub.com
+    port: 443
+    uuid: 02bd8b5a-170b-4a79-8e68-9cec710272c7
+    servername: nl2.gursub.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: ltHl15Wq549qC2JdAtesy-POs6Hwm_BbrlzuwDkWoUk
+      short-id: a1b2c3d4e5f6a1b2
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 荷兰 | NLD_1
+    type: vless
+    server: 13.143.193.156
+    port: 443
+    uuid: 02bd8b5a-170b-4a79-8e68-9cec710272c7
+    servername: nl2.gursub.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ltHl15Wq549qC2JdAtesy-POs6Hwm_BbrlzuwDkWoUk
+      short-id: a1b2c3d4e5f6a1b2
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷 法国 | FRA
+    type: vless
+    server: 151.101.1.194
+    port: 80
+    uuid: 5fb42b35-29e1-43c1-9c48-13b1b5e67e94
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: simorghfr.global.ssl.fastly.net
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇱 智利 | CHL
+    type: vless
+    server: platform107.golnamakcert.top
+    port: 80
+    uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+    network: ws
+    servername: platform107.halalkhor.info
+    tls: false
+    ws-opts:
+      path: /platform107
+      headers:
+        Host: platform107.halalkhor.info
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS
+    type: vless
+    server: 31.76.65.234
+    port: 443
+    uuid: cc39844c-d9ba-4394-9cae-395933f4e353
+    network: ws
+    servername: 31.76.65.234.fwqfw783rg2dad.website
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /websocket?ed=2560
+      headers:
+        Host: 31.76.65.234.fwqfw783rg2dad.website
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港
+    type: anytls
+    server: ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn
+    port: 443
+    password: 9sK2mP8xQ7vL3nZ6
+    sni: ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn
+    skip-cert-verify: true
+    tls: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 美国21
+      - 美国21_1
+      - 美国21_2
+      - 美国21_3
+      - 美国21_4
+      - 美国21_5
+      - 美国261
+      - 法国261
+      - 美国261_1
+      - 美国261_2
+      - 美国261_3
+      - 美国21_6
+      - 美国21_7
+      - 美国21_8
+      - 美国261_4
+      - 美国+CloudFlare节点
+      - 美国21_9
+      - 美国21_10
+      - 美国21_11
+      - 美国21_12
+      - 美国21_13
+      - 美国261_5
+      - 美国261_6
+      - 美国261_7
+      - 美国21_14
+      - 香港ee89
+      - 美国21_15
+      - 美国261_8
+      - 美国21_16
+      - 美国25
+      - 美国21_17
+      - 美国21_18
+      - 美国21_19
+      - 美国21_20
+      - 美国21_21
+      - 美国ee89
+      - 美国25_1
+      - 美国26
+      - 美国21_22
+      - 美国261_9
+      - 美国261_10
+      - 美国26_1
+      - 法国21
+      - 美国21_23
+      - 美国+CloudFlare节点_1
+      - 美国21_24
+      - 美国ee22
+      - 美国261_11
+      - 美国21_25
+      - 美国21_26
+      - 美国+CloudFlare节点_2
+      - 美国21_27
+      - 美国25_2
+      - 美国21_28
+      - 美国261_12
+      - 加拿大21
+      - 美国25_3
+      - 美国25_4
+      - 美国21_29
+      - 美国21_30
+      - 美国21_31
+      - 美国23
+      - 台湾23
+      - 台湾23_1
+      - 美国23_1
+      - 美国23_2
+      - 美国23_3
+      - 美国23_4
+      - 美国23_5
+      - 美国23_6
+      - 美国23_7
+      - 美国23_8
+      - 美国23_9
+      - 美国23_10
+      - 美国23_11
+      - 美国23_12
+      - 美国23_13
+      - 美国23_14
+      - 美国23_15
+      - 美国23_16
+      - 美国23_17
+      - 美国23_18
+      - 美国23_19
+      - 美国23_20
+      - 韩国23
+      - 美国23_21
+      - 美国23_22
+      - 美国23_23
+      - 美国23_24
+      - 美国23_25
+      - 美国23_26
+      - 美国23_27
+      - 美国23_28
+      - 加拿大23
+      - 美国23_29
+      - 美国23_30
+      - 美国23_31
+      - 美国23_32
+      - 美国23_33
+      - 美国23_34
+      - 美国23_35
+      - 美国23_36
+      - 美国23_37
+      - 美国23_38
+      - 美国23_39
+      - 美国23_40
+      - 美国23_41
+      - 美国23_42
+      - 美国23_43
+      - 美国23_44
+      - 美国23_45
+      - 美国23_46
+      - 美国23_47
+      - 美国23_48
+      - 美国23_49
+      - 美国23_50
+      - 美国23_51
+      - 美国23_52
+      - 美国23_53
+      - 美国23_54
+      - 美国23_55
+      - 俄罗斯23
+      - 美国23_56
+      - 美国23_57
+      - 美国23_58
+      - 美国23_59
+      - 美国23_60
+      - 美国23_61
+      - 美国23_62
+      - 美国23_63
+      - 美国23_64
+      - 美国23_65
+      - 美国23_66
+      - 美国23_67
+      - 美国23_68
+      - 比利时+2
+      - 美国+CloudFlare节点_3
+      - 英国+1
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 美国+CloudFlare节点_6
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇪🇪 爱沙尼亚 | EST
+      - 🇳🇱 荷兰 | NLD
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇫🇷 法国 | FRA
+      - 🇨🇱 智利 | CHL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇭🇰_HK_中国香港
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 美国21
+      - 美国21_1
+      - 美国21_2
+      - 美国21_3
+      - 美国21_4
+      - 美国21_5
+      - 美国261
+      - 法国261
+      - 美国261_1
+      - 美国261_2
+      - 美国261_3
+      - 美国21_6
+      - 美国21_7
+      - 美国21_8
+      - 美国261_4
+      - 美国+CloudFlare节点
+      - 美国21_9
+      - 美国21_10
+      - 美国21_11
+      - 美国21_12
+      - 美国21_13
+      - 美国261_5
+      - 美国261_6
+      - 美国261_7
+      - 美国21_14
+      - 香港ee89
+      - 美国21_15
+      - 美国261_8
+      - 美国21_16
+      - 美国25
+      - 美国21_17
+      - 美国21_18
+      - 美国21_19
+      - 美国21_20
+      - 美国21_21
+      - 美国ee89
+      - 美国25_1
+      - 美国26
+      - 美国21_22
+      - 美国261_9
+      - 美国261_10
+      - 美国26_1
+      - 法国21
+      - 美国21_23
+      - 美国+CloudFlare节点_1
+      - 美国21_24
+      - 美国ee22
+      - 美国261_11
+      - 美国21_25
+      - 美国21_26
+      - 美国+CloudFlare节点_2
+      - 美国21_27
+      - 美国25_2
+      - 美国21_28
+      - 美国261_12
+      - 加拿大21
+      - 美国25_3
+      - 美国25_4
+      - 美国21_29
+      - 美国21_30
+      - 美国21_31
+      - 美国23
+      - 台湾23
+      - 台湾23_1
+      - 美国23_1
+      - 美国23_2
+      - 美国23_3
+      - 美国23_4
+      - 美国23_5
+      - 美国23_6
+      - 美国23_7
+      - 美国23_8
+      - 美国23_9
+      - 美国23_10
+      - 美国23_11
+      - 美国23_12
+      - 美国23_13
+      - 美国23_14
+      - 美国23_15
+      - 美国23_16
+      - 美国23_17
+      - 美国23_18
+      - 美国23_19
+      - 美国23_20
+      - 韩国23
+      - 美国23_21
+      - 美国23_22
+      - 美国23_23
+      - 美国23_24
+      - 美国23_25
+      - 美国23_26
+      - 美国23_27
+      - 美国23_28
+      - 加拿大23
+      - 美国23_29
+      - 美国23_30
+      - 美国23_31
+      - 美国23_32
+      - 美国23_33
+      - 美国23_34
+      - 美国23_35
+      - 美国23_36
+      - 美国23_37
+      - 美国23_38
+      - 美国23_39
+      - 美国23_40
+      - 美国23_41
+      - 美国23_42
+      - 美国23_43
+      - 美国23_44
+      - 美国23_45
+      - 美国23_46
+      - 美国23_47
+      - 美国23_48
+      - 美国23_49
+      - 美国23_50
+      - 美国23_51
+      - 美国23_52
+      - 美国23_53
+      - 美国23_54
+      - 美国23_55
+      - 俄罗斯23
+      - 美国23_56
+      - 美国23_57
+      - 美国23_58
+      - 美国23_59
+      - 美国23_60
+      - 美国23_61
+      - 美国23_62
+      - 美国23_63
+      - 美国23_64
+      - 美国23_65
+      - 美国23_66
+      - 美国23_67
+      - 美国23_68
+      - 比利时+2
+      - 美国+CloudFlare节点_3
+      - 英国+1
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 美国+CloudFlare节点_6
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇪🇪 爱沙尼亚 | EST
+      - 🇳🇱 荷兰 | NLD
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇫🇷 法国 | FRA
+      - 🇨🇱 智利 | CHL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇭🇰_HK_中国香港
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 美国21
+      - 美国21_1
+      - 美国21_2
+      - 美国21_3
+      - 美国21_4
+      - 美国21_5
+      - 美国261
+      - 法国261
+      - 美国261_1
+      - 美国261_2
+      - 美国261_3
+      - 美国21_6
+      - 美国21_7
+      - 美国21_8
+      - 美国261_4
+      - 美国+CloudFlare节点
+      - 美国21_9
+      - 美国21_10
+      - 美国21_11
+      - 美国21_12
+      - 美国21_13
+      - 美国261_5
+      - 美国261_6
+      - 美国261_7
+      - 美国21_14
+      - 香港ee89
+      - 美国21_15
+      - 美国261_8
+      - 美国21_16
+      - 美国25
+      - 美国21_17
+      - 美国21_18
+      - 美国21_19
+      - 美国21_20
+      - 美国21_21
+      - 美国ee89
+      - 美国25_1
+      - 美国26
+      - 美国21_22
+      - 美国261_9
+      - 美国261_10
+      - 美国26_1
+      - 法国21
+      - 美国21_23
+      - 美国+CloudFlare节点_1
+      - 美国21_24
+      - 美国ee22
+      - 美国261_11
+      - 美国21_25
+      - 美国21_26
+      - 美国+CloudFlare节点_2
+      - 美国21_27
+      - 美国25_2
+      - 美国21_28
+      - 美国261_12
+      - 加拿大21
+      - 美国25_3
+      - 美国25_4
+      - 美国21_29
+      - 美国21_30
+      - 美国21_31
+      - 美国23
+      - 台湾23
+      - 台湾23_1
+      - 美国23_1
+      - 美国23_2
+      - 美国23_3
+      - 美国23_4
+      - 美国23_5
+      - 美国23_6
+      - 美国23_7
+      - 美国23_8
+      - 美国23_9
+      - 美国23_10
+      - 美国23_11
+      - 美国23_12
+      - 美国23_13
+      - 美国23_14
+      - 美国23_15
+      - 美国23_16
+      - 美国23_17
+      - 美国23_18
+      - 美国23_19
+      - 美国23_20
+      - 韩国23
+      - 美国23_21
+      - 美国23_22
+      - 美国23_23
+      - 美国23_24
+      - 美国23_25
+      - 美国23_26
+      - 美国23_27
+      - 美国23_28
+      - 加拿大23
+      - 美国23_29
+      - 美国23_30
+      - 美国23_31
+      - 美国23_32
+      - 美国23_33
+      - 美国23_34
+      - 美国23_35
+      - 美国23_36
+      - 美国23_37
+      - 美国23_38
+      - 美国23_39
+      - 美国23_40
+      - 美国23_41
+      - 美国23_42
+      - 美国23_43
+      - 美国23_44
+      - 美国23_45
+      - 美国23_46
+      - 美国23_47
+      - 美国23_48
+      - 美国23_49
+      - 美国23_50
+      - 美国23_51
+      - 美国23_52
+      - 美国23_53
+      - 美国23_54
+      - 美国23_55
+      - 俄罗斯23
+      - 美国23_56
+      - 美国23_57
+      - 美国23_58
+      - 美国23_59
+      - 美国23_60
+      - 美国23_61
+      - 美国23_62
+      - 美国23_63
+      - 美国23_64
+      - 美国23_65
+      - 美国23_66
+      - 美国23_67
+      - 美国23_68
+      - 比利时+2
+      - 美国+CloudFlare节点_3
+      - 英国+1
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 美国+CloudFlare节点_6
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇪🇪 爱沙尼亚 | EST
+      - 🇳🇱 荷兰 | NLD
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇫🇷 法国 | FRA
+      - 🇨🇱 智利 | CHL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇭🇰_HK_中国香港
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 美国21
+      - 美国21_1
+      - 美国21_2
+      - 美国21_3
+      - 美国21_4
+      - 美国21_5
+      - 美国261
+      - 法国261
+      - 美国261_1
+      - 美国261_2
+      - 美国261_3
+      - 美国21_6
+      - 美国21_7
+      - 美国21_8
+      - 美国261_4
+      - 美国+CloudFlare节点
+      - 美国21_9
+      - 美国21_10
+      - 美国21_11
+      - 美国21_12
+      - 美国21_13
+      - 美国261_5
+      - 美国261_6
+      - 美国261_7
+      - 美国21_14
+      - 香港ee89
+      - 美国21_15
+      - 美国261_8
+      - 美国21_16
+      - 美国25
+      - 美国21_17
+      - 美国21_18
+      - 美国21_19
+      - 美国21_20
+      - 美国21_21
+      - 美国ee89
+      - 美国25_1
+      - 美国26
+      - 美国21_22
+      - 美国261_9
+      - 美国261_10
+      - 美国26_1
+      - 法国21
+      - 美国21_23
+      - 美国+CloudFlare节点_1
+      - 美国21_24
+      - 美国ee22
+      - 美国261_11
+      - 美国21_25
+      - 美国21_26
+      - 美国+CloudFlare节点_2
+      - 美国21_27
+      - 美国25_2
+      - 美国21_28
+      - 美国261_12
+      - 加拿大21
+      - 美国25_3
+      - 美国25_4
+      - 美国21_29
+      - 美国21_30
+      - 美国21_31
+      - 美国23
+      - 台湾23
+      - 台湾23_1
+      - 美国23_1
+      - 美国23_2
+      - 美国23_3
+      - 美国23_4
+      - 美国23_5
+      - 美国23_6
+      - 美国23_7
+      - 美国23_8
+      - 美国23_9
+      - 美国23_10
+      - 美国23_11
+      - 美国23_12
+      - 美国23_13
+      - 美国23_14
+      - 美国23_15
+      - 美国23_16
+      - 美国23_17
+      - 美国23_18
+      - 美国23_19
+      - 美国23_20
+      - 韩国23
+      - 美国23_21
+      - 美国23_22
+      - 美国23_23
+      - 美国23_24
+      - 美国23_25
+      - 美国23_26
+      - 美国23_27
+      - 美国23_28
+      - 加拿大23
+      - 美国23_29
+      - 美国23_30
+      - 美国23_31
+      - 美国23_32
+      - 美国23_33
+      - 美国23_34
+      - 美国23_35
+      - 美国23_36
+      - 美国23_37
+      - 美国23_38
+      - 美国23_39
+      - 美国23_40
+      - 美国23_41
+      - 美国23_42
+      - 美国23_43
+      - 美国23_44
+      - 美国23_45
+      - 美国23_46
+      - 美国23_47
+      - 美国23_48
+      - 美国23_49
+      - 美国23_50
+      - 美国23_51
+      - 美国23_52
+      - 美国23_53
+      - 美国23_54
+      - 美国23_55
+      - 俄罗斯23
+      - 美国23_56
+      - 美国23_57
+      - 美国23_58
+      - 美国23_59
+      - 美国23_60
+      - 美国23_61
+      - 美国23_62
+      - 美国23_63
+      - 美国23_64
+      - 美国23_65
+      - 美国23_66
+      - 美国23_67
+      - 美国23_68
+      - 比利时+2
+      - 美国+CloudFlare节点_3
+      - 英国+1
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 美国+CloudFlare节点_6
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇪🇪 爱沙尼亚 | EST
+      - 🇳🇱 荷兰 | NLD
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇫🇷 法国 | FRA
+      - 🇨🇱 智利 | CHL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇭🇰_HK_中国香港
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 美国21
+      - 美国21_1
+      - 美国21_2
+      - 美国21_3
+      - 美国21_4
+      - 美国21_5
+      - 美国261
+      - 法国261
+      - 美国261_1
+      - 美国261_2
+      - 美国261_3
+      - 美国21_6
+      - 美国21_7
+      - 美国21_8
+      - 美国261_4
+      - 美国+CloudFlare节点
+      - 美国21_9
+      - 美国21_10
+      - 美国21_11
+      - 美国21_12
+      - 美国21_13
+      - 美国261_5
+      - 美国261_6
+      - 美国261_7
+      - 美国21_14
+      - 香港ee89
+      - 美国21_15
+      - 美国261_8
+      - 美国21_16
+      - 美国25
+      - 美国21_17
+      - 美国21_18
+      - 美国21_19
+      - 美国21_20
+      - 美国21_21
+      - 美国ee89
+      - 美国25_1
+      - 美国26
+      - 美国21_22
+      - 美国261_9
+      - 美国261_10
+      - 美国26_1
+      - 法国21
+      - 美国21_23
+      - 美国+CloudFlare节点_1
+      - 美国21_24
+      - 美国ee22
+      - 美国261_11
+      - 美国21_25
+      - 美国21_26
+      - 美国+CloudFlare节点_2
+      - 美国21_27
+      - 美国25_2
+      - 美国21_28
+      - 美国261_12
+      - 加拿大21
+      - 美国25_3
+      - 美国25_4
+      - 美国21_29
+      - 美国21_30
+      - 美国21_31
+      - 美国23
+      - 台湾23
+      - 台湾23_1
+      - 美国23_1
+      - 美国23_2
+      - 美国23_3
+      - 美国23_4
+      - 美国23_5
+      - 美国23_6
+      - 美国23_7
+      - 美国23_8
+      - 美国23_9
+      - 美国23_10
+      - 美国23_11
+      - 美国23_12
+      - 美国23_13
+      - 美国23_14
+      - 美国23_15
+      - 美国23_16
+      - 美国23_17
+      - 美国23_18
+      - 美国23_19
+      - 美国23_20
+      - 韩国23
+      - 美国23_21
+      - 美国23_22
+      - 美国23_23
+      - 美国23_24
+      - 美国23_25
+      - 美国23_26
+      - 美国23_27
+      - 美国23_28
+      - 加拿大23
+      - 美国23_29
+      - 美国23_30
+      - 美国23_31
+      - 美国23_32
+      - 美国23_33
+      - 美国23_34
+      - 美国23_35
+      - 美国23_36
+      - 美国23_37
+      - 美国23_38
+      - 美国23_39
+      - 美国23_40
+      - 美国23_41
+      - 美国23_42
+      - 美国23_43
+      - 美国23_44
+      - 美国23_45
+      - 美国23_46
+      - 美国23_47
+      - 美国23_48
+      - 美国23_49
+      - 美国23_50
+      - 美国23_51
+      - 美国23_52
+      - 美国23_53
+      - 美国23_54
+      - 美国23_55
+      - 俄罗斯23
+      - 美国23_56
+      - 美国23_57
+      - 美国23_58
+      - 美国23_59
+      - 美国23_60
+      - 美国23_61
+      - 美国23_62
+      - 美国23_63
+      - 美国23_64
+      - 美国23_65
+      - 美国23_66
+      - 美国23_67
+      - 美国23_68
+      - 比利时+2
+      - 美国+CloudFlare节点_3
+      - 英国+1
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 美国+CloudFlare节点_6
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇪🇪 爱沙尼亚 | EST
+      - 🇳🇱 荷兰 | NLD
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇫🇷 法国 | FRA
+      - 🇨🇱 智利 | CHL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇭🇰_HK_中国香港
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 美国21
+      - 美国21_1
+      - 美国21_2
+      - 美国21_3
+      - 美国21_4
+      - 美国21_5
+      - 美国261
+      - 法国261
+      - 美国261_1
+      - 美国261_2
+      - 美国261_3
+      - 美国21_6
+      - 美国21_7
+      - 美国21_8
+      - 美国261_4
+      - 美国+CloudFlare节点
+      - 美国21_9
+      - 美国21_10
+      - 美国21_11
+      - 美国21_12
+      - 美国21_13
+      - 美国261_5
+      - 美国261_6
+      - 美国261_7
+      - 美国21_14
+      - 香港ee89
+      - 美国21_15
+      - 美国261_8
+      - 美国21_16
+      - 美国25
+      - 美国21_17
+      - 美国21_18
+      - 美国21_19
+      - 美国21_20
+      - 美国21_21
+      - 美国ee89
+      - 美国25_1
+      - 美国26
+      - 美国21_22
+      - 美国261_9
+      - 美国261_10
+      - 美国26_1
+      - 法国21
+      - 美国21_23
+      - 美国+CloudFlare节点_1
+      - 美国21_24
+      - 美国ee22
+      - 美国261_11
+      - 美国21_25
+      - 美国21_26
+      - 美国+CloudFlare节点_2
+      - 美国21_27
+      - 美国25_2
+      - 美国21_28
+      - 美国261_12
+      - 加拿大21
+      - 美国25_3
+      - 美国25_4
+      - 美国21_29
+      - 美国21_30
+      - 美国21_31
+      - 美国23
+      - 台湾23
+      - 台湾23_1
+      - 美国23_1
+      - 美国23_2
+      - 美国23_3
+      - 美国23_4
+      - 美国23_5
+      - 美国23_6
+      - 美国23_7
+      - 美国23_8
+      - 美国23_9
+      - 美国23_10
+      - 美国23_11
+      - 美国23_12
+      - 美国23_13
+      - 美国23_14
+      - 美国23_15
+      - 美国23_16
+      - 美国23_17
+      - 美国23_18
+      - 美国23_19
+      - 美国23_20
+      - 韩国23
+      - 美国23_21
+      - 美国23_22
+      - 美国23_23
+      - 美国23_24
+      - 美国23_25
+      - 美国23_26
+      - 美国23_27
+      - 美国23_28
+      - 加拿大23
+      - 美国23_29
+      - 美国23_30
+      - 美国23_31
+      - 美国23_32
+      - 美国23_33
+      - 美国23_34
+      - 美国23_35
+      - 美国23_36
+      - 美国23_37
+      - 美国23_38
+      - 美国23_39
+      - 美国23_40
+      - 美国23_41
+      - 美国23_42
+      - 美国23_43
+      - 美国23_44
+      - 美国23_45
+      - 美国23_46
+      - 美国23_47
+      - 美国23_48
+      - 美国23_49
+      - 美国23_50
+      - 美国23_51
+      - 美国23_52
+      - 美国23_53
+      - 美国23_54
+      - 美国23_55
+      - 俄罗斯23
+      - 美国23_56
+      - 美国23_57
+      - 美国23_58
+      - 美国23_59
+      - 美国23_60
+      - 美国23_61
+      - 美国23_62
+      - 美国23_63
+      - 美国23_64
+      - 美国23_65
+      - 美国23_66
+      - 美国23_67
+      - 美国23_68
+      - 比利时+2
+      - 美国+CloudFlare节点_3
+      - 英国+1
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 美国+CloudFlare节点_6
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇪🇪 爱沙尼亚 | EST
+      - 🇳🇱 荷兰 | NLD
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇫🇷 法国 | FRA
+      - 🇨🇱 智利 | CHL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇭🇰_HK_中国香港
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 美国21
+      - 美国21_1
+      - 美国21_2
+      - 美国21_3
+      - 美国21_4
+      - 美国21_5
+      - 美国261
+      - 法国261
+      - 美国261_1
+      - 美国261_2
+      - 美国261_3
+      - 美国21_6
+      - 美国21_7
+      - 美国21_8
+      - 美国261_4
+      - 美国+CloudFlare节点
+      - 美国21_9
+      - 美国21_10
+      - 美国21_11
+      - 美国21_12
+      - 美国21_13
+      - 美国261_5
+      - 美国261_6
+      - 美国261_7
+      - 美国21_14
+      - 香港ee89
+      - 美国21_15
+      - 美国261_8
+      - 美国21_16
+      - 美国25
+      - 美国21_17
+      - 美国21_18
+      - 美国21_19
+      - 美国21_20
+      - 美国21_21
+      - 美国ee89
+      - 美国25_1
+      - 美国26
+      - 美国21_22
+      - 美国261_9
+      - 美国261_10
+      - 美国26_1
+      - 法国21
+      - 美国21_23
+      - 美国+CloudFlare节点_1
+      - 美国21_24
+      - 美国ee22
+      - 美国261_11
+      - 美国21_25
+      - 美国21_26
+      - 美国+CloudFlare节点_2
+      - 美国21_27
+      - 美国25_2
+      - 美国21_28
+      - 美国261_12
+      - 加拿大21
+      - 美国25_3
+      - 美国25_4
+      - 美国21_29
+      - 美国21_30
+      - 美国21_31
+      - 美国23
+      - 台湾23
+      - 台湾23_1
+      - 美国23_1
+      - 美国23_2
+      - 美国23_3
+      - 美国23_4
+      - 美国23_5
+      - 美国23_6
+      - 美国23_7
+      - 美国23_8
+      - 美国23_9
+      - 美国23_10
+      - 美国23_11
+      - 美国23_12
+      - 美国23_13
+      - 美国23_14
+      - 美国23_15
+      - 美国23_16
+      - 美国23_17
+      - 美国23_18
+      - 美国23_19
+      - 美国23_20
+      - 韩国23
+      - 美国23_21
+      - 美国23_22
+      - 美国23_23
+      - 美国23_24
+      - 美国23_25
+      - 美国23_26
+      - 美国23_27
+      - 美国23_28
+      - 加拿大23
+      - 美国23_29
+      - 美国23_30
+      - 美国23_31
+      - 美国23_32
+      - 美国23_33
+      - 美国23_34
+      - 美国23_35
+      - 美国23_36
+      - 美国23_37
+      - 美国23_38
+      - 美国23_39
+      - 美国23_40
+      - 美国23_41
+      - 美国23_42
+      - 美国23_43
+      - 美国23_44
+      - 美国23_45
+      - 美国23_46
+      - 美国23_47
+      - 美国23_48
+      - 美国23_49
+      - 美国23_50
+      - 美国23_51
+      - 美国23_52
+      - 美国23_53
+      - 美国23_54
+      - 美国23_55
+      - 俄罗斯23
+      - 美国23_56
+      - 美国23_57
+      - 美国23_58
+      - 美国23_59
+      - 美国23_60
+      - 美国23_61
+      - 美国23_62
+      - 美国23_63
+      - 美国23_64
+      - 美国23_65
+      - 美国23_66
+      - 美国23_67
+      - 美国23_68
+      - 比利时+2
+      - 美国+CloudFlare节点_3
+      - 英国+1
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 美国+CloudFlare节点_6
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA_1
+      - 🇪🇪 爱沙尼亚 | EST
+      - 🇳🇱 荷兰 | NLD
+      - 🇳🇱 荷兰 | NLD_1
+      - 🇫🇷 法国 | FRA
+      - 🇨🇱 智利 | CHL
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇭🇰_HK_中国香港
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
