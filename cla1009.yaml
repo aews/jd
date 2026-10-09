@@ -1,0 +1,1774 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 美国12
+    type: anytls
+    server: anytls2.864106.xyz
+    port: 19000
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: anytls2.864106.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: GB VLESS-429 | free-nodes
+    type: vless
+    server: s1243.sspcccdn.xyz
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ueb8953b4s861.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: GB VLESS-412 | free-nodes
+    type: vless
+    server: s1244.csgfw.top
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ueb8953b4s861.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 英国
+    type: vless
+    server: 2.28.142.170
+    port: 443
+    uuid: f774f037-6320-42e3-a97b-6d4a1f018dd5
+    encryption: mlkem768x25519plus.native.0rtt.Y0-j5e-CpehUKzhEeat1dTYevroKyHV4g9HML3ujmlQ
+    network: xhttp
+    servername: germanytest.tulnaro.ir
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IqFTx4k5VQydmffvavaOHDXBtdgDxX26A6NtsVvDfhw
+      short-id: d485c3d5248d6b51
+    xhttp-opts:
+      path: /
+      host: germanytest.tulnaro.ir
+      mode: auto
+    skip-cert-verify: true
+    udp: true
+  - name: GB VLESS-438 | free-nodes
+    type: vless
+    server: 193.142.59.97
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ueb8953b4s861.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 英国12
+    type: vless
+    server: 2.28.142.170
+    port: 443
+    uuid: f774f037-6320-42e3-a97b-6d4a1f018dd5
+    encryption: mlkem768x25519plus.native.0rtt.Y0-j5e-CpehUKzhEeat1dTYevroKyHV4g9HML3ujmlQ
+    network: xhttp
+    servername: germanytest.tulnaro.ir
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IqFTx4k5VQydmffvavaOHDXBtdgDxX26A6NtsVvDfhw
+      short-id: d485c3d5248d6b51
+    xhttp-opts:
+      path: /
+      host: germanytest.tulnaro.ir
+      mode: auto
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-449 | free-nodes
+    type: vless
+    server: 192.3.118.133
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098uf24555c7s2316.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-455 | free-nodes
+    type: vless
+    server: s593.sspcccdn.xyz
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u4d99b056s591.csgfw.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-407 | free-nodes
+    type: vless
+    server: s2318.okgg.top
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098uf24555c7s2316.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-443 | free-nodes
+    type: vless
+    server: 103.173.155.212
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u4d99b056s591.csgfw.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-454 | free-nodes
+    type: vless
+    server: s592.wagahaha.xyz
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u4d99b056s591.csgfw.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-395 | free-nodes
+    type: vless
+    server: s2317.kukuss.top
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098uf24555c7s2316.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-441 | free-nodes
+    type: vless
+    server: 198.12.124.74
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u5e20ed1cs709.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_1
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_2
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_3
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 台湾e1
+    type: anytls
+    server: 684616s4.df6h451rh.xin
+    port: 443
+    password: 9sK2mP8xQ7vL3nZ6
+    sni: px.ads.linkedin.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 香港e1
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 6725d134ee80
+    sni: images.ctfassets.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国e1_4
+    type: vless
+    server: 157.228.160.166
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_5
+    type: vless
+    server: 157.228.160.166
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_6
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰e1
+    type: vless
+    server: 157.228.150.34
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰e1_1
+    type: vless
+    server: 193.142.59.97
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ueb8953b4s861.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_7
+    type: vless
+    server: s1244.csgfw.top
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ueb8953b4s861.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰e1_2
+    type: vless
+    server: s1244.csgfw.top
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ueb8953b4s861.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_8
+    type: vless
+    server: 157.228.128.59
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
+    skip-cert-verify: true
+    udp: true
+  - name: 芬兰e1
+    type: vless
+    server: 157.228.128.59
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_9
+    type: vless
+    server: 157.228.128.59
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_10
+    type: vless
+    server: 157.228.128.59
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+      short-id: 06e00e7c
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_11
+    type: vless
+    server: 192.227.169.125
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u764943ccs478.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 意大利e1
+    type: vless
+    server: 185.119.19.105
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u2c5f47d6s8746.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 德国e1
+    type: vless
+    server: 2.28.142.170
+    port: 443
+    uuid: f774f037-6320-42e3-a97b-6d4a1f018dd5
+    encryption: mlkem768x25519plus.native.0rtt.Y0-j5e-CpehUKzhEeat1dTYevroKyHV4g9HML3ujmlQ
+    network: xhttp
+    servername: germanytest.tulnaro.ir
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IqFTx4k5VQydmffvavaOHDXBtdgDxX26A6NtsVvDfhw
+      short-id: d485c3d5248d6b51
+    xhttp-opts:
+      path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+      host: germanytest.tulnaro.ir
+      mode: auto
+    skip-cert-verify: true
+    udp: true
+  - name: 英国e1
+    type: vless
+    server: 2.26.231.218
+    port: 2063
+    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+    servername: rusbid.de
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_12
+    type: vless
+    server: 31.59.210.24
+    port: 2087
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: W2OLbQ682PLJ9yHQ21Q0nPJk9U8RuL5YnlP-U1fdQzI
+      short-id: a11023050f134216
+    skip-cert-verify: true
+    udp: true
+  - name: 英国e1_1
+    type: vless
+    server: 2.28.142.170
+    port: 443
+    uuid: f774f037-6320-42e3-a97b-6d4a1f018dd5
+    encryption: mlkem768x25519plus.native.0rtt.Y0-j5e-CpehUKzhEeat1dTYevroKyHV4g9HML3ujmlQ
+    network: xhttp
+    servername: germanytest.tulnaro.ir
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IqFTx4k5VQydmffvavaOHDXBtdgDxX26A6NtsVvDfhw
+      short-id: d485c3d5248d6b51
+    xhttp-opts:
+      path: /
+      host: germanytest.tulnaro.ir
+      mode: auto
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯e1
+    type: vless
+    server: 31.59.210.26
+    port: 2088
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: Eq3c19Y0WGB1APWMADQB-oxCvZFSVFAQxG5L6b8EkUg
+      short-id: b1ad165f903c62fe
+    skip-cert-verify: true
+    udp: true
+  - name: 香港e1_1
+    type: vless
+    server: s299.kukuss.top
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u54d73951s298.kukuss.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 香港e1_2
+    type: vless
+    server: 212.192.15.191
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u54d73951s298.kukuss.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_13
+    type: anytls
+    server: anytls2.864106.xyz
+    port: 19000
+    password: github.com/Alvin9999-newpac/fanqiang
+    sni: anytls2.864106.xyz
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 美国e1_14
+    type: vless
+    server: 31.59.210.24
+    port: 2087
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: ios
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: W2OLbQ682PLJ9yHQ21Q0nPJk9U8RuL5YnlP-U1fdQzI
+      short-id: a11023050f134216
+    skip-cert-verify: true
+    udp: true
+  - name: 美国e1_15
+    type: vless
+    server: 31.59.210.24
+    port: 2087
+    uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+    network: grpc
+    servername: www.yandex.ru
+    tls: true
+    client-fingerprint: safari
+    grpc-opts:
+      grpc-service-name: astracat
+    reality-opts:
+      public-key: W2OLbQ682PLJ9yHQ21Q0nPJk9U8RuL5YnlP-U1fdQzI
+      short-id: a11023050f134216
+    skip-cert-verify: true
+    udp: true
+  - name: 香港e1_3
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 6725d134ee80
+    sni: images.ctfassets.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国e1_16
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-552 | free-nodes
+    type: vless
+    server: 192.227.168.162
+    port: 33414
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u5cabc3b2s489.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-547 | free-nodes
+    type: vless
+    server: 185.106.96.231
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u99a93686s848.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-493 | free-nodes
+    type: vless
+    server: s849.kukuss.top
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u99a93686s848.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-544 | free-nodes
+    type: vless
+    server: s490.kukuss.top
+    port: 33414
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u5cabc3b2s489.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: RU VLESS-181 | free-nodes
+    type: vless
+    server: de2.srv.vbuste.ru
+    port: 443
+    uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+    servername: de2.srv.vbuste.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+      short-id: 4be4110078ebed4a
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-558 | free-nodes
+    type: vless
+    server: 192.227.169.125
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u764943ccs478.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-542 | free-nodes
+    type: vless
+    server: s482.wagahaha.xyz
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u764943ccs478.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-532 | free-nodes
+    type: vless
+    server: s8747.okgfwbackxyz.xyz
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u2c5f47d6s8746.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-551 | free-nodes
+    type: vless
+    server: 185.119.19.105
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u2c5f47d6s8746.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-533 | free-nodes
+    type: vless
+    server: s8748.okgg.top
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u2c5f47d6s8746.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-549 | free-nodes
+    type: vless
+    server: 160.25.74.91
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ue79dbcd4s783.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-515 | free-nodes
+    type: vless
+    server: s784.uugfw.top
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ue79dbcd4s783.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-223 | free-nodes
+    type: vless
+    server: pl-waw.dontblockmepls.com
+    port: 2063
+    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+    servername: rusbid.de
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-487 | free-nodes
+    type: vless
+    server: s785.ccgfw.online
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098ue79dbcd4s783.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: HK VLESS-524 | free-nodes
+    type: vless
+    server: s299.kukuss.top
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u54d73951s298.kukuss.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: HK VLESS-531 | free-nodes
+    type: vless
+    server: 212.192.15.191
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u54d73951s298.kukuss.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: VLESS-233 | free-nodes
+    type: vless
+    server: 157.228.150.34
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
+    skip-cert-verify: true
+    udp: true
+  - name: HK VLESS-500 | free-nodes
+    type: vless
+    server: s151.gogocs.xyz
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u54d73951s298.kukuss.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-556 | free-nodes
+    type: vless
+    server: 192.3.118.133
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098uf24555c7s2316.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-514 | free-nodes
+    type: vless
+    server: s2318.okgg.top
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098uf24555c7s2316.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: US VLESS-502 | free-nodes
+    type: vless
+    server: s2317.kukuss.top
+    port: 443
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098uf24555c7s2316.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+纽约州纽约BuyVM
+    type: vless
+    server: 198.98.48.110
+    port: 57233
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u8fad5a44s552.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+纽约州纽约BuyVM_1
+    type: vless
+    server: s554.csgfw.top
+    port: 57233
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u8fad5a44s552.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 巴西+1
+    type: vless
+    server: fl1.balancer.vbuste-bot.com
+    port: 443
+    uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+    servername: fl1.balancer.vbuste-bot.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+      short-id: 4be4110078ebed4a
+    skip-cert-verify: true
+    udp: true
+  - name: 亚太地区+1
+    type: vless
+    server: s593.sspcccdn.xyz
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u4d99b056s591.csgfw.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国纽约州水牛城
+    type: vless
+    server: 198.12.124.74
+    port: 10829
+    uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+    servername: u695098u5e20ed1cs709.gogocs.xyz
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 英国+桑德兰大学
+    type: vless
+    server: 157.228.150.34
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    servername: addons.mozilla.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+      short-id: 3cef317b
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: 🇰🇷 韩国 | KOR
+    type: vless
+    server: 52.78.216.116
+    port: 443
+    uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+    servername: qa.api.sazo.kr
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 9y70yaeBADfbMlb5_6t6fJqmSozYmv5lhKFVl32bX3E
+      short-id: efce3016b5a0e616
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_1
+    type: vless
+    server: de2.srv.vbuste.ru
+    port: 443
+    uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+    servername: de2.srv.vbuste.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: randomized
+    reality-opts:
+      public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+      short-id: 4be4110078ebed4a
+    skip-cert-verify: true
+    udp: true
+  - name: 🇰🇷 韩国 | KOR_1
+    type: ss
+    server: 52.78.216.116
+    port: 8443
+    cipher: chacha20-ietf-poly1305
+    password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_2
+    type: vless
+    server: gw1.edgemedia.lol
+    port: 8443
+    uuid: 9ebf4fda-7395-4800-b42f-b2dda649880a
+    servername: ya.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
+      short-id: d2061bb1
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 美国12
+      - GB VLESS-429 | free-nodes
+      - GB VLESS-412 | free-nodes
+      - 英国
+      - GB VLESS-438 | free-nodes
+      - 英国12
+      - US VLESS-449 | free-nodes
+      - VLESS-455 | free-nodes
+      - US VLESS-407 | free-nodes
+      - VLESS-443 | free-nodes
+      - VLESS-454 | free-nodes
+      - US VLESS-395 | free-nodes
+      - US VLESS-441 | free-nodes
+      - 美国e1
+      - 美国e1_1
+      - 美国e1_2
+      - 美国e1_3
+      - 台湾e1
+      - 香港e1
+      - 美国e1_4
+      - 美国e1_5
+      - 美国e1_6
+      - 荷兰e1
+      - 荷兰e1_1
+      - 美国e1_7
+      - 荷兰e1_2
+      - 美国e1_8
+      - 芬兰e1
+      - 美国e1_9
+      - 美国e1_10
+      - 美国e1_11
+      - 意大利e1
+      - 德国e1
+      - 英国e1
+      - 美国e1_12
+      - 英国e1_1
+      - 俄罗斯e1
+      - 香港e1_1
+      - 香港e1_2
+      - 美国e1_13
+      - 美国e1_14
+      - 美国e1_15
+      - 香港e1_3
+      - 美国e1_16
+      - US VLESS-552 | free-nodes
+      - US VLESS-547 | free-nodes
+      - US VLESS-493 | free-nodes
+      - US VLESS-544 | free-nodes
+      - RU VLESS-181 | free-nodes
+      - US VLESS-558 | free-nodes
+      - US VLESS-542 | free-nodes
+      - VLESS-532 | free-nodes
+      - VLESS-551 | free-nodes
+      - VLESS-533 | free-nodes
+      - VLESS-549 | free-nodes
+      - VLESS-515 | free-nodes
+      - VLESS-223 | free-nodes
+      - VLESS-487 | free-nodes
+      - HK VLESS-524 | free-nodes
+      - HK VLESS-531 | free-nodes
+      - VLESS-233 | free-nodes
+      - HK VLESS-500 | free-nodes
+      - US VLESS-556 | free-nodes
+      - US VLESS-514 | free-nodes
+      - US VLESS-502 | free-nodes
+      - 美国+纽约州纽约BuyVM
+      - 美国+纽约州纽约BuyVM_1
+      - 巴西+1
+      - 亚太地区+1
+      - 美国纽约州水牛城
+      - 英国+桑德兰大学
+      - 🇩🇪 德国 | DEU
+      - 🇰🇷 韩国 | KOR
+      - 🇩🇪 德国 | DEU_1
+      - 🇰🇷 韩国 | KOR_1
+      - 🇩🇪 德国 | DEU_2
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 美国12
+      - GB VLESS-429 | free-nodes
+      - GB VLESS-412 | free-nodes
+      - 英国
+      - GB VLESS-438 | free-nodes
+      - 英国12
+      - US VLESS-449 | free-nodes
+      - VLESS-455 | free-nodes
+      - US VLESS-407 | free-nodes
+      - VLESS-443 | free-nodes
+      - VLESS-454 | free-nodes
+      - US VLESS-395 | free-nodes
+      - US VLESS-441 | free-nodes
+      - 美国e1
+      - 美国e1_1
+      - 美国e1_2
+      - 美国e1_3
+      - 台湾e1
+      - 香港e1
+      - 美国e1_4
+      - 美国e1_5
+      - 美国e1_6
+      - 荷兰e1
+      - 荷兰e1_1
+      - 美国e1_7
+      - 荷兰e1_2
+      - 美国e1_8
+      - 芬兰e1
+      - 美国e1_9
+      - 美国e1_10
+      - 美国e1_11
+      - 意大利e1
+      - 德国e1
+      - 英国e1
+      - 美国e1_12
+      - 英国e1_1
+      - 俄罗斯e1
+      - 香港e1_1
+      - 香港e1_2
+      - 美国e1_13
+      - 美国e1_14
+      - 美国e1_15
+      - 香港e1_3
+      - 美国e1_16
+      - US VLESS-552 | free-nodes
+      - US VLESS-547 | free-nodes
+      - US VLESS-493 | free-nodes
+      - US VLESS-544 | free-nodes
+      - RU VLESS-181 | free-nodes
+      - US VLESS-558 | free-nodes
+      - US VLESS-542 | free-nodes
+      - VLESS-532 | free-nodes
+      - VLESS-551 | free-nodes
+      - VLESS-533 | free-nodes
+      - VLESS-549 | free-nodes
+      - VLESS-515 | free-nodes
+      - VLESS-223 | free-nodes
+      - VLESS-487 | free-nodes
+      - HK VLESS-524 | free-nodes
+      - HK VLESS-531 | free-nodes
+      - VLESS-233 | free-nodes
+      - HK VLESS-500 | free-nodes
+      - US VLESS-556 | free-nodes
+      - US VLESS-514 | free-nodes
+      - US VLESS-502 | free-nodes
+      - 美国+纽约州纽约BuyVM
+      - 美国+纽约州纽约BuyVM_1
+      - 巴西+1
+      - 亚太地区+1
+      - 美国纽约州水牛城
+      - 英国+桑德兰大学
+      - 🇩🇪 德国 | DEU
+      - 🇰🇷 韩国 | KOR
+      - 🇩🇪 德国 | DEU_1
+      - 🇰🇷 韩国 | KOR_1
+      - 🇩🇪 德国 | DEU_2
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 美国12
+      - GB VLESS-429 | free-nodes
+      - GB VLESS-412 | free-nodes
+      - 英国
+      - GB VLESS-438 | free-nodes
+      - 英国12
+      - US VLESS-449 | free-nodes
+      - VLESS-455 | free-nodes
+      - US VLESS-407 | free-nodes
+      - VLESS-443 | free-nodes
+      - VLESS-454 | free-nodes
+      - US VLESS-395 | free-nodes
+      - US VLESS-441 | free-nodes
+      - 美国e1
+      - 美国e1_1
+      - 美国e1_2
+      - 美国e1_3
+      - 台湾e1
+      - 香港e1
+      - 美国e1_4
+      - 美国e1_5
+      - 美国e1_6
+      - 荷兰e1
+      - 荷兰e1_1
+      - 美国e1_7
+      - 荷兰e1_2
+      - 美国e1_8
+      - 芬兰e1
+      - 美国e1_9
+      - 美国e1_10
+      - 美国e1_11
+      - 意大利e1
+      - 德国e1
+      - 英国e1
+      - 美国e1_12
+      - 英国e1_1
+      - 俄罗斯e1
+      - 香港e1_1
+      - 香港e1_2
+      - 美国e1_13
+      - 美国e1_14
+      - 美国e1_15
+      - 香港e1_3
+      - 美国e1_16
+      - US VLESS-552 | free-nodes
+      - US VLESS-547 | free-nodes
+      - US VLESS-493 | free-nodes
+      - US VLESS-544 | free-nodes
+      - RU VLESS-181 | free-nodes
+      - US VLESS-558 | free-nodes
+      - US VLESS-542 | free-nodes
+      - VLESS-532 | free-nodes
+      - VLESS-551 | free-nodes
+      - VLESS-533 | free-nodes
+      - VLESS-549 | free-nodes
+      - VLESS-515 | free-nodes
+      - VLESS-223 | free-nodes
+      - VLESS-487 | free-nodes
+      - HK VLESS-524 | free-nodes
+      - HK VLESS-531 | free-nodes
+      - VLESS-233 | free-nodes
+      - HK VLESS-500 | free-nodes
+      - US VLESS-556 | free-nodes
+      - US VLESS-514 | free-nodes
+      - US VLESS-502 | free-nodes
+      - 美国+纽约州纽约BuyVM
+      - 美国+纽约州纽约BuyVM_1
+      - 巴西+1
+      - 亚太地区+1
+      - 美国纽约州水牛城
+      - 英国+桑德兰大学
+      - 🇩🇪 德国 | DEU
+      - 🇰🇷 韩国 | KOR
+      - 🇩🇪 德国 | DEU_1
+      - 🇰🇷 韩国 | KOR_1
+      - 🇩🇪 德国 | DEU_2
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 美国12
+      - GB VLESS-429 | free-nodes
+      - GB VLESS-412 | free-nodes
+      - 英国
+      - GB VLESS-438 | free-nodes
+      - 英国12
+      - US VLESS-449 | free-nodes
+      - VLESS-455 | free-nodes
+      - US VLESS-407 | free-nodes
+      - VLESS-443 | free-nodes
+      - VLESS-454 | free-nodes
+      - US VLESS-395 | free-nodes
+      - US VLESS-441 | free-nodes
+      - 美国e1
+      - 美国e1_1
+      - 美国e1_2
+      - 美国e1_3
+      - 台湾e1
+      - 香港e1
+      - 美国e1_4
+      - 美国e1_5
+      - 美国e1_6
+      - 荷兰e1
+      - 荷兰e1_1
+      - 美国e1_7
+      - 荷兰e1_2
+      - 美国e1_8
+      - 芬兰e1
+      - 美国e1_9
+      - 美国e1_10
+      - 美国e1_11
+      - 意大利e1
+      - 德国e1
+      - 英国e1
+      - 美国e1_12
+      - 英国e1_1
+      - 俄罗斯e1
+      - 香港e1_1
+      - 香港e1_2
+      - 美国e1_13
+      - 美国e1_14
+      - 美国e1_15
+      - 香港e1_3
+      - 美国e1_16
+      - US VLESS-552 | free-nodes
+      - US VLESS-547 | free-nodes
+      - US VLESS-493 | free-nodes
+      - US VLESS-544 | free-nodes
+      - RU VLESS-181 | free-nodes
+      - US VLESS-558 | free-nodes
+      - US VLESS-542 | free-nodes
+      - VLESS-532 | free-nodes
+      - VLESS-551 | free-nodes
+      - VLESS-533 | free-nodes
+      - VLESS-549 | free-nodes
+      - VLESS-515 | free-nodes
+      - VLESS-223 | free-nodes
+      - VLESS-487 | free-nodes
+      - HK VLESS-524 | free-nodes
+      - HK VLESS-531 | free-nodes
+      - VLESS-233 | free-nodes
+      - HK VLESS-500 | free-nodes
+      - US VLESS-556 | free-nodes
+      - US VLESS-514 | free-nodes
+      - US VLESS-502 | free-nodes
+      - 美国+纽约州纽约BuyVM
+      - 美国+纽约州纽约BuyVM_1
+      - 巴西+1
+      - 亚太地区+1
+      - 美国纽约州水牛城
+      - 英国+桑德兰大学
+      - 🇩🇪 德国 | DEU
+      - 🇰🇷 韩国 | KOR
+      - 🇩🇪 德国 | DEU_1
+      - 🇰🇷 韩国 | KOR_1
+      - 🇩🇪 德国 | DEU_2
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 美国12
+      - GB VLESS-429 | free-nodes
+      - GB VLESS-412 | free-nodes
+      - 英国
+      - GB VLESS-438 | free-nodes
+      - 英国12
+      - US VLESS-449 | free-nodes
+      - VLESS-455 | free-nodes
+      - US VLESS-407 | free-nodes
+      - VLESS-443 | free-nodes
+      - VLESS-454 | free-nodes
+      - US VLESS-395 | free-nodes
+      - US VLESS-441 | free-nodes
+      - 美国e1
+      - 美国e1_1
+      - 美国e1_2
+      - 美国e1_3
+      - 台湾e1
+      - 香港e1
+      - 美国e1_4
+      - 美国e1_5
+      - 美国e1_6
+      - 荷兰e1
+      - 荷兰e1_1
+      - 美国e1_7
+      - 荷兰e1_2
+      - 美国e1_8
+      - 芬兰e1
+      - 美国e1_9
+      - 美国e1_10
+      - 美国e1_11
+      - 意大利e1
+      - 德国e1
+      - 英国e1
+      - 美国e1_12
+      - 英国e1_1
+      - 俄罗斯e1
+      - 香港e1_1
+      - 香港e1_2
+      - 美国e1_13
+      - 美国e1_14
+      - 美国e1_15
+      - 香港e1_3
+      - 美国e1_16
+      - US VLESS-552 | free-nodes
+      - US VLESS-547 | free-nodes
+      - US VLESS-493 | free-nodes
+      - US VLESS-544 | free-nodes
+      - RU VLESS-181 | free-nodes
+      - US VLESS-558 | free-nodes
+      - US VLESS-542 | free-nodes
+      - VLESS-532 | free-nodes
+      - VLESS-551 | free-nodes
+      - VLESS-533 | free-nodes
+      - VLESS-549 | free-nodes
+      - VLESS-515 | free-nodes
+      - VLESS-223 | free-nodes
+      - VLESS-487 | free-nodes
+      - HK VLESS-524 | free-nodes
+      - HK VLESS-531 | free-nodes
+      - VLESS-233 | free-nodes
+      - HK VLESS-500 | free-nodes
+      - US VLESS-556 | free-nodes
+      - US VLESS-514 | free-nodes
+      - US VLESS-502 | free-nodes
+      - 美国+纽约州纽约BuyVM
+      - 美国+纽约州纽约BuyVM_1
+      - 巴西+1
+      - 亚太地区+1
+      - 美国纽约州水牛城
+      - 英国+桑德兰大学
+      - 🇩🇪 德国 | DEU
+      - 🇰🇷 韩国 | KOR
+      - 🇩🇪 德国 | DEU_1
+      - 🇰🇷 韩国 | KOR_1
+      - 🇩🇪 德国 | DEU_2
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 美国12
+      - GB VLESS-429 | free-nodes
+      - GB VLESS-412 | free-nodes
+      - 英国
+      - GB VLESS-438 | free-nodes
+      - 英国12
+      - US VLESS-449 | free-nodes
+      - VLESS-455 | free-nodes
+      - US VLESS-407 | free-nodes
+      - VLESS-443 | free-nodes
+      - VLESS-454 | free-nodes
+      - US VLESS-395 | free-nodes
+      - US VLESS-441 | free-nodes
+      - 美国e1
+      - 美国e1_1
+      - 美国e1_2
+      - 美国e1_3
+      - 台湾e1
+      - 香港e1
+      - 美国e1_4
+      - 美国e1_5
+      - 美国e1_6
+      - 荷兰e1
+      - 荷兰e1_1
+      - 美国e1_7
+      - 荷兰e1_2
+      - 美国e1_8
+      - 芬兰e1
+      - 美国e1_9
+      - 美国e1_10
+      - 美国e1_11
+      - 意大利e1
+      - 德国e1
+      - 英国e1
+      - 美国e1_12
+      - 英国e1_1
+      - 俄罗斯e1
+      - 香港e1_1
+      - 香港e1_2
+      - 美国e1_13
+      - 美国e1_14
+      - 美国e1_15
+      - 香港e1_3
+      - 美国e1_16
+      - US VLESS-552 | free-nodes
+      - US VLESS-547 | free-nodes
+      - US VLESS-493 | free-nodes
+      - US VLESS-544 | free-nodes
+      - RU VLESS-181 | free-nodes
+      - US VLESS-558 | free-nodes
+      - US VLESS-542 | free-nodes
+      - VLESS-532 | free-nodes
+      - VLESS-551 | free-nodes
+      - VLESS-533 | free-nodes
+      - VLESS-549 | free-nodes
+      - VLESS-515 | free-nodes
+      - VLESS-223 | free-nodes
+      - VLESS-487 | free-nodes
+      - HK VLESS-524 | free-nodes
+      - HK VLESS-531 | free-nodes
+      - VLESS-233 | free-nodes
+      - HK VLESS-500 | free-nodes
+      - US VLESS-556 | free-nodes
+      - US VLESS-514 | free-nodes
+      - US VLESS-502 | free-nodes
+      - 美国+纽约州纽约BuyVM
+      - 美国+纽约州纽约BuyVM_1
+      - 巴西+1
+      - 亚太地区+1
+      - 美国纽约州水牛城
+      - 英国+桑德兰大学
+      - 🇩🇪 德国 | DEU
+      - 🇰🇷 韩国 | KOR
+      - 🇩🇪 德国 | DEU_1
+      - 🇰🇷 韩国 | KOR_1
+      - 🇩🇪 德国 | DEU_2
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 美国12
+      - GB VLESS-429 | free-nodes
+      - GB VLESS-412 | free-nodes
+      - 英国
+      - GB VLESS-438 | free-nodes
+      - 英国12
+      - US VLESS-449 | free-nodes
+      - VLESS-455 | free-nodes
+      - US VLESS-407 | free-nodes
+      - VLESS-443 | free-nodes
+      - VLESS-454 | free-nodes
+      - US VLESS-395 | free-nodes
+      - US VLESS-441 | free-nodes
+      - 美国e1
+      - 美国e1_1
+      - 美国e1_2
+      - 美国e1_3
+      - 台湾e1
+      - 香港e1
+      - 美国e1_4
+      - 美国e1_5
+      - 美国e1_6
+      - 荷兰e1
+      - 荷兰e1_1
+      - 美国e1_7
+      - 荷兰e1_2
+      - 美国e1_8
+      - 芬兰e1
+      - 美国e1_9
+      - 美国e1_10
+      - 美国e1_11
+      - 意大利e1
+      - 德国e1
+      - 英国e1
+      - 美国e1_12
+      - 英国e1_1
+      - 俄罗斯e1
+      - 香港e1_1
+      - 香港e1_2
+      - 美国e1_13
+      - 美国e1_14
+      - 美国e1_15
+      - 香港e1_3
+      - 美国e1_16
+      - US VLESS-552 | free-nodes
+      - US VLESS-547 | free-nodes
+      - US VLESS-493 | free-nodes
+      - US VLESS-544 | free-nodes
+      - RU VLESS-181 | free-nodes
+      - US VLESS-558 | free-nodes
+      - US VLESS-542 | free-nodes
+      - VLESS-532 | free-nodes
+      - VLESS-551 | free-nodes
+      - VLESS-533 | free-nodes
+      - VLESS-549 | free-nodes
+      - VLESS-515 | free-nodes
+      - VLESS-223 | free-nodes
+      - VLESS-487 | free-nodes
+      - HK VLESS-524 | free-nodes
+      - HK VLESS-531 | free-nodes
+      - VLESS-233 | free-nodes
+      - HK VLESS-500 | free-nodes
+      - US VLESS-556 | free-nodes
+      - US VLESS-514 | free-nodes
+      - US VLESS-502 | free-nodes
+      - 美国+纽约州纽约BuyVM
+      - 美国+纽约州纽约BuyVM_1
+      - 巴西+1
+      - 亚太地区+1
+      - 美国纽约州水牛城
+      - 英国+桑德兰大学
+      - 🇩🇪 德国 | DEU
+      - 🇰🇷 韩国 | KOR
+      - 🇩🇪 德国 | DEU_1
+      - 🇰🇷 韩国 | KOR_1
+      - 🇩🇪 德国 | DEU_2
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
