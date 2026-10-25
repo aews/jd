@@ -1,0 +1,1935 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 香港23
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 香港21
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: 127.0.0.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 香港21_1
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 台湾
+    type: anytls
+    server: er8u54dh.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: px.ads.linkedin.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国21
+    type: anytls
+    server: svip.skycon808.com
+    port: 60005
+    password: 13f0acfa-38c1-4e82-a758-583aa31740df
+    sni: 127.0.0.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 澳洲21
+    type: anytls
+    server: svip.skycon808.com
+    port: 60005
+    password: 13f0acfa-38c1-4e82-a758-583aa31740df
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 英国+2
+    type: vless
+    server: 31.77.10.167
+    port: 24503
+    uuid: fafc7c16-f890-45ee-a856-02df225172dd
+    servername: nl3-gkv6mb.vpvr4ib84nuv6hdkt.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: iiApJD_tVRzp1t8EfIpG7T4dnx-O0ai5nkzD9GUV9Fc
+      short-id: 02ea11017a1c951f
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利
+    type: ss
+    server: 202.50.253.90
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 台湾21
+    type: anytls
+    server: 98416548.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 韩国21
+    type: anytls
+    server: svip.skycon808.com
+    port: 47531
+    password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
+    sni: tw15.swiftrelay.cc
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国21_1
+    type: anytls
+    server: svip.skycon808.com
+    port: 47531
+    password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
+    sni: tw15.swiftrelay.cc
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇮🇹_IT_意大利_1
+    type: ss
+    server: 202.50.253.99
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利_2
+    type: ss
+    server: 202.50.253.18
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹 意大利 | ITA
+    type: ss
+    server: 202.50.253.18
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹 意大利 | ITA_1
+    type: ss
+    server: 202.50.253.81
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹 意大利 | ITA_2
+    type: ss
+    server: 202.50.253.45
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 爱尔兰+1
+    type: vless
+    server: 78.17.178.125
+    port: 443
+    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+    servername: cdn.tbank.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
+      short-id: e0215064d8d1fd7c
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹 意大利 | ITA_3
+    type: ss
+    server: 202.50.253.63
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利_3
+    type: ss
+    server: 202.50.253.45
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 台湾21_1
+    type: anytls
+    server: 684616s4.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: px.ads.linkedin.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 🇮🇹_IT_意大利_4
+    type: ss
+    server: 202.50.253.54
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 香港21_2
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 香港21_3
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 香港21_4
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 香港21_5
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 台湾21_2
+    type: anytls
+    server: 684616s4.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: px.ads.linkedin.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 台湾21_3
+    type: anytls
+    server: er8u54dh.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: px.ads.linkedin.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 香港21_6
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国12
+    type: vmess
+    server: us16-4.998998.best
+    port: 443
+    uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /efrsdioy98wert
+      headers:
+        Host: server1.9966338.xyz
+    udp: true
+  - name: 台湾21_4
+    type: anytls
+    server: er8u54dh.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: px.ads.linkedin.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 香港21_7
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 澳洲21_1
+    type: anytls
+    server: svip.skycon808.com
+    port: 60005
+    password: 13f0acfa-38c1-4e82-a758-583aa31740df
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国21_2
+    type: vless
+    server: 31.59.143.242
+    port: 34451
+    uuid: f259a2e5-fd8d-4db9-a3ac-6b26322cffa9
+    network: xhttp
+    servername: pl-cfe6b10b7f.shamanapp.online
+    tls: true
+    client-fingerprint: firefox
+    xhttp-opts:
+      path: /ShamanXHTTP2026
+      host: pl-cfe6b10b7f.shamanapp.online
+      mode: auto
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰21
+    type: vless
+    server: 217.60.23.218
+    port: 443
+    uuid: 0f11b72f-1af1-4f0a-b992-87a8241d9213
+    servername: www.bing.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: uAoKx_ePWGe_jowwFZt7x3oZSNU3VJl9dIQmeYG22FM
+      short-id: 9a4d61e8c2f735b0
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡21
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 54528
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
+      short-id: 54cca3c1c1c7
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡21_1
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 56415
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: www.kaidee.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: EG-jzQw1RyOwAM4L9rMKondSx7cyFmPyv1OP7xXkIk4
+      short-id: cbd39bea0805e2
+    skip-cert-verify: true
+    udp: true
+  - name: 新加坡21_2
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 54528
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
+      short-id: 54cca3c1c1c7
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_3
+    type: ss
+    server: 202.50.253.90
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 加拿大21
+    type: vless
+    server: 51.161.72.153
+    port: 37765
+    uuid: 12af3df8-2ffe-48fe-9b60-376f015ea4f8
+    network: grpc
+    servername: www.semiconductor.samsung.com
+    tls: true
+    grpc-opts:
+      grpc-service-name: grpc_common1
+    reality-opts:
+      public-key: g-4UVtgbojoxQaglMCttyLme4xjtTqomqxdZaVsruQ4
+      short-id: defda00d613c
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_4
+    type: ss
+    server: 202.50.253.36
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 意大利21
+    type: ss
+    server: 202.50.253.81
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 德国21
+    type: vless
+    server: 31.59.216.141
+    port: 443
+    uuid: c6cfcc53-9271-4ef7-88c5-5141621c8db1
+    servername: 193.23.216.239.cdn-one.org
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 7zsU1U-30jh-qqfmqZukMfoqHB75ksKFA5aQFi8LGW4
+      short-id: 70b4ca
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰21_1
+    type: vless
+    server: 213.152.165.203
+    port: 2093
+    uuid: 0b418782-e023-447e-ba99-e66b84ff118d
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+      short-id: 8a9725533854a7e8
+    skip-cert-verify: true
+    udp: true
+  - name: 德国21_1
+    type: vless
+    server: 78.17.178.125
+    port: 443
+    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+    servername: cdn.tbank.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
+      short-id: e0215064d8d1fd7c
+    skip-cert-verify: true
+    udp: true
+  - name: 德国21_2
+    type: vless
+    server: 31.59.216.141
+    port: 443
+    uuid: c6cfcc53-9271-4ef7-88c5-5141621c8db1
+    servername: 193.23.216.239.cdn-one.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 7zsU1U-30jh-qqfmqZukMfoqHB75ksKFA5aQFi8LGW4
+      short-id: 70b4ca
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_5
+    type: ss
+    server: 202.50.253.72
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_6
+    type: vless
+    server: 213.152.165.203
+    port: 2093
+    uuid: 0b418782-e023-447e-ba99-e66b84ff118d
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+      short-id: 8a9725533854a7e8
+    skip-cert-verify: true
+    udp: true
+  - name: 香港21_8
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 荷兰21_2
+    type: vless
+    server: 213.152.165.203
+    port: 2093
+    uuid: 0b418782-e023-447e-ba99-e66b84ff118d
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+      short-id: 8a9725533854a7e8
+    skip-cert-verify: true
+    udp: true
+  - name: 台湾21_5
+    type: anytls
+    server: 98416548.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 美国21_7
+    type: ss
+    server: 202.50.253.54
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰21_3
+    type: vless
+    server: 213.152.165.203
+    port: 2091
+    uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
+      short-id: 08a4b1f473932632
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰21_4
+    type: vless
+    server: 213.152.165.203
+    port: 2091
+    uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
+      short-id: 08a4b1f473932632
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_8
+    type: ss
+    server: 202.50.253.18
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰21_5
+    type: vless
+    server: 213.152.165.203
+    port: 2091
+    uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
+      short-id: 08a4b1f473932632
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰21_6
+    type: vless
+    server: 213.152.165.203
+    port: 2091
+    uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
+      short-id: 08a4b1f473932632
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_9
+    type: ss
+    server: 202.50.253.45
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰21_7
+    type: vless
+    server: 89.34.230.66
+    port: 60023
+    uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+    network: grpc
+    servername: starlink.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: PFL3AoMNTu9-VrM2WIrvQl2l-ibVgR5vIE1Vh-txKVg
+      short-id: 6070d424a64f75
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_10
+    type: anytls
+    server: svip.skycon808.com
+    port: 47531
+    password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
+    sni: tw15.swiftrelay.cc
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 美国21_11
+    type: ss
+    server: 202.50.253.27
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 香港21_9
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: 127.0.0.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 韩国21_1
+    type: anytls
+    server: svip.skycon808.com
+    port: 47531
+    password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
+    sni: tw15.swiftrelay.cc
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: 俄罗斯21
+    type: vless
+    server: z1q3pv4g78.rucdncomp.pro
+    port: 443
+    uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
+    network: ws
+    servername: z1q3pv4g78.rucdncomp.pro
+    tls: true
+    client-fingerprint: random
+    ws-opts:
+      path: /useraction/events/b892639b7195/
+      headers:
+        Host: z1q3pv4g78.rucdncomp.pro
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_12
+    type: vless
+    server: 138.124.79.6
+    port: 443
+    uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+    servername: node-nl-1.nztpro.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ydN3DRKjNC6q7JI_Zegj3hhvdHussmralsnSQGQVdws
+      short-id: 25f4a40b9fdd9780
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_13
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 30892
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: us1p1.xn--ghq880n3na965a.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: YinI5MijeZpRatg6QNDvP0qXEif-6VHC6gV5yoji4i4
+      short-id: 3d31326f95
+    skip-cert-verify: true
+    udp: true
+  - name: 美国21_14
+    type: ss
+    server: 202.50.253.63
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 荷兰21_8
+    type: vless
+    server: 138.124.79.6
+    port: 443
+    uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+    servername: node-nl-1.nztpro.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ydN3DRKjNC6q7JI_Zegj3hhvdHussmralsnSQGQVdws
+      short-id: 25f4a40b9fdd9780
+    skip-cert-verify: true
+    udp: true
+  - name: 俄罗斯+1
+    type: vless
+    server: 185.179.190.170
+    port: 59222
+    uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+    network: grpc
+    servername: tbank.ru
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: riOqDvO6CI06_GP7aJEtDH27zPWu6BiFwGrUESatk1I
+      short-id: e03d3096bebd
+    skip-cert-verify: true
+    udp: true
+  - name: 新西兰+2
+    type: ss
+    server: 202.50.253.36
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 新西兰+3
+    type: ss
+    server: 202.50.253.54
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 乌克兰+4
+    type: vless
+    server: 46.243.142.104
+    port: 443
+    uuid: 9ba53795-4356-40ab-8067-76ec2ae2a3d8
+    network: ws
+    servername: santehdv.site
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /media/stream/qUWu2oaFgxAw
+      headers:
+        Host: santehdv.site
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 🇰🇷 韩国 | KOR
+    type: vless
+    server: 13.125.13.26
+    port: 443
+    uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+    servername: telemetry.tesla-dev2.ev-infra.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: DHOrfoin7TeRpnIoU3d6qT5Yrq3QPVFp49kApATA4iE
+      short-id: e04a526b0b09c765
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS
+    type: vless
+    server: 193.223.104.140
+    port: 443
+    uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+    servername: abuse.ozon.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS_1
+    type: vless
+    server: 147.45.46.169
+    port: 443
+    uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+    servername: abuse.ozon.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷 法国 | FRA
+    type: vless
+    server: 213.152.165.204
+    port: 2092
+    uuid: 41e9280c-818c-4939-b5d6-332bf4d872e6
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+      short-id: 716b7eba38125f3a
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS_2
+    type: vless
+    server: 45.128.78.176
+    port: 443
+    uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+    servername: ozon.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS_3
+    type: vless
+    server: 113.30.154.207
+    port: 8443
+    uuid: ca926603-c678-4639-b726-a5b82d7e110c
+    servername: apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷 法国 | FRA_1
+    type: vless
+    server: 213.152.165.203
+    port: 2092
+    uuid: 901cb432-3807-404a-9bb8-987814b000ca
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+      short-id: 716b7eba38125f3a
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇱 波兰 | POL
+    type: vless
+    server: pl1.mycloud1.org
+    port: 443
+    uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
+    servername: pl1.mycloud1.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
+      short-id: afee962d
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 英国 | GBR
+    type: vless
+    server: 45.151.71.165
+    port: 443
+    uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+    servername: gb.ozon.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺 俄罗斯 | RUS_4
+    type: ss
+    server: 46.17.43.227
+    port: 18443
+    cipher: aes-256-gcm
+    password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+    skip-cert-verify: true
+    udp: true
+  - name: 🇪🇸 西班牙 | ESP
+    type: vless
+    server: 213.152.165.203
+    port: 2095
+    uuid: b38712cb-e4aa-4462-b7e3-df20508d2b39
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: OKksVHWL5JepTv7if7Ta_L_7vn8OxW0INwV71HJM1jI
+      short-id: 3869d49a9a79e06a
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦 加拿大 | CAN
+    type: vless
+    server: 213.152.165.203
+    port: 2093
+    uuid: 28d7a636-fd0b-489e-bf99-baa5b1bf9f15
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+      short-id: 8a9725533854a7e8
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹 意大利 | ITA_4
+    type: ss
+    server: 202.50.253.18
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 英国 | GBR_1
+    type: vless
+    server: 45.151.71.162
+    port: 443
+    uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+    servername: gb.ozon.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU
+    type: vless
+    server: 5.175.205.190
+    port: 27774
+    uuid: 653137c6-474e-4a3d-9a20-5a5afb3d4a4f
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪 德国 | DEU_1
+    type: vless
+    server: 201.51.8.163
+    port: 443
+    uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+    servername: atk.vkusnews.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 美国 | USA
+    type: vless
+    server: santehdv.site
+    port: 443
+    uuid: 9ba53795-4356-40ab-8067-76ec2ae2a3d8
+    network: ws
+    servername: santehdv.site
+    tls: true
+    client-fingerprint: edge
+    ws-opts:
+      path: /media/stream/E2QlYgrvniT_
+      headers:
+        Host: santehdv.site
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇷 伊朗 | IRN
+    type: vless
+    server: 198.16.113.222
+    port: 8443
+    uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
+      short-id: 69984b9e02545831
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 日本 | JPN
+    type: vless
+    server: 213.152.165.205
+    port: 2090
+    uuid: 5f19bac3-f40d-4de8-8f4e-0de7853efa07
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
+      short-id: bb472a184677af64
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 日本 | JPN_1
+    type: vless
+    server: 213.152.165.200
+    port: 2090
+    uuid: c63487b1-2543-40b9-b39a-3f27a5a1f4cf
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
+      short-id: bb472a184677af64
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦 加拿大 | CAN_1
+    type: vless
+    server: 213.152.165.200
+    port: 2093
+    uuid: 28d7a636-fd0b-489e-bf99-baa5b1bf9f15
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+      short-id: 8a9725533854a7e8
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利_5
+    type: ss
+    server: 202.50.253.99
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利_6
+    type: ss
+    server: 202.50.253.90
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利_7
+    type: ss
+    server: 202.50.253.72
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利_8
+    type: ss
+    server: 202.50.253.18
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利_9
+    type: ss
+    server: 202.50.253.45
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 香港23
+      - 香港21
+      - 香港21_1
+      - 台湾
+      - 美国21
+      - 澳洲21
+      - 英国+2
+      - 🇮🇹_IT_意大利
+      - 台湾21
+      - 韩国21
+      - 美国21_1
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹_IT_意大利_2
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA_1
+      - 🇮🇹 意大利 | ITA_2
+      - 爱尔兰+1
+      - 🇮🇹 意大利 | ITA_3
+      - 🇮🇹_IT_意大利_3
+      - 台湾21_1
+      - 🇮🇹_IT_意大利_4
+      - 香港21_2
+      - 香港21_3
+      - 香港21_4
+      - 香港21_5
+      - 台湾21_2
+      - 台湾21_3
+      - 香港21_6
+      - 美国12
+      - 台湾21_4
+      - 香港21_7
+      - 澳洲21_1
+      - 美国21_2
+      - 荷兰21
+      - 新加坡21
+      - 新加坡21_1
+      - 新加坡21_2
+      - 美国21_3
+      - 加拿大21
+      - 美国21_4
+      - 意大利21
+      - 德国21
+      - 荷兰21_1
+      - 德国21_1
+      - 德国21_2
+      - 美国21_5
+      - 美国21_6
+      - 香港21_8
+      - 荷兰21_2
+      - 台湾21_5
+      - 美国21_7
+      - 荷兰21_3
+      - 荷兰21_4
+      - 美国21_8
+      - 荷兰21_5
+      - 荷兰21_6
+      - 美国21_9
+      - 荷兰21_7
+      - 美国21_10
+      - 美国21_11
+      - 香港21_9
+      - 韩国21_1
+      - 俄罗斯21
+      - 美国21_12
+      - 美国21_13
+      - 美国21_14
+      - 荷兰21_8
+      - 俄罗斯+1
+      - 新西兰+2
+      - 新西兰+3
+      - 乌克兰+4
+      - 🇰🇷 韩国 | KOR
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇫🇷 法国 | FRA
+      - 🇷🇺 俄罗斯 | RUS_2
+      - 🇷🇺 俄罗斯 | RUS_3
+      - 🇫🇷 法国 | FRA_1
+      - 🇵🇱 波兰 | POL
+      - 🇬🇧 英国 | GBR
+      - 🇷🇺 俄罗斯 | RUS_4
+      - 🇪🇸 西班牙 | ESP
+      - 🇨🇦 加拿大 | CAN
+      - 🇮🇹 意大利 | ITA_4
+      - 🇬🇧 英国 | GBR_1
+      - 🇩🇪 德国 | DEU
+      - 🇩🇪 德国 | DEU_1
+      - 🇺🇸 美国 | USA
+      - 🇮🇷 伊朗 | IRN
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇨🇦 加拿大 | CAN_1
+      - 🇮🇹_IT_意大利_5
+      - 🇮🇹_IT_意大利_6
+      - 🇮🇹_IT_意大利_7
+      - 🇮🇹_IT_意大利_8
+      - 🇮🇹_IT_意大利_9
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 香港23
+      - 香港21
+      - 香港21_1
+      - 台湾
+      - 美国21
+      - 澳洲21
+      - 英国+2
+      - 🇮🇹_IT_意大利
+      - 台湾21
+      - 韩国21
+      - 美国21_1
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹_IT_意大利_2
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA_1
+      - 🇮🇹 意大利 | ITA_2
+      - 爱尔兰+1
+      - 🇮🇹 意大利 | ITA_3
+      - 🇮🇹_IT_意大利_3
+      - 台湾21_1
+      - 🇮🇹_IT_意大利_4
+      - 香港21_2
+      - 香港21_3
+      - 香港21_4
+      - 香港21_5
+      - 台湾21_2
+      - 台湾21_3
+      - 香港21_6
+      - 美国12
+      - 台湾21_4
+      - 香港21_7
+      - 澳洲21_1
+      - 美国21_2
+      - 荷兰21
+      - 新加坡21
+      - 新加坡21_1
+      - 新加坡21_2
+      - 美国21_3
+      - 加拿大21
+      - 美国21_4
+      - 意大利21
+      - 德国21
+      - 荷兰21_1
+      - 德国21_1
+      - 德国21_2
+      - 美国21_5
+      - 美国21_6
+      - 香港21_8
+      - 荷兰21_2
+      - 台湾21_5
+      - 美国21_7
+      - 荷兰21_3
+      - 荷兰21_4
+      - 美国21_8
+      - 荷兰21_5
+      - 荷兰21_6
+      - 美国21_9
+      - 荷兰21_7
+      - 美国21_10
+      - 美国21_11
+      - 香港21_9
+      - 韩国21_1
+      - 俄罗斯21
+      - 美国21_12
+      - 美国21_13
+      - 美国21_14
+      - 荷兰21_8
+      - 俄罗斯+1
+      - 新西兰+2
+      - 新西兰+3
+      - 乌克兰+4
+      - 🇰🇷 韩国 | KOR
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇫🇷 法国 | FRA
+      - 🇷🇺 俄罗斯 | RUS_2
+      - 🇷🇺 俄罗斯 | RUS_3
+      - 🇫🇷 法国 | FRA_1
+      - 🇵🇱 波兰 | POL
+      - 🇬🇧 英国 | GBR
+      - 🇷🇺 俄罗斯 | RUS_4
+      - 🇪🇸 西班牙 | ESP
+      - 🇨🇦 加拿大 | CAN
+      - 🇮🇹 意大利 | ITA_4
+      - 🇬🇧 英国 | GBR_1
+      - 🇩🇪 德国 | DEU
+      - 🇩🇪 德国 | DEU_1
+      - 🇺🇸 美国 | USA
+      - 🇮🇷 伊朗 | IRN
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇨🇦 加拿大 | CAN_1
+      - 🇮🇹_IT_意大利_5
+      - 🇮🇹_IT_意大利_6
+      - 🇮🇹_IT_意大利_7
+      - 🇮🇹_IT_意大利_8
+      - 🇮🇹_IT_意大利_9
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 香港23
+      - 香港21
+      - 香港21_1
+      - 台湾
+      - 美国21
+      - 澳洲21
+      - 英国+2
+      - 🇮🇹_IT_意大利
+      - 台湾21
+      - 韩国21
+      - 美国21_1
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹_IT_意大利_2
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA_1
+      - 🇮🇹 意大利 | ITA_2
+      - 爱尔兰+1
+      - 🇮🇹 意大利 | ITA_3
+      - 🇮🇹_IT_意大利_3
+      - 台湾21_1
+      - 🇮🇹_IT_意大利_4
+      - 香港21_2
+      - 香港21_3
+      - 香港21_4
+      - 香港21_5
+      - 台湾21_2
+      - 台湾21_3
+      - 香港21_6
+      - 美国12
+      - 台湾21_4
+      - 香港21_7
+      - 澳洲21_1
+      - 美国21_2
+      - 荷兰21
+      - 新加坡21
+      - 新加坡21_1
+      - 新加坡21_2
+      - 美国21_3
+      - 加拿大21
+      - 美国21_4
+      - 意大利21
+      - 德国21
+      - 荷兰21_1
+      - 德国21_1
+      - 德国21_2
+      - 美国21_5
+      - 美国21_6
+      - 香港21_8
+      - 荷兰21_2
+      - 台湾21_5
+      - 美国21_7
+      - 荷兰21_3
+      - 荷兰21_4
+      - 美国21_8
+      - 荷兰21_5
+      - 荷兰21_6
+      - 美国21_9
+      - 荷兰21_7
+      - 美国21_10
+      - 美国21_11
+      - 香港21_9
+      - 韩国21_1
+      - 俄罗斯21
+      - 美国21_12
+      - 美国21_13
+      - 美国21_14
+      - 荷兰21_8
+      - 俄罗斯+1
+      - 新西兰+2
+      - 新西兰+3
+      - 乌克兰+4
+      - 🇰🇷 韩国 | KOR
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇫🇷 法国 | FRA
+      - 🇷🇺 俄罗斯 | RUS_2
+      - 🇷🇺 俄罗斯 | RUS_3
+      - 🇫🇷 法国 | FRA_1
+      - 🇵🇱 波兰 | POL
+      - 🇬🇧 英国 | GBR
+      - 🇷🇺 俄罗斯 | RUS_4
+      - 🇪🇸 西班牙 | ESP
+      - 🇨🇦 加拿大 | CAN
+      - 🇮🇹 意大利 | ITA_4
+      - 🇬🇧 英国 | GBR_1
+      - 🇩🇪 德国 | DEU
+      - 🇩🇪 德国 | DEU_1
+      - 🇺🇸 美国 | USA
+      - 🇮🇷 伊朗 | IRN
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇨🇦 加拿大 | CAN_1
+      - 🇮🇹_IT_意大利_5
+      - 🇮🇹_IT_意大利_6
+      - 🇮🇹_IT_意大利_7
+      - 🇮🇹_IT_意大利_8
+      - 🇮🇹_IT_意大利_9
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 香港23
+      - 香港21
+      - 香港21_1
+      - 台湾
+      - 美国21
+      - 澳洲21
+      - 英国+2
+      - 🇮🇹_IT_意大利
+      - 台湾21
+      - 韩国21
+      - 美国21_1
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹_IT_意大利_2
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA_1
+      - 🇮🇹 意大利 | ITA_2
+      - 爱尔兰+1
+      - 🇮🇹 意大利 | ITA_3
+      - 🇮🇹_IT_意大利_3
+      - 台湾21_1
+      - 🇮🇹_IT_意大利_4
+      - 香港21_2
+      - 香港21_3
+      - 香港21_4
+      - 香港21_5
+      - 台湾21_2
+      - 台湾21_3
+      - 香港21_6
+      - 美国12
+      - 台湾21_4
+      - 香港21_7
+      - 澳洲21_1
+      - 美国21_2
+      - 荷兰21
+      - 新加坡21
+      - 新加坡21_1
+      - 新加坡21_2
+      - 美国21_3
+      - 加拿大21
+      - 美国21_4
+      - 意大利21
+      - 德国21
+      - 荷兰21_1
+      - 德国21_1
+      - 德国21_2
+      - 美国21_5
+      - 美国21_6
+      - 香港21_8
+      - 荷兰21_2
+      - 台湾21_5
+      - 美国21_7
+      - 荷兰21_3
+      - 荷兰21_4
+      - 美国21_8
+      - 荷兰21_5
+      - 荷兰21_6
+      - 美国21_9
+      - 荷兰21_7
+      - 美国21_10
+      - 美国21_11
+      - 香港21_9
+      - 韩国21_1
+      - 俄罗斯21
+      - 美国21_12
+      - 美国21_13
+      - 美国21_14
+      - 荷兰21_8
+      - 俄罗斯+1
+      - 新西兰+2
+      - 新西兰+3
+      - 乌克兰+4
+      - 🇰🇷 韩国 | KOR
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇫🇷 法国 | FRA
+      - 🇷🇺 俄罗斯 | RUS_2
+      - 🇷🇺 俄罗斯 | RUS_3
+      - 🇫🇷 法国 | FRA_1
+      - 🇵🇱 波兰 | POL
+      - 🇬🇧 英国 | GBR
+      - 🇷🇺 俄罗斯 | RUS_4
+      - 🇪🇸 西班牙 | ESP
+      - 🇨🇦 加拿大 | CAN
+      - 🇮🇹 意大利 | ITA_4
+      - 🇬🇧 英国 | GBR_1
+      - 🇩🇪 德国 | DEU
+      - 🇩🇪 德国 | DEU_1
+      - 🇺🇸 美国 | USA
+      - 🇮🇷 伊朗 | IRN
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇨🇦 加拿大 | CAN_1
+      - 🇮🇹_IT_意大利_5
+      - 🇮🇹_IT_意大利_6
+      - 🇮🇹_IT_意大利_7
+      - 🇮🇹_IT_意大利_8
+      - 🇮🇹_IT_意大利_9
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 香港23
+      - 香港21
+      - 香港21_1
+      - 台湾
+      - 美国21
+      - 澳洲21
+      - 英国+2
+      - 🇮🇹_IT_意大利
+      - 台湾21
+      - 韩国21
+      - 美国21_1
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹_IT_意大利_2
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA_1
+      - 🇮🇹 意大利 | ITA_2
+      - 爱尔兰+1
+      - 🇮🇹 意大利 | ITA_3
+      - 🇮🇹_IT_意大利_3
+      - 台湾21_1
+      - 🇮🇹_IT_意大利_4
+      - 香港21_2
+      - 香港21_3
+      - 香港21_4
+      - 香港21_5
+      - 台湾21_2
+      - 台湾21_3
+      - 香港21_6
+      - 美国12
+      - 台湾21_4
+      - 香港21_7
+      - 澳洲21_1
+      - 美国21_2
+      - 荷兰21
+      - 新加坡21
+      - 新加坡21_1
+      - 新加坡21_2
+      - 美国21_3
+      - 加拿大21
+      - 美国21_4
+      - 意大利21
+      - 德国21
+      - 荷兰21_1
+      - 德国21_1
+      - 德国21_2
+      - 美国21_5
+      - 美国21_6
+      - 香港21_8
+      - 荷兰21_2
+      - 台湾21_5
+      - 美国21_7
+      - 荷兰21_3
+      - 荷兰21_4
+      - 美国21_8
+      - 荷兰21_5
+      - 荷兰21_6
+      - 美国21_9
+      - 荷兰21_7
+      - 美国21_10
+      - 美国21_11
+      - 香港21_9
+      - 韩国21_1
+      - 俄罗斯21
+      - 美国21_12
+      - 美国21_13
+      - 美国21_14
+      - 荷兰21_8
+      - 俄罗斯+1
+      - 新西兰+2
+      - 新西兰+3
+      - 乌克兰+4
+      - 🇰🇷 韩国 | KOR
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇫🇷 法国 | FRA
+      - 🇷🇺 俄罗斯 | RUS_2
+      - 🇷🇺 俄罗斯 | RUS_3
+      - 🇫🇷 法国 | FRA_1
+      - 🇵🇱 波兰 | POL
+      - 🇬🇧 英国 | GBR
+      - 🇷🇺 俄罗斯 | RUS_4
+      - 🇪🇸 西班牙 | ESP
+      - 🇨🇦 加拿大 | CAN
+      - 🇮🇹 意大利 | ITA_4
+      - 🇬🇧 英国 | GBR_1
+      - 🇩🇪 德国 | DEU
+      - 🇩🇪 德国 | DEU_1
+      - 🇺🇸 美国 | USA
+      - 🇮🇷 伊朗 | IRN
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇨🇦 加拿大 | CAN_1
+      - 🇮🇹_IT_意大利_5
+      - 🇮🇹_IT_意大利_6
+      - 🇮🇹_IT_意大利_7
+      - 🇮🇹_IT_意大利_8
+      - 🇮🇹_IT_意大利_9
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 香港23
+      - 香港21
+      - 香港21_1
+      - 台湾
+      - 美国21
+      - 澳洲21
+      - 英国+2
+      - 🇮🇹_IT_意大利
+      - 台湾21
+      - 韩国21
+      - 美国21_1
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹_IT_意大利_2
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA_1
+      - 🇮🇹 意大利 | ITA_2
+      - 爱尔兰+1
+      - 🇮🇹 意大利 | ITA_3
+      - 🇮🇹_IT_意大利_3
+      - 台湾21_1
+      - 🇮🇹_IT_意大利_4
+      - 香港21_2
+      - 香港21_3
+      - 香港21_4
+      - 香港21_5
+      - 台湾21_2
+      - 台湾21_3
+      - 香港21_6
+      - 美国12
+      - 台湾21_4
+      - 香港21_7
+      - 澳洲21_1
+      - 美国21_2
+      - 荷兰21
+      - 新加坡21
+      - 新加坡21_1
+      - 新加坡21_2
+      - 美国21_3
+      - 加拿大21
+      - 美国21_4
+      - 意大利21
+      - 德国21
+      - 荷兰21_1
+      - 德国21_1
+      - 德国21_2
+      - 美国21_5
+      - 美国21_6
+      - 香港21_8
+      - 荷兰21_2
+      - 台湾21_5
+      - 美国21_7
+      - 荷兰21_3
+      - 荷兰21_4
+      - 美国21_8
+      - 荷兰21_5
+      - 荷兰21_6
+      - 美国21_9
+      - 荷兰21_7
+      - 美国21_10
+      - 美国21_11
+      - 香港21_9
+      - 韩国21_1
+      - 俄罗斯21
+      - 美国21_12
+      - 美国21_13
+      - 美国21_14
+      - 荷兰21_8
+      - 俄罗斯+1
+      - 新西兰+2
+      - 新西兰+3
+      - 乌克兰+4
+      - 🇰🇷 韩国 | KOR
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇫🇷 法国 | FRA
+      - 🇷🇺 俄罗斯 | RUS_2
+      - 🇷🇺 俄罗斯 | RUS_3
+      - 🇫🇷 法国 | FRA_1
+      - 🇵🇱 波兰 | POL
+      - 🇬🇧 英国 | GBR
+      - 🇷🇺 俄罗斯 | RUS_4
+      - 🇪🇸 西班牙 | ESP
+      - 🇨🇦 加拿大 | CAN
+      - 🇮🇹 意大利 | ITA_4
+      - 🇬🇧 英国 | GBR_1
+      - 🇩🇪 德国 | DEU
+      - 🇩🇪 德国 | DEU_1
+      - 🇺🇸 美国 | USA
+      - 🇮🇷 伊朗 | IRN
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇨🇦 加拿大 | CAN_1
+      - 🇮🇹_IT_意大利_5
+      - 🇮🇹_IT_意大利_6
+      - 🇮🇹_IT_意大利_7
+      - 🇮🇹_IT_意大利_8
+      - 🇮🇹_IT_意大利_9
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 香港23
+      - 香港21
+      - 香港21_1
+      - 台湾
+      - 美国21
+      - 澳洲21
+      - 英国+2
+      - 🇮🇹_IT_意大利
+      - 台湾21
+      - 韩国21
+      - 美国21_1
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹_IT_意大利_2
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA_1
+      - 🇮🇹 意大利 | ITA_2
+      - 爱尔兰+1
+      - 🇮🇹 意大利 | ITA_3
+      - 🇮🇹_IT_意大利_3
+      - 台湾21_1
+      - 🇮🇹_IT_意大利_4
+      - 香港21_2
+      - 香港21_3
+      - 香港21_4
+      - 香港21_5
+      - 台湾21_2
+      - 台湾21_3
+      - 香港21_6
+      - 美国12
+      - 台湾21_4
+      - 香港21_7
+      - 澳洲21_1
+      - 美国21_2
+      - 荷兰21
+      - 新加坡21
+      - 新加坡21_1
+      - 新加坡21_2
+      - 美国21_3
+      - 加拿大21
+      - 美国21_4
+      - 意大利21
+      - 德国21
+      - 荷兰21_1
+      - 德国21_1
+      - 德国21_2
+      - 美国21_5
+      - 美国21_6
+      - 香港21_8
+      - 荷兰21_2
+      - 台湾21_5
+      - 美国21_7
+      - 荷兰21_3
+      - 荷兰21_4
+      - 美国21_8
+      - 荷兰21_5
+      - 荷兰21_6
+      - 美国21_9
+      - 荷兰21_7
+      - 美国21_10
+      - 美国21_11
+      - 香港21_9
+      - 韩国21_1
+      - 俄罗斯21
+      - 美国21_12
+      - 美国21_13
+      - 美国21_14
+      - 荷兰21_8
+      - 俄罗斯+1
+      - 新西兰+2
+      - 新西兰+3
+      - 乌克兰+4
+      - 🇰🇷 韩国 | KOR
+      - 🇷🇺 俄罗斯 | RUS
+      - 🇷🇺 俄罗斯 | RUS_1
+      - 🇫🇷 法国 | FRA
+      - 🇷🇺 俄罗斯 | RUS_2
+      - 🇷🇺 俄罗斯 | RUS_3
+      - 🇫🇷 法国 | FRA_1
+      - 🇵🇱 波兰 | POL
+      - 🇬🇧 英国 | GBR
+      - 🇷🇺 俄罗斯 | RUS_4
+      - 🇪🇸 西班牙 | ESP
+      - 🇨🇦 加拿大 | CAN
+      - 🇮🇹 意大利 | ITA_4
+      - 🇬🇧 英国 | GBR_1
+      - 🇩🇪 德国 | DEU
+      - 🇩🇪 德国 | DEU_1
+      - 🇺🇸 美国 | USA
+      - 🇮🇷 伊朗 | IRN
+      - 🇯🇵 日本 | JPN
+      - 🇯🇵 日本 | JPN_1
+      - 🇨🇦 加拿大 | CAN_1
+      - 🇮🇹_IT_意大利_5
+      - 🇮🇹_IT_意大利_6
+      - 🇮🇹_IT_意大利_7
+      - 🇮🇹_IT_意大利_8
+      - 🇮🇹_IT_意大利_9
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
