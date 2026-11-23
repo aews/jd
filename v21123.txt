@@ -1,0 +1,1715 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: true
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - localhost
+    - +.localhost
+    - +.lan
+    - +.local
+    - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    geosite:cn:
+      - https://223.5.5.5/dns-query#DIRECT
+      - https://doh.pub/dns-query#DIRECT
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+proxies:
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (3)
+    server: 202.50.253.90
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (6)
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (8)
+    server: 202.50.253.99
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (9)
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 荷兰12
+    server: api.ferrin.uk
+    port: 443
+    uuid: 7d1a74fd-8a38-4a29-863f-5da53a9e557e
+    udp: true
+    tls: true
+    servername: 7d1a74fd.ferrin.uk
+    sni: 7d1a74fd.ferrin.uk
+    skip-cert-verify: false
+    alpn:
+      - h2
+    client-fingerprint: chrome
+    network: xhttp
+    xhttp-opts:
+      path: /es
+      mode: stream-one
+  - type: trojan
+    name: 美国
+    server: sclass-c2.catcat321.com
+    port: 20051
+    password: d9064589-74af-432a-9390-5d8a9da281bf
+    udp: true
+    tls: true
+    servername: hk.catxstar.com
+    sni: hk.catxstar.com
+    skip-cert-verify: false
+  - type: anytls
+    name: 美国_IPV4
+    server: sdf65h46wr.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    udp: true
+    tls: true
+    servername: images.ctfassets.net
+    sni: images.ctfassets.net
+    skip-cert-verify: false
+  - type: trojan
+    name: 新加坡12
+    server: sclass-01.catcat321.com
+    port: 20103
+    password: d7563108-615c-4338-a7bd-77f359869a4a
+    udp: true
+    tls: true
+    servername: hk.catxstar.com
+    sni: hk.catxstar.com
+    skip-cert-verify: false
+  - type: ss
+    name: 新西兰
+    server: 202.50.253.45
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 新西兰 (2)
+    server: 202.50.253.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 新西兰 (3)
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 新西兰 (4)
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 新西兰 (5)
+    server: 202.50.253.72
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 新西兰 (6)
+    server: 202.50.253.63
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 英国
+    server: 2.26.251.236
+    port: 443
+    uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: mental-deprivation.ru
+    sni: mental-deprivation.ru
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+      short-id: 4ff31b18d1bd8227
+  - type: vless
+    name: 英国 (2)
+    server: 2.26.251.236
+    port: 443
+    uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: mental-deprivation.ru
+    sni: mental-deprivation.ru
+    skip-cert-verify: false
+    reality-opts:
+      public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+      short-id: 4ff31b18d1bd8227
+  - type: vless
+    name: 英国12
+    server: 2.26.251.236
+    port: 443
+    uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: mental-deprivation.ru
+    sni: mental-deprivation.ru
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+      short-id: 4ff31b18d1bd8227
+  - type: vless
+    name: 英国12 (2)
+    server: 85.189.89.169
+    port: 20086
+    uuid: 6618c37f-edd7-4ff0-b9d6-26f1cc4945ab
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: aws.amazon.com
+    sni: aws.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: H3CK3gN9HfMONI7aYoSxOUqc5EYPgOVWfLOU3ygaIjw
+  - type: vless
+    name: 英国12 (3)
+    server: 85.189.89.182
+    port: 20086
+    uuid: 24bc6f99-bb3c-405b-9f99-e27c5012cf45
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: aws.amazon.com
+    sni: aws.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: p6xwBXTFkq8nzeO8zjPTSHANvS2DfstuG-Vp134hBGs
+  - type: vless
+    name: 英国12 (4)
+    server: 85.189.89.172
+    port: 20086
+    uuid: 469e41b2-ffb2-4ab3-ad4d-fd00ac69af75
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.amazon.com
+    sni: www.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: n1_yHUrlljxT_VL8HX0ALz8JKAYHJb5e2sQ8tMdBp2A
+  - type: ss
+    name: 意大利12
+    server: 202.50.253.90
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 意大利12 (2)
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 意大利12 (3)
+    server: 202.50.253.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 意大利12 (4)
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 意大利12 (5)
+    server: 202.50.253.99
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 意大利12 (6)
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 香港12
+    server: 45.136.15.212
+    port: 20086
+    uuid: 5a66e6cf-ba9f-41c5-8590-036890654e58
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.amazon.com
+    sni: www.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: z_EU3XzU2TmXkInPLf0GWdFEfx6ZcpVSxnS9BFJ1hGE
+  - type: vless
+    name: 香港12 (2)
+    server: 45.136.14.140
+    port: 20086
+    uuid: 367e69b0-5781-45ad-83bc-94013729532d
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.amazon.com
+    sni: www.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: hfJpGSf-nFizW5PjVNk0W5ZoTc81diTMjurFm3FT9j4
+  - type: vless
+    name: 香港12 (3)
+    server: 45.144.136.202
+    port: 20086
+    uuid: 16eb939a-75c3-4b59-bfc3-ff07316c7a80
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.paypal.com
+    sni: www.paypal.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ZMKSZGONIVWum7Ut-O7JIKJ6gUBfURgrNOiMrblUBxk
+  - type: vless
+    name: 香港12 (4)
+    server: 103.143.81.24
+    port: 20086
+    uuid: 4125878c-8cd5-4e2e-8e07-eca469c03e85
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.amazon.com
+    sni: www.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: lT0Tq10qFAJItnnPw9RjOizcHeAA0JZl_wC1DsqEKj0
+  - type: vless
+    name: 香港12 (5)
+    server: 38.180.95.176
+    port: 20086
+    uuid: 8d5b4bc5-2355-4a43-a386-ea8d20f6c3b8
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.ebay.com
+    sni: www.ebay.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: TpDfpHz7Lj4-Itv0ShybMhUrPChNXoexCGaOHtRjoD8
+  - type: vless
+    name: 香港12 (6)
+    server: 38.180.95.95
+    port: 20086
+    uuid: ba8ae5e6-835d-44f0-95fd-5d1291b2f599
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.amazon.com
+    sni: www.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 18kWhBUWGBC9R9_535uTkJWXyC79QrA4fqJgKa4tBQ0
+  - type: vless
+    name: 香港12 (7)
+    server: 38.244.198.105
+    port: 20086
+    uuid: f261bc8c-d2f2-43da-83e7-06ef41ef8aa5
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: aws.amazon.com
+    sni: aws.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: -cQ8O3f7-PUJ_RGl_QM106ivhH_ClMUMxZtnVczV0Vs
+  - type: vless
+    name: 香港12 (8)
+    server: 38.180.149.71
+    port: 20086
+    uuid: 31020df0-6aed-40a6-a84f-25296c07f80a
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.paypal.com
+    sni: www.paypal.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 7RIUTTFMeW_Jag3aT-XmbJipce7w3COFC0CQ1qiIZmk
+  - type: vless
+    name: 香港12 (9)
+    server: 38.180.95.96
+    port: 20086
+    uuid: af18b465-6f56-4a35-8932-fe9ce8c079b7
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: aws.amazon.com
+    sni: aws.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: gMbm2Kom7Njm5Vh1Eycw7s9hH0x84csLzC21eYEI9QY
+  - type: vless
+    name: 香港12 (10)
+    server: 38.180.149.224
+    port: 20086
+    uuid: c3f8154e-e6d3-40ce-b53e-7215fd96de5d
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.paypal.com
+    sni: www.paypal.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: q7cUSh9cmnxEDBTz2eQQF7b3luX0YZi9jp7CHgOVFS0
+  - type: vless
+    name: 香港12 (11)
+    server: 38.180.95.2
+    port: 20086
+    uuid: ffc912cc-45da-4ece-86d2-fe340c9ed1fc
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: aws.amazon.com
+    sni: aws.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: MyWImK76KPf3T75mEf5vIA8eNQR_7mKEK_mOP0HlclI
+  - type: vless
+    name: 美国12
+    server: 38.207.178.28
+    port: 20086
+    uuid: 11a2709f-a1aa-4b97-9212-4d5cb0c83e53
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.paypal.com
+    sni: www.paypal.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: fSVnXtIce23KOtqQjDuwRkNCM3mvWlva7bPNMfODv04
+  - type: vless
+    name: 美国12 (2)
+    server: 38.207.178.113
+    port: 20086
+    uuid: 82db522b-8f2b-45e1-a984-e199a3d3a6db
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: aws.amazon.com
+    sni: aws.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IdYIcbajO4njkNrsWpYriaYW9fF0YQAKjICgl0ynWDs
+  - type: vless
+    name: 美国12 (3)
+    server: 68.64.181.197
+    port: 20086
+    uuid: cfa9310e-0083-4e06-a664-0381098c148f
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: aws.amazon.com
+    sni: aws.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 78TG1qYh_ShLeQszkvn8Fzv9fItRD5uqNbldKeejFTI
+  - type: ss
+    name: 美国12 (4)
+    server: 202.50.253.72
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 美国12 (5)
+    server: 196.196.148.177
+    port: 443
+    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: 4935e4t.de25.h1clayd.click
+    sni: 4935e4t.de25.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+      short-id: 6976d670818644cc
+  - type: vless
+    name: 美国12 (6)
+    server: api.ferrin.uk
+    port: 443
+    uuid: 7d1a74fd-8a38-4a29-863f-5da53a9e557e
+    udp: true
+    tls: true
+    servername: 7d1a74fd.ferrin.uk
+    sni: 7d1a74fd.ferrin.uk
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: xhttp
+    xhttp-opts:
+      path: /es
+      mode: stream-one
+  - type: ss
+    name: 美国12 (7)
+    server: 202.50.253.63
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 美国12 (8)
+    server: api.ferrin.uk
+    port: 443
+    uuid: 7d1a74fd-8a38-4a29-863f-5da53a9e557e
+    udp: true
+    tls: true
+    servername: 7d1a74fd.ferrin.uk
+    sni: 7d1a74fd.ferrin.uk
+    skip-cert-verify: false
+    alpn:
+      - h2
+    client-fingerprint: chrome
+    network: xhttp
+    xhttp-opts:
+      path: /es
+      mode: stream-one
+  - type: vless
+    name: 美国12 (9)
+    server: 83.141.92.168
+    port: 443
+    uuid: a7595994-695d-484e-bfcb-e9fbb73cfa39
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: sladovna.russianpiwo.fun
+    sni: sladovna.russianpiwo.fun
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY
+      short-id: 7a7d19880a9ee786
+  - type: ss
+    name: 美国12 (10)
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vless
+    name: 美国12 (11)
+    server: api.ferrin.uk
+    port: 443
+    uuid: 7d1a74fd-8a38-4a29-863f-5da53a9e557e
+    udp: true
+    tls: true
+    servername: 7d1a74fd.ferrin.uk
+    sni: 7d1a74fd.ferrin.uk
+    skip-cert-verify: false
+    alpn:
+      - h2
+    client-fingerprint: chrome
+    network: xhttp
+    xhttp-opts:
+      path: /es
+      mode: stream-one
+  - type: wireguard
+    name: 美国12 (12)
+    server: 188.114.97.6
+    port: 7281
+    password: mNL2pg8LMMi2bIjoSR0fRSL6QO1BMvfsr8/Zog6ZW0c=
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    private-key: mNL2pg8LMMi2bIjoSR0fRSL6QO1BMvfsr8/Zog6ZW0c=
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    mtu: 1420
+  - type: wireguard
+    name: 美国12 (13)
+    server: 188.114.97.168
+    port: 1018
+    password: oIJI1bYivodfQPsjpa8/X74YOPBkN9tS50Z0QVVdSFo=
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    private-key: oIJI1bYivodfQPsjpa8/X74YOPBkN9tS50Z0QVVdSFo=
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    mtu: 1280
+  - type: wireguard
+    name: 美国12 (14)
+    server: 188.114.97.168
+    port: 1018
+    password: oIJI1bYivodfQPsjpa8/X74YOPBkN9tS50Z0QVVdSFo=
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    private-key: oIJI1bYivodfQPsjpa8/X74YOPBkN9tS50Z0QVVdSFo=
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    mtu: 1280
+  - type: vless
+    name: 美国12 (15)
+    server: 38.207.178.137
+    port: 20086
+    uuid: e4e11486-cef7-488a-8b4c-ac51f106383f
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.amazon.com
+    sni: www.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: t7qRcxR85PGhMJngfejgN01UsAmFZHxgIUVU36cCUhk
+  - type: vless
+    name: 俄罗斯12
+    server: 136.148.83.69
+    port: 443
+    uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+    udp: true
+    tls: true
+    servername: szqbx-ru-77dc.my-fade.cloud
+    sni: szqbx-ru-77dc.my-fade.cloud
+    skip-cert-verify: false
+    alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: qq
+  - type: vless
+    name: 俄罗斯12 (2)
+    server: 136.148.83.69
+    port: 443
+    uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+    udp: true
+    tls: true
+    servername: szqbx-ru-77dc.my-fade.cloud
+    sni: szqbx-ru-77dc.my-fade.cloud
+    skip-cert-verify: false
+  - type: vless
+    name: 俄罗斯12 (3)
+    server: 136.148.83.69
+    port: 443
+    uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+    udp: true
+    tls: true
+    servername: szqbx-ru-77dc.my-fade.cloud
+    sni: szqbx-ru-77dc.my-fade.cloud
+    skip-cert-verify: false
+    client-fingerprint: qq
+  - type: vless
+    name: 俄罗斯12 (4)
+    server: 136.148.83.69
+    port: 443
+    uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
+    udp: true
+    tls: true
+    servername: szqbx-ru-77dc.my-fade.cloud
+    sni: szqbx-ru-77dc.my-fade.cloud
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - type: vless
+    name: 俄罗斯12 (5)
+    server: 153.80.22.106
+    port: 443
+    uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: rusbox729.alexdjane.am
+    sni: rusbox729.alexdjane.am
+    skip-cert-verify: false
+    reality-opts:
+      public-key: IU5C8_llRrimMDeJDPc3XM256DZOWIYblUdDYilAcFM
+      short-id: 686f7ed96ec0227d
+  - type: ss
+    name: 德国12
+    server: 47.254.167.157
+    port: 443
+    password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+    cipher: 2022-blake3-chacha20-poly1305
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vmess
+    name: TW VMESS-04 | free-nodes
+    server: d1eyz.xiaoyan.io
+    port: 16616
+    uuid: 904f0569-8695-466f-97cf-0de2face1b46
+    cipher: auto
+    alterId: 0
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+  - type: vmess
+    name: US VMESS-13 | free-nodes
+    server: pdmv4.xiaoyan.io
+    port: 16648
+    uuid: 904f0569-8695-466f-97cf-0de2face1b46
+    cipher: auto
+    alterId: 0
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+  - type: ss
+    name: DE SS-20 | free-nodes
+    server: 202.50.253.72
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-16 | free-nodes
+    server: 202.50.253.90
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-23 | free-nodes
+    server: 202.50.253.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-19 | free-nodes
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: SS-02 | free-nodes
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: SS-01 | free-nodes
+    server: 202.50.253.45
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-15 | free-nodes
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-14 | free-nodes
+    server: 202.50.253.45
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-18 | free-nodes
+    server: 202.50.253.63
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-21 | free-nodes
+    server: 202.50.253.99
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-17 | free-nodes
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: DE SS-22 | free-nodes
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: vmess
+    name: HK VMESS-09
+    server: byr3a.xiaoyan.io
+    port: 16622
+    uuid: 904f0569-8695-466f-97cf-0de2face1b46
+    cipher: auto
+    alterId: 0
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+  - type: ss
+    name: 新西兰+1
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 新西兰+2
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 新西兰+3
+    server: 202.50.253.45
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹 意大利 | ITA
+    server: 202.50.253.72
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹 意大利 | ITA (2)
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹 意大利 | ITA (3)
+    server: 202.50.253.99
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹 意大利 | ITA (4)
+    server: 202.50.253.63
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹 意大利 | ITA (5)
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹 意大利 | ITA (6)
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹 意大利 | ITA (7)
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    udp: true
+    tls: false
+    skip-cert-verify: false
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 荷兰12
+      - 美国
+      - 美国_IPV4
+      - 新加坡12
+      - 新西兰
+      - 新西兰 (2)
+      - 新西兰 (3)
+      - 新西兰 (4)
+      - 新西兰 (5)
+      - 新西兰 (6)
+      - 英国
+      - 英国 (2)
+      - 英国12
+      - 英国12 (2)
+      - 英国12 (3)
+      - 英国12 (4)
+      - 意大利12
+      - 意大利12 (2)
+      - 意大利12 (3)
+      - 意大利12 (4)
+      - 意大利12 (5)
+      - 意大利12 (6)
+      - 香港12
+      - 香港12 (2)
+      - 香港12 (3)
+      - 香港12 (4)
+      - 香港12 (5)
+      - 香港12 (6)
+      - 香港12 (7)
+      - 香港12 (8)
+      - 香港12 (9)
+      - 香港12 (10)
+      - 香港12 (11)
+      - 美国12
+      - 美国12 (2)
+      - 美国12 (3)
+      - 美国12 (4)
+      - 美国12 (5)
+      - 美国12 (6)
+      - 美国12 (7)
+      - 美国12 (8)
+      - 美国12 (9)
+      - 美国12 (10)
+      - 美国12 (11)
+      - 美国12 (12)
+      - 美国12 (13)
+      - 美国12 (14)
+      - 美国12 (15)
+      - 俄罗斯12
+      - 俄罗斯12 (2)
+      - 俄罗斯12 (3)
+      - 俄罗斯12 (4)
+      - 俄罗斯12 (5)
+      - 德国12
+      - TW VMESS-04 | free-nodes
+      - US VMESS-13 | free-nodes
+      - DE SS-20 | free-nodes
+      - DE SS-16 | free-nodes
+      - DE SS-23 | free-nodes
+      - DE SS-19 | free-nodes
+      - SS-02 | free-nodes
+      - SS-01 | free-nodes
+      - DE SS-15 | free-nodes
+      - DE SS-14 | free-nodes
+      - DE SS-18 | free-nodes
+      - DE SS-21 | free-nodes
+      - DE SS-17 | free-nodes
+      - DE SS-22 | free-nodes
+      - HK VMESS-09
+      - 新西兰+1
+      - 新西兰+2
+      - 新西兰+3
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA (2)
+      - 🇮🇹 意大利 | ITA (3)
+      - 🇮🇹 意大利 | ITA (4)
+      - 🇮🇹 意大利 | ITA (5)
+      - 🇮🇹 意大利 | ITA (6)
+      - 🇮🇹 意大利 | ITA (7)
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 荷兰12
+      - 美国
+      - 美国_IPV4
+      - 新加坡12
+      - 新西兰
+      - 新西兰 (2)
+      - 新西兰 (3)
+      - 新西兰 (4)
+      - 新西兰 (5)
+      - 新西兰 (6)
+      - 英国
+      - 英国 (2)
+      - 英国12
+      - 英国12 (2)
+      - 英国12 (3)
+      - 英国12 (4)
+      - 意大利12
+      - 意大利12 (2)
+      - 意大利12 (3)
+      - 意大利12 (4)
+      - 意大利12 (5)
+      - 意大利12 (6)
+      - 香港12
+      - 香港12 (2)
+      - 香港12 (3)
+      - 香港12 (4)
+      - 香港12 (5)
+      - 香港12 (6)
+      - 香港12 (7)
+      - 香港12 (8)
+      - 香港12 (9)
+      - 香港12 (10)
+      - 香港12 (11)
+      - 美国12
+      - 美国12 (2)
+      - 美国12 (3)
+      - 美国12 (4)
+      - 美国12 (5)
+      - 美国12 (6)
+      - 美国12 (7)
+      - 美国12 (8)
+      - 美国12 (9)
+      - 美国12 (10)
+      - 美国12 (11)
+      - 美国12 (12)
+      - 美国12 (13)
+      - 美国12 (14)
+      - 美国12 (15)
+      - 俄罗斯12
+      - 俄罗斯12 (2)
+      - 俄罗斯12 (3)
+      - 俄罗斯12 (4)
+      - 俄罗斯12 (5)
+      - 德国12
+      - TW VMESS-04 | free-nodes
+      - US VMESS-13 | free-nodes
+      - DE SS-20 | free-nodes
+      - DE SS-16 | free-nodes
+      - DE SS-23 | free-nodes
+      - DE SS-19 | free-nodes
+      - SS-02 | free-nodes
+      - SS-01 | free-nodes
+      - DE SS-15 | free-nodes
+      - DE SS-14 | free-nodes
+      - DE SS-18 | free-nodes
+      - DE SS-21 | free-nodes
+      - DE SS-17 | free-nodes
+      - DE SS-22 | free-nodes
+      - HK VMESS-09
+      - 新西兰+1
+      - 新西兰+2
+      - 新西兰+3
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA (2)
+      - 🇮🇹 意大利 | ITA (3)
+      - 🇮🇹 意大利 | ITA (4)
+      - 🇮🇹 意大利 | ITA (5)
+      - 🇮🇹 意大利 | ITA (6)
+      - 🇮🇹 意大利 | ITA (7)
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 荷兰12
+      - 美国
+      - 美国_IPV4
+      - 新加坡12
+      - 新西兰
+      - 新西兰 (2)
+      - 新西兰 (3)
+      - 新西兰 (4)
+      - 新西兰 (5)
+      - 新西兰 (6)
+      - 英国
+      - 英国 (2)
+      - 英国12
+      - 英国12 (2)
+      - 英国12 (3)
+      - 英国12 (4)
+      - 意大利12
+      - 意大利12 (2)
+      - 意大利12 (3)
+      - 意大利12 (4)
+      - 意大利12 (5)
+      - 意大利12 (6)
+      - 香港12
+      - 香港12 (2)
+      - 香港12 (3)
+      - 香港12 (4)
+      - 香港12 (5)
+      - 香港12 (6)
+      - 香港12 (7)
+      - 香港12 (8)
+      - 香港12 (9)
+      - 香港12 (10)
+      - 香港12 (11)
+      - 美国12
+      - 美国12 (2)
+      - 美国12 (3)
+      - 美国12 (4)
+      - 美国12 (5)
+      - 美国12 (6)
+      - 美国12 (7)
+      - 美国12 (8)
+      - 美国12 (9)
+      - 美国12 (10)
+      - 美国12 (11)
+      - 美国12 (12)
+      - 美国12 (13)
+      - 美国12 (14)
+      - 美国12 (15)
+      - 俄罗斯12
+      - 俄罗斯12 (2)
+      - 俄罗斯12 (3)
+      - 俄罗斯12 (4)
+      - 俄罗斯12 (5)
+      - 德国12
+      - TW VMESS-04 | free-nodes
+      - US VMESS-13 | free-nodes
+      - DE SS-20 | free-nodes
+      - DE SS-16 | free-nodes
+      - DE SS-23 | free-nodes
+      - DE SS-19 | free-nodes
+      - SS-02 | free-nodes
+      - SS-01 | free-nodes
+      - DE SS-15 | free-nodes
+      - DE SS-14 | free-nodes
+      - DE SS-18 | free-nodes
+      - DE SS-21 | free-nodes
+      - DE SS-17 | free-nodes
+      - DE SS-22 | free-nodes
+      - HK VMESS-09
+      - 新西兰+1
+      - 新西兰+2
+      - 新西兰+3
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA (2)
+      - 🇮🇹 意大利 | ITA (3)
+      - 🇮🇹 意大利 | ITA (4)
+      - 🇮🇹 意大利 | ITA (5)
+      - 🇮🇹 意大利 | ITA (6)
+      - 🇮🇹 意大利 | ITA (7)
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 荷兰12
+      - 美国
+      - 美国_IPV4
+      - 新加坡12
+      - 新西兰
+      - 新西兰 (2)
+      - 新西兰 (3)
+      - 新西兰 (4)
+      - 新西兰 (5)
+      - 新西兰 (6)
+      - 英国
+      - 英国 (2)
+      - 英国12
+      - 英国12 (2)
+      - 英国12 (3)
+      - 英国12 (4)
+      - 意大利12
+      - 意大利12 (2)
+      - 意大利12 (3)
+      - 意大利12 (4)
+      - 意大利12 (5)
+      - 意大利12 (6)
+      - 香港12
+      - 香港12 (2)
+      - 香港12 (3)
+      - 香港12 (4)
+      - 香港12 (5)
+      - 香港12 (6)
+      - 香港12 (7)
+      - 香港12 (8)
+      - 香港12 (9)
+      - 香港12 (10)
+      - 香港12 (11)
+      - 美国12
+      - 美国12 (2)
+      - 美国12 (3)
+      - 美国12 (4)
+      - 美国12 (5)
+      - 美国12 (6)
+      - 美国12 (7)
+      - 美国12 (8)
+      - 美国12 (9)
+      - 美国12 (10)
+      - 美国12 (11)
+      - 美国12 (12)
+      - 美国12 (13)
+      - 美国12 (14)
+      - 美国12 (15)
+      - 俄罗斯12
+      - 俄罗斯12 (2)
+      - 俄罗斯12 (3)
+      - 俄罗斯12 (4)
+      - 俄罗斯12 (5)
+      - 德国12
+      - TW VMESS-04 | free-nodes
+      - US VMESS-13 | free-nodes
+      - DE SS-20 | free-nodes
+      - DE SS-16 | free-nodes
+      - DE SS-23 | free-nodes
+      - DE SS-19 | free-nodes
+      - SS-02 | free-nodes
+      - SS-01 | free-nodes
+      - DE SS-15 | free-nodes
+      - DE SS-14 | free-nodes
+      - DE SS-18 | free-nodes
+      - DE SS-21 | free-nodes
+      - DE SS-17 | free-nodes
+      - DE SS-22 | free-nodes
+      - HK VMESS-09
+      - 新西兰+1
+      - 新西兰+2
+      - 新西兰+3
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA (2)
+      - 🇮🇹 意大利 | ITA (3)
+      - 🇮🇹 意大利 | ITA (4)
+      - 🇮🇹 意大利 | ITA (5)
+      - 🇮🇹 意大利 | ITA (6)
+      - 🇮🇹 意大利 | ITA (7)
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 荷兰12
+      - 美国
+      - 美国_IPV4
+      - 新加坡12
+      - 新西兰
+      - 新西兰 (2)
+      - 新西兰 (3)
+      - 新西兰 (4)
+      - 新西兰 (5)
+      - 新西兰 (6)
+      - 英国
+      - 英国 (2)
+      - 英国12
+      - 英国12 (2)
+      - 英国12 (3)
+      - 英国12 (4)
+      - 意大利12
+      - 意大利12 (2)
+      - 意大利12 (3)
+      - 意大利12 (4)
+      - 意大利12 (5)
+      - 意大利12 (6)
+      - 香港12
+      - 香港12 (2)
+      - 香港12 (3)
+      - 香港12 (4)
+      - 香港12 (5)
+      - 香港12 (6)
+      - 香港12 (7)
+      - 香港12 (8)
+      - 香港12 (9)
+      - 香港12 (10)
+      - 香港12 (11)
+      - 美国12
+      - 美国12 (2)
+      - 美国12 (3)
+      - 美国12 (4)
+      - 美国12 (5)
+      - 美国12 (6)
+      - 美国12 (7)
+      - 美国12 (8)
+      - 美国12 (9)
+      - 美国12 (10)
+      - 美国12 (11)
+      - 美国12 (12)
+      - 美国12 (13)
+      - 美国12 (14)
+      - 美国12 (15)
+      - 俄罗斯12
+      - 俄罗斯12 (2)
+      - 俄罗斯12 (3)
+      - 俄罗斯12 (4)
+      - 俄罗斯12 (5)
+      - 德国12
+      - TW VMESS-04 | free-nodes
+      - US VMESS-13 | free-nodes
+      - DE SS-20 | free-nodes
+      - DE SS-16 | free-nodes
+      - DE SS-23 | free-nodes
+      - DE SS-19 | free-nodes
+      - SS-02 | free-nodes
+      - SS-01 | free-nodes
+      - DE SS-15 | free-nodes
+      - DE SS-14 | free-nodes
+      - DE SS-18 | free-nodes
+      - DE SS-21 | free-nodes
+      - DE SS-17 | free-nodes
+      - DE SS-22 | free-nodes
+      - HK VMESS-09
+      - 新西兰+1
+      - 新西兰+2
+      - 新西兰+3
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA (2)
+      - 🇮🇹 意大利 | ITA (3)
+      - 🇮🇹 意大利 | ITA (4)
+      - 🇮🇹 意大利 | ITA (5)
+      - 🇮🇹 意大利 | ITA (6)
+      - 🇮🇹 意大利 | ITA (7)
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 荷兰12
+      - 美国
+      - 美国_IPV4
+      - 新加坡12
+      - 新西兰
+      - 新西兰 (2)
+      - 新西兰 (3)
+      - 新西兰 (4)
+      - 新西兰 (5)
+      - 新西兰 (6)
+      - 英国
+      - 英国 (2)
+      - 英国12
+      - 英国12 (2)
+      - 英国12 (3)
+      - 英国12 (4)
+      - 意大利12
+      - 意大利12 (2)
+      - 意大利12 (3)
+      - 意大利12 (4)
+      - 意大利12 (5)
+      - 意大利12 (6)
+      - 香港12
+      - 香港12 (2)
+      - 香港12 (3)
+      - 香港12 (4)
+      - 香港12 (5)
+      - 香港12 (6)
+      - 香港12 (7)
+      - 香港12 (8)
+      - 香港12 (9)
+      - 香港12 (10)
+      - 香港12 (11)
+      - 美国12
+      - 美国12 (2)
+      - 美国12 (3)
+      - 美国12 (4)
+      - 美国12 (5)
+      - 美国12 (6)
+      - 美国12 (7)
+      - 美国12 (8)
+      - 美国12 (9)
+      - 美国12 (10)
+      - 美国12 (11)
+      - 美国12 (12)
+      - 美国12 (13)
+      - 美国12 (14)
+      - 美国12 (15)
+      - 俄罗斯12
+      - 俄罗斯12 (2)
+      - 俄罗斯12 (3)
+      - 俄罗斯12 (4)
+      - 俄罗斯12 (5)
+      - 德国12
+      - TW VMESS-04 | free-nodes
+      - US VMESS-13 | free-nodes
+      - DE SS-20 | free-nodes
+      - DE SS-16 | free-nodes
+      - DE SS-23 | free-nodes
+      - DE SS-19 | free-nodes
+      - SS-02 | free-nodes
+      - SS-01 | free-nodes
+      - DE SS-15 | free-nodes
+      - DE SS-14 | free-nodes
+      - DE SS-18 | free-nodes
+      - DE SS-21 | free-nodes
+      - DE SS-17 | free-nodes
+      - DE SS-22 | free-nodes
+      - HK VMESS-09
+      - 新西兰+1
+      - 新西兰+2
+      - 新西兰+3
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA (2)
+      - 🇮🇹 意大利 | ITA (3)
+      - 🇮🇹 意大利 | ITA (4)
+      - 🇮🇹 意大利 | ITA (5)
+      - 🇮🇹 意大利 | ITA (6)
+      - 🇮🇹 意大利 | ITA (7)
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 荷兰12
+      - 美国
+      - 美国_IPV4
+      - 新加坡12
+      - 新西兰
+      - 新西兰 (2)
+      - 新西兰 (3)
+      - 新西兰 (4)
+      - 新西兰 (5)
+      - 新西兰 (6)
+      - 英国
+      - 英国 (2)
+      - 英国12
+      - 英国12 (2)
+      - 英国12 (3)
+      - 英国12 (4)
+      - 意大利12
+      - 意大利12 (2)
+      - 意大利12 (3)
+      - 意大利12 (4)
+      - 意大利12 (5)
+      - 意大利12 (6)
+      - 香港12
+      - 香港12 (2)
+      - 香港12 (3)
+      - 香港12 (4)
+      - 香港12 (5)
+      - 香港12 (6)
+      - 香港12 (7)
+      - 香港12 (8)
+      - 香港12 (9)
+      - 香港12 (10)
+      - 香港12 (11)
+      - 美国12
+      - 美国12 (2)
+      - 美国12 (3)
+      - 美国12 (4)
+      - 美国12 (5)
+      - 美国12 (6)
+      - 美国12 (7)
+      - 美国12 (8)
+      - 美国12 (9)
+      - 美国12 (10)
+      - 美国12 (11)
+      - 美国12 (12)
+      - 美国12 (13)
+      - 美国12 (14)
+      - 美国12 (15)
+      - 俄罗斯12
+      - 俄罗斯12 (2)
+      - 俄罗斯12 (3)
+      - 俄罗斯12 (4)
+      - 俄罗斯12 (5)
+      - 德国12
+      - TW VMESS-04 | free-nodes
+      - US VMESS-13 | free-nodes
+      - DE SS-20 | free-nodes
+      - DE SS-16 | free-nodes
+      - DE SS-23 | free-nodes
+      - DE SS-19 | free-nodes
+      - SS-02 | free-nodes
+      - SS-01 | free-nodes
+      - DE SS-15 | free-nodes
+      - DE SS-14 | free-nodes
+      - DE SS-18 | free-nodes
+      - DE SS-21 | free-nodes
+      - DE SS-17 | free-nodes
+      - DE SS-22 | free-nodes
+      - HK VMESS-09
+      - 新西兰+1
+      - 新西兰+2
+      - 新西兰+3
+      - 🇮🇹 意大利 | ITA
+      - 🇮🇹 意大利 | ITA (2)
+      - 🇮🇹 意大利 | ITA (3)
+      - 🇮🇹 意大利 | ITA (4)
+      - 🇮🇹 意大利 | ITA (5)
+      - 🇮🇹 意大利 | ITA (6)
+      - 🇮🇹 意大利 | ITA (7)
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
